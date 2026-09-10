@@ -42,3 +42,4 @@ _(vuoto)_
 - [x] `infra` — Protocollo multi-agente: `TASKS.md`, `STATE.md`, `REVIEWER_PROMPT.md`, CI di compliance. · owner: `@diego/claude` · branch: `feat/scocca`
 - [x] `scocca` — Scaffold avviabile frontend + backend, app shell, tema triage, registry presidi, cartella `data/`. · owner: `@diego/claude` · branch: `feat/scocca`
 - [x] `feature-1-triage` — Scelta del ruolo all'apertura; assistente di triage con LLM (LM Studio → Groq → regole), classificazione nei cinque codici, mappa OpenStreetMap con congestione e tempi reali di viaggio e attesa. · owner: `@diego/claude` · branch: `feat/triage-paziente`
+- [x] `dati-reali` — Ingestione degli open data della Regione Lazio: 1848 presidi georeferenziati e code reali per codice colore dei 49 pronto soccorso. Interfaccia a tutta finestra, mappa minimale con percorso tracciato. · owner: `@diego/claude` · branch: `feat/dati-reali`

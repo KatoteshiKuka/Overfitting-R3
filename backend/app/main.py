@@ -10,8 +10,9 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
 from app.core.config import get_settings
-from app.core.database import Base, SessionLocal, engine
+from app.core.database import SessionLocal, engine
 from app.core.errors import register_error_handlers
+from app.core.schema import ensure_schema
 from app.features.congestion.service import seed_loads
 from app.features.facilities.seed import seed_facilities
 
@@ -20,13 +21,15 @@ settings = get_settings()
 
 @asynccontextmanager
 async def lifespan(_: FastAPI) -> AsyncGenerator[None, None]:
-    # Il database è un artefatto locale: si ricostruisce dai file in data/.
-    Base.metadata.create_all(bind=engine)
+    # Il database è un artefatto locale: si ricostruisce dai file in data/. Se lo schema
+    # non corrisponde più ai modelli lo si rifà da zero, così nessuno resta bloccato con
+    # un `no such column` dopo un git pull.
+    rebuilt = ensure_schema(engine)
     if settings.auto_seed:
         with SessionLocal() as db:
-            seed_facilities(db, settings.facilities_dir)
+            seed_facilities(db, settings.facilities_dir, reset=rebuilt)
             # Il carico dipende dai presidi, quindi va generato dopo di loro.
-            seed_loads(db)
+            seed_loads(db, reset=rebuilt)
     yield
 
 

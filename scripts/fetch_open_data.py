@@ -66,9 +66,35 @@ SOURCES = {
 LAZIO_BBOX = (40.7, 11.4, 42.9, 14.1)
 ROME = (41.8931, 12.4828)
 
-# Strutture private con queste parole nella ragione sociale non sono ambulatori
-# dove un cittadino può presentarsi per un problema acuto.
-PRIVATE_EXCLUDE = ("rsa", "residenza", "hospice", "riabilitazione", "lungodegenza", "casa di cura")
+# Non tutte le strutture accreditate sono posti dove un cittadino può presentarsi con
+# un problema acuto: un laboratorio analisi o un centro diurno per disabilità lavorano
+# solo su prescrizione o su utenza dedicata. Consigliarli sarebbe un errore grave,
+# quindi restano fuori dall'elenco degli ambulatori.
+PRIVATE_EXCLUDE = (
+    # ricovero e lungo termine
+    "rsa",
+    "residenza",
+    "semiresidenzial",
+    "hospice",
+    "lungodegenza",
+    "casa di cura",
+    "centro diurno",
+    # percorsi su prescrizione, non ad accesso diretto
+    "laboratorio",
+    "analisi",
+    "radiolog",
+    "diagnostic",
+    "dialisi",
+    "riabilitazione",
+    "fisioterap",
+    "odontoiatr",
+    "termale",
+    # utenza dedicata
+    "psichiatr",
+    "disabil",
+    "anffas",
+    "veterinar",
+)
 
 
 def haversine(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
@@ -237,13 +263,22 @@ def geocode_facility(name: str, town: str | None, cache: dict) -> tuple[float, f
             return True
         return haversine(*centre, *candidate) <= MAX_KM_FROM_TOWN
 
+    # Sappiamo che è una struttura sanitaria: dirlo evita che "Sant'Andrea" finisca
+    # sull'omonima chiesa in centro a Roma, cosa che senza qualificatore succede.
+    lowered = expanded.casefold()
+    already_qualified = any(
+        word in lowered for word in ("ospedale", "policlinico", "clinica", "istituto", "casa")
+    )
+    qualified = expanded if already_qualified else f"ospedale {expanded}"
+
     attempts: list[dict[str, str]] = []
     if town:
         # La ricerca strutturata è la più affidabile: vincola davvero al comune.
-        attempts.append({"amenity": expanded, "city": town, "country": "Italy"})
-        attempts.append({"amenity": f"ospedale {expanded}", "city": town, "country": "Italy"})
-        attempts.append({"q": f"{expanded}, {town}", "countrycodes": "it"})
-    attempts.append({"q": f"{expanded}, Lazio, Italia", "countrycodes": "it"})
+        attempts.append({"amenity": qualified, "city": town, "country": "Italy"})
+        if qualified != expanded:
+            attempts.append({"amenity": expanded, "city": town, "country": "Italy"})
+        attempts.append({"q": f"{qualified}, {town}", "countrycodes": "it"})
+    attempts.append({"q": f"{qualified}, Lazio, Italia", "countrycodes": "it"})
 
     result: tuple[float, float, str] | None = None
     for params in attempts:
