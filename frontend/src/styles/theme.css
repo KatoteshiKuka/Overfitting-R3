@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  FILE GLOBALE — token di tema condivisi. Vedi STATE.md prima di modificare.
+  I colori forti sono riservati alla semantica del triage: le superfici restano neutre.
+*/
+
+@layer base {
+  :root {
+    --ground: 248 250 250;
+    --surface: 255 255 255;
+    --raised: 244 247 247;
+    --line: 226 232 232;
+    --ink: 15 33 38;
+    --muted: 82 103 110;
+    --faint: 129 148 155;
+    --accent: 13 118 110;
+    --accent-soft: 226 244 241;
+    --accent-ink: 8 79 74;
+
+    /* Scala triage: usata da lib/triage.ts, mai hardcodata nei componenti. */
+    --triage-bianco: 148 163 184;
+    --triage-verde: 22 138 92;
+    --triage-azzurro: 37 110 180;
+    --triage-arancione: 190 96 12;
+    --triage-rosso: 190 42 42;
+
+    color-scheme: light;
+  }
+
+  .dark {
+    --ground: 8 15 18;
+    --surface: 17 27 31;
+    --raised: 25 37 42;
+    --line: 42 58 64;
+    --ink: 232 241 242;
+    --muted: 157 178 184;
+    --faint: 118 140 147;
+    --accent: 45 212 191;
+    --accent-soft: 21 56 55;
+    --accent-ink: 153 246 228;
+
+    --triage-bianco: 203 213 225;
+    --triage-verde: 52 190 130;
+    --triage-azzurro: 96 165 250;
+    --triage-arancione: 245 158 66;
+    --triage-rosso: 248 113 113;
+
+    color-scheme: dark;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-ground text-ink antialiased;
+    font-family: theme('fontFamily.sans');
+  }
+
+  /* Il focus deve restare visibile: l'app la usa gente di fretta, anche da tastiera. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-ground;
+  }
+
+  /* Le metriche si leggono meglio con cifre di larghezza uniforme. */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
