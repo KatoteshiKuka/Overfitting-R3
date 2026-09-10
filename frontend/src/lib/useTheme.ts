@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 type Theme = 'light' | 'dark';
 
-const STORAGE_KEY = 'presidio-theme';
+const STORAGE_KEY = 'healthpulse-theme';
 
 function readInitialTheme(): Theme {
   try {

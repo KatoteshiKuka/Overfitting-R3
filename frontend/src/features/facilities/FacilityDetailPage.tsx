@@ -32,7 +32,7 @@ export function FacilityDetailPage() {
   ].filter((row) => row.value !== '');
 
   return (
-    <>
+    <div className="mx-auto w-full max-w-3xl">
       <Link
         to="/presidi"
         className="mb-5 inline-flex min-h-11 items-center gap-1.5 text-sm text-muted transition-colors hover:text-ink"
@@ -73,6 +73,6 @@ export function FacilityDetailPage() {
           soccorso.
         </p>
       )}
-    </>
+    </div>
   );
 }

@@ -9,14 +9,14 @@ BACKEND_ROOT = Path(__file__).resolve().parents[2]
 class Settings(BaseSettings):
     """Configurazione applicativa, sovrascrivibile da .env o variabili d'ambiente."""
 
-    model_config = SettingsConfigDict(env_prefix="PRESIDIO_", env_file=".env", extra="ignore")
+    model_config = SettingsConfigDict(env_prefix="HEALTHPULSE_", env_file=".env", extra="ignore")
 
-    app_name: str = "Presidio Lazio"
+    app_name: str = "HealthPulse"
     version: str = "0.1.0"
     api_prefix: str = "/api/v1"
 
     data_dir: Path = BACKEND_ROOT.parent / "data"
-    database_url: str = "sqlite:///./presidio.db"
+    database_url: str = "sqlite:///./healthpulse.db"
     auto_seed: bool = True
 
     # Catena LLM: si prova prima il modello locale, poi Groq, poi le regole deterministiche.
@@ -32,11 +32,15 @@ class Settings(BaseSettings):
     osrm_url: str = "https://router.project-osrm.org/route/v1/driving"
     geo_timeout_seconds: float = 8.0
     # Nominatim richiede uno user agent identificabile.
-    user_agent: str = "PresidioLazio/0.1 (hackathon project)"
+    user_agent: str = "HealthPulse/0.1 (hackathon project)"
 
     @property
     def facilities_dir(self) -> Path:
         return self.resolved_data_dir / "facilities"
+
+    @property
+    def congestion_dir(self) -> Path:
+        return self.resolved_data_dir / "congestion"
 
     @property
     def resolved_data_dir(self) -> Path:

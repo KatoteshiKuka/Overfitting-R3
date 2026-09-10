@@ -1,8 +1,9 @@
 /** Identità dell'app in un punto solo: cambiare qui si propaga ovunque. */
 export const BRANDING = {
-  name: 'Presidio',
+  name: 'Health',
+  nameAccent: 'Pulse',
+  fullName: 'HealthPulse',
   region: 'Lazio',
-  fullName: 'Presidio Lazio',
   tagline: 'Emergency Triage Assistant',
   claim: 'Dove devo andare adesso?',
   subclaim:

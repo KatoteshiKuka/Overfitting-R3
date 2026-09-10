@@ -40,6 +40,8 @@ class Route:
     travel_minutes: int
     #: `osrm` se il percorso è reale, `stimato` se calcolato in linea d'aria.
     source: str
+    #: Punti [lat, lon] del tragitto, per disegnarlo sulla mappa.
+    geometry: tuple[tuple[float, float], ...] = ()
 
 
 def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
@@ -52,7 +54,14 @@ def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 def straight_line_route(lat1: float, lon1: float, lat2: float, lon2: float) -> Route:
     distance = haversine_km(lat1, lon1, lat2, lon2) * DETOUR_FACTOR
     minutes = max(1, round(distance / URBAN_SPEED_KMH * 60))
-    return Route(distance_km=round(distance, 1), travel_minutes=minutes, source="stimato")
+    return Route(
+        distance_km=round(distance, 1),
+        travel_minutes=minutes,
+        source="stimato",
+        # Senza percorso reale si disegna il segmento fra i due punti: la mappa resta
+        # leggibile e si vede che è una linea dritta, quindi una stima.
+        geometry=((lat1, lon1), (lat2, lon2)),
+    )
 
 
 async def geocode(address: str) -> GeoPoint | None:
@@ -108,7 +117,9 @@ async def route_between(origin: GeoPoint, dest_lat: float, dest_lon: float) -> R
         async with httpx.AsyncClient(timeout=settings.geo_timeout_seconds) as client:
             response = await client.get(
                 f"{settings.osrm_url}/{path}",
-                params={"overview": "false"},
+                # `geojson` semplificato: bastano poche decine di punti per disegnare
+                # un tracciato credibile senza appesantire la risposta.
+                params={"overview": "simplified", "geometries": "geojson"},
                 headers={"User-Agent": settings.user_agent},
             )
             response.raise_for_status()
@@ -116,10 +127,14 @@ async def route_between(origin: GeoPoint, dest_lat: float, dest_lon: float) -> R
         routes = body.get("routes") or []
         if routes:
             leg = routes[0]
+            coordinates = (leg.get("geometry") or {}).get("coordinates") or []
+            # GeoJSON usa [lon, lat]: Leaflet vuole l'ordine opposto.
+            geometry = tuple((float(point[1]), float(point[0])) for point in coordinates)
             return Route(
                 distance_km=round(leg["distance"] / 1000, 1),
                 travel_minutes=max(1, round(leg["duration"] / 60)),
                 source="osrm",
+                geometry=geometry,
             )
     except (httpx.HTTPError, KeyError, TypeError, ValueError) as exc:
         logger.warning("OSRM non disponibile, uso la distanza in linea d'aria: %s", exc)

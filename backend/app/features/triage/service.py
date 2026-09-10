@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 
 from app.core.errors import AppError
 from app.features.congestion import service as congestion_service
+from app.features.congestion.waiting import level_for
 from app.features.facilities.models import Facility
 from app.features.triage import geo, llm, rules
 from app.features.triage.prompts import (
@@ -173,19 +174,27 @@ async def plan(db: Session, address: str, code: str, limit: int) -> PlanResponse
 
     # Il percorso stradale si chiede solo per le più vicine in linea d'aria: una chiamata
     # OSRM per ogni struttura del Lazio sarebbe lentissima e inutile.
-    by_distance = sorted(
-        facilities,
-        key=lambda f: geo.haversine_km(
-            origin.latitude, origin.longitude, f.latitude or 0.0, f.longitude or 0.0
-        ),
-    )
-    shortlist = by_distance[: max(limit, 3)]
+    def distance(facility: Facility) -> float:
+        return geo.haversine_km(
+            origin.latitude, origin.longitude, facility.latitude or 0.0, facility.longitude or 0.0
+        )
+
+    # Le strutture collocate solo al centro del comune hanno distanze inaffidabili:
+    # entrano in classifica soltanto se quelle georeferenziate con precisione non bastano.
+    exact = sorted((f for f in facilities if f.geo_precision != "comune"), key=distance)
+    approximate = sorted((f for f in facilities if f.geo_precision == "comune"), key=distance)
+
+    wanted = max(limit, 3)
+    shortlist = exact[:wanted]
+    if len(shortlist) < wanted:
+        shortlist += approximate[: wanted - len(shortlist)]
 
     options: list[PlanOption] = []
     for facility in shortlist:
         route = await geo.route_between(origin, facility.latitude or 0.0, facility.longitude or 0.0)
         load = loads.get(facility.id)
-        waiting = load.waiting_minutes if load else 0
+        # L'attesa dipende da chi hai davanti: un codice bianco passa dopo tutti gli altri.
+        waiting = congestion_service.waiting_minutes_for(load, code) if load else 0
         ratio = load.ratio if load else 0.0
 
         options.append(
@@ -201,9 +210,11 @@ async def plan(db: Session, address: str, code: str, limit: int) -> PlanResponse
                 travel_minutes=route.travel_minutes,
                 waiting_minutes=waiting,
                 total_minutes=route.travel_minutes + waiting,
-                congestion_level=congestion_service.level_for(ratio),
+                congestion_level=level_for(ratio),
                 congestion_ratio=round(ratio, 3),
                 route_source=route.source,
+                geo_precision=facility.geo_precision,
+                route_geometry=[list(point) for point in route.geometry],
             )
         )
 

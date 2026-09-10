@@ -43,7 +43,8 @@ export function PlanOptionCard({ option, selected, onSelect }: PlanOptionCardPro
       <div className="tabular mt-3 flex flex-wrap items-baseline gap-x-4 gap-y-1 text-sm">
         <span className="font-semibold text-ink">{formatMinutes(option.total_minutes)}</span>
         <span className="text-xs text-muted">
-          {option.travel_minutes} min di viaggio · {option.distance_km} km
+          {option.travel_minutes} min di viaggio + {option.waiting_minutes} di attesa ·{' '}
+          {option.distance_km} km
         </span>
       </div>
 
@@ -57,7 +58,7 @@ export function PlanOptionCard({ option, selected, onSelect }: PlanOptionCardPro
             className="h-1.5 w-1.5 rounded-full"
             style={{ backgroundColor: `rgb(var(${cssVar}))` }}
           />
-          {CONGESTION_LABELS[option.congestion_level]} · attesa {option.waiting_minutes} min
+          {CONGESTION_LABELS[option.congestion_level]}
         </span>
         {option.route_source === 'stimato' && (
           <span className="text-[11px] text-faint" title="OSRM non ha risposto: distanza in linea d'aria">

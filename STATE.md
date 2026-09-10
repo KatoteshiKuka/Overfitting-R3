@@ -121,12 +121,29 @@ Disponibilità dei provider LLM. `fallback_ready` è sempre `true`: le regole no
 
 ### `GET /api/v1/congestion` · `GET /api/v1/congestion/{facility_id}` — 🔒 LOCKED
 
-Carico dei presidi: `ratio` (0–1), `waiting_minutes`, `people_waiting`, `level`
-(`basso`/`medio`/`alto`), `source`, `updated_at`.
+Carico reale dei pronto soccorso, dal dataset regionale degli accessi:
 
-⚠️ **I valori sono oggi generati in modo deterministico**, non reali: gli Open Data non
-espongono la saturazione in tempo reale. La tabella `facility_loads` è però scrivibile,
-ed è il punto di aggancio della feature 2.
+```json
+{
+  "facility_id": 12,
+  "queue": { "rosso": 0, "giallo": 4, "verde": 21, "bianco": 2, "non_assegnato": 0, "totale": 27 },
+  "in_treatment": 49,
+  "in_observation": 18,
+  "ratio": 0.675,
+  "level": "medio",
+  "source": "open-data",
+  "observed_at": "2021-07-31T16:34:00Z",
+  "updated_at": "..."
+}
+```
+
+Le code sono tenute **divise per colore**, non aggregate: l'attesa di chi arriva dipende
+da quante persone più gravi ha davanti, e si calcola in
+`backend/app/features/congestion/waiting.py`. Per questo `POST /triage/plan` restituisce
+`waiting_minutes` diversi a seconda del codice della persona.
+
+⚠️ `observed_at` è del 31/07/2021: è l'ultimo dato pubblico. La tabella `facility_loads`
+è scrivibile ed è il punto di aggancio della feature 2, che porterà il tempo reale.
 
 ### `GET /api/v1/feature-b` — ⚪ SLOT LIBERO
 
@@ -166,13 +183,13 @@ Definite in `.env.example` (append-only). `.env` non si committa mai.
 
 | Variabile | Default | Descrizione |
 |---|---|---|
-| `PRESIDIO_DATA_DIR` | `../data` | Cartella dei dataset Open Data |
-| `PRESIDIO_DATABASE_URL` | `sqlite:///./presidio.db` | Connessione SQLite |
-| `PRESIDIO_AUTO_SEED` | `true` | Carica i dati allo startup se il DB è vuoto |
-| `PRESIDIO_LLM_BASE_URL` | `http://127.0.0.1:1234/v1` | LM Studio, endpoint OpenAI-compatibile |
-| `PRESIDIO_LLM_MODEL` | `google/gemma-4-e4b` | Modello locale caricato in LM Studio |
-| `PRESIDIO_GROQ_API_KEY` | *(vuota)* | Chiave Groq, usata come secondo provider |
-| `PRESIDIO_GROQ_MODEL` | `openai/gpt-oss-120b` | Modello Groq |
+| `HEALTHPULSE_DATA_DIR` | `../data` | Cartella dei dataset Open Data |
+| `HEALTHPULSE_DATABASE_URL` | `sqlite:///./healthpulse.db` | Connessione SQLite |
+| `HEALTHPULSE_AUTO_SEED` | `true` | Carica i dati allo startup se il DB è vuoto |
+| `HEALTHPULSE_LLM_BASE_URL` | `http://127.0.0.1:1234/v1` | LM Studio, endpoint OpenAI-compatibile |
+| `HEALTHPULSE_LLM_MODEL` | `google/gemma-4-e4b` | Modello locale caricato in LM Studio |
+| `HEALTHPULSE_GROQ_API_KEY` | *(vuota)* | Chiave Groq, usata come secondo provider |
+| `HEALTHPULSE_GROQ_MODEL` | `openai/gpt-oss-120b` | Modello Groq |
 
 ⚠️ La chiave Groq **non si committa**: sta in `backend/.env`, che è gitignorato. Il repo è
 pubblico, una chiave nel sorgente verrebbe scrapata e revocata nel giro di minuti.

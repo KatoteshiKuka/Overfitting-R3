@@ -10,6 +10,7 @@ import sys
 
 from app.core.config import get_settings
 from app.core.database import Base, SessionLocal, engine
+from app.features.congestion.service import seed_loads
 from app.features.facilities.seed import seed_facilities
 
 
@@ -29,7 +30,10 @@ def main(argv: list[str] | None = None) -> int:
         Base.metadata.create_all(bind=engine)
         with SessionLocal() as db:
             count = seed_facilities(db, settings.facilities_dir, reset=args.reset)
+            # Il carico si abbina ai presidi, quindi va ricaricato subito dopo.
+            loads = seed_loads(db, reset=args.reset)
         print(f"Presidi caricati da {settings.facilities_dir}: {count}")
+        print(f"Code reali caricate da {settings.congestion_dir}: {loads}")
         if count == 0 and not args.reset:
             print("Il censimento era già popolato. Usa --reset per ricaricare da zero.")
     return 0

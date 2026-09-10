@@ -24,3 +24,7 @@ class Facility(Base):
     beds: Mapped[int | None] = mapped_column(Integer, default=None)
     phone: Mapped[str | None] = mapped_column(String(64), default=None)
     source: Mapped[str] = mapped_column(String(255), default="")
+    #: `esatta` se il punto è quello della struttura, `comune` se è solo il centro
+    #: del paese: molti ospedali non sono geocodificabili per nome, e spacciare un
+    #: centroide per posizione reale falserebbe il calcolo della più vicina.
+    geo_precision: Mapped[str | None] = mapped_column(String(16), default=None)

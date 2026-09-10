@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 export type Role = 'paziente' | 'operatore';
 
-const STORAGE_KEY = 'presidio-role';
+const STORAGE_KEY = 'healthpulse-role';
 
 function readStoredRole(): Role | null {
   try {

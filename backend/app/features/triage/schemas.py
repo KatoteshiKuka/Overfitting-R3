@@ -58,6 +58,10 @@ class PlanOption(BaseModel):
     congestion_ratio: float
     #: `osrm` se il tragitto è reale, `stimato` se in linea d'aria.
     route_source: str
+    #: `esatta` o `comune`: quanto è precisa la posizione della struttura.
+    geo_precision: str | None = None
+    #: Punti [lat, lon] del tragitto, per tracciarlo sulla mappa.
+    route_geometry: list[tuple[float, float]] = []
     recommended: bool = False
 
 

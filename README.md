@@ -25,9 +25,21 @@ reali). L'area del personale è predisposta ma vuota: la sviluppa il team.
 Il modello locale si configura in `backend/.env` (vedi `.env.example`). Per Groq serve
 `PRESIDIO_GROQ_API_KEY`. **La chiave non va committata**: il repo è pubblico.
 
-⚠️ L'affollamento dei presidi è oggi un **valore generato**, non reale: gli Open Data non
-espongono la saturazione in tempo reale. È deterministico (stessa struttura, stesso valore) e
-sempre etichettato come stima in interfaccia.
+### I dati sono reali
+
+L'app è alimentata dagli Open Data della Regione Lazio, già scaricati e committati in
+`data/` (vedi [`data/README.md`](data/README.md)):
+
+- **1800+ presidi**: i 49 pronto soccorso del Lazio, gli ospedali pubblici, le farmacie
+  attive e gli ambulatori accreditati, tutti georeferenziati.
+- **Code reali per codice colore** in ogni pronto soccorso, dal dataset regionale degli
+  accessi. Su questi conteggi si calcola l'attesa di chi arriva adesso: non un numero
+  unico per struttura, ma il tempo che dipende da quante persone più gravi hai davanti.
+
+⚠️ La fotografia delle code è del **31/07/2021**: è l'ultimo dato pubblico esposto dalla
+Regione, che per il tempo reale offre solo una pagina web senza feed. I numeri sono reali
+ma non aggiornati, e l'interfaccia dichiara sempre la data a cui si riferiscono. Il tempo
+reale arriverà con la feature dedicata al personale, che scrive sulla stessa tabella.
 
 ---
 

@@ -8,7 +8,7 @@ from app.features.status.schemas import DatasetStatus, SystemStatus
 
 # Cartelle di `data/` che l'interfaccia mostra sempre, anche quando sono ancora vuote:
 # così chi clona il repo vede subito quali dataset mancano.
-KNOWN_DATASETS = ("facilities", "waiting-times")
+KNOWN_DATASETS = ("facilities", "congestion")
 
 
 def get_system_status(db: Session) -> SystemStatus:

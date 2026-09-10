@@ -1,107 +1,181 @@
-"""Carico dei presidi.
+"""Carico dei presidi, dai dati aperti della Regione Lazio.
 
-I valori attuali sono **finti ma deterministici**: derivano da un hash del nome della
-struttura, così restano identici a ogni riavvio e la demo è ripetibile. Un valore casuale
-cambierebbe a ogni refresh e non sarebbe difendibile.
-
-Quando arriveranno i dataset reali si sostituisce `synthetic_load` con il caricamento
-dei dati veri: il resto dell'applicazione non cambia, perché legge solo la tabella.
+I conteggi arrivano da `data/congestion/pronto-soccorso.json`, prodotto da
+`scripts/fetch_open_data.py` a partire dal dataset regionale degli accessi ai pronto
+soccorso. Non c'è nessun valore inventato: se una struttura non è nel dataset, non ha
+dati di carico e l'interfaccia lo dice invece di riempire il vuoto con una stima.
 """
 
 from __future__ import annotations
 
-from hashlib import blake2b
+import json
+import unicodedata
+from datetime import UTC, datetime
+from pathlib import Path
 
-from sqlalchemy import select
+from sqlalchemy import delete, select
 from sqlalchemy.orm import Session
 
+from app.core.config import get_settings
+from app.core.dataset_state import record_load
 from app.features.congestion.models import FacilityLoad
-from app.features.congestion.schemas import CongestionList, FacilityLoadRead
+from app.features.congestion.schemas import CongestionList, FacilityLoadRead, QueueBreakdown
+from app.features.congestion.waiting import Queue, estimate_wait, level_for, load_ratio
 from app.features.facilities.models import Facility
 
-# Quanto tende a essere affollata ogni tipologia, e quanto si aspetta al massimo.
-TYPE_PROFILE: dict[str, tuple[float, float, int]] = {
-    # tipo: (rapporto minimo, rapporto massimo, attesa in minuti a saturazione piena)
-    "pronto-soccorso": (0.55, 0.98, 240),
-    "ospedale": (0.45, 0.90, 150),
-    "casa-comunita": (0.20, 0.65, 45),
-    "ambulatorio": (0.25, 0.70, 60),
-    "farmacia": (0.05, 0.40, 15),
-    "altro": (0.20, 0.60, 40),
-}
+DATASET_NAME = "congestion"
 
 
-def _stable_unit(seed: str) -> float:
-    """Numero stabile in [0, 1) ricavato dal nome: stesso presidio, stesso valore."""
-    digest = blake2b(seed.encode("utf-8"), digest_size=8).digest()
-    return int.from_bytes(digest, "big") / float(1 << 64)
+def _key(name: str, municipality: str | None) -> str:
+    """Chiave di abbinamento tolleante a maiuscole, accenti e punteggiatura."""
+    raw = f"{name}|{municipality or ''}"
+    decomposed = unicodedata.normalize("NFKD", raw)
+    stripped = "".join(c for c in decomposed if not unicodedata.combining(c)).casefold()
+    return " ".join("".join(c if c.isalnum() or c == "|" else " " for c in stripped).split())
 
 
-def synthetic_load(facility: Facility) -> FacilityLoad:
-    """Carico plausibile per un presidio, riproducibile e coerente con la tipologia."""
-    low, high, max_wait = TYPE_PROFILE.get(facility.type, TYPE_PROFILE["altro"])
-    unit = _stable_unit(f"{facility.name}|{facility.municipality or ''}")
-
-    ratio = low + (high - low) * unit
-    waiting = round(max_wait * ratio**2)
-    # Una struttura più grande smaltisce più persone a parità di saturazione.
-    capacity = facility.beds if facility.beds and facility.beds > 0 else 12
-    people = round(capacity * ratio)
-
-    return FacilityLoad(
-        facility_id=facility.id,
-        ratio=round(ratio, 3),
-        waiting_minutes=waiting,
-        people_waiting=people,
-        source="stimato",
-    )
+def _parse_observed(raw: str | None) -> datetime | None:
+    if not raw:
+        return None
+    for fmt in ("%d/%m/%Y %H:%M", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S"):
+        try:
+            return datetime.strptime(raw, fmt).replace(tzinfo=UTC)
+        except ValueError:
+            continue
+    return None
 
 
-def level_for(ratio: float) -> str:
-    if ratio < 0.6:
-        return "basso"
-    if ratio < 0.85:
-        return "medio"
-    return "alto"
+def _read_source(directory: Path) -> tuple[list[dict], str, datetime | None]:
+    if not directory.is_dir():
+        return [], "assente", None
+
+    items: list[dict] = []
+    label = "open-data"
+    observed: datetime | None = None
+
+    for path in sorted(directory.glob("*.json")):
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            continue
+        if not isinstance(payload, dict):
+            continue
+        items.extend(entry for entry in payload.get("items", []) if isinstance(entry, dict))
+        label = payload.get("source") or label
+        observed = observed or _parse_observed(payload.get("snapshot_at"))
+
+    return items, label, observed
 
 
 def seed_loads(db: Session, reset: bool = False) -> int:
-    """Genera il carico per i presidi che non ne hanno ancora uno."""
-    existing = {row for row in db.scalars(select(FacilityLoad.facility_id)).all()}
+    """Carica le code reali abbinandole ai presidi già censiti."""
+    existing = db.scalar(select(FacilityLoad.facility_id).limit(1))
+    if existing is not None and not reset:
+        return 0
+    if reset:
+        db.execute(delete(FacilityLoad))
 
-    created = 0
-    for facility in db.scalars(select(Facility)).all():
-        if facility.id in existing and not reset:
+    settings = get_settings()
+    items, label, observed = _read_source(settings.congestion_dir)
+    if not items:
+        record_load(db, DATASET_NAME, files=0, records=0)
+        db.commit()
+        return 0
+
+    index = {
+        _key(facility.name, facility.municipality): facility.id
+        for facility in db.scalars(select(Facility)).all()
+    }
+
+    written = 0
+    for entry in items:
+        facility_id = index.get(_key(entry.get("facility_name", ""), entry.get("municipality")))
+        if facility_id is None:
             continue
-        if facility.id in existing:
-            db.merge(synthetic_load(facility))
-        else:
-            db.add(synthetic_load(facility))
-        created += 1
 
+        waiting = entry.get("waiting") or {}
+        queue = Queue(
+            rosso=int(waiting.get("rosso") or 0),
+            giallo=int(waiting.get("giallo") or 0),
+            verde=int(waiting.get("verde") or 0),
+            bianco=int(waiting.get("bianco") or 0),
+            non_assegnato=int(waiting.get("non_assegnato") or 0),
+            in_treatment=int(entry.get("in_treatment") or 0),
+            capacity_hint=int(entry.get("capacity_hint") or 20),
+        )
+
+        db.add(
+            FacilityLoad(
+                facility_id=facility_id,
+                waiting_red=queue.rosso,
+                waiting_yellow=queue.giallo,
+                waiting_green=queue.verde,
+                waiting_white=queue.bianco,
+                waiting_unassigned=queue.non_assegnato,
+                waiting_total=int(waiting.get("totale") or queue.total),
+                in_treatment=queue.in_treatment,
+                in_observation=int(entry.get("in_observation") or 0),
+                capacity_hint=queue.capacity_hint,
+                ratio=load_ratio(queue),
+                source="open-data",
+                observed_at=observed,
+            )
+        )
+        written += 1
+
+    record_load(db, DATASET_NAME, files=1, records=written)
     db.commit()
-    return created
+    return written
+
+
+def to_queue(row: FacilityLoad) -> Queue:
+    return Queue(
+        rosso=row.waiting_red,
+        giallo=row.waiting_yellow,
+        verde=row.waiting_green,
+        bianco=row.waiting_white,
+        non_assegnato=row.waiting_unassigned,
+        in_treatment=row.in_treatment,
+        capacity_hint=row.capacity_hint,
+    )
+
+
+def waiting_minutes_for(row: FacilityLoad, app_code: str) -> int:
+    """Attesa stimata per chi arriva con quel codice di triage."""
+    return estimate_wait(to_queue(row), app_code)
 
 
 def to_read(row: FacilityLoad) -> FacilityLoadRead:
     return FacilityLoadRead(
         facility_id=row.facility_id,
+        queue=QueueBreakdown(
+            rosso=row.waiting_red,
+            giallo=row.waiting_yellow,
+            verde=row.waiting_green,
+            bianco=row.waiting_white,
+            non_assegnato=row.waiting_unassigned,
+            totale=row.waiting_total,
+        ),
+        in_treatment=row.in_treatment,
+        in_observation=row.in_observation,
         ratio=row.ratio,
-        waiting_minutes=row.waiting_minutes,
-        people_waiting=row.people_waiting,
-        source=row.source,
-        updated_at=row.updated_at,
         level=level_for(row.ratio),
+        source=row.source,
+        observed_at=row.observed_at,
+        updated_at=row.updated_at,
     )
 
 
 def list_loads(db: Session) -> CongestionList:
     rows = db.scalars(select(FacilityLoad)).all()
-    items = [to_read(row) for row in rows]
-    # Se anche una sola riga è dichiarata da un operatore, non è più tutto stimato.
-    sources = {row.source for row in rows}
-    source = "misto" if len(sources) > 1 else (next(iter(sources)) if sources else "stimato")
-    return CongestionList(items=items, total=len(items), source=source)
+    settings = get_settings()
+    _, label, observed = _read_source(settings.congestion_dir)
+    return CongestionList(
+        items=[to_read(row) for row in rows],
+        total=len(rows),
+        source=label if rows else "assente",
+        observed_at=observed,
+    )
 
 
 def get_load(db: Session, facility_id: int) -> FacilityLoadRead | None:

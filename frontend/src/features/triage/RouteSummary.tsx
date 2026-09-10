@@ -1,0 +1,94 @@
+import {
+  CONGESTION_COLORS,
+  CONGESTION_LABELS,
+  formatMinutes,
+} from '@/features/triage/congestion';
+import type { PlanOption } from '@/features/triage/types';
+
+type RouteSummaryProps = {
+  option: PlanOption;
+};
+
+/**
+ * I due numeri che contano davvero, affiancati e sommati: quanto ci metti ad arrivare
+ * e quanto aspetti una volta lì. Tenerli separati è il punto dell'app — un pronto
+ * soccorso vicino ma pieno può costare più di uno lontano e scarico.
+ */
+export function RouteSummary({ option }: RouteSummaryProps) {
+  const cssVar = CONGESTION_COLORS[option.congestion_level];
+
+  return (
+    <div className="rounded-2xl border border-line bg-surface p-5">
+      <p className="text-xs font-medium uppercase tracking-wide text-faint">Struttura consigliata</p>
+      <h3 className="mt-1 text-lg font-semibold leading-tight text-ink">{option.name}</h3>
+      {option.address && (
+        <p className="mt-0.5 text-sm text-muted">
+          {option.address}
+          {option.municipality ? ` · ${option.municipality}` : ''}
+        </p>
+      )}
+
+      <div className="mt-4 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-2">
+        <Metric label="Viaggio" value={formatMinutes(option.travel_minutes)} hint={`${option.distance_km} km`} />
+        <Operator symbol="+" />
+        <Metric
+          label="Attesa"
+          value={formatMinutes(option.waiting_minutes)}
+          hint={CONGESTION_LABELS[option.congestion_level]}
+          cssVar={cssVar}
+        />
+        <Operator symbol="=" />
+        <Metric label="Totale" value={formatMinutes(option.total_minutes)} strong />
+      </div>
+
+      <p className="mt-4 text-xs leading-relaxed text-faint">
+        {option.route_source === 'osrm'
+          ? 'Tragitto in auto calcolato su OpenStreetMap.'
+          : 'Tragitto stimato in linea d’aria: il servizio di navigazione non ha risposto.'}{' '}
+        L’attesa è calcolata sulle persone in coda davanti a te, per il tuo codice.
+        {option.geo_precision === 'comune' && (
+          <>
+            {' '}
+            La posizione esatta di questa struttura non è nei dati aperti: è collocata al
+            centro del comune, quindi distanza e tempi sono indicativi.
+          </>
+        )}
+      </p>
+    </div>
+  );
+}
+
+function Metric({
+  label,
+  value,
+  hint,
+  cssVar,
+  strong = false,
+}: {
+  label: string;
+  value: string;
+  hint?: string;
+  cssVar?: string;
+  strong?: boolean;
+}) {
+  return (
+    <div className={`rounded-xl px-2 py-2 text-center ${strong ? 'bg-accent-soft' : 'bg-raised'}`}>
+      <p className="text-[11px] font-medium uppercase tracking-wide text-faint">{label}</p>
+      <p
+        className={`tabular mt-0.5 font-semibold leading-tight ${strong ? 'text-xl text-accent-ink' : 'text-lg text-ink'}`}
+        style={cssVar && !strong ? { color: `rgb(var(${cssVar}))` } : undefined}
+      >
+        {value}
+      </p>
+      {hint && <p className="mt-0.5 truncate text-[11px] text-faint">{hint}</p>}
+    </div>
+  );
+}
+
+function Operator({ symbol }: { symbol: string }) {
+  return (
+    <span aria-hidden="true" className="text-center text-sm text-faint">
+      {symbol}
+    </span>
+  );
+}

@@ -14,9 +14,11 @@ export function Logo() {
       <span className="leading-tight">
         <span className="block text-[15px] font-semibold tracking-tight text-ink">
           {BRANDING.name}
-          <span className="text-accent"> {BRANDING.region}</span>
+          <span className="text-accent">{BRANDING.nameAccent}</span>
         </span>
-        <span className="hidden text-[11px] text-faint sm:block">{BRANDING.tagline}</span>
+        <span className="hidden text-[11px] text-faint sm:block">
+          {BRANDING.tagline} · {BRANDING.region}
+        </span>
       </span>
     </span>
   );

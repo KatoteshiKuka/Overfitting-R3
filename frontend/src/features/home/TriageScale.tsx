@@ -1,3 +1,4 @@
+import { EmergencyCard } from '@/features/home/EmergencyCard';
 import { TRIAGE_CODES, TRIAGE_SCALE } from '@/lib/triage';
 
 /**
@@ -42,6 +43,10 @@ export function TriageScale() {
             </li>
           );
         })}
+        {/* Sesta cella della griglia: lo spazio lasciato libero dai cinque codici. */}
+        <li>
+          <EmergencyCard />
+        </li>
       </ul>
     </section>
   );

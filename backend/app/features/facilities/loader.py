@@ -80,6 +80,7 @@ FIELD_ALIASES: dict[str, tuple[str, ...]] = {
     "longitude": ("longitude", "longitudine", "lon", "lng", "long", "coordx", "x"),
     "beds": ("beds", "postiletto", "postilettototali", "npostiletto", "pl", "totalepostiletto"),
     "phone": ("phone", "telefono", "tel", "recapito", "contatto", "numerotelefono"),
+    "geo_precision": ("geoprecision", "precisione"),
 }
 
 _ALIAS_TO_FIELD: dict[str, str] = {
@@ -102,6 +103,7 @@ class FacilityRecord:
     longitude: float | None = None
     beds: int | None = None
     phone: str | None = None
+    geo_precision: str | None = None
     source: str = ""
 
     @property
@@ -195,6 +197,7 @@ def map_record(raw: dict[str, object], source: str = "") -> FacilityRecord | Non
         longitude=parse_float(fields.get("longitude")),
         beds=parse_int(fields.get("beds")),
         phone=clean_str(fields.get("phone"), 64),
+        geo_precision=clean_str(fields.get("geo_precision"), 16),
         source=source,
     )
 

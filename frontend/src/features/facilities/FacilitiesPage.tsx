@@ -33,7 +33,7 @@ export function FacilitiesPage() {
   const isEmptyCensus = summary.isSuccess && summary.data.total === 0;
 
   return (
-    <>
+    <div className="mx-auto w-full max-w-4xl">
       <PageHeader
         title="Presidi sanitari"
         description="Il censimento delle strutture del territorio, così come arriva dai dataset aperti della Regione."
@@ -87,6 +87,6 @@ export function FacilitiesPage() {
           </div>
         </>
       )}
-    </>
+    </div>
   );
 }

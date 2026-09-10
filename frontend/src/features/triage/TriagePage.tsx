@@ -1,5 +1,4 @@
 import { ErrorState } from '@/components/ErrorState';
-import { PageHeader } from '@/components/PageHeader';
 import { AddressForm } from '@/features/triage/AddressForm';
 import { AssessmentPanel } from '@/features/triage/AssessmentPanel';
 import { ChatBubble } from '@/features/triage/ChatBubble';
@@ -7,9 +6,11 @@ import { ChatComposer } from '@/features/triage/ChatComposer';
 import { FacilityMap } from '@/features/triage/FacilityMap';
 import { PlanOptionCard } from '@/features/triage/PlanOptionCard';
 import { ProviderBadge } from '@/features/triage/ProviderBadge';
+import { RouteSummary } from '@/features/triage/RouteSummary';
 import { TypingBubble } from '@/features/triage/TypingBubble';
-import type { Assessment, ChatMessage, PlanOption } from '@/features/triage/types';
+import type { Assessment, ChatMessage } from '@/features/triage/types';
 import { usePlan, useSendMessage, useTriageStatus } from '@/features/triage/useTriage';
+import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 
 const OPENING: ChatMessage = {
@@ -78,14 +79,26 @@ export function TriagePage() {
 
   const offline = status.data?.providers.every((entry) => !entry.available) ?? false;
   const showMapStep = assessment !== null && assessment.code !== 'rosso';
+  const selected =
+    plan.data?.options.find((option) => option.facility_id === selectedId) ?? plan.data?.options[0];
 
   return (
-    <>
-      <PageHeader
-        title="Assistente di triage"
-        description="Rispondi a poche domande: capiamo quanto è urgente e dove conviene andare davvero."
-        actions={
-          assessment && (
+    <div className="flex w-full flex-1 flex-col">
+      <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h1 className="text-xl font-semibold tracking-tight text-ink">Assistente di triage</h1>
+          <p className="mt-0.5 text-sm text-muted">
+            Rispondi a poche domande: capiamo quanto è urgente e dove conviene andare davvero.
+          </p>
+        </div>
+        <div className="flex items-center gap-2">
+          <Link
+            to="/"
+            className="min-h-11 rounded-xl border border-line px-4 text-sm leading-[2.75rem] text-muted transition-colors hover:text-ink"
+          >
+            Cambia ruolo
+          </Link>
+          {assessment && (
             <button
               type="button"
               onClick={restart}
@@ -93,9 +106,9 @@ export function TriagePage() {
             >
               Ricomincia
             </button>
-          )
-        }
-      />
+          )}
+        </div>
+      </div>
 
       {offline && (
         <p
@@ -110,92 +123,114 @@ export function TriagePage() {
         </p>
       )}
 
-      <div className="rounded-2xl border border-line bg-raised p-3 sm:p-4">
-        <div className="max-h-[420px] space-y-3 overflow-y-auto pr-1">
-          {messages.map((message, index) => (
-            <ChatBubble key={index} role={message.role} content={message.content} />
-          ))}
-          {sendMessage.isPending && <TypingBubble />}
-          <div ref={scrollAnchor} />
-        </div>
+      {/* Due colonne su schermi larghi: la conversazione a sinistra, il risultato a destra. */}
+      <div className="grid flex-1 gap-5 lg:grid-cols-[minmax(0,7fr)_minmax(0,9fr)]">
+        <section aria-label="Conversazione" className="flex min-h-[26rem] flex-col">
+          <div className="flex flex-1 flex-col rounded-2xl border border-line bg-raised p-3 sm:p-4">
+            <div className="flex-1 space-y-3 overflow-y-auto pr-1" style={{ maxHeight: '58vh' }}>
+              {messages.map((message, index) => (
+                <ChatBubble key={index} role={message.role} content={message.content} />
+              ))}
+              {sendMessage.isPending && <TypingBubble />}
+              <div ref={scrollAnchor} />
+            </div>
 
-        <div className="mt-3 border-t border-line pt-3">
-          <ChatComposer onSend={handleSend} disabled={sendMessage.isPending} />
-          <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
-            {provider ? <ProviderBadge provider={provider} /> : <span />}
-            <p className="text-[11px] text-faint">Non è un servizio medico. Emergenze: 118.</p>
-          </div>
-        </div>
-      </div>
-
-      {messages.length === 1 && (
-        <div className="mt-3 flex flex-wrap gap-2">
-          {EXAMPLES.map((example) => (
-            <button
-              key={example}
-              type="button"
-              onClick={() => handleSend(example)}
-              className="rounded-full border border-line bg-surface px-3 py-2 text-xs text-muted transition-colors hover:border-accent/40 hover:text-ink"
-            >
-              {example}
-            </button>
-          ))}
-        </div>
-      )}
-
-      {assessment && (
-        <div className="mt-6">
-          <AssessmentPanel assessment={assessment} />
-        </div>
-      )}
-
-      {showMapStep && (
-        <section className="mt-6" aria-label="Strutture consigliate">
-          <div className="rounded-2xl border border-line bg-surface p-5">
-            <AddressForm onSubmit={handlePlan} pending={plan.isPending} />
+            <div className="mt-3 border-t border-line pt-3">
+              <ChatComposer onSend={handleSend} disabled={sendMessage.isPending} />
+              <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
+                {provider ? <ProviderBadge provider={provider} /> : <span />}
+                <p className="text-[11px] text-faint">Non è un servizio medico. Emergenze: 118.</p>
+              </div>
+            </div>
           </div>
 
-          {plan.isError && (
-            <div className="mt-4">
-              <ErrorState error={plan.error} />
+          {messages.length === 1 && (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {EXAMPLES.map((example) => (
+                <button
+                  key={example}
+                  type="button"
+                  onClick={() => handleSend(example)}
+                  className="rounded-full border border-line bg-surface px-3 py-2 text-xs text-muted transition-colors hover:border-accent/40 hover:text-ink"
+                >
+                  {example}
+                </button>
+              ))}
+            </div>
+          )}
+        </section>
+
+        <section aria-label="Esito e strutture" className="flex flex-col gap-4">
+          {!assessment && (
+            <div className="flex flex-1 items-center justify-center rounded-2xl border border-dashed border-line px-6 py-16 text-center">
+              <p className="max-w-xs text-sm leading-relaxed text-faint">
+                Qui compariranno il tuo codice di priorità e la struttura più adatta, con il
+                tragitto e l’attesa stimata.
+              </p>
             </div>
           )}
 
-          {plan.data && (
-            <div className="mt-4 space-y-4">
-              <div className="rounded-2xl border border-line bg-surface p-5">
+          {assessment && <AssessmentPanel assessment={assessment} />}
+
+          {showMapStep && !plan.data && (
+            <div className="rounded-2xl border border-line bg-surface p-5">
+              <AddressForm onSubmit={handlePlan} pending={plan.isPending} />
+            </div>
+          )}
+
+          {plan.isError && <ErrorState error={plan.error} />}
+
+          {plan.data && selected && (
+            <>
+              <div className="h-[300px] shrink-0 lg:h-[340px]">
+                <FacilityMap
+                  plan={plan.data}
+                  selectedId={selected.facility_id}
+                  onSelect={(option) => setSelectedId(option.facility_id)}
+                />
+              </div>
+
+              <RouteSummary option={selected} />
+
+              <div className="rounded-2xl border border-line bg-surface p-4">
                 <p className="text-sm leading-relaxed text-ink">{plan.data.advice}</p>
                 <div className="mt-2">
                   <ProviderBadge provider={plan.data.provider} />
                 </div>
               </div>
 
-              <FacilityMap
-                plan={plan.data}
-                selectedId={selectedId}
-                onSelect={(option: PlanOption) => setSelectedId(option.facility_id)}
-              />
+              {plan.data.options.length > 1 && (
+                <div>
+                  <p className="mb-2 text-xs font-medium uppercase tracking-wide text-faint">
+                    Altre opzioni
+                  </p>
+                  <ul className="space-y-2">
+                    {plan.data.options
+                      .filter((option) => option.facility_id !== selected.facility_id)
+                      .map((option) => (
+                        <li key={option.facility_id}>
+                          <PlanOptionCard
+                            option={option}
+                            selected={false}
+                            onSelect={() => setSelectedId(option.facility_id)}
+                          />
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              )}
 
-              <ul className="space-y-3">
-                {plan.data.options.map((option) => (
-                  <li key={option.facility_id}>
-                    <PlanOptionCard
-                      option={option}
-                      selected={option.facility_id === selectedId}
-                      onSelect={() => setSelectedId(option.facility_id)}
-                    />
-                  </li>
-                ))}
-              </ul>
-
-              <p className="text-xs text-faint">
-                Tempi di viaggio calcolati su OpenStreetMap. L'affollamento è al momento una stima:
-                sarà sostituito dai dati dichiarati dalle strutture.
-              </p>
-            </div>
+              <button
+                type="button"
+                onClick={() => plan.reset()}
+                className="min-h-11 self-start rounded-xl border border-line px-4 text-sm text-muted transition-colors hover:text-ink"
+              >
+                Cambia indirizzo
+              </button>
+            </>
           )}
         </section>
-      )}
-    </>
+      </div>
+    </div>
   );
 }

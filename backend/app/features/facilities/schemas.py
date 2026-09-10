@@ -17,6 +17,7 @@ class FacilityRead(BaseModel):
     beds: int | None = None
     phone: str | None = None
     source: str = ""
+    geo_precision: str | None = None
 
 
 class FacilityList(BaseModel):

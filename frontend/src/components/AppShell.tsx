@@ -1,5 +1,3 @@
-import { NavRail } from '@/components/NavRail';
-import { TabBar } from '@/components/TabBar';
 import { TopBar } from '@/components/TopBar';
 import type { ReactNode } from 'react';
 
@@ -7,10 +5,16 @@ type AppShellProps = {
   children: ReactNode;
 };
 
-/** Telaio dell'interfaccia: top bar, navigazione e area contenuto a larghezza leggibile. */
+/**
+ * Telaio dell'interfaccia: solo barra superiore e contenuto a tutta finestra.
+ *
+ * Niente navigazione laterale: il percorso è guidato (si sceglie il ruolo e si prosegue),
+ * quindi un menu permanente ruberebbe spazio senza aggiungere niente. Si torna indietro
+ * dal logo o dai pulsanti in pagina.
+ */
 export function AppShell({ children }: AppShellProps) {
   return (
-    <div className="min-h-dvh bg-ground">
+    <div className="flex min-h-dvh flex-col bg-ground">
       <a
         href="#contenuto"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:text-white"
@@ -20,14 +24,9 @@ export function AppShell({ children }: AppShellProps) {
 
       <TopBar />
 
-      <div className="mx-auto flex w-full max-w-5xl gap-8 px-4 pb-24 pt-6 md:pb-12">
-        <NavRail />
-        <main id="contenuto" className="min-w-0 flex-1">
-          {children}
-        </main>
-      </div>
-
-      <TabBar />
+      <main id="contenuto" className="flex w-full flex-1 flex-col px-4 pb-8 pt-6 sm:px-6 lg:px-8">
+        {children}
+      </main>
     </div>
   );
 }

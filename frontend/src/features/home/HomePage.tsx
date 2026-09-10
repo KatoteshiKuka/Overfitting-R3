@@ -8,7 +8,7 @@ export function HomePage() {
   const { setRole } = useRole();
 
   return (
-    <>
+    <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col justify-center py-6">
       <section className="animate-fade-up text-center">
         <p className="text-sm font-medium text-accent">{BRANDING.tagline}</p>
         <h1 className="mx-auto mt-2 max-w-2xl text-[2rem] font-semibold leading-[1.15] tracking-tight text-ink sm:text-4xl">
@@ -69,9 +69,9 @@ export function HomePage() {
       <TriageScale />
 
       <p className="mt-10 rounded-xl border border-line bg-raised px-4 py-3 text-xs leading-relaxed text-muted">
-        Presidio Lazio non è un servizio medico e non sostituisce una diagnosi. In caso di
+        HealthPulse non è un servizio medico e non sostituisce una diagnosi. In caso di
         emergenza chiama sempre il <strong className="text-ink">118</strong>.
       </p>
-    </>
+    </div>
   );
 }

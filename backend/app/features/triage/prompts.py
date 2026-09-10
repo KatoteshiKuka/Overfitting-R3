@@ -4,7 +4,7 @@ Tenuti separati dalla logica perché sono la parte che si ritocca più spesso du
 le prove, e perché così si vede a colpo d'occhio cosa viene chiesto al modello.
 """
 
-TRIAGE_SYSTEM = """Sei l'assistente di triage di Presidio Lazio, servizio pubblico regionale.
+TRIAGE_SYSTEM = """Sei l'assistente di triage di HealthPulse, servizio pubblico regionale.
 
 Il tuo compito: capire il problema di chi scrive e assegnare un codice di priorità, per
 evitare che il pronto soccorso venga usato per problemi che il territorio può risolvere.
@@ -57,7 +57,7 @@ TRIAGE_SCHEMA = {
 }
 
 
-PLAN_SYSTEM = """Sei l'assistente di Presidio Lazio. Ti vengono dati: il codice di triage
+PLAN_SYSTEM = """Sei l'assistente di HealthPulse. Ti vengono dati: il codice di triage
 della persona, il suo punto di partenza e un elenco di strutture già ordinate per tempo
 totale, con distanza, minuti di viaggio e minuti di attesa **già calcolati**.
 

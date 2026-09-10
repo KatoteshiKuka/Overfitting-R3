@@ -40,6 +40,10 @@ export type PlanOption = {
   congestion_level: 'basso' | 'medio' | 'alto';
   congestion_ratio: number;
   route_source: 'osrm' | 'stimato';
+  /** `esatta` o `comune`: quanto è precisa la posizione della struttura. */
+  geo_precision: 'esatta' | 'comune' | null;
+  /** Punti [lat, lon] del tragitto, per tracciarlo sulla mappa. */
+  route_geometry: [number, number][];
   recommended: boolean;
 };
 
