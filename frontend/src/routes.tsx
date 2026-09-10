@@ -12,9 +12,10 @@
 import type { NavIconName } from '@/components/NavIcon';
 import { FacilityDetailPage } from '@/features/facilities/FacilityDetailPage';
 import { FacilitiesPage } from '@/features/facilities/FacilitiesPage';
-import { FeatureAPage } from '@/features/feature-a/FeatureAPage';
 import { FeatureBPage } from '@/features/feature-b/FeatureBPage';
 import { HomePage } from '@/features/home/HomePage';
+import { OperatorePage } from '@/features/operatore/OperatorePage';
+import { TriagePage } from '@/features/triage/TriagePage';
 import type { ReactElement } from 'react';
 
 export type AppRoute = {
@@ -33,15 +34,14 @@ export const ROUTES: AppRoute[] = [
   { path: '/presidi', element: <FacilitiesPage />, nav: { label: 'Presidi', icon: 'facilities' } },
   { path: '/presidi/:facilityId', element: <FacilityDetailPage /> },
   {
-    path: '/feature-a',
-    element: <FeatureAPage />,
-    nav: { label: 'Feature A', icon: 'slot', pending: true },
-  },
-  {
     path: '/feature-b',
     element: <FeatureBPage />,
     nav: { label: 'Feature B', icon: 'slot', pending: true },
   },
+  // Feature 1: assistente di triage per il paziente.
+  { path: '/paziente', element: <TriagePage />, nav: { label: 'Assistente', icon: 'triage' } },
+  // Feature 2: area del personale, ancora da sviluppare. Senza `nav`: ci si arriva dalla home.
+  { path: '/operatore', element: <OperatorePage /> },
 ];
 
 export const NAV_ROUTES = ROUTES.filter(

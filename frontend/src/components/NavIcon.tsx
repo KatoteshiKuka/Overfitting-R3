@@ -1,4 +1,4 @@
-export type NavIconName = 'home' | 'facilities' | 'slot';
+export type NavIconName = 'home' | 'facilities' | 'triage' | 'slot';
 
 type NavIconProps = {
   name: NavIconName;
@@ -23,6 +23,12 @@ export function NavIcon({ name, className = 'h-5 w-5' }: NavIconProps) {
           <path d="M4 20V8.5L12 4l8 4.5V20" />
           <path d="M12 10v5M9.5 12.5h5" />
           <path d="M3 20h18" />
+        </>
+      )}
+      {name === 'triage' && (
+        <>
+          <path d="M4 5.5h16v11a1 1 0 0 1-1 1h-7l-4 3v-3H5a1 1 0 0 1-1-1Z" />
+          <path d="M12 8.5v4M10 10.5h4" />
         </>
       )}
       {name === 'slot' && (

@@ -28,10 +28,13 @@ function buildUrl(path: string, params?: Record<string, QueryValue>): string {
   return query ? `${url}?${query}` : url;
 }
 
-export async function apiGet<T>(path: string, params?: Record<string, QueryValue>): Promise<T> {
+async function request<T>(url: string, init?: RequestInit): Promise<T> {
   let response: Response;
   try {
-    response = await fetch(buildUrl(path, params), { headers: { Accept: 'application/json' } });
+    response = await fetch(url, {
+      ...init,
+      headers: { Accept: 'application/json', ...(init?.headers ?? {}) },
+    });
   } catch {
     // Il caso più comune in hackathon: il backend non è avviato. Meglio dirlo chiaramente.
     throw new ApiError('Backend non raggiungibile. Avvialo sulla porta 8000.', 'network_error', 0);
@@ -47,4 +50,16 @@ export async function apiGet<T>(path: string, params?: Record<string, QueryValue
   }
 
   return (await response.json()) as T;
+}
+
+export function apiGet<T>(path: string, params?: Record<string, QueryValue>): Promise<T> {
+  return request<T>(buildUrl(path, params));
+}
+
+export function apiPost<T>(path: string, body: unknown): Promise<T> {
+  return request<T>(buildUrl(path), {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
 }

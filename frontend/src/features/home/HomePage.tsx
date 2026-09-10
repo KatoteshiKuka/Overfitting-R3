@@ -1,82 +1,77 @@
-import { StatTile } from '@/components/StatTile';
-import { useFacilitySummary } from '@/features/facilities/useFacilities';
-import { EntryCard } from '@/features/home/EntryCard';
+import { RoleCard } from '@/features/home/RoleCard';
 import { TriageScale } from '@/features/home/TriageScale';
 import { BRANDING } from '@/lib/branding';
-import { formatDateTime, formatNumber } from '@/lib/format';
-import { useSystemStatus } from '@/lib/useSystemStatus';
+import { useRole } from '@/lib/useRole';
 
+/** Apertura dell'app: si sceglie chi sei, e da lì cambia tutto il percorso. */
 export function HomePage() {
-  const status = useSystemStatus();
-  const summary = useFacilitySummary();
-
-  const facilitiesDataset = status.data?.datasets.find((dataset) => dataset.name === 'facilities');
+  const { setRole } = useRole();
 
   return (
     <>
-      <section className="animate-fade-up">
+      <section className="animate-fade-up text-center">
         <p className="text-sm font-medium text-accent">{BRANDING.tagline}</p>
-        <h1 className="mt-2 text-[2rem] font-semibold leading-[1.15] tracking-tight text-ink sm:text-4xl">
+        <h1 className="mx-auto mt-2 max-w-2xl text-[2rem] font-semibold leading-[1.15] tracking-tight text-ink sm:text-4xl">
           {BRANDING.claim}
         </h1>
-        <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-muted">
+        <p className="mx-auto mt-3 max-w-xl text-[15px] leading-relaxed text-muted">
           {BRANDING.subclaim}
         </p>
       </section>
 
-      <section aria-label="Sezioni principali" className="mt-8 grid gap-3 sm:grid-cols-3">
-        <EntryCard
-          to="/presidi"
-          icon="facilities"
-          title="Presidi sanitari"
-          description="Cerca e filtra le strutture del territorio: pronto soccorso, case della comunità, farmacie, ambulatori."
+      <section aria-label="Scegli il tuo ruolo" className="mt-10 grid gap-4 sm:grid-cols-2">
+        <RoleCard
+          to="/paziente"
+          accent
+          onSelect={() => setRole('paziente')}
+          title="Ho bisogno di aiuto"
+          description="Raccontami cosa ti succede: capiamo insieme quanto è urgente e dove conviene andare, con i tempi reali di viaggio e di attesa."
+          cta="Inizia"
+          icon={
+            <svg
+              viewBox="0 0 24 24"
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M20.5 10.5c0 5-8.5 9.5-8.5 9.5s-8.5-4.5-8.5-9.5a5 5 0 0 1 8.5-3.5 5 5 0 0 1 8.5 3.5Z" />
+            </svg>
+          }
         />
-        <EntryCard
-          to="/feature-a"
-          icon="slot"
-          title="Feature A"
-          description="Slot libero, già collegato all'app. Verrà scelto e sviluppato dal team."
-          pending
-        />
-        <EntryCard
-          to="/feature-b"
-          icon="slot"
-          title="Feature B"
-          description="Slot libero, già collegato all'app. Verrà scelto e sviluppato dal team."
-          pending
-        />
-      </section>
 
-      <section aria-label="Stato dei dati" className="mt-8">
-        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-          <StatTile
-            label="Presidi"
-            value={summary.data ? formatNumber(summary.data.total) : '—'}
-            hint="strutture censite"
-          />
-          <StatTile
-            label="Aziende"
-            value={status.data ? formatNumber(status.data.asl_count) : '—'}
-            hint="ASL coperte"
-          />
-          <StatTile
-            label="Comuni"
-            value={summary.data ? formatNumber(summary.data.municipalities) : '—'}
-            hint="territori raggiunti"
-          />
-          <StatTile
-            label="Dati"
-            value={facilitiesDataset ? formatNumber(facilitiesDataset.files) : '—'}
-            hint={`aggiornati ${formatDateTime(facilitiesDataset?.last_loaded_at ?? null)}`}
-          />
-        </div>
-        <p className="mt-3 text-xs text-faint">
-          Fonte: Portale Open Data Regione Lazio. I file caricati stanno in{' '}
-          <code>data/facilities/</code>.
-        </p>
+        <RoleCard
+          to="/operatore"
+          onSelect={() => setRole('operatore')}
+          title="Lavoro in una struttura"
+          description="Monitoraggio dei reparti e dello stato dei presidi. Sezione in costruzione: la sviluppa il team."
+          cta="Entra"
+          icon={
+            <svg
+              viewBox="0 0 24 24"
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M4 20V8.5L12 4l8 4.5V20" />
+              <path d="M12 10v5M9.5 12.5h5" />
+              <path d="M3 20h18" />
+            </svg>
+          }
+        />
       </section>
 
       <TriageScale />
+
+      <p className="mt-10 rounded-xl border border-line bg-raised px-4 py-3 text-xs leading-relaxed text-muted">
+        Presidio Lazio non è un servizio medico e non sostituisce una diagnosi. In caso di
+        emergenza chiama sempre il <strong className="text-ink">118</strong>.
+      </p>
     </>
   );
 }
