@@ -131,3 +131,36 @@ Vite fa da proxy su `/api` verso il backend: nel codice si usano sempre URL rela
 - Se cambi il contratto API, aggiorna nello stesso passaggio lo schema Pydantic, il router e la chiamata dal frontend.
 - Codice in inglese, commenti in italiano. Commenta solo il perché, mai il cosa.
 - Se un requisito è ambiguo, fai una domanda sola e proponi il default che useresti.
+
+---
+
+## Protocollo di sincronizzazione multi-agente
+
+Regole tassative, valide per umani e agenti. Si applicano **sopra** tutto il resto di questo file.
+
+**1. Nessun branch senza task.**
+Nessun branch viene creato se il task non è prima assegnato in `TASKS.md`. Sposta la card da `TODO` a `IN_PROGRESS` con il tuo ID Agente, committa e pusha, *poi* apri il branch.
+
+**2. Il contratto API viene prima del codice.**
+Qualsiasi modifica all'API o al contratto dati deve essere preventivamente scritta e committata in `STATE.md`. Il frontend lavora sui mock di quel contratto senza aspettare il backend.
+
+**3. File globali vietati.**
+Le modifiche ai file globali (`backend/app/main.py`, `frontend/src/routes.tsx`, `package.json`, `pyproject.toml`, i lockfile, i token di tema) sono severamente vietate agli agenti feature. Ogni richiesta di modifica globale va annotata in `STATE.md` o comunicata al Reviewer Agent, che la applica lui.
+
+**4. Sync continuo autonomo.**
+L'agente è pienamente responsabile della sincronizzazione del repo. DEVE eseguire `git pull --rebase origin main` autonomamente: prima di iniziare un nuovo task, prima di scrivere in `STATE.md` o `TASKS.md`, e ogni 15 minuti durante l'implementazione di task lunghi, risolvendo i conflitti man mano che emergono.
+
+**5. Test-driven git protocol.**
+Prima di qualsiasi `git push` l'agente DEVE eseguire `git pull --rebase origin main` e verificare in locale che il codice compili e passi i controlli:
+
+```bash
+cd frontend && pnpm lint && pnpm typecheck && pnpm build
+cd backend  && uv run ruff check . && uv run ruff format --check .
+./check_compliance.sh
+```
+
+È vietato pushare codice che rompe la build locale.
+
+**Dipendenze.** Se il tuo codice richiede un pacchetto non presente nella baseline, scrivi il codice normalmente ma aggiungi **subito** una riga in `STATE.md` → *Dependency Requests* e avvisa il Reviewer Agent. Non modificare `package.json` né `pyproject.toml` da solo.
+
+Il ruolo dell'Orchestratore è descritto in `REVIEWER_PROMPT.md`.

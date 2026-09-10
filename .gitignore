@@ -1,0 +1,25 @@
+# env
+.env
+.env.local
+
+# node
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+.ruff_cache/
+.pytest_cache/
+
+# database locale (si rigenera dai file in data/)
+*.db
+*.db-journal
+*.sqlite3
+
+# os / editor
+.DS_Store
+*.swp
