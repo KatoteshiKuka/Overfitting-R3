@@ -7,7 +7,8 @@
   "address": "Via Barberini, 3",
   "postal_code": "00187",
   "latitude": 41.9040194,
-  "longitude": 12.4896661
+  "longitude": 12.4896661,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ambulatorio Afri S.R.L.",
@@ -17,17 +18,8 @@
   "address": "via giovanni barracco, 11",
   "postal_code": "00162",
   "latitude": 41.9202517,
-  "longitude": 12.5201006
- },
- {
-  "name": "Analisi Cliniche Castelfidardo S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "via castelfidardo, 34",
-  "postal_code": "00185",
-  "latitude": 41.9071152,
-  "longitude": 12.5002712
+  "longitude": 12.5201006,
+  "geo_precision": "esatta"
  },
  {
   "name": "Poliambulatorio Specialistico",
@@ -37,27 +29,8 @@
   "address": "Via Antonio Salandra 6",
   "postal_code": "00187",
   "latitude": 41.90564029999999,
-  "longitude": 12.4955343
- },
- {
-  "name": "Analisi Cliniche Trastevere S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "via San Francesco a Ripa 110",
-  "postal_code": "00153",
-  "latitude": 41.8862894,
-  "longitude": 12.4722667
- },
- {
-  "name": "Ar.Pa. Radiologica S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Alessandro Volta 37",
-  "postal_code": "00153",
-  "latitude": 41.8787736,
-  "longitude": 12.4774683
+  "longitude": 12.4955343,
+  "geo_precision": "esatta"
  },
  {
   "name": "Aristeia S.R.L.",
@@ -67,27 +40,8 @@
   "address": "Via Pietro Aretino, 41",
   "postal_code": "00137",
   "latitude": 41.9447457,
-  "longitude": 12.5495363
- },
- {
-  "name": "Poliambulatorio E Diagnostica Strumentale",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Viale Liegi 45",
-  "postal_code": "00198",
-  "latitude": 41.92210679999999,
-  "longitude": 12.4930466
- },
- {
-  "name": "Biodiagnostica S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Gianluca Squarcialupo n.° 36",
-  "postal_code": "00162",
-  "latitude": 41.9167312,
-  "longitude": 12.5255006
+  "longitude": 12.5495363,
+  "geo_precision": "esatta"
  },
  {
   "name": "Biolevi Sair Servizi Sanitari Srl",
@@ -97,7 +51,8 @@
   "address": "Via G. Squarcialupo 3",
   "postal_code": "00162",
   "latitude": 41.912199,
-  "longitude": 12.5263537
+  "longitude": 12.5263537,
+  "geo_precision": "esatta"
  },
  {
   "name": "Bios S.P.A.",
@@ -107,7 +62,8 @@
   "address": "Via D. Chelini n. 39",
   "postal_code": "00197",
   "latitude": 41.9263805,
-  "longitude": 12.4819652
+  "longitude": 12.4819652,
+  "geo_precision": "esatta"
  },
  {
   "name": "Capri Medical House Srl",
@@ -117,17 +73,8 @@
   "address": "Piazza Capri 5",
   "postal_code": "00141",
   "latitude": 41.8052702,
-  "longitude": 12.6255018
- },
- {
-  "name": "Cardiodiagnostica S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Lima 35",
-  "postal_code": "00198",
-  "latitude": 41.9235966,
-  "longitude": 12.4960488
+  "longitude": 12.6255018,
+  "geo_precision": "esatta"
  },
  {
   "name": "Carvital S.R.L.",
@@ -137,7 +84,8 @@
   "address": "Via Francesco Cocco Ortu 44-50",
   "postal_code": "00139",
   "latitude": 41.9591292,
-  "longitude": 12.5223296
+  "longitude": 12.5223296,
+  "geo_precision": "esatta"
  },
  {
   "name": "Studio Neurologico Laterano Casa San Lucio S.R.L.",
@@ -147,7 +95,8 @@
   "address": "Via Domenico Fontana, 12",
   "postal_code": "00185",
   "latitude": 41.88774189999999,
-  "longitude": 12.5066754
+  "longitude": 12.5066754,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Casa Giocosa",
@@ -157,7 +106,8 @@
   "address": "Via Picco dei Tre Signori,14",
   "postal_code": "00141",
   "latitude": 41.9301586,
-  "longitude": 12.5368413
+  "longitude": 12.5368413,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Di Audiofonologopedia",
@@ -167,27 +117,8 @@
   "address": "Via Di Poggio Moiano 6",
   "postal_code": "00199",
   "latitude": 41.9337572,
-  "longitude": 12.5115357
- },
- {
-  "name": "Centro Di Radiodiagnostica E Fisioterapia Srl",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via San Martino Della Battaglia 25",
-  "postal_code": "00185",
-  "latitude": 41.9057652,
-  "longitude": 12.504961
- },
- {
-  "name": "Centro Fisioterapico Zurigo Di Modafferi Pietro & C. S.A.S.",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "viale gorizia 25/b",
-  "postal_code": "00198",
-  "latitude": 41.9194812,
-  "longitude": 12.5122013
+  "longitude": 12.5115357,
+  "geo_precision": "esatta"
  },
  {
   "name": "Madonna delle Grazie Healthcare srl",
@@ -197,7 +128,8 @@
   "address": "L.go DI VILLA BIANCA, 11",
   "postal_code": "00199",
   "latitude": 41.92599000000001,
-  "longitude": 12.51281
+  "longitude": 12.51281,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Ricerche Cliniche Ortasa Srl",
@@ -207,7 +139,8 @@
   "address": "Via San Leo, 30/32",
   "postal_code": "00138",
   "latitude": 41.98029810000001,
-  "longitude": 12.5115613
+  "longitude": 12.5115613,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centrolab S.R.L.",
@@ -217,7 +150,8 @@
   "address": "Via dei Montecatini 6a-6b",
   "postal_code": "00186",
   "latitude": 41.899336,
-  "longitude": 12.480264
+  "longitude": 12.480264,
+  "geo_precision": "esatta"
  },
  {
   "name": "Cid Laboratori S.R.L.",
@@ -227,7 +161,8 @@
   "address": "Via di Villa Patrizi 22/a",
   "postal_code": "00161",
   "latitude": 41.91051,
-  "longitude": 12.50831
+  "longitude": 12.50831,
+  "geo_precision": "esatta"
  },
  {
   "name": "Presidio 1/A-B-C",
@@ -237,7 +172,8 @@
   "address": "Via Verona, 18",
   "postal_code": "00161",
   "latitude": 41.91187,
-  "longitude": 12.5161
+  "longitude": 12.5161,
+  "geo_precision": "esatta"
  },
  {
   "name": "Presidio 1/D",
@@ -247,7 +183,8 @@
   "address": "Via Livorno 25",
   "postal_code": "00161",
   "latitude": 41.9151012,
-  "longitude": 12.5230482
+  "longitude": 12.5230482,
+  "geo_precision": "esatta"
  },
  {
   "name": "Compagnie Generale Des Hopitaux Srl",
@@ -257,7 +194,8 @@
   "address": "Via Nomentana 119",
   "postal_code": "00161",
   "latitude": 41.9116204,
-  "longitude": 12.5042264
+  "longitude": 12.5042264,
+  "geo_precision": "esatta"
  },
  {
   "name": "Coprez Srl",
@@ -267,27 +205,8 @@
   "address": "Via Franco Sacchetti, 18/M",
   "postal_code": "00137",
   "latitude": 41.9500518,
-  "longitude": 12.5463516
- },
- {
-  "name": "Laboratorio Generale Di Base",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Sacco Pastore,22-24",
-  "postal_code": "00141",
-  "latitude": 41.9318446,
-  "longitude": 12.5270023
- },
- {
-  "name": "Diagnostica Srl",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Gargano 5",
-  "postal_code": "00141",
-  "latitude": 41.93565,
-  "longitude": 12.53432
+  "longitude": 12.5463516,
+  "geo_precision": "esatta"
  },
  {
   "name": "Dott. Maurizio Nargi",
@@ -297,7 +216,8 @@
   "address": "Via Ugo Ojetti, 16",
   "postal_code": "00137",
   "latitude": 41.9437337,
-  "longitude": 12.5483098
+  "longitude": 12.5483098,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ematologico Milanese S.R.L.",
@@ -307,7 +227,8 @@
   "address": "Via XX Settembre 40",
   "postal_code": "00187",
   "latitude": 41.9066695,
-  "longitude": 12.49748
+  "longitude": 12.49748,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ferretti 10",
@@ -317,7 +238,8 @@
   "address": "Via Jacopo Ferretti 10/12",
   "postal_code": "00137",
   "latitude": 41.9480653,
-  "longitude": 12.5482655
+  "longitude": 12.5482655,
+  "geo_precision": "esatta"
  },
  {
   "name": "Fisiocentro Srl",
@@ -327,7 +249,8 @@
   "address": "Viale Trastevere, 6",
   "postal_code": "00153",
   "latitude": 41.88842,
-  "longitude": 12.47352
+  "longitude": 12.47352,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Flaminio9 Srl",
@@ -337,7 +260,8 @@
   "address": "Piazzale Flaminio 9",
   "postal_code": "00196",
   "latitude": 41.9118106,
-  "longitude": 12.4749778
+  "longitude": 12.4749778,
+  "geo_precision": "esatta"
  },
  {
   "name": "Istituto C.S.S. Mendel",
@@ -347,27 +271,8 @@
   "address": "Viale Regina Margherita 261",
   "postal_code": "00198",
   "latitude": 41.9113516,
-  "longitude": 12.5087718
- },
- {
-  "name": "Analisi Cliniche Gemini Medical - Poliambulatorio Specialistico - Diagnostica",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "via Pacchiarotti 95",
-  "postal_code": "00139",
-  "latitude": 41.9620972,
-  "longitude": 12.5135465
- },
- {
-  "name": "Poliambulatorio Specialistico - Laboratorio Analisi",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via di Santa Costanza, 21",
-  "postal_code": "00198",
-  "latitude": 41.9224667,
-  "longitude": 12.5149093
+  "longitude": 12.5087718,
+  "geo_precision": "esatta"
  },
  {
   "name": "Gilar Srl",
@@ -377,17 +282,8 @@
   "address": "Via Augusto Genina 30",
   "postal_code": "00139",
   "latitude": 41.961194,
-  "longitude": 12.5364784
- },
- {
-  "name": "Analisi Cliniche Giulio Ciaffi Srl",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Viale Libia 74/A",
-  "postal_code": "00199",
-  "latitude": 41.93022,
-  "longitude": 12.51772
+  "longitude": 12.5364784,
+  "geo_precision": "esatta"
  },
  {
   "name": "Informare",
@@ -397,7 +293,8 @@
   "address": "Via Valdinievole, 8",
   "postal_code": "00141",
   "latitude": 41.9339617,
-  "longitude": 12.5284244
+  "longitude": 12.5284244,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale I.K.O.R. Srl",
@@ -407,7 +304,8 @@
   "address": "Viale Libia, 5",
   "postal_code": "00199",
   "latitude": 41.9290323,
-  "longitude": 12.5166414
+  "longitude": 12.5166414,
+  "geo_precision": "esatta"
  },
  {
   "name": "Il Kinesiterapico S.R.L.",
@@ -417,7 +315,8 @@
   "address": "Via Panama83",
   "postal_code": "00198",
   "latitude": 41.92336,
-  "longitude": 12.50132
+  "longitude": 12.50132,
+  "geo_precision": "esatta"
  },
  {
   "name": "Immunolab Srl",
@@ -427,7 +326,8 @@
   "address": "piazza Addis Abeba 1",
   "postal_code": "00199",
   "latitude": 41.9315179,
-  "longitude": 12.523017
+  "longitude": 12.523017,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ido Salaria",
@@ -437,7 +337,8 @@
   "address": "via Salaria 30",
   "postal_code": "00198",
   "latitude": 41.911866,
-  "longitude": 12.4979411
+  "longitude": 12.4979411,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ido Tagliamento",
@@ -447,7 +348,8 @@
   "address": "via Tagliamento 25",
   "postal_code": "00198",
   "latitude": 41.9196087,
-  "longitude": 12.5023097
+  "longitude": 12.5023097,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ido Furlo",
@@ -457,17 +359,8 @@
   "address": "via Passo del Furlo 53",
   "postal_code": "00141",
   "latitude": 41.9305679,
-  "longitude": 12.5354957
- },
- {
-  "name": "Istituto Fleming Diagnostica Clinica Di Laboratorio S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Viale Tiziano n. 78/80",
-  "postal_code": "00196",
-  "latitude": 41.9313037,
-  "longitude": 12.4689854
+  "longitude": 12.5354957,
+  "geo_precision": "esatta"
  },
  {
   "name": "Italmedica S.A.S",
@@ -477,7 +370,8 @@
   "address": "via Treviso, 16",
   "postal_code": "00161",
   "latitude": 41.90907929999999,
-  "longitude": 12.5130273
+  "longitude": 12.5130273,
+  "geo_precision": "esatta"
  },
  {
   "name": "Krasi Srl",
@@ -487,7 +381,8 @@
   "address": "Via Annone 1",
   "postal_code": "00199",
   "latitude": 41.9246114,
-  "longitude": 12.5151428
+  "longitude": 12.5151428,
+  "geo_precision": "esatta"
  },
  {
   "name": "L.A.D. Prof. Giorgio Natalizi Srl",
@@ -497,7 +392,8 @@
   "address": "Via Zanardelli, 36",
   "postal_code": "00186",
   "latitude": 41.901595,
-  "longitude": 12.4718651
+  "longitude": 12.4718651,
+  "geo_precision": "esatta"
  },
  {
   "name": "L.E.A. S.R.L.",
@@ -507,17 +403,8 @@
   "address": "Via Dei Pontefici 3",
   "postal_code": "00186",
   "latitude": 41.9064663,
-  "longitude": 12.4779355
- },
- {
-  "name": "Lab. Analisi Cliniche Mediche Sargentini Srl",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Di Tor Fiorenza, 47",
-  "postal_code": "00199",
-  "latitude": 41.9323422,
-  "longitude": 12.5109812
+  "longitude": 12.4779355,
+  "geo_precision": "esatta"
  },
  {
   "name": "Lab.An.Clin.Med. Paolo Gorini Srl",
@@ -527,67 +414,8 @@
   "address": "Via Di Priscilla,106",
   "postal_code": "00199",
   "latitude": 41.9322019,
-  "longitude": 12.5124988
- },
- {
-  "name": "Biotecnica Romana Laboratorio Analisi Srl",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Prati Fiscali 258",
-  "postal_code": "11010",
-  "latitude": 41.94617239999999,
-  "longitude": 12.5165958
- },
- {
-  "name": "Poliambulatorio E Diagnostica Strumentale",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Velletri,10",
-  "postal_code": "00198",
-  "latitude": 41.9119276,
-  "longitude": 12.4988596
- },
- {
-  "name": "Laboratorio Analisi Cliniche Delle Valli Srl",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Largo Valsabbia 26",
-  "postal_code": "00141",
-  "latitude": 41.9426575,
-  "longitude": 12.5163646
- },
- {
-  "name": "Laboratorio Analisi Cliniche Dott. Lorenzo Antonini S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Viale Regina Margherita, 158",
-  "postal_code": "00198",
-  "latitude": 41.915211,
-  "longitude": 12.5034463
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Analisi Cliniche Dr. Sardone Srl",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Monte Cervialto N. 75",
-  "postal_code": "00139",
-  "latitude": 41.95219,
-  "longitude": 12.52466
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Analisi Cliniche E Radioimmunologiche Bologna S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Viale Ventuno Aprile, 38 b",
-  "postal_code": "00162",
-  "latitude": 41.9155168,
-  "longitude": 12.5203148
+  "longitude": 12.5124988,
+  "geo_precision": "esatta"
  },
  {
   "name": "Lab Prof. De Arcangelis Srl",
@@ -597,127 +425,8 @@
   "address": "Corso Trieste 22",
   "postal_code": "00198",
   "latitude": 41.9153834,
-  "longitude": 12.5075813
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Analisi Cliniche Gianturco S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Cesare Fracassini 18",
-  "postal_code": "00196",
-  "latitude": 41.9236093,
-  "longitude": 12.470299
- },
- {
-  "name": "Laboratorio",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Ortignano, 2/C",
-  "postal_code": "00138",
-  "latitude": 41.9717913,
-  "longitude": 12.5168262
- },
- {
-  "name": "Laboratorio Analisi Dr.Ssa Silvia Tolloy S.R.L",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Milano, 37",
-  "postal_code": "00184",
-  "latitude": 41.8985128,
-  "longitude": 12.4908144
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Analisi Cliniche S Emerenziana Snc",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Piazza S Emerenziana 2",
-  "postal_code": "00199",
-  "latitude": 41.92904,
-  "longitude": 12.51603
- },
- {
-  "name": "Laboratorio De Sanctis Srl",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Merulana 13",
-  "postal_code": "00185",
-  "latitude": 41.8963067,
-  "longitude": 12.4996536
- },
- {
-  "name": "Laboratorio Di Analisi Cliniche Dr. Marcello Barbato Srl",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Clisio,9",
-  "postal_code": "00199",
-  "latitude": 41.92409,
-  "longitude": 12.51121
- },
- {
-  "name": "Laboratorio Di Patologia Clinica Brusca Srl",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Panama , 68 - ingresso indip. al n¿ 70",
-  "postal_code": "00198",
-  "latitude": 41.9178828,
-  "longitude": 12.5039922
- },
- {
-  "name": "Laboratorio Di Patologia Clinica Giarnieri Srl",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Po 43-45",
-  "postal_code": "00198",
-  "latitude": 41.9174637,
-  "longitude": 12.499021
- },
- {
-  "name": "Laboratorio Ippocrate Srl",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Circonvallazione Nomentana 538",
-  "postal_code": "00162",
-  "latitude": 41.9112216,
-  "longitude": 12.5286266
- },
- {
-  "name": "Laboratorio Medico Biologico Graf S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Arturo Graf 45-47",
-  "postal_code": "00137",
-  "latitude": 41.9432608,
-  "longitude": 12.5524494
- },
- {
-  "name": "Laboratorio Patologia Clinica Di Giorgi",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "piazza m.b.bulgarelli 32/44",
-  "postal_code": "00139",
-  "latitude": 41.9650271,
-  "longitude": 12.5191936
- },
- {
-  "name": "Analisi Cliniche Luisa Poliambulatorio",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Padova 96/A",
-  "postal_code": "00161",
-  "latitude": 41.9105291,
-  "longitude": 12.5206345
+  "longitude": 12.5075813,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Lyceum Srl",
@@ -727,7 +436,8 @@
   "address": "Via Montebuono, 25/b",
   "postal_code": "00199",
   "latitude": 41.9340228,
-  "longitude": 12.5129158
+  "longitude": 12.5129158,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ambulatorio Specialistico Oculistico Mar",
@@ -737,17 +447,8 @@
   "address": "Via Adige 28 piano I int. 2",
   "postal_code": "00198",
   "latitude": 41.9209437,
-  "longitude": 12.5041157
- },
- {
-  "name": "Martelli Analisi Cliniche Srl",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "via filippo antonio gualterio 52 e",
-  "postal_code": "00139",
-  "latitude": 41.9531948,
-  "longitude": 12.5222347
+  "longitude": 12.5041157,
+  "geo_precision": "esatta"
  },
  {
   "name": "Matricciani Dott. Antonio - Otorino",
@@ -757,7 +458,8 @@
   "address": "via Franco Sacchetti 101",
   "postal_code": "00137",
   "latitude": 41.947207,
-  "longitude": 12.54354
+  "longitude": 12.54354,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Me.Di.T. Srl",
@@ -767,7 +469,8 @@
   "address": "P.Le Adriatico 5",
   "postal_code": "00141",
   "latitude": 41.9398831,
-  "longitude": 12.5359714
+  "longitude": 12.5359714,
+  "geo_precision": "esatta"
  },
  {
   "name": "Medical House Vigne Nuove Srl",
@@ -777,17 +480,8 @@
   "address": "Via Giovanni Pastrone 41",
   "postal_code": "00139",
   "latitude": 41.9613795,
-  "longitude": 12.5371295
- },
- {
-  "name": "Monte Cervialto Radiologia Srl",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "via monte cervialto n.56",
-  "postal_code": "00139",
-  "latitude": 41.95197,
-  "longitude": 12.52476
+  "longitude": 12.5371295,
+  "geo_precision": "esatta"
  },
  {
   "name": "Novamedica S.R.L.",
@@ -797,7 +491,8 @@
   "address": "Via Gianluca Squarcialupo n.° 17/C",
   "postal_code": "00162",
   "latitude": 41.9167312,
-  "longitude": 12.5255006
+  "longitude": 12.5255006,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Via Conte Verde",
@@ -807,7 +502,8 @@
   "address": "Via Conte Verde 47",
   "postal_code": "00185",
   "latitude": 41.892938,
-  "longitude": 12.5071292
+  "longitude": 12.5071292,
+  "geo_precision": "esatta"
  },
  {
   "name": "Presidio Oreda",
@@ -817,7 +513,8 @@
   "address": "Via Franco Sacchetti 127",
   "postal_code": "00137",
   "latitude": 41.9466218,
-  "longitude": 12.543026
+  "longitude": 12.543026,
+  "geo_precision": "esatta"
  },
  {
   "name": "Passaretti Giuseppe",
@@ -827,7 +524,8 @@
   "address": "via Bari n°7",
   "postal_code": "00161",
   "latitude": 41.9107291,
-  "longitude": 12.5149189
+  "longitude": 12.5149189,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Pigreco Omnia Salus Srl",
@@ -837,7 +535,8 @@
   "address": "Via Don Giustino Maria Russolillo, 63",
   "postal_code": "00138",
   "latitude": 41.97055779999999,
-  "longitude": 12.5174886
+  "longitude": 12.5174886,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Poliambulatorio Talenti S.R.L.",
@@ -847,27 +546,8 @@
   "address": "Via Pietro Aretino 43",
   "postal_code": "00137",
   "latitude": 41.944717,
-  "longitude": 12.5498918
- },
- {
-  "name": "Istituto Di Diagnostica Clinica Proda 1",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Piazza Capri, 15",
-  "postal_code": "00141",
-  "latitude": 41.9438172,
-  "longitude": 12.5289765
- },
- {
-  "name": "Radiologica Pavia S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Po 45",
-  "postal_code": "00198",
-  "latitude": 41.9175023,
-  "longitude": 12.4990683
+  "longitude": 12.5498918,
+  "geo_precision": "esatta"
  },
  {
   "name": "Reverie Comunit¿ 1 - Comunit¿ Terapeutica Romana",
@@ -877,7 +557,8 @@
   "address": "Via Moncenisio, 20",
   "postal_code": "00141",
   "latitude": 41.9412787,
-  "longitude": 12.5338262
+  "longitude": 12.5338262,
+  "geo_precision": "esatta"
  },
  {
   "name": "Medicina Fisica E Riabilitativa",
@@ -887,17 +568,8 @@
   "address": "Via Francesco Carrara, 24",
   "postal_code": "00196",
   "latitude": 41.9121432,
-  "longitude": 12.4738814
- },
- {
-  "name": "Salus C.M.D. S.R.L. Poliambulatorio - Laboratorio Analisi Cliniche",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Alessandro Volta, 37",
-  "postal_code": "00153",
-  "latitude": 41.8787736,
-  "longitude": 12.4774683
+  "longitude": 12.4738814,
+  "geo_precision": "esatta"
  },
  {
   "name": "Salus",
@@ -907,7 +579,8 @@
   "address": "Via Paolo Monelli 59",
   "postal_code": "00137",
   "latitude": 41.96113,
-  "longitude": 12.55355
+  "longitude": 12.55355,
+  "geo_precision": "esatta"
  },
  {
   "name": "San Michele Roma S.P.A.",
@@ -917,7 +590,8 @@
   "address": "Via Val Di Non 37",
   "postal_code": "00141",
   "latitude": 41.9433503,
-  "longitude": 12.5174449
+  "longitude": 12.5174449,
+  "geo_precision": "esatta"
  },
  {
   "name": "Sanem 2001 Di Tocci Agostino Snc",
@@ -927,7 +601,8 @@
   "address": "Via Nemorense 27",
   "postal_code": "00199",
   "latitude": 41.9248573,
-  "longitude": 12.5080051
+  "longitude": 12.5080051,
+  "geo_precision": "esatta"
  },
  {
   "name": "Presidio 1",
@@ -937,7 +612,8 @@
   "address": "Via Renato Fucini 240",
   "postal_code": "00137",
   "latitude": 41.9482465,
-  "longitude": 12.5504516
+  "longitude": 12.5504516,
+  "geo_precision": "esatta"
  },
  {
   "name": "Società Cooperativa Sociale Di Azione Riabilitativa A R.L.",
@@ -947,7 +623,8 @@
   "address": "Via Suvereto 237 E Via Valfurva n. 14/16",
   "postal_code": "00139",
   "latitude": 41.9347891,
-  "longitude": 12.5308123
+  "longitude": 12.5308123,
+  "geo_precision": "esatta"
  },
  {
   "name": "Somalia Salus Sas",
@@ -957,7 +634,8 @@
   "address": "Viale Somalia Sas",
   "postal_code": "00199",
   "latitude": 41.9319083,
-  "longitude": 12.5097274
+  "longitude": 12.5097274,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Studio Di Diagnosi Medica Srl",
@@ -967,7 +645,8 @@
   "address": "Viale Regina Margherita 270",
   "postal_code": "00198",
   "latitude": 41.9115731,
-  "longitude": 12.5080661
+  "longitude": 12.5080661,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Studio Di Medicina Nucleare Srl",
@@ -977,17 +656,8 @@
   "address": "Via Renato Fucini 59",
   "postal_code": "00137",
   "latitude": 41.9524119,
-  "longitude": 12.5466285
- },
- {
-  "name": "Studio Diagnostico Pantheon Srl",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Giustiniani 12",
-  "postal_code": "00186",
-  "latitude": 41.899439,
-  "longitude": 12.4751212
+  "longitude": 12.5466285,
+  "geo_precision": "esatta"
  },
  {
   "name": "Studio Fisiokinesiterapico Accademia",
@@ -997,7 +667,8 @@
   "address": "Piazza Antonio Baldini 4",
   "postal_code": "00141",
   "latitude": 41.9401572,
-  "longitude": 12.54452
+  "longitude": 12.54452,
+  "geo_precision": "esatta"
  },
  {
   "name": "Studio Fisiokinesiterapico Romano S.R.L.",
@@ -1007,7 +678,8 @@
   "address": "Viale Libia, 76",
   "postal_code": "00199",
   "latitude": 41.92991070000001,
-  "longitude": 12.5172385
+  "longitude": 12.5172385,
+  "geo_precision": "esatta"
  },
  {
   "name": "Studio Medico Lazio S.R.L.",
@@ -1017,27 +689,8 @@
   "address": "Viale G. Rossini, 24",
   "postal_code": "00198",
   "latitude": 41.9199825,
-  "longitude": 12.4913388
- },
- {
-  "name": "Studio Radiologico Libia S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Viale Libia 58",
-  "postal_code": "00199",
-  "latitude": 41.9301091,
-  "longitude": 12.5174765
- },
- {
-  "name": "Studio Radiologico Marullo Srl",
-  "type": "Ambulatorio",
-  "asl": "101 RM/A",
-  "municipality": "Roma",
-  "address": "Via Alessandro Torlonia 11/13",
-  "postal_code": "00161",
-  "latitude": 41.915703,
-  "longitude": 12.5124667
+  "longitude": 12.4913388,
+  "geo_precision": "esatta"
  },
  {
   "name": "Tiziano Consultorio Familiare Srl",
@@ -1047,7 +700,8 @@
   "address": "Via Renato Fucini 59 ter",
   "postal_code": "00137",
   "latitude": 41.9524119,
-  "longitude": 12.5466285
+  "longitude": 12.5466285,
+  "geo_precision": "esatta"
  },
  {
   "name": "Villa Esperia Roma S.R.L.",
@@ -1057,27 +711,8 @@
   "address": "Viale Regina Margherita n.° 279",
   "postal_code": "00198",
   "latitude": 41.9178828,
-  "longitude": 12.5039922
- },
- {
-  "name": "901 Tuscolana Accertamenti Diagnostici S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Tuscolana, 901",
-  "postal_code": "00174",
-  "latitude": 41.85678,
-  "longitude": 12.56246
- },
- {
-  "name": "Struttura Ambulatoriale A.D.I. Accentramento Diagnostico Italiano S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Nazareno Gianni N° 5/7",
-  "postal_code": "00131",
-  "latitude": 41.94570299999999,
-  "longitude": 12.6074724
+  "longitude": 12.5039922,
+  "geo_precision": "esatta"
  },
  {
   "name": "Aerolab S.R.L.",
@@ -1087,7 +722,8 @@
   "address": "Via dell'Aeroporto 6",
   "postal_code": "00175",
   "latitude": 41.8613363,
-  "longitude": 12.5553113
+  "longitude": 12.5553113,
+  "geo_precision": "esatta"
  },
  {
   "name": "R.S.A. Villa Lucia",
@@ -1097,17 +733,8 @@
   "address": "Via dei Pioppi 6",
   "postal_code": "00172",
   "latitude": 41.87732,
-  "longitude": 12.56739
- },
- {
-  "name": "Analisi Cliniche Lars-Tor Sapienza Srl",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Stefano Ussi, 6",
-  "postal_code": "00155",
-  "latitude": 41.9014698,
-  "longitude": 12.5909212
+  "longitude": 12.56739,
+  "geo_precision": "esatta"
  },
  {
   "name": "Analitica Asklepeion Srl",
@@ -1117,37 +744,8 @@
   "address": "Via Di Tor Vergata 1",
   "postal_code": "00133",
   "latitude": 41.8625707,
-  "longitude": 12.6203815
- },
- {
-  "name": "Anicio Gallo Studio Radiologico",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "viale anicio gallo 12",
-  "postal_code": "00174",
-  "latitude": 41.85447569999999,
-  "longitude": 12.5608019
- },
- {
-  "name": "Ar.Na. Radiologica S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Piazza Aruleno Celio Sabino 78",
-  "postal_code": "00174",
-  "latitude": 41.8532772,
-  "longitude": 12.5585733
- },
- {
-  "name": "Diagnostica X Immagini - Fisiokinesiterapia - Poliambulatorio - Laboratorio Analisi Cliniche",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Di Prataporci, 52",
-  "postal_code": "00132",
-  "latitude": 41.8592323,
-  "longitude": 12.6845159
+  "longitude": 12.6203815,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Areteia Del Dott.Bonomolo Ed Altri Srl",
@@ -1157,7 +755,8 @@
   "address": "Via Eugenio Torelli Viollier N° 15",
   "postal_code": "00157",
   "latitude": 41.91089789999999,
-  "longitude": 12.5378637
+  "longitude": 12.5378637,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale \"Artemedica Torvergata S.R.L.\"",
@@ -1167,7 +766,8 @@
   "address": "Viale Luigi Schiavonetti 290",
   "postal_code": "00173",
   "latitude": 41.84485979999999,
-  "longitude": 12.6176438
+  "longitude": 12.6176438,
+  "geo_precision": "esatta"
  },
  {
   "name": "Comunità La Tenda - Unità Di Strada V Municipio",
@@ -1177,7 +777,8 @@
   "address": "Via del Frantoio 58",
   "postal_code": "00159",
   "latitude": 41.91431,
-  "longitude": 12.56117
+  "longitude": 12.56117,
+  "geo_precision": "esatta"
  },
  {
   "name": "Azzopardi Rosario Maria",
@@ -1187,17 +788,8 @@
   "address": "Via Amico Aspertini 113",
   "postal_code": "00133",
   "latitude": 41.8757718,
-  "longitude": 12.6275106
- },
- {
-  "name": "Struttura Ambulatoriale Biodiagnostica Alessandrina Srl",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Del Campo 46F",
-  "postal_code": "00172",
-  "latitude": 41.8768545,
-  "longitude": 12.5778008
+  "longitude": 12.6275106,
+  "geo_precision": "esatta"
  },
  {
   "name": "Biomedica Roma Srl",
@@ -1207,7 +799,8 @@
   "address": "V. Pan 18",
   "postal_code": "00158",
   "latitude": 41.9153433,
-  "longitude": 12.5548801
+  "longitude": 12.5548801,
+  "geo_precision": "esatta"
  },
  {
   "name": "Biorama 77 S.R.L.",
@@ -1217,7 +810,8 @@
   "address": "Via Carlo fadda 41-47",
   "postal_code": "00173",
   "latitude": 41.8611101,
-  "longitude": 12.5714415
+  "longitude": 12.5714415,
+  "geo_precision": "esatta"
  },
  {
   "name": "Bios Prevention Srl (Già Bios Marx S.R.L. E Bios S.P.A.)",
@@ -1227,7 +821,8 @@
   "address": "Viale Marx n. 203",
   "postal_code": "00156",
   "latitude": 41.9387872,
-  "longitude": 12.5621094
+  "longitude": 12.5621094,
+  "geo_precision": "esatta"
  },
  {
   "name": "Bio-Test S.R.L.",
@@ -1237,7 +832,8 @@
   "address": "via Flavio stilicone",
   "postal_code": "00264",
   "latitude": 41.8585242,
-  "longitude": 12.562085
+  "longitude": 12.562085,
+  "geo_precision": "esatta"
  },
  {
   "name": "C.A.M.E.S. S.R.L.",
@@ -1247,7 +843,8 @@
   "address": "via Iperione 11",
   "postal_code": "00133",
   "latitude": 41.87846,
-  "longitude": 12.61933
+  "longitude": 12.61933,
+  "geo_precision": "esatta"
  },
  {
   "name": "Cardiologia Capitolina Dott. Caselli S.R.L.",
@@ -1257,7 +854,8 @@
   "address": "L.go Giulio Capitolino, 9",
   "postal_code": "00174",
   "latitude": 41.8534327,
-  "longitude": 12.5644838
+  "longitude": 12.5644838,
+  "geo_precision": "esatta"
  },
  {
   "name": "R.S.A + Cdc Nps - Castello Della Quiete",
@@ -1267,17 +865,8 @@
   "address": "Via di Tor Cervara 112",
   "postal_code": "00155",
   "latitude": 41.92408340000001,
-  "longitude": 12.5879673
- },
- {
-  "name": "Cedit Centro Diagnostico Tiburtino Srl",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Tiburtina 364",
-  "postal_code": "00159",
-  "latitude": 41.9081008,
-  "longitude": 12.5357959
+  "longitude": 12.5879673,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Centro Alessandrino Di Fisiokinesiterapia E Ginnastica Medica Snc",
@@ -1287,17 +876,8 @@
   "address": "via G.B. Delponte 12/14",
   "postal_code": "00172",
   "latitude": 41.8766069,
-  "longitude": 12.5782642
- },
- {
-  "name": "Centro Diagnostico Giardinetti S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Carlo Santarelli 98",
-  "postal_code": "00133",
-  "latitude": 41.8611463,
-  "longitude": 12.6064554
+  "longitude": 12.5782642,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ce.I.S. Don Mario Picchi \"Via Appia Nuova\"",
@@ -1307,7 +887,8 @@
   "address": "Via Appia Nuova 1251",
   "postal_code": "00174",
   "latitude": 41.82083,
-  "longitude": 12.56644
+  "longitude": 12.56644,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Permanente Di Prevenzione Alle Tossicodipendenze",
@@ -1317,7 +898,8 @@
   "address": "Via di Pietralatella snc",
   "postal_code": "00159",
   "latitude": 41.9036749,
-  "longitude": 12.5441446
+  "longitude": 12.5441446,
+  "geo_precision": "esatta"
  },
  {
   "name": "Presidio Multifunzione Comunità Capodarco Di Roma",
@@ -1327,7 +909,8 @@
   "address": "via lungro 3",
   "postal_code": "00178",
   "latitude": 41.83814,
-  "longitude": 12.5529823
+  "longitude": 12.5529823,
+  "geo_precision": "esatta"
  },
  {
   "name": "Dalc Srl",
@@ -1337,7 +920,8 @@
   "address": "Via Di Tor Vergata 1",
   "postal_code": "00133",
   "latitude": 41.8625707,
-  "longitude": 12.6203815
+  "longitude": 12.6203815,
+  "geo_precision": "esatta"
  },
  {
   "name": "Delta Rx S.R.L.",
@@ -1347,27 +931,8 @@
   "address": "via IPERIONE 9",
   "postal_code": "00133",
   "latitude": 41.8784591,
-  "longitude": 12.6193512
- },
- {
-  "name": "Diagnostica Basil Srl",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via del casale di san basilio 256",
-  "postal_code": "00156",
-  "latitude": 41.9354874,
-  "longitude": 12.5824748
- },
- {
-  "name": "Struttura Ambulatoriale Diagnostica Nobiliore S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Viale Marco Fulvio Nobiliore 43",
-  "postal_code": "00175",
-  "latitude": 41.8576425,
-  "longitude": 12.5633503
+  "longitude": 12.6193512,
+  "geo_precision": "esatta"
  },
  {
   "name": "Didasco Societa Cooperativa Sociale",
@@ -1377,7 +942,8 @@
   "address": "via pescosolido 160",
   "postal_code": "00158",
   "latitude": 41.918306,
-  "longitude": 12.5620651
+  "longitude": 12.5620651,
+  "geo_precision": "esatta"
  },
  {
   "name": "Domus Medica Srl",
@@ -1387,7 +953,8 @@
   "address": "Via Dei Castani 170",
   "postal_code": "00172",
   "latitude": 41.8863007,
-  "longitude": 12.5662862
+  "longitude": 12.5662862,
+  "geo_precision": "esatta"
  },
  {
   "name": "Presidio Ambulatoriale F.K.T. Srl",
@@ -1397,7 +964,8 @@
   "address": "Via delle Robinie, 1/b",
   "postal_code": "00172",
   "latitude": 41.8829547,
-  "longitude": 12.5613263
+  "longitude": 12.5613263,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale F.K.T. Salvetti Srl",
@@ -1407,7 +975,8 @@
   "address": "Piazza degli Ontani, 11",
   "postal_code": "00172",
   "latitude": 41.8791065,
-  "longitude": 12.5711016
+  "longitude": 12.5711016,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Medico Polispecialistico Fisiocard",
@@ -1417,7 +986,8 @@
   "address": "Via Francesco Tovaglieri, 19",
   "postal_code": "00155",
   "latitude": 41.88263,
-  "longitude": 12.5888172
+  "longitude": 12.5888172,
+  "geo_precision": "esatta"
  },
  {
   "name": "Fisiomichelmaria Srl",
@@ -1427,7 +997,8 @@
   "address": "Via Del Forte Toburtino 98",
   "postal_code": "00159",
   "latitude": 41.9084078,
-  "longitude": 12.5585964
+  "longitude": 12.5585964,
+  "geo_precision": "esatta"
  },
  {
   "name": "Herzlabor S.R.L.",
@@ -1437,7 +1008,8 @@
   "address": "via Giuseppe Rondinini, 7",
   "postal_code": "00159",
   "latitude": 41.9082606,
-  "longitude": 12.5365745
+  "longitude": 12.5365745,
+  "geo_precision": "esatta"
  },
  {
   "name": "I.M.P.P. La Nostra Scuola",
@@ -1447,7 +1019,8 @@
   "address": "Via Acerenza 35",
   "postal_code": "00178",
   "latitude": 41.84108,
-  "longitude": 12.5530839
+  "longitude": 12.5530839,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ini Centocelle",
@@ -1457,17 +1030,8 @@
   "address": "Via dei Castani, 183-185",
   "postal_code": "00171",
   "latitude": 41.8844271,
-  "longitude": 12.5666152
- },
- {
-  "name": "Struttura Ambulatoriale Istituto Radiologico Tiburtino Srl",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Palmiro Togliatti 1640",
-  "postal_code": "00155",
-  "latitude": 41.9130271,
-  "longitude": 12.5711311
+  "longitude": 12.5666152,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Laboconsult Srl",
@@ -1477,7 +1041,8 @@
   "address": "Via Troilo Il Grande 55",
   "postal_code": "00131",
   "latitude": 41.9479926,
-  "longitude": 12.6010241
+  "longitude": 12.6010241,
+  "geo_precision": "esatta"
  },
  {
   "name": "Labomedica_Giulio_Agricola_33",
@@ -1487,127 +1052,8 @@
   "address": "Viale Giulio Agricola 33",
   "postal_code": "00174",
   "latitude": 41.85598,
-  "longitude": 12.56208
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Analisi Cliniche Annibaliano S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Casal Bianco N. 141",
-  "postal_code": "00131",
-  "latitude": 41.94164,
-  "longitude": 12.62851
- },
- {
-  "name": "Laboratorio Analisi Cliniche Giglioli S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Domenico De Dominicis 39",
-  "postal_code": "00159",
-  "latitude": 41.90201589999999,
-  "longitude": 12.5353544
- },
- {
-  "name": "Laboratorio Analisi Cliniche Iperione S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "via Amico Aspertini 109/111",
-  "postal_code": "00133",
-  "latitude": 41.8758341,
-  "longitude": 12.6274534
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Analisi Cliniche Pasteur Srl",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Montecassiano 157",
-  "postal_code": "00156",
-  "latitude": 41.943334,
-  "longitude": 12.5716681
- },
- {
-  "name": "Laboratorio Analisi Cliniche - Poliambulatorio",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Viale Fernando Santi 38",
-  "postal_code": "00155",
-  "latitude": 41.912323,
-  "longitude": 12.5667384
- },
- {
-  "name": "Laboratorio Analisi Lepetit Srl",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Francesco Tovaglieri 19",
-  "postal_code": "00155",
-  "latitude": 41.88263,
-  "longitude": 12.5888172
- },
- {
-  "name": "Laboratorio Analisi Per La Diagnostica Medica Quarto Miglio S.R.L. Unipersonale",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Pozzobonelli, 8",
-  "postal_code": "00178",
-  "latitude": 41.84307,
-  "longitude": 12.54884
- },
- {
-  "name": "Laboratorio Di Patologia Clinica Emmepi Srl",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Viale Spartaco 138",
-  "postal_code": "00174",
-  "latitude": 41.85502,
-  "longitude": 12.56005
- },
- {
-  "name": "Laboratorio Di Via Diego Angeli Srl",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Diego Angeli, 173",
-  "postal_code": "00159",
-  "latitude": 41.9063668,
-  "longitude": 12.5513436
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Diagnostico M. Malpighi S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Tuscolana, 703",
-  "postal_code": "00174",
-  "latitude": 41.8615833,
-  "longitude": 12.5543741
- },
- {
-  "name": "Laboratorio Fracastoro Srl",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Giuseppe Albanese Ruffo 40-46",
-  "postal_code": "00173",
-  "latitude": 41.85078000000001,
-  "longitude": 12.59194
- },
- {
-  "name": "Laboratorio Iris Srl",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Dei Castani 236",
-  "postal_code": "00171",
-  "latitude": 41.8880536,
-  "longitude": 12.5656973
+  "longitude": 12.56208,
+  "geo_precision": "esatta"
  },
  {
   "name": "Medical Ray",
@@ -1617,7 +1063,8 @@
   "address": "Via Carlo Mezzacapo 49-55",
   "postal_code": "00159",
   "latitude": 41.8989084,
-  "longitude": 12.5344471
+  "longitude": 12.5344471,
+  "geo_precision": "esatta"
  },
  {
   "name": "Mycete S.R.L.",
@@ -1627,17 +1074,8 @@
   "address": "Via San Polo Dei Cavalieri 20",
   "postal_code": "00159",
   "latitude": 41.9082023,
-  "longitude": 12.5439427
- },
- {
-  "name": "Namusa Analisi Srl",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Aufidio Namusa 150-148-146-144",
-  "postal_code": "00169",
-  "latitude": 41.87152,
-  "longitude": 12.57623
+  "longitude": 12.5439427,
+  "geo_precision": "esatta"
  },
  {
   "name": "Pietralata S.R.L.",
@@ -1647,7 +1085,8 @@
   "address": "Via dei Durantini n.¿ 360/366",
   "postal_code": "00157",
   "latitude": 41.9196828,
-  "longitude": 12.545993
+  "longitude": 12.545993,
+  "geo_precision": "esatta"
  },
  {
   "name": "Synlab Lazio Srl",
@@ -1657,7 +1096,8 @@
   "address": "Via Di Torrenova 142 A",
   "postal_code": "00133",
   "latitude": 41.8731579,
-  "longitude": 12.6187239
+  "longitude": 12.6187239,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ra.Ci. S.N.C.",
@@ -1667,37 +1107,8 @@
   "address": "Piazza Di Cinecitta'",
   "postal_code": "00174",
   "latitude": 41.8526439,
-  "longitude": 12.5692478
- },
- {
-  "name": "Radiologia Colli Aniene S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Viale Marx n. 203",
-  "postal_code": "00156",
-  "latitude": 41.9387872,
-  "longitude": 12.5621094
- },
- {
-  "name": "Radiologia Villa Chigi",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "via tenuta del casalotto, 55/m",
-  "postal_code": "00118",
-  "latitude": 41.8166924,
-  "longitude": 12.6110467
- },
- {
-  "name": "Radiodiagnostica",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "viale fernando santi 48/50",
-  "postal_code": "00155",
-  "latitude": 41.912323,
-  "longitude": 12.5667384
+  "longitude": 12.5692478,
+  "geo_precision": "esatta"
  },
  {
   "name": "Rx Sonic",
@@ -1707,7 +1118,8 @@
   "address": "Via Dei Glicini 119/B",
   "postal_code": "00172",
   "latitude": 41.8793501,
-  "longitude": 12.5698142
+  "longitude": 12.5698142,
+  "geo_precision": "esatta"
  },
  {
   "name": "Rx.C.A. S.R.L.",
@@ -1717,17 +1129,8 @@
   "address": "Via Dei Glicini n. 93",
   "postal_code": "00172",
   "latitude": 41.87960409999999,
-  "longitude": 12.5673662
- },
- {
-  "name": "San Felice Analisi Cliniche S.R.L",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "VIA MIRABELLA ECLANO n° 27",
-  "postal_code": "00132",
-  "latitude": 41.89185,
-  "longitude": 12.63168
+  "longitude": 12.5673662,
+  "geo_precision": "esatta"
  },
  {
   "name": "San Michele Arcangelo Spa",
@@ -1737,7 +1140,8 @@
   "address": "Via Dei Sestili 18",
   "postal_code": "00174",
   "latitude": 41.8632561,
-  "longitude": 12.5458747
+  "longitude": 12.5458747,
+  "geo_precision": "esatta"
  },
  {
   "name": "Servizi Intercomunali",
@@ -1747,7 +1151,8 @@
   "address": "Via Casilina 1750",
   "postal_code": "00133",
   "latitude": 41.86409219999999,
-  "longitude": 12.6659604
+  "longitude": 12.6659604,
+  "geo_precision": "esatta"
  },
  {
   "name": "Alessandrino",
@@ -1757,7 +1162,8 @@
   "address": "Via delle Susine, 87",
   "postal_code": "00172",
   "latitude": 41.880301,
-  "longitude": 12.5794595
+  "longitude": 12.5794595,
+  "geo_precision": "esatta"
  },
  {
   "name": "Dott.Ssa Strati Maria",
@@ -1767,77 +1173,8 @@
   "address": "Via Casale del Finocchio 2",
   "postal_code": "00132",
   "latitude": 41.8636955,
-  "longitude": 12.691495
- },
- {
-  "name": "Studio Diagnostico Ciamarra 2000 S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "viale bruno rizzieri 203",
-  "postal_code": "00173",
-  "latitude": 41.8529393,
-  "longitude": 12.5902903
- },
- {
-  "name": "Studio Radiodiagnostico Dr. Vincenzo Giovinazzo S.N.C.",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Cipriano Facchinetti 129",
-  "postal_code": "00159",
-  "latitude": 41.905956,
-  "longitude": 12.5498251
- },
- {
-  "name": "Studio Radiologico Casilino Srl",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Piazza San Felice Da Cantalice, 12",
-  "postal_code": "00172",
-  "latitude": 41.8768696,
-  "longitude": 12.5662212
- },
- {
-  "name": "Struttura Ambulatoriale Studio Radiologico Di C. E G. Parola Srl",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via del Fuoco Sacro 136",
-  "postal_code": "00133",
-  "latitude": 41.8659048,
-  "longitude": 12.643706
- },
- {
-  "name": "Studio Radiologico Guerrisi S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Tiburtina 572",
-  "postal_code": "00159",
-  "latitude": 41.9085274,
-  "longitude": 12.5434861
- },
- {
-  "name": "Studio Radiologico Minerva Srl",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "via a aspertini 115",
-  "postal_code": "00133",
-  "latitude": 41.8756415,
-  "longitude": 12.6273429
- },
- {
-  "name": "Studio Radiologico Pantaray",
-  "type": "Ambulatorio",
-  "asl": "102 RM/B",
-  "municipality": "Roma",
-  "address": "Via Dei Castani 170",
-  "postal_code": "00171",
-  "latitude": 41.8863007,
-  "longitude": 12.5662862
+  "longitude": 12.691495,
+  "geo_precision": "esatta"
  },
  {
   "name": "Te.Ri.",
@@ -1847,7 +1184,8 @@
   "address": "via Renato Simoni 31",
   "postal_code": "00157",
   "latitude": 41.9092302,
-  "longitude": 12.5388601
+  "longitude": 12.5388601,
+  "geo_precision": "esatta"
  },
  {
   "name": "Villa Alba Roma - Via Casilina",
@@ -1857,7 +1195,8 @@
   "address": "Via Casilina, 1290",
   "postal_code": "00133",
   "latitude": 41.8639521,
-  "longitude": 12.6069407
+  "longitude": 12.6069407,
+  "geo_precision": "esatta"
  },
  {
   "name": "Villa Tuscolana S.R.L.",
@@ -1867,7 +1206,8 @@
   "address": "Circonvallazione Tuscolana 16",
   "postal_code": "00174",
   "latitude": 41.85206,
-  "longitude": 12.569
+  "longitude": 12.569,
+  "geo_precision": "esatta"
  },
  {
   "name": "Dott. Luigi Zangrilli",
@@ -1877,7 +1217,8 @@
   "address": "via dei Castani 170",
   "postal_code": "00171",
   "latitude": 41.8863007,
-  "longitude": 12.5662862
+  "longitude": 12.5662862,
+  "geo_precision": "esatta"
  },
  {
   "name": "Poliambulatorio Specialistico",
@@ -1887,47 +1228,8 @@
   "address": "Via Accademia degli Agiati n.65",
   "postal_code": "00147",
   "latitude": 41.8506302,
-  "longitude": 12.4906912
- },
- {
-  "name": "Alemar Immagini Diagnostiche S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via accademia degli agiati, 67",
-  "postal_code": "00147",
-  "latitude": 41.85069,
-  "longitude": 12.49044
- },
- {
-  "name": "Analisi Cliniche Dr. Natalini Riccardo",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "via teano 233",
-  "postal_code": "00177",
-  "latitude": 41.8895367,
-  "longitude": 12.55014
- },
- {
-  "name": "Struttura Ambulatoriale Analisi Cliniche Malatesta Sas Di Donato Piccolelli",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Renzo Da Ceri 196",
-  "postal_code": "00176",
-  "latitude": 41.88669489999999,
-  "longitude": 12.5384647
- },
- {
-  "name": "Analisi Cliniche Pavese Srl",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Viale Cesare Pavese n.410",
-  "postal_code": "00144",
-  "latitude": 41.8182363,
-  "longitude": 12.4681678
+  "longitude": 12.4906912,
+  "geo_precision": "esatta"
  },
  {
   "name": "Bioroma Srl",
@@ -1937,7 +1239,8 @@
   "address": "Via Pisino 159H",
   "postal_code": "00177",
   "latitude": 41.8991699,
-  "longitude": 12.5602053
+  "longitude": 12.5602053,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Biotest Tuscolo Srl",
@@ -1947,7 +1250,8 @@
   "address": "Via Olevano Romano 220",
   "postal_code": "00171",
   "latitude": 41.8911457,
-  "longitude": 12.5554878
+  "longitude": 12.5554878,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Bompiani S.R.L.",
@@ -1957,7 +1261,8 @@
   "address": "Via Benedetto Bompiani 20",
   "postal_code": "00147",
   "latitude": 41.8584274,
-  "longitude": 12.5037126
+  "longitude": 12.5037126,
+  "geo_precision": "esatta"
  },
  {
   "name": "C.R.C. Balbuzie Srl",
@@ -1967,7 +1272,8 @@
   "address": "Viale Beethoven 56",
   "postal_code": "00144",
   "latitude": 41.8320356,
-  "longitude": 12.4660497
+  "longitude": 12.4660497,
+  "geo_precision": "esatta"
  },
  {
   "name": "Caffaro Fisiokinesiterapico Srl",
@@ -1977,37 +1283,8 @@
   "address": "via Caffaro 127 - 133",
   "postal_code": "00154",
   "latitude": 41.86649999999999,
-  "longitude": 12.48588
- },
- {
-  "name": "Can.Bi.As. Laboratorio Analisi Cliniche Caravaggio Srl",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Accademia Degli Agiati N.65",
-  "postal_code": "00147",
-  "latitude": 41.8506302,
-  "longitude": 12.4906912
- },
- {
-  "name": "Presidio Di Diagnostica Di Laboratorio",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Cina n. 42",
-  "postal_code": "00144",
-  "latitude": 41.8157842,
-  "longitude": 12.4369762
- },
- {
-  "name": "Cedilab (Laboratorio Generale Di Base)",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Cerreto Di Spoleto, 9",
-  "postal_code": "00181",
-  "latitude": 41.8772496,
-  "longitude": 12.5258225
+  "longitude": 12.48588,
+  "geo_precision": "esatta"
  },
  {
   "name": "Casa Santa Rosa",
@@ -2017,17 +1294,8 @@
   "address": "Via Appia Antica, 203",
   "postal_code": "00178",
   "latitude": 41.84554,
-  "longitude": 12.52798
- },
- {
-  "name": "Centro Diagnostico S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via F. A. Pigafetta, 1",
-  "postal_code": "00154",
-  "latitude": 41.87012379999999,
-  "longitude": 12.4845546
+  "longitude": 12.52798,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ce.I.S. Don Mario Picchi \"Via Ambrosini\"",
@@ -2037,7 +1305,8 @@
   "address": "Via Attilio Ambrosini 129",
   "postal_code": "00147",
   "latitude": 41.8498957,
-  "longitude": 12.4909531
+  "longitude": 12.4909531,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Regionale S. Alessio Margherita Di Savoia Per I Ciechi",
@@ -2047,7 +1316,8 @@
   "address": "Viale Carlo Tommaso Odescalchi, 38",
   "postal_code": "00147",
   "latitude": 41.8564806,
-  "longitude": 12.5006576
+  "longitude": 12.5006576,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Ricerche Patologia Clinica",
@@ -2057,37 +1327,8 @@
   "address": "Viale Città d' Europa 664",
   "postal_code": "00144",
   "latitude": 41.82022509999999,
-  "longitude": 12.4515582
- },
- {
-  "name": "Struttura Ambulatoriale Cer.Lab. S.R.L. Laboratorio Analisi",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Cerveteri n 14",
-  "postal_code": "00183",
-  "latitude": 41.8817154,
-  "longitude": 12.5123435
- },
- {
-  "name": "Struttura Ambulatoriale Cer.Lab. S.R.L. Dialisi",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Vicolo Tuscolano n. 28",
-  "postal_code": "00181",
-  "latitude": 41.8672142,
-  "longitude": 12.5388639
- },
- {
-  "name": "Laboratorio Analisi Cliniche",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Sermoneta 14-16",
-  "postal_code": "00179",
-  "latitude": 41.867468,
-  "longitude": 12.5312709
+  "longitude": 12.4515582,
+  "geo_precision": "esatta"
  },
  {
   "name": "Clinica Latina S.P.A.",
@@ -2097,7 +1338,8 @@
   "address": "Via Vulci N. 16",
   "postal_code": "00183",
   "latitude": 41.8776264,
-  "longitude": 12.5041285
+  "longitude": 12.5041285,
+  "geo_precision": "esatta"
  },
  {
   "name": "Comunita' Casa D'Oro",
@@ -2107,7 +1349,8 @@
   "address": "Vicolo Casilino N. 5",
   "postal_code": "00177",
   "latitude": 41.8803561,
-  "longitude": 12.5431131
+  "longitude": 12.5431131,
+  "geo_precision": "esatta"
  },
  {
   "name": "Diaverum Italia S.R.L. - Roma",
@@ -2117,7 +1360,8 @@
   "address": "Via Vincenzo cerulli n. 2/b",
   "postal_code": "00144",
   "latitude": 41.82470379999999,
-  "longitude": 12.4912308
+  "longitude": 12.4912308,
+  "geo_precision": "esatta"
  },
  {
   "name": "Dr. Gellini Massimo",
@@ -2127,7 +1371,8 @@
   "address": "Piazza Sulmana 4",
   "postal_code": "00182",
   "latitude": 41.882981,
-  "longitude": 12.5133525
+  "longitude": 12.5133525,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ematolab Snc",
@@ -2137,7 +1382,8 @@
   "address": "via francesco laparelli 64/66",
   "postal_code": "00176",
   "latitude": 41.8797494,
-  "longitude": 12.5394753
+  "longitude": 12.5394753,
+  "geo_precision": "esatta"
  },
  {
   "name": "Esperanto",
@@ -2147,7 +1393,8 @@
   "address": "Viale dell'Esperanto 58",
   "postal_code": "00144",
   "latitude": 41.8268246,
-  "longitude": 12.4627731
+  "longitude": 12.4627731,
+  "geo_precision": "esatta"
  },
  {
   "name": "Fisio Europa S.N.C. Di Carlo Bianco & C.",
@@ -2157,7 +1404,8 @@
   "address": "Viale Dell'Umanesimo 308",
   "postal_code": "00144",
   "latitude": 41.8279536,
-  "longitude": 12.4610203
+  "longitude": 12.4610203,
+  "geo_precision": "esatta"
  },
  {
   "name": "Fisio.Cast S.R.L. Ambulatorio",
@@ -2167,7 +1415,8 @@
   "address": "Via Taranto 90",
   "postal_code": "00182",
   "latitude": 41.8840779,
-  "longitude": 12.5163365
+  "longitude": 12.5163365,
+  "geo_precision": "esatta"
  },
  {
   "name": "Fisiokinesiterapia Srl",
@@ -2177,7 +1426,8 @@
   "address": "Via Altavilla Irpina 17",
   "postal_code": "00177",
   "latitude": 41.89073,
-  "longitude": 12.55183
+  "longitude": 12.55183,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Fisionir",
@@ -2187,7 +1437,8 @@
   "address": "Via Leonardo Umile 33",
   "postal_code": "00144",
   "latitude": 41.8066269,
-  "longitude": 12.444949
+  "longitude": 12.444949,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Fisiosemeria Srl",
@@ -2197,7 +1448,8 @@
   "address": "Via Guglielmo Ciamarra, 34",
   "postal_code": "00154",
   "latitude": 41.86854049999999,
-  "longitude": 12.4940999
+  "longitude": 12.4940999,
+  "geo_precision": "esatta"
  },
  {
   "name": "Fondazione Santa Lucia Irccs - Celebro Lesioni Gravi",
@@ -2207,7 +1459,8 @@
   "address": "Via Ardeatina 306",
   "postal_code": "00179",
   "latitude": 41.84321,
-  "longitude": 12.51553
+  "longitude": 12.51553,
+  "geo_precision": "esatta"
  },
  {
   "name": "Gabinetto Fisiokinesiterapia Coriolano S.R.L.",
@@ -2217,17 +1470,8 @@
   "address": "Via Coriolano 40",
   "postal_code": "00181",
   "latitude": 41.8731369,
-  "longitude": 12.5274168
- },
- {
-  "name": "Presidio Di Laboratorio Gamma Di Luca Marino Snc",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Francesco Patrizio da Cherso, 10",
-  "postal_code": "00143",
-  "latitude": 41.8224782,
-  "longitude": 12.5076176
+  "longitude": 12.5274168,
+  "geo_precision": "esatta"
  },
  {
   "name": "Italo American Ortopedic Srl",
@@ -2237,47 +1481,8 @@
   "address": "Via Cividale del Friuli n.7a",
   "postal_code": "00183",
   "latitude": 41.87717,
-  "longitude": 12.51727
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Analisi Cliniche Preneste Srl",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "via prenestina 240",
-  "postal_code": "00176",
-  "latitude": 41.89239999999999,
-  "longitude": 12.54042
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Tre Pini Srl",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Ascanio Vitozzi 50",
-  "postal_code": "00128",
-  "latitude": 41.7859882,
-  "longitude": 12.4311948
- },
- {
-  "name": "Laboratorio Analisi Zaffino S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "via mirandola 29",
-  "postal_code": "00182",
-  "latitude": 41.8818685,
-  "longitude": 12.5241117
- },
- {
-  "name": "Laboratorio Analisi",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Ostiense 38 F/G/H",
-  "postal_code": "00154",
-  "latitude": 41.8734064,
-  "longitude": 12.4801917
+  "longitude": 12.51727,
+  "geo_precision": "esatta"
  },
  {
   "name": "Maz Medical",
@@ -2287,7 +1492,8 @@
   "address": "Via Pietro Sensini 38 - 46",
   "postal_code": "00176",
   "latitude": 41.8835564,
-  "longitude": 12.5359456
+  "longitude": 12.5359456,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Medical Acta - Srl Unipersonale",
@@ -2297,7 +1503,8 @@
   "address": "viale della serenissima 22",
   "postal_code": "00177",
   "latitude": 41.8955734,
-  "longitude": 12.5591481
+  "longitude": 12.5591481,
+  "geo_precision": "esatta"
  },
  {
   "name": "Medical Research S.R.L.",
@@ -2307,7 +1514,8 @@
   "address": "Via Teodoro Mommsen 45",
   "postal_code": "00179",
   "latitude": 41.867129,
-  "longitude": 12.5279131
+  "longitude": 12.5279131,
+  "geo_precision": "esatta"
  },
  {
   "name": "Messana Srl",
@@ -2317,7 +1525,8 @@
   "address": "Via Gallia, 60",
   "postal_code": "00183",
   "latitude": 41.88125429999999,
-  "longitude": 12.5021774
+  "longitude": 12.5021774,
+  "geo_precision": "esatta"
  },
  {
   "name": "Mr3000 Srl",
@@ -2327,7 +1536,8 @@
   "address": "via Raffaele De Cesare 6",
   "postal_code": "00179",
   "latitude": 41.8735394,
-  "longitude": 12.5239674
+  "longitude": 12.5239674,
+  "geo_precision": "esatta"
  },
  {
   "name": "Pol.Rio Polisp.Co Madonna Della Fiducia",
@@ -2337,7 +1547,8 @@
   "address": "via Mantellini, 3",
   "postal_code": "00179",
   "latitude": 41.874,
-  "longitude": 12.51673
+  "longitude": 12.51673,
+  "geo_precision": "esatta"
  },
  {
   "name": "Nike 85 Srl",
@@ -2347,17 +1558,8 @@
   "address": "Via Francesco Patrizio da Cherso, 10",
   "postal_code": "00143",
   "latitude": 41.8224782,
-  "longitude": 12.5076176
- },
- {
-  "name": "Nuova Clinica Annunziatella - Centro Dialisi Ambulatoriale",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Meropia 124",
-  "postal_code": "00147",
-  "latitude": 41.8552766,
-  "longitude": 12.5058037
+  "longitude": 12.5076176,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Piazza Giuseppe Cardinali",
@@ -2367,17 +1569,8 @@
   "address": "Piazza G. Cardinali 15",
   "postal_code": "00177",
   "latitude": 41.8747056,
-  "longitude": 12.5451831
- },
- {
-  "name": "Visite Specialistiche - Diagnostica Per Immagini E Di Laboratorio -Recupero E Ribilitazione - Panigea",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Delle Cave 84/86",
-  "postal_code": "00166",
-  "latitude": 41.8715598,
-  "longitude": 12.5308497
+  "longitude": 12.5451831,
+  "geo_precision": "esatta"
  },
  {
   "name": "Polispecialistica Garda",
@@ -2387,7 +1580,8 @@
   "address": "Viale Caduti Della Resistenza, 79",
   "postal_code": "00128",
   "latitude": 41.7897726,
-  "longitude": 12.4462354
+  "longitude": 12.4462354,
+  "geo_precision": "esatta"
  },
  {
   "name": "Praximedica S.R.L.",
@@ -2397,7 +1591,8 @@
   "address": "via Magnagrecia 117",
   "postal_code": "00183",
   "latitude": 41.88083719999999,
-  "longitude": 12.5083128
+  "longitude": 12.5083128,
+  "geo_precision": "esatta"
  },
  {
   "name": "Premedica",
@@ -2407,37 +1602,8 @@
   "address": "Via Taranto 18",
   "postal_code": "00182",
   "latitude": 41.8849425,
-  "longitude": 12.5123021
- },
- {
-  "name": "Radiologia Cavalcanti S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "via Taranto 58",
-  "postal_code": "00182",
-  "latitude": 41.88451,
-  "longitude": 12.5148
- },
- {
-  "name": "Struttura Ambulatoriale Radiologia Dr. Diotallevi Srl",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Prenestina, 321",
-  "postal_code": "00177",
-  "latitude": 41.893902,
-  "longitude": 12.5504641
- },
- {
-  "name": "Struttura Ambulatoriale Radiologia E Diagnosi Clinica Srl - Unipersonale",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Viale della Serenissima 22",
-  "postal_code": "00177",
-  "latitude": 41.8955734,
-  "longitude": 12.5591481
+  "longitude": 12.5123021,
+  "geo_precision": "esatta"
  },
  {
   "name": "Presidio 1 E 2",
@@ -2447,7 +1613,8 @@
   "address": "Via delle Costellazioni 306",
   "postal_code": "00144",
   "latitude": 41.8155562,
-  "longitude": 12.4486688
+  "longitude": 12.4486688,
+  "geo_precision": "esatta"
  },
  {
   "name": "Società Caffaro s.r.l.",
@@ -2457,17 +1624,8 @@
   "address": "Via Caffaro, 137",
   "postal_code": "00154",
   "latitude": 41.8666373,
-  "longitude": 12.4858446
- },
- {
-  "name": "Rocomar Analisi Cliniche M.Massimo S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Vincenzo Cerulli n. 2/b",
-  "postal_code": "00143",
-  "latitude": 41.82470379999999,
-  "longitude": 12.4912308
+  "longitude": 12.4858446,
+  "geo_precision": "esatta"
  },
  {
   "name": "S.O.Fi.S. Snc Del Dott. S. Ronconi E C.",
@@ -2477,7 +1635,8 @@
   "address": "Via Duccio di Buoninsegna 82",
   "postal_code": "00142",
   "latitude": 41.8298244,
-  "longitude": 12.4911739
+  "longitude": 12.4911739,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Salus 2000 Srl",
@@ -2487,7 +1646,8 @@
   "address": "Via Prenestina, 321",
   "postal_code": "00177",
   "latitude": 41.893902,
-  "longitude": 12.5504641
+  "longitude": 12.5504641,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Studio Di Semeiologia Funzionale Sas",
@@ -2497,57 +1657,8 @@
   "address": "Viale Caduti per la Resistenza 79",
   "postal_code": "00128",
   "latitude": 41.7897726,
-  "longitude": 12.4462354
- },
- {
-  "name": "Studio Diagnostico Amelia Srl",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Appia Nuova 637 637/A",
-  "postal_code": "00179",
-  "latitude": 41.8670788,
-  "longitude": 12.5307494
- },
- {
-  "name": "Studio Fisioterapico Morgagni S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "via Sermoneta 20/28",
-  "postal_code": "00179",
-  "latitude": 41.86794829999999,
-  "longitude": 12.5310992
- },
- {
-  "name": "Studio Medico Diagnostico Anglona Fkt",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Acqua Bullicante 312",
-  "postal_code": "00177",
-  "latitude": 41.8916045,
-  "longitude": 12.5420072
- },
- {
-  "name": "Presidio Di Recupero E Rieducazione Funzionale - Laboratorio Analisi - Branche Specialistiche",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Tiberio Imperatore 19",
-  "postal_code": "00145",
-  "latitude": 41.8529845,
-  "longitude": 12.4860973
- },
- {
-  "name": "Struttura Ambulatoriale Studio Radiologico Spinaceto Srl",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Viale Eroi Di Cefalonia 203",
-  "postal_code": "00128",
-  "latitude": 41.78357,
-  "longitude": 12.43623
+  "longitude": 12.4462354,
+  "geo_precision": "esatta"
  },
  {
   "name": "Policlinico Campus Biomedico",
@@ -2557,27 +1668,8 @@
   "address": "Via Alvaro del Portillo 200",
   "postal_code": "00128",
   "latitude": 41.7699889,
-  "longitude": 12.4668242
- },
- {
-  "name": "Poliambulatorio Ve. Di Radiologica",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Pietro sensini, 38-46",
-  "postal_code": "00176",
-  "latitude": 41.8835564,
-  "longitude": 12.5359456
- },
- {
-  "name": "Servizio Di Assistenza Residenziale, Semiresidenziale E Non Residenziale",
-  "type": "Ambulatorio",
-  "asl": "103 RM/C",
-  "municipality": "Roma",
-  "address": "Via Ardeatina 304",
-  "postal_code": "00179",
-  "latitude": 41.84337000000001,
-  "longitude": 12.51548
+  "longitude": 12.4668242,
+  "geo_precision": "esatta"
  },
  {
   "name": "Acedit 2003 Srl",
@@ -2587,87 +1679,8 @@
   "address": "via massa marittima 10-20",
   "postal_code": "00148",
   "latitude": 41.8423826,
-  "longitude": 12.4374366
- },
- {
-  "name": "Struttura Ambulatoriale Analisi Cliniche E Radiologia Dott.Ri Pizzo E Salvatori Srl",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via Laura Mantegazza 25",
-  "postal_code": "00152",
-  "latitude": 41.8713937,
-  "longitude": 12.4553704
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Analisi Nievo",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via Ippolito Nievo 62",
-  "postal_code": "00153",
-  "latitude": 41.8777202,
-  "longitude": 12.4674633
- },
- {
-  "name": "Analisi Cliniche Portuense Srl",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via Portuense, 561",
-  "postal_code": "00149",
-  "latitude": 41.855751,
-  "longitude": 12.4455841
- },
- {
-  "name": "Analisi Cliniche Prospero Colonna S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Corso Duca Di Genova,26",
-  "postal_code": "00121",
-  "latitude": 41.733188,
-  "longitude": 12.2741818
- },
- {
-  "name": "Poliambulatorio E Diagnostica Strumentale",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via A. Lo Surdo 42",
-  "postal_code": "00146",
-  "latitude": 41.8630372,
-  "longitude": 12.4702431
- },
- {
-  "name": "Anffas Ostia Onlus Semiresidenziale - Domiciliare - Ambulatoriale Non Residenziale - Centro Gr",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via Del Sommergibile, Snc",
-  "postal_code": "00121",
-  "latitude": 41.9027835,
-  "longitude": 12.4963655
- },
- {
-  "name": "Anffas Roma Onlus/Ambulatorio-Domiciliare - Semiresidenziale Via Aurelia Antica",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via Aurelia Antica 269",
-  "postal_code": "00165",
-  "latitude": 41.88939,
-  "longitude": 12.43873
- },
- {
-  "name": "Anffas Roma Onlus/Semiresidenziale Via Vitellia",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via Vitellia n. 74",
-  "postal_code": "00152",
-  "latitude": 41.8804827,
-  "longitude": 12.4502631
+  "longitude": 12.4374366,
+  "geo_precision": "esatta"
  },
  {
   "name": "Asklepion Srl",
@@ -2677,7 +1690,8 @@
   "address": "Via Di Villa Bonelli 36",
   "postal_code": "00146",
   "latitude": 41.8508578,
-  "longitude": 12.4576774
+  "longitude": 12.4576774,
+  "geo_precision": "esatta"
  },
  {
   "name": "Axa Medica Srl",
@@ -2687,7 +1701,8 @@
   "address": "Via Pindaro, 28/N",
   "postal_code": "00125",
   "latitude": 41.757301,
-  "longitude": 12.3664209
+  "longitude": 12.3664209,
+  "geo_precision": "esatta"
  },
  {
   "name": "Bpl Sanitaria E Ambiente Srl",
@@ -2697,17 +1712,8 @@
   "address": "via Oderisi da Gubbio 10",
   "postal_code": "00146",
   "latitude": 41.8688859,
-  "longitude": 12.466873
- },
- {
-  "name": "C.R.S.Analisi Srl",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via Capo Soprano 9",
-  "postal_code": "00122",
-  "latitude": 41.73395,
-  "longitude": 12.28636
+  "longitude": 12.466873,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Cardiolab Monteverde Vecchio Srl",
@@ -2717,7 +1723,8 @@
   "address": "Via Anton Giulio Barrili 68",
   "postal_code": "00152",
   "latitude": 41.88082199999999,
-  "longitude": 12.4608106
+  "longitude": 12.4608106,
+  "geo_precision": "esatta"
  },
  {
   "name": "Casa Santa Maria Della Provvidenza",
@@ -2727,27 +1734,8 @@
   "address": "Via della Nocetta, 23",
   "postal_code": "00164",
   "latitude": 41.8801758,
-  "longitude": 12.4389378
- },
- {
-  "name": "Centro Diagnostica Lido S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via Capo Soprano-21",
-  "postal_code": "00122",
-  "latitude": 41.7343887,
-  "longitude": 12.286657
- },
- {
-  "name": "Struttura Ambulatoria Centro Fisioterapico Lido Di Ostia Srl",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Corso Duca di Genova, 26",
-  "postal_code": "00121",
-  "latitude": 41.733188,
-  "longitude": 12.2741818
+  "longitude": 12.4389378,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Centro Medico Fisiokinesiterapico S.R.L.",
@@ -2757,17 +1745,8 @@
   "address": "Via Gabriele Rossetti 50",
   "postal_code": "00152",
   "latitude": 41.8826281,
-  "longitude": 12.4614399
- },
- {
-  "name": "Centro Di Radiologia",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via Antonino Lo Surdo 42",
-  "postal_code": "00146",
-  "latitude": 41.8630372,
-  "longitude": 12.4702431
+  "longitude": 12.4614399,
+  "geo_precision": "esatta"
  },
  {
   "name": "Coes Onlus",
@@ -2777,7 +1756,8 @@
   "address": "Via Della Nocetta 162",
   "postal_code": "00164",
   "latitude": 41.88379,
-  "longitude": 12.43128
+  "longitude": 12.43128,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Diagnostika Srl",
@@ -2787,7 +1767,8 @@
   "address": "Via madre Colomba Gabriel 11",
   "postal_code": "00126",
   "latitude": 41.7806105,
-  "longitude": 12.3465893
+  "longitude": 12.3465893,
+  "geo_precision": "esatta"
  },
  {
   "name": "Dr. Andrea Giudice Cardiologo",
@@ -2797,27 +1778,8 @@
   "address": "via oderisi da gubbio 167",
   "postal_code": "00146",
   "latitude": 41.8644907,
-  "longitude": 12.4650024
- },
- {
-  "name": "E.C.A.S.S. Via Radicondoli N 23 (Semiresidenziali)",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via Radicondoli N 23",
-  "postal_code": "00146",
-  "latitude": 41.8489661,
-  "longitude": 12.4585628
- },
- {
-  "name": "E.C.A.S.S. Via Bagno A Ripoli 33 (Semiresidenziali)",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via Bagno A Ripoli 33",
-  "postal_code": "00146",
-  "latitude": 41.8494122,
-  "longitude": 12.4600117
+  "longitude": 12.4650024,
+  "geo_precision": "esatta"
  },
  {
   "name": "E.C.A.S.S. Via Murlo 13 (Residenziali)",
@@ -2827,17 +1789,8 @@
   "address": "Via Murlo 13",
   "postal_code": "00146",
   "latitude": 41.848691,
-  "longitude": 12.4592963
- },
- {
-  "name": "E.C.A.S.S. Via Della Magliana 279 (Semiresidenziali)",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via Della Magliana 279",
-  "postal_code": "00146",
-  "latitude": 41.8445938,
-  "longitude": 12.4560874
+  "longitude": 12.4592963,
+  "geo_precision": "esatta"
  },
  {
   "name": "E.C.A.S.S. Via Della Magliana 256 (Residenziale)",
@@ -2847,7 +1800,8 @@
   "address": "Via Della Magliana 256",
   "postal_code": "00146",
   "latitude": 41.8463529,
-  "longitude": 12.4569745
+  "longitude": 12.4569745,
+  "geo_precision": "esatta"
  },
  {
   "name": "E.C.A.S.S. Via Bagno A Ripoli 36 (Non Residenziale)",
@@ -2857,7 +1811,8 @@
   "address": "Via Bagno A Ripoli 36",
   "postal_code": "00146",
   "latitude": 41.8494349,
-  "longitude": 12.4599562
+  "longitude": 12.4599562,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ecorad Srl",
@@ -2867,7 +1822,8 @@
   "address": "Via Dei Traghetti 22",
   "postal_code": "00121",
   "latitude": 41.7357231,
-  "longitude": 12.2795613
+  "longitude": 12.2795613,
+  "geo_precision": "esatta"
  },
  {
   "name": "European Hospital S.P.A.",
@@ -2877,7 +1833,8 @@
   "address": "Via Portuense, 700",
   "postal_code": "00148",
   "latitude": 41.85256,
-  "longitude": 12.43594
+  "longitude": 12.43594,
+  "geo_precision": "esatta"
  },
  {
   "name": "Fi.Ra.L. S.R.L.",
@@ -2887,7 +1844,8 @@
   "address": "via Lari 18",
   "postal_code": "00146",
   "latitude": 41.849365,
-  "longitude": 12.46115
+  "longitude": 12.46115,
+  "geo_precision": "esatta"
  },
  {
   "name": "Fisiomare Srl",
@@ -2897,7 +1855,8 @@
   "address": "Via dei navicellari 16/a",
   "postal_code": "00122",
   "latitude": 41.7290767,
-  "longitude": 12.281095
+  "longitude": 12.281095,
+  "geo_precision": "esatta"
  },
  {
   "name": "Fisioroma Sas Di Riccardo Colombo",
@@ -2907,7 +1866,8 @@
   "address": "Via Gaetano Fuggetta, 47",
   "postal_code": "00149",
   "latitude": 41.85129860000001,
-  "longitude": 12.452079
+  "longitude": 12.452079,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Fisioter Solemar S.R.L.",
@@ -2917,7 +1877,8 @@
   "address": "Via Raffaele De Cosa 34",
   "postal_code": "00122",
   "latitude": 41.7377765,
-  "longitude": 12.2845827
+  "longitude": 12.2845827,
+  "geo_precision": "esatta"
  },
  {
   "name": "Padiglione Maraini - Frascara",
@@ -2927,37 +1888,8 @@
   "address": "Via Bernardino Ramazzini 31",
   "postal_code": "00151",
   "latitude": 41.86399249999999,
-  "longitude": 12.4500837
- },
- {
-  "name": "Gabinetto Fisioterapico Ri.Fi. S.A.S.",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Fiumicino",
-  "address": "via della Scafa 144 B/C/D",
-  "postal_code": "00054",
-  "latitude": 41.7710732,
-  "longitude": 12.2564887
- },
- {
-  "name": "Studio Odontoiatrico Del Dott. Giuva Leandro",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via Ferdinando Acton, 5",
-  "postal_code": "00122",
-  "latitude": 41.732266,
-  "longitude": 12.2901129
- },
- {
-  "name": "Laboratorio Analisi",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Fiumicino",
-  "address": "Via Eucario Silber, 7/C",
-  "postal_code": "00054",
-  "latitude": 41.91622,
-  "longitude": 12.20005
+  "longitude": 12.4500837,
+  "geo_precision": "esatta"
  },
  {
   "name": "Villa Delle Magnolie- Il Soggiorno S.R.L.",
@@ -2967,17 +1899,8 @@
   "address": "Via delle Vigne 96",
   "postal_code": "00148",
   "latitude": 41.8404167,
-  "longitude": 12.4220545
- },
- {
-  "name": "Istituto Analisi Cliniche I.A.C. Srl",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via dei Navicellari 16/a",
-  "postal_code": "00122",
-  "latitude": 41.7290767,
-  "longitude": 12.281095
+  "longitude": 12.4220545,
+  "geo_precision": "esatta"
  },
  {
   "name": "Istituto Di Fisiokinesiterapia S.R.L.",
@@ -2987,7 +1910,8 @@
   "address": "Via Desiderato Pietri 111/115",
   "postal_code": "00122",
   "latitude": 41.7271874,
-  "longitude": 12.2920077
+  "longitude": 12.2920077,
+  "geo_precision": "esatta"
  },
  {
   "name": "Presidio 1",
@@ -2997,27 +1921,8 @@
   "address": "Via Clarice Marescotti 7",
   "postal_code": "00151",
   "latitude": 41.86430439999999,
-  "longitude": 12.4473248
- },
- {
-  "name": "Poliambulatorio Specialistico E Lab Analisi",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via Lari 28/30",
-  "postal_code": "00146",
-  "latitude": 41.8493076,
-  "longitude": 12.4610994
- },
- {
-  "name": "Struttura Ambulatoriale Labanalisi Monteverde Srl",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via Maurizio Quadrio 30",
-  "postal_code": "00152",
-  "latitude": 41.8817579,
-  "longitude": 12.4616466
+  "longitude": 12.4473248,
+  "geo_precision": "esatta"
  },
  {
   "name": "Laboratori Medicina Industria Ambiente M.I.L.A. Srl",
@@ -3027,37 +1932,8 @@
   "address": "Via della Casetta Mattei 153/d",
   "postal_code": "00148",
   "latitude": 41.8561742,
-  "longitude": 12.419999
- },
- {
-  "name": "Laboratorio Analisi Cliniche Dr.Giordani &C. S.A.S.",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Fiumicino",
-  "address": "via Giuseppe Bignami, 47/49",
-  "postal_code": "00054",
-  "latitude": 41.7678453,
-  "longitude": 12.2325082
- },
- {
-  "name": "Laboratorio Diagnostico Bravetta S.A.S.",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via dei Capasso, 52 - 54",
-  "postal_code": "00164",
-  "latitude": 41.8839142,
-  "longitude": 12.4258052
- },
- {
-  "name": "Laboratorio Gianicolense Srl",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Viale dei Colli Portuensi 547",
-  "postal_code": "00151",
-  "latitude": 41.8589961,
-  "longitude": 12.4435006
+  "longitude": 12.419999,
+  "geo_precision": "esatta"
  },
  {
   "name": "Marilab - Griba 2 - Patologia Clinica E Radioimmunologia",
@@ -3067,7 +1943,8 @@
   "address": "Viale Paolo Orlando, 52",
   "postal_code": "00122",
   "latitude": 41.7307295,
-  "longitude": 12.2859806
+  "longitude": 12.2859806,
+  "geo_precision": "esatta"
  },
  {
   "name": "Marilab Acilia",
@@ -3077,7 +1954,8 @@
   "address": "Via di Acilia 71a-Via Valle Porcina 3a",
   "postal_code": "00125",
   "latitude": 41.7818418,
-  "longitude": 12.3664791
+  "longitude": 12.3664791,
+  "geo_precision": "esatta"
  },
  {
   "name": "Marilab Center (Via Zambrini)",
@@ -3087,7 +1965,8 @@
   "address": "Viale Alfredo Zambrini, 14",
   "postal_code": "00121",
   "latitude": 41.7367018,
-  "longitude": 12.2685233
+  "longitude": 12.2685233,
+  "geo_precision": "esatta"
  },
  {
   "name": "Marilab Fiumicino",
@@ -3097,7 +1976,8 @@
   "address": "Via Tempio della Fortuna, 44",
   "postal_code": "00054",
   "latitude": 41.76807,
-  "longitude": 12.229703
+  "longitude": 12.229703,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ormolab S.A.S. Di G.Antonacci E C.",
@@ -3107,7 +1987,8 @@
   "address": "Via Gaetano Fuggetta 1",
   "postal_code": "00149",
   "latitude": 41.8523967,
-  "longitude": 12.4515837
+  "longitude": 12.4515837,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ospedale Israelitico+2 Poliambulatori",
@@ -3117,17 +1998,8 @@
   "address": "Via Fulda, 14",
   "postal_code": "00148",
   "latitude": 41.83549,
-  "longitude": 12.42753
- },
- {
-  "name": "Radiologia Fiumicino S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "largo girolamo da montesarchio 17",
-  "postal_code": "00125",
-  "latitude": 41.7844222,
-  "longitude": 12.3642122
+  "longitude": 12.42753,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ricerche Cliniche Clodio Fisiochinesiterapia S.N.C.",
@@ -3137,7 +2009,8 @@
   "address": "Via Francesco Maurolico n. 5",
   "postal_code": "00146",
   "latitude": 41.8641244,
-  "longitude": 12.4712027
+  "longitude": 12.4712027,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ricerche Cliniche Clodio Snc Patologia Clinica",
@@ -3147,17 +2020,8 @@
   "address": "Via S. Boccapaduli 25",
   "postal_code": "00151",
   "latitude": 41.8722865,
-  "longitude": 12.4457723
- },
- {
-  "name": "S.D.I. Studio Diagnostico Impruneta S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via Dell'Impruneta 9 B-C",
-  "postal_code": "00146",
-  "latitude": 41.84705,
-  "longitude": 12.458374
+  "longitude": 12.4457723,
+  "geo_precision": "esatta"
  },
  {
   "name": "Irccs San Raffaele Pisana",
@@ -3167,7 +2031,8 @@
   "address": "Via della Pisana n. 235",
   "postal_code": "00163",
   "latitude": 41.8779966,
-  "longitude": 12.4160002
+  "longitude": 12.4160002,
+  "geo_precision": "esatta"
  },
  {
   "name": "Santa Bonora S.R.L.",
@@ -3177,57 +2042,8 @@
   "address": "Viale Guglielmo Marconi n.° 139",
   "postal_code": "00146",
   "latitude": 41.8581057,
-  "longitude": 12.469587
- },
- {
-  "name": "Struttura Ambulatoriale Studio Di Radiologia E Roentgenterapia Lido Di Ostia",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Corso Duca di Genova 26",
-  "postal_code": "00121",
-  "latitude": 41.733188,
-  "longitude": 12.2741818
- },
- {
-  "name": "Studio Odontoiatrico Del Lido S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Corso Duca Di Genova, 26",
-  "postal_code": "00121",
-  "latitude": 41.733188,
-  "longitude": 12.2741818
- },
- {
-  "name": "Struttura Ambulatoriale Studio Radiologico Dr. Di Stefano Antonino Di Di Giuseppe Rosanna & C. Snc",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Fiumicino",
-  "address": "Via Porto Romano 59 A B C D",
-  "postal_code": "00054",
-  "latitude": 41.7625185,
-  "longitude": 12.231016
- },
- {
-  "name": "Struttura Ambulatoriale Studio Radiologico Fisioterapico Casalpalocco Di R. Ronconi S.A.S",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Piazza Filippo Il Macedone",
-  "postal_code": "00124",
-  "latitude": 41.9027835,
-  "longitude": 12.4963655
- },
- {
-  "name": "Struttura Ambulatoriale Studio Radiologico Fisioterapico Casalpalocco Di R. Ronconi S.A.S",
-  "type": "Ambulatorio",
-  "asl": "104 RM/D",
-  "municipality": "Roma",
-  "address": "Via G. Pian del Carmine, 19 roma",
-  "postal_code": "00124",
-  "latitude": 41.7833256,
-  "longitude": 12.3645181
+  "longitude": 12.469587,
+  "geo_precision": "esatta"
  },
  {
   "name": "Tiap S.R.L.",
@@ -3237,7 +2053,8 @@
   "address": "Via Oderisi da Gubbio n. 224",
   "postal_code": "00146",
   "latitude": 41.863914,
-  "longitude": 12.464537
+  "longitude": 12.464537,
+  "geo_precision": "esatta"
  },
  {
   "name": "R.S.A. Villa Giulia",
@@ -3247,7 +2064,8 @@
   "address": "Via delle Vigne 92",
   "postal_code": "00148",
   "latitude": 41.8400012,
-  "longitude": 12.4222111
+  "longitude": 12.4222111,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Villa Del Lido Srl",
@@ -3257,17 +2075,8 @@
   "address": "Viale Del Lido 3",
   "postal_code": "00122",
   "latitude": 41.7294655,
-  "longitude": 12.2873216
- },
- {
-  "name": "3C+A Centro Di Fisioterapia Srl",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Via Monti Di Primavalle 133/145",
-  "postal_code": "00168",
-  "latitude": 41.9097227,
-  "longitude": 12.4130772
+  "longitude": 12.2873216,
+  "geo_precision": "esatta"
  },
  {
   "name": "Airri Clodio",
@@ -3277,7 +2086,8 @@
   "address": "via Enrico Accinni 20",
   "postal_code": "00195",
   "latitude": 41.91642,
-  "longitude": 12.45319
+  "longitude": 12.45319,
+  "geo_precision": "esatta"
  },
  {
   "name": "Srsr Via Di Valle Della Storta",
@@ -3287,7 +2097,8 @@
   "address": "Via di Valle della Storta, 6",
   "postal_code": "00123",
   "latitude": 42.0101369,
-  "longitude": 12.3788767
+  "longitude": 12.3788767,
+  "geo_precision": "esatta"
  },
  {
   "name": "Srsr Via Enrico Bondi",
@@ -3297,27 +2108,8 @@
   "address": "Via Enrico Bondi, 42",
   "postal_code": "00166",
   "latitude": 41.9039249,
-  "longitude": 12.389369
- },
- {
-  "name": "Analisi Cliniche Aima Srl - Poliambulatorio",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Via Bernardino Telesio 23",
-  "postal_code": "00195",
-  "latitude": 41.9111771,
-  "longitude": 12.4511317
- },
- {
-  "name": "Struttura Ambulatoriale Analisi Cliniche Cimatti Srl",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Viale Angelico,39",
-  "postal_code": "00195",
-  "latitude": 41.91577119999999,
-  "longitude": 12.458138
+  "longitude": 12.389369,
+  "geo_precision": "esatta"
  },
  {
   "name": "Antea Associazione O.N.L.U.S.",
@@ -3327,7 +2119,8 @@
   "address": "Piazza Santa Maria della Pieta n. 5",
   "postal_code": "00135",
   "latitude": 41.9407108,
-  "longitude": 12.4191006
+  "longitude": 12.4191006,
+  "geo_precision": "esatta"
  },
  {
   "name": "Aurelia Hospital",
@@ -3337,7 +2130,8 @@
   "address": "Via Aurelia, 860",
   "postal_code": "00165",
   "latitude": 41.8857473,
-  "longitude": 12.3998349
+  "longitude": 12.3998349,
+  "geo_precision": "esatta"
  },
  {
   "name": "Biolab Srl",
@@ -3347,7 +2141,8 @@
   "address": "Via Trionfale 6917",
   "postal_code": "00135",
   "latitude": 41.933919,
-  "longitude": 12.4397374
+  "longitude": 12.4397374,
+  "geo_precision": "esatta"
  },
  {
   "name": "Casa Delle Religiose Figlie Di Nostra Signora Del Sacro Cuore Di Issoudun",
@@ -3357,7 +2152,8 @@
   "address": "Via Cardinal Pacca, 16",
   "postal_code": "00165",
   "latitude": 41.89231729999999,
-  "longitude": 12.4308227
+  "longitude": 12.4308227,
+  "geo_precision": "esatta"
  },
  {
   "name": "Nuova Villa Claudia Spa",
@@ -3367,17 +2163,8 @@
   "address": "Via Flaminia Nuova N. 280",
   "postal_code": "00191",
   "latitude": 41.9527007,
-  "longitude": 12.4729066
- },
- {
-  "name": "Clem Fisioterapia E Cosmetologia Srl",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Via della Lucchina 89/91",
-  "postal_code": "00135",
-  "latitude": 41.9584842,
-  "longitude": 12.3999363
+  "longitude": 12.4729066,
+  "geo_precision": "esatta"
  },
  {
   "name": "Via Germanico",
@@ -3387,7 +2174,8 @@
   "address": "via germanico, 198",
   "postal_code": "00192",
   "latitude": 41.9091417,
-  "longitude": 12.463005
+  "longitude": 12.463005,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Costanzo Marcello S.A.S.",
@@ -3397,7 +2185,8 @@
   "address": "P.le delle Medaglie d'Oro 20",
   "postal_code": "00136",
   "latitude": 41.92373,
-  "longitude": 12.44674
+  "longitude": 12.44674,
+  "geo_precision": "esatta"
  },
  {
   "name": "Data Medica Srl",
@@ -3407,27 +2196,8 @@
   "address": "via Ennio Quirino Visconti, 4",
   "postal_code": "00193",
   "latitude": 41.9082962,
-  "longitude": 12.4722721
- },
- {
-  "name": "Struttura Ambulatoriale Diagnostica Medica Piazza Risorgimento S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Piazza Risorgimento, 55",
-  "postal_code": "00192",
-  "latitude": 41.90582,
-  "longitude": 12.45824
- },
- {
-  "name": "Struttura Ambulatoriale Diagnostica Vigna Clara Srl",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Piazza Stefano Jacini 14",
-  "postal_code": "00191",
-  "latitude": 41.949582,
-  "longitude": 12.46557
+  "longitude": 12.4722721,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Diagnostika Vallebona Srl",
@@ -3437,7 +2207,8 @@
   "address": "Via Vallebona 10A",
   "postal_code": "00168",
   "latitude": 41.9323218,
-  "longitude": 12.4193226
+  "longitude": 12.4193226,
+  "geo_precision": "esatta"
  },
  {
   "name": "Dymanic Fisiokinesiterapia Srl",
@@ -3447,7 +2218,8 @@
   "address": "Via Baldo Degli Ubaldi 55",
   "postal_code": "00167",
   "latitude": 41.8986701,
-  "longitude": 12.4317319
+  "longitude": 12.4317319,
+  "geo_precision": "esatta"
  },
  {
   "name": "Fisiokinesiterapia Ponte Milvio S.R.L.",
@@ -3457,7 +2229,8 @@
   "address": "P.Le Ponte Milvio 43",
   "postal_code": "00191",
   "latitude": 41.9375327,
-  "longitude": 12.4661836
+  "longitude": 12.4661836,
+  "geo_precision": "esatta"
  },
  {
   "name": "Fisiokinesiterapico Gregorio Vii S.N.C.",
@@ -3467,7 +2240,8 @@
   "address": "Via Gregorio Vii, 350",
   "postal_code": "00165",
   "latitude": 41.8938953,
-  "longitude": 12.4366144
+  "longitude": 12.4366144,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Fisiomed Srl",
@@ -3477,7 +2251,8 @@
   "address": "Via Sergio I n.32",
   "postal_code": "00165",
   "latitude": 41.8989,
-  "longitude": 12.45011
+  "longitude": 12.45011,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Fisioprati Srl",
@@ -3487,17 +2262,8 @@
   "address": "Via Limbiate 10/12",
   "postal_code": "00135",
   "latitude": 41.94621,
-  "longitude": 12.39119
- },
- {
-  "name": "Gabinetto Radiologico Canitano & C. S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Via Gregorio VII, 350",
-  "postal_code": "00165",
-  "latitude": 41.8938953,
-  "longitude": 12.4366144
+  "longitude": 12.39119,
+  "geo_precision": "esatta"
  },
  {
   "name": "Gamma Srl",
@@ -3507,7 +2273,8 @@
   "address": "via Suor Celestina Donati n°119",
   "postal_code": "00167",
   "latitude": 41.9212885,
-  "longitude": 12.4214499
+  "longitude": 12.4214499,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ambulatorio Medico Chirurgico",
@@ -3517,7 +2284,8 @@
   "address": "Via Casalotti 65P/Q",
   "postal_code": "00166",
   "latitude": 41.9159657,
-  "longitude": 12.3740494
+  "longitude": 12.3740494,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Istituto Custureri Srl",
@@ -3527,27 +2295,8 @@
   "address": "via Aristide Gabelli, 32",
   "postal_code": "00135",
   "latitude": 41.942568,
-  "longitude": 12.4229673
- },
- {
-  "name": "Istituto Don Calabria - Centro Diurno Terapeutico-Riabilitativo \"L'Alberoblu\"",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Via Giambattista Soria 13",
-  "postal_code": "00168",
-  "latitude": 41.9094434,
-  "longitude": 12.41022
- },
- {
-  "name": "Istituto Fisioterapico Srl",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Via Antonio Baiamonti",
-  "postal_code": "00195",
-  "latitude": 41.91443599999999,
-  "longitude": 12.4599904
+  "longitude": 12.4229673,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ospedale Cristo Re Dell' Istituto Figlie Di Nostra Signora Al Monte Calvario",
@@ -3557,97 +2306,8 @@
   "address": "Via Delle Calasanziane, 25",
   "postal_code": "00167",
   "latitude": 41.9182771,
-  "longitude": 12.420847
- },
- {
-  "name": "Laboratorio Analisi - Lab. Aurelia S.R.L. -Dagnostica Per Immagini - Poliambulatorio",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Via Cardinal Parocchi 12/14",
-  "postal_code": "00167",
-  "latitude": 41.8992975,
-  "longitude": 12.4294984
- },
- {
-  "name": "Laboratorio Alessandro Pietravalle S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "via Gregorio VII 172",
-  "postal_code": "00165",
-  "latitude": 41.8962449,
-  "longitude": 12.443769
- },
- {
-  "name": "Laboratorio Analisi ' Agostino Bassi'S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Via Flaminia Vecchia 653",
-  "postal_code": "00100",
-  "latitude": 41.9511238,
-  "longitude": 12.4816318
- },
- {
-  "name": "Diagnostica Di Laboratorio Balduina",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Via della Balduina 28",
-  "postal_code": "00136",
-  "latitude": 41.9146907,
-  "longitude": 12.4422757
- },
- {
-  "name": "Laboratorio Analisi Cliniche Cesano Srl.",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Via Della Stazione Di Cesano 576",
-  "postal_code": "00123",
-  "latitude": 42.07517,
-  "longitude": 12.33836
- },
- {
-  "name": "Laboratorio Analisi Cliniche Dott.Inghirami S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "P.zza dei Giureconsulti n. 27",
-  "postal_code": "00167",
-  "latitude": 41.9021546,
-  "longitude": 12.4251716
- },
- {
-  "name": "Laboratorio Analisi Cliniche Eureka S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "via enrico bondi 80",
-  "postal_code": "00166",
-  "latitude": 41.9029515,
-  "longitude": 12.3884978
- },
- {
-  "name": "Laboratorio Analisi Cliniche - Diagnostica Olgiata Dott. Pedretti",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "via Anton Giulio Bragaglia n°78 e-f",
-  "postal_code": "00123",
-  "latitude": 42.0221716,
-  "longitude": 12.3761142
- },
- {
-  "name": "Laboratorio Analisi Pabi Srl",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Via Giuseppe Ferrari 12",
-  "postal_code": "00195",
-  "latitude": 41.9144981,
-  "longitude": 12.4645054
+  "longitude": 12.420847,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Monterchi Srl",
@@ -3657,7 +2317,8 @@
   "address": "via Montello 14/16",
   "postal_code": "00195",
   "latitude": 41.9183875,
-  "longitude": 12.4628792
+  "longitude": 12.4628792,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Via Achille Papa",
@@ -3667,17 +2328,8 @@
   "address": "Via Achille Papa 22",
   "postal_code": "00195",
   "latitude": 41.9194408,
-  "longitude": 12.4648731
- },
- {
-  "name": "Complesso Polispecialistico Radiologica Romana Srl",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Via della stazione della storta, 12",
-  "postal_code": "00123",
-  "latitude": 42.0025256,
-  "longitude": 12.3817808
+  "longitude": 12.4648731,
+  "geo_precision": "esatta"
  },
  {
   "name": "Radiomedical",
@@ -3687,7 +2339,8 @@
   "address": "Via Lucio Cassio 53",
   "postal_code": "00189",
   "latitude": 41.9692095,
-  "longitude": 12.4398845
+  "longitude": 12.4398845,
+  "geo_precision": "esatta"
  },
  {
   "name": "Samadi S.P.A.",
@@ -3697,7 +2350,8 @@
   "address": "via di Grottarossa km.2.200",
   "postal_code": "00189",
   "latitude": 41.9800429,
-  "longitude": 12.4495221
+  "longitude": 12.4495221,
+  "geo_precision": "esatta"
  },
  {
   "name": "Santa Lucia Dei Fontanili",
@@ -3707,7 +2361,8 @@
   "address": "Via Valle dei Fontanili 211",
   "postal_code": "00168",
   "latitude": 41.92315,
-  "longitude": 12.41101
+  "longitude": 12.41101,
+  "geo_precision": "esatta"
  },
  {
   "name": "Sezione Laziale Della Uildm (Unione Italiana Lotta Alla Distrofia Muscolare) Onlus",
@@ -3717,7 +2372,8 @@
   "address": "Via Prospero Santacroce, 5",
   "postal_code": "00167",
   "latitude": 41.90608,
-  "longitude": 12.41938
+  "longitude": 12.41938,
+  "geo_precision": "esatta"
  },
  {
   "name": "San Valentino",
@@ -3727,7 +2383,8 @@
   "address": "Via Della Cappelletta Della Giustiniana 119",
   "postal_code": "00123",
   "latitude": 41.9872,
-  "longitude": 12.40295
+  "longitude": 12.40295,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Static Chiroterapeutica Srl",
@@ -3737,7 +2394,8 @@
   "address": "Piazza della Libertà, 20",
   "postal_code": "00192",
   "latitude": 41.90985,
-  "longitude": 12.47044
+  "longitude": 12.47044,
+  "geo_precision": "esatta"
  },
  {
   "name": "Studio Patologia Clinica Filia S.R.L.",
@@ -3747,7 +2405,8 @@
   "address": "Via Costantiniana, 28",
   "postal_code": "00188",
   "latitude": 41.9897,
-  "longitude": 12.48939
+  "longitude": 12.48939,
+  "geo_precision": "esatta"
  },
  {
   "name": "Studio Medico Fisiokinesiterapico Aemme S.R.L.",
@@ -3757,7 +2416,8 @@
   "address": "Viale Di Valle Aurelia 81/93",
   "postal_code": "00167",
   "latitude": 41.902819,
-  "longitude": 12.4372126
+  "longitude": 12.4372126,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Giaccari Srl",
@@ -3767,17 +2427,8 @@
   "address": "Piazza della Balduina, 5",
   "postal_code": "00136",
   "latitude": 41.91957499999999,
-  "longitude": 12.4412992
- },
- {
-  "name": "Struttura Ambulatoriale Studio Radiologico Monte Mario S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Via Trionfale 6917",
-  "postal_code": "00135",
-  "latitude": 41.933919,
-  "longitude": 12.4397374
+  "longitude": 12.4412992,
+  "geo_precision": "esatta"
  },
  {
   "name": "T.De Sanctis Monaldi S.R.L.",
@@ -3787,27 +2438,8 @@
   "address": "Piazzale Gregorio Vii 10",
   "postal_code": "00165",
   "latitude": 41.898839,
-  "longitude": 12.4508602
- },
- {
-  "name": "Presidio Residenziale Psichiatrico - Comunita' Villa Maria Pia",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Via Forte Trionfale n.36",
-  "postal_code": "00135",
-  "latitude": 41.94011560000001,
-  "longitude": 12.4339163
- },
- {
-  "name": "Presidio Residenziale Psichiatrico - Comunità Pal. D",
-  "type": "Ambulatorio",
-  "asl": "105 RM/E",
-  "municipality": "Roma",
-  "address": "Via Forte Trionfale n.36",
-  "postal_code": "00136",
-  "latitude": 41.94011560000001,
-  "longitude": 12.4339163
+  "longitude": 12.4508602,
+  "geo_precision": "esatta"
  },
  {
   "name": "Visconti Srl",
@@ -3817,7 +2449,8 @@
   "address": "Viale Giulio Cesare 2",
   "postal_code": "00192",
   "latitude": 41.9124438,
-  "longitude": 12.4697084
+  "longitude": 12.4697084,
+  "geo_precision": "esatta"
  },
  {
   "name": "Airri Formello",
@@ -3827,7 +2460,8 @@
   "address": "via Mariano Marchicelli 22",
   "postal_code": "00060",
   "latitude": 42.080142,
-  "longitude": 12.404667
+  "longitude": 12.404667,
+  "geo_precision": "esatta"
  },
  {
   "name": "R.S.A. Oasi Tabor",
@@ -3837,7 +2471,8 @@
   "address": "Via S. Maria della Visitazione, 35",
   "postal_code": "00058",
   "latitude": 42.0335042,
-  "longitude": 11.8536061
+  "longitude": 11.8536061,
+  "geo_precision": "esatta"
  },
  {
   "name": "Airri Centro Di Campagnano",
@@ -3847,7 +2482,8 @@
   "address": "via della Vittoria, 25-29",
   "postal_code": "00063",
   "latitude": 42.1376491,
-  "longitude": 12.3807196
+  "longitude": 12.3807196,
+  "geo_precision": "esatta"
  },
  {
   "name": "Villa Sergetto",
@@ -3857,7 +2493,8 @@
   "address": "Via Braccianese Claudia Km. 69 300",
   "postal_code": "00053",
   "latitude": 42.0924239,
-  "longitude": 11.7954132
+  "longitude": 11.7954132,
+  "geo_precision": "esatta"
  },
  {
   "name": "Casa Loic",
@@ -3867,7 +2504,8 @@
   "address": "Via Grottaponga S.N.C.",
   "postal_code": "00060",
   "latitude": 42.1252897,
-  "longitude": 12.5444214
+  "longitude": 12.5444214,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Di Chirurgia Ambulatoriale Dott. Giuseppe Crocchianti",
@@ -3877,57 +2515,8 @@
   "address": "Via Pietro Nenni n. J8/H",
   "postal_code": "00053",
   "latitude": 42.0941944,
-  "longitude": 11.8127521
- },
- {
-  "name": "Struttura Ambulatoriale Centro Diagnostico Bramante Srl",
-  "type": "Ambulatorio",
-  "asl": "106 RM/F",
-  "municipality": "Civitavecchia",
-  "address": "Via Bramante, 1",
-  "postal_code": "00053",
-  "latitude": 42.0902123,
-  "longitude": 11.7984285
- },
- {
-  "name": "Struttura Ambulatoriale Centro Diagnostico Buonarroti Srl",
-  "type": "Ambulatorio",
-  "asl": "106 RM/F",
-  "municipality": "Civitavecchia",
-  "address": "Via Buonarroti 26-30 - Via S. V. Strambi 4-8",
-  "postal_code": "00053",
-  "latitude": 42.0924239,
-  "longitude": 11.7954132
- },
- {
-  "name": "Struttura Ambulatoriale Centro Diagnostico Riviera Snc Di Tarantino Linda & C.",
-  "type": "Ambulatorio",
-  "asl": "106 RM/F",
-  "municipality": "Santa Marinella",
-  "address": "Via della Libertà 56-58",
-  "postal_code": "00058",
-  "latitude": 42.03445,
-  "longitude": 11.86346
- },
- {
-  "name": "Struttura Ambulatoriale Centro Diagnostico Sabatino Srl",
-  "type": "Ambulatorio",
-  "asl": "106 RM/F",
-  "municipality": "Anguillara Sabazia",
-  "address": "Via Romana,10",
-  "postal_code": "00061",
-  "latitude": 42.0912126,
-  "longitude": 12.2716617
- },
- {
-  "name": "Centro Medico Radiologico Biomedica Srl",
-  "type": "Ambulatorio",
-  "asl": "106 RM/F",
-  "municipality": "Ladispoli",
-  "address": "Via Ancona 94 - 1° Piano Int 1",
-  "postal_code": "00055",
-  "latitude": 41.949272,
-  "longitude": 12.077886
+  "longitude": 11.8127521,
+  "geo_precision": "esatta"
  },
  {
   "name": "Regina Coelorum",
@@ -3937,7 +2526,8 @@
   "address": "Via Cesare Battisti, 10",
   "postal_code": "00058",
   "latitude": 42.0302204,
-  "longitude": 11.8396349
+  "longitude": 11.8396349,
+  "geo_precision": "esatta"
  },
  {
   "name": "Progetto Psicoterapeutico Giacomo Cusmano",
@@ -3947,7 +2537,8 @@
   "address": "Via Giacomo Cusmano,28",
   "postal_code": "00061",
   "latitude": 42.09147859999999,
-  "longitude": 12.2715458
+  "longitude": 12.2715458,
+  "geo_precision": "esatta"
  },
  {
   "name": "La Gatta",
@@ -3957,7 +2548,8 @@
   "address": "lungomare G.Marconi, 96",
   "postal_code": "00058",
   "latitude": 42.030718,
-  "longitude": 11.843813
+  "longitude": 11.843813,
+  "geo_precision": "esatta"
  },
  {
   "name": "Progetto Terapeutico \"Fratello Sole\"",
@@ -3967,17 +2559,8 @@
   "address": "via dei Normanni, 8/10",
   "postal_code": "00050",
   "latitude": 42.021883,
-  "longitude": 11.957825
- },
- {
-  "name": "Diaverum Italia S.R.L - Ladispoli Centro Dialisi",
-  "type": "Ambulatorio",
-  "asl": "106 RM/F",
-  "municipality": "Ladispoli",
-  "address": "Via Aldo Moro 38",
-  "postal_code": "00055",
-  "latitude": 41.965293,
-  "longitude": 12.078252
+  "longitude": 11.957825,
+  "geo_precision": "esatta"
  },
  {
   "name": "Galileo Galilei S.N.C.",
@@ -3987,17 +2570,8 @@
   "address": "Via G. Amendola, 4",
   "postal_code": "00065",
   "latitude": 42.168812,
-  "longitude": 12.586945
- },
- {
-  "name": "Ggr Radiologica Vita Srl",
-  "type": "Ambulatorio",
-  "asl": "106 RM/F",
-  "municipality": "Riano",
-  "address": "Via Strada Vecchia, 2",
-  "postal_code": "00060",
-  "latitude": 42.098157,
-  "longitude": 12.51148
+  "longitude": 12.586945,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Idac Srl",
@@ -4007,7 +2581,8 @@
   "address": "Via G. Di Vittorio, 3",
   "postal_code": "00067",
   "latitude": 42.145207,
-  "longitude": 12.493085
+  "longitude": 12.493085,
+  "geo_precision": "esatta"
  },
  {
   "name": "Le Querce - Casa Dei Nonni",
@@ -4017,7 +2592,8 @@
   "address": "via Casale delle Grazie, 4",
   "postal_code": "00066",
   "latitude": 42.12260999999999,
-  "longitude": 12.12749
+  "longitude": 12.12749,
+  "geo_precision": "esatta"
  },
  {
   "name": "Irmed Srl",
@@ -4027,27 +2603,8 @@
   "address": "P.Zza Odescalchi 4",
   "postal_code": "00055",
   "latitude": 41.95175,
-  "longitude": 12.06818
- },
- {
-  "name": "Laboratorio Analisi Cliniche Mediche Iannaccone S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "106 RM/F",
-  "municipality": "Bracciano",
-  "address": "Viale Odescalchi n. 11",
-  "postal_code": "00062",
-  "latitude": 42.1027222,
-  "longitude": 12.1743105
- },
- {
-  "name": "Laboratorio Analisi Manzoni Snc",
-  "type": "Ambulatorio",
-  "asl": "106 RM/F",
-  "municipality": "Rignano Flaminio",
-  "address": "via Flaminia 6/S",
-  "postal_code": "00068",
-  "latitude": 42.2062919,
-  "longitude": 12.4785399
+  "longitude": 12.06818,
+  "geo_precision": "esatta"
  },
  {
   "name": "Medical Fisiolab Snc",
@@ -4057,7 +2614,8 @@
   "address": "Via Strada Vecchia, 2",
   "postal_code": "00060",
   "latitude": 42.098157,
-  "longitude": 12.51148
+  "longitude": 12.51148,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Poliambulatorio Praecilia",
@@ -4067,27 +2625,8 @@
   "address": "Corso Vittorio Emanuele,170",
   "postal_code": "00066",
   "latitude": 42.1313821,
-  "longitude": 12.1280818
- },
- {
-  "name": "Laboratorio Analisi S. Giorgio S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "106 RM/F",
-  "municipality": "Civitavecchia",
-  "address": "Piazza Del Conservatorio 4/5",
-  "postal_code": "00053",
-  "latitude": 42.0924239,
-  "longitude": 11.7954132
- },
- {
-  "name": "Laboratorio Salvatori Srl Poliambulatorio - Radiologia",
-  "type": "Ambulatorio",
-  "asl": "106 RM/F",
-  "municipality": "Sacrofano",
-  "address": "L.Go Cardinal Gasparri 18",
-  "postal_code": "00060",
-  "latitude": 42.1046039,
-  "longitude": 12.4479796
+  "longitude": 12.1280818,
+  "geo_precision": "esatta"
  },
  {
   "name": "Maieusis Coop - Comunità Psico Terapeutica",
@@ -4097,7 +2636,8 @@
   "address": "Via di Macchia Tonda 8/10",
   "postal_code": "00060",
   "latitude": 42.11121,
-  "longitude": 12.55048
+  "longitude": 12.55048,
+  "geo_precision": "esatta"
  },
  {
   "name": "Mant Med Srl",
@@ -4107,7 +2647,8 @@
   "address": "Via Ancona 94 Piano Terra",
   "postal_code": "00055",
   "latitude": 41.9498965,
-  "longitude": 12.0761045
+  "longitude": 12.0761045,
+  "geo_precision": "esatta"
  },
  {
   "name": "Medical Spuri Srl",
@@ -4117,7 +2658,8 @@
   "address": "Via Etruria 8",
   "postal_code": "00053",
   "latitude": 42.09287,
-  "longitude": 11.79929
+  "longitude": 11.79929,
+  "geo_precision": "esatta"
  },
  {
   "name": "Presidio 1",
@@ -4127,7 +2669,8 @@
   "address": "Via Gregorio Rocchi 11",
   "postal_code": "00060",
   "latitude": 42.1248355,
-  "longitude": 12.4904854
+  "longitude": 12.4904854,
+  "geo_precision": "esatta"
  },
  {
   "name": "Res Medica Snc Di Loriana Petruzzi E C.",
@@ -4137,7 +2680,8 @@
   "address": "Via Nazario Sauro 43",
   "postal_code": "00060",
   "latitude": 42.081444,
-  "longitude": 12.40221
+  "longitude": 12.40221,
+  "geo_precision": "esatta"
  },
  {
   "name": "Reverie Comunita' 1 - Madonna Dei Due Ponti",
@@ -4147,17 +2691,8 @@
   "address": "Via Madonna dei due ponti s.n.c.",
   "postal_code": "00060",
   "latitude": 42.13657269999999,
-  "longitude": 12.542643
- },
- {
-  "name": "Reverie Comunita' 1 - Centro Diurno Madonna Dei Due Ponti",
-  "type": "Ambulatorio",
-  "asl": "106 RM/F",
-  "municipality": "Capena",
-  "address": "Via Madonna dei due ponti s.n.c.",
-  "postal_code": "00060",
-  "latitude": 42.13657269999999,
-  "longitude": 12.542643
+  "longitude": 12.542643,
+  "geo_precision": "esatta"
  },
  {
   "name": "Reverie Comunita' 1 - Comunita' Terapeutico Riabilitativa",
@@ -4167,7 +2702,8 @@
   "address": "Passo Del Cavallone",
   "postal_code": "00060",
   "latitude": 42.1409078,
-  "longitude": 12.5394045
+  "longitude": 12.5394045,
+  "geo_precision": "esatta"
  },
  {
   "name": "Salus Di Alabiso Roberto & C Snc",
@@ -4177,7 +2713,8 @@
   "address": "Via Ancona 94",
   "postal_code": "00055",
   "latitude": 41.949272,
-  "longitude": 12.077886
+  "longitude": 12.077886,
+  "geo_precision": "esatta"
  },
  {
   "name": "Salus S.R.L.",
@@ -4187,7 +2724,8 @@
   "address": "Via Raffaele Cadorna 8/12",
   "postal_code": "00053",
   "latitude": 42.09619929999999,
-  "longitude": 11.7893036
+  "longitude": 11.7893036,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Scofit Rx Srl",
@@ -4197,17 +2735,8 @@
   "address": "via Flaminia 6/R",
   "postal_code": "00068",
   "latitude": 42.2062919,
-  "longitude": 12.4785399
- },
- {
-  "name": "Studio Di Radiologia Medica Fasanelli Snc",
-  "type": "Ambulatorio",
-  "asl": "106 RM/F",
-  "municipality": "Formello",
-  "address": "Via Nazario Sauro 43",
-  "postal_code": "00060",
-  "latitude": 42.081444,
-  "longitude": 12.40221
+  "longitude": 12.4785399,
+  "geo_precision": "esatta"
  },
  {
   "name": "Studio Diagniostico Tiberino Di Eleonora Di Giorgi & C. Snc",
@@ -4217,7 +2746,8 @@
   "address": "Via Pietro Nenni, n° 2",
   "postal_code": "00065",
   "latitude": 42.1662161,
-  "longitude": 12.5889596
+  "longitude": 12.5889596,
+  "geo_precision": "esatta"
  },
  {
   "name": "Terme Di Stigliano",
@@ -4227,7 +2757,8 @@
   "address": "Localita' Bagni Stigliano 2",
   "postal_code": "00062",
   "latitude": 42.1400313,
-  "longitude": 12.1047329
+  "longitude": 12.1047329,
+  "geo_precision": "esatta"
  },
  {
   "name": "Setteville",
@@ -4237,27 +2768,8 @@
   "address": "Via Tiburtina N. 258",
   "postal_code": "00012",
   "latitude": 41.9521579,
-  "longitude": 12.7295496
- },
- {
-  "name": "Struttura Ambulatoriale Analisi Cliniche Ciocci Srl",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Tivoli",
-  "address": "Via Palatina, 19",
-  "postal_code": "00019",
-  "latitude": 41.9636216,
-  "longitude": 12.7995038
- },
- {
-  "name": "Centro Ambulatoriale Analisi",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Tivoli",
-  "address": "Viale Tomei 3",
-  "postal_code": "00019",
-  "latitude": 41.9594892,
-  "longitude": 12.7987525
+  "longitude": 12.7295496,
+  "geo_precision": "esatta"
  },
  {
   "name": "Villa Letizia",
@@ -4267,7 +2779,8 @@
   "address": "Via Colle Ristretti, 88",
   "postal_code": "00039",
   "latitude": 41.8309962,
-  "longitude": 12.8116935
+  "longitude": 12.8116935,
+  "geo_precision": "esatta"
  },
  {
   "name": "Insieme",
@@ -4277,7 +2790,8 @@
   "address": "via cardinale pietro parente, 33",
   "postal_code": "00030",
   "latitude": 41.8185638,
-  "longitude": 12.7979193
+  "longitude": 12.7979193,
+  "geo_precision": "esatta"
  },
  {
   "name": "Al Colle",
@@ -4287,7 +2801,8 @@
   "address": "Via cardinale pietro parente, 33",
   "postal_code": "00030",
   "latitude": 41.8185638,
-  "longitude": 12.7979193
+  "longitude": 12.7979193,
+  "geo_precision": "esatta"
  },
  {
   "name": "Operiamo Assieme",
@@ -4297,7 +2812,8 @@
   "address": "via agrolatino, 112",
   "postal_code": "00030",
   "latitude": 41.7956046,
-  "longitude": 12.8645374
+  "longitude": 12.8645374,
+  "geo_precision": "esatta"
  },
  {
   "name": "Presidio 1",
@@ -4307,7 +2823,8 @@
   "address": "Via S. Ambrogio, 1",
   "postal_code": "00034",
   "latitude": 41.7304755,
-  "longitude": 13.0031463
+  "longitude": 13.0031463,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Ambulatoriale",
@@ -4317,7 +2834,8 @@
   "address": "Viale Trieste 2",
   "postal_code": "00019",
   "latitude": 41.9594986,
-  "longitude": 12.7982978
+  "longitude": 12.7982978,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Ambulatoriale",
@@ -4327,17 +2845,8 @@
   "address": "Via Tiburtina",
   "postal_code": "00019",
   "latitude": 41.9579586,
-  "longitude": 12.7769057
- },
- {
-  "name": "Centro Fisioterapico Srl",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Subiaco",
-  "address": "via Martiri di Cicchetti, 6",
-  "postal_code": "00028",
-  "latitude": 41.924433,
-  "longitude": 13.097746
+  "longitude": 12.7769057,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Medico Filippi S.R.L.",
@@ -4347,7 +2856,8 @@
   "address": "via consolare latina 48",
   "postal_code": "00034",
   "latitude": 41.7265996,
-  "longitude": 13.0071962
+  "longitude": 13.0071962,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Medico Polispecialistico Villanova Srl",
@@ -4357,17 +2867,8 @@
   "address": "Via Naz. Tiburtina Km 25,600",
   "postal_code": "00012",
   "latitude": 41.9939694,
-  "longitude": 12.7245045
- },
- {
-  "name": "Struttura Ambulatoriale - Diagnosi Analisi E Terapie Pasteur S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Mentana",
-  "address": "Via Luigi Einaudi, 33",
-  "postal_code": "00013",
-  "latitude": 42.037647,
-  "longitude": 12.6419
+  "longitude": 12.7245045,
+  "geo_precision": "esatta"
  },
  {
   "name": "Presidio Ambulatoriale Diagnosis Srl",
@@ -4377,17 +2878,8 @@
   "address": "Via Giuseppe Di Vittorio 5",
   "postal_code": "00031",
   "latitude": 41.74321,
-  "longitude": 12.9121606
- },
- {
-  "name": "Struttura Ambulatoriale Eidos Diagnostica Per Immagini Srl",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Guidonia Montecelio",
-  "address": "Viale Roma 52-60",
-  "postal_code": "00012",
-  "latitude": 41.995038,
-  "longitude": 12.725823
+  "longitude": 12.9121606,
+  "geo_precision": "esatta"
  },
  {
   "name": "Euromedical S.R.L.",
@@ -4397,7 +2889,8 @@
   "address": "Via Fontana Bracchi 63",
   "postal_code": "00034",
   "latitude": 41.721128,
-  "longitude": 13.003187
+  "longitude": 13.003187,
+  "geo_precision": "esatta"
  },
  {
   "name": "Fleming",
@@ -4407,17 +2900,8 @@
   "address": "Via Edmondo Riva 59/Z",
   "postal_code": "00015",
   "latitude": 42.055816,
-  "longitude": 12.6167811
- },
- {
-  "name": "Colle Cesarano Psichiatria",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Tivoli",
-  "address": "Via Maremmana Inferiore Km 3,200",
-  "postal_code": "00010",
-  "latitude": 41.959817,
-  "longitude": 12.8022261
+  "longitude": 12.6167811,
+  "geo_precision": "esatta"
  },
  {
   "name": "Villa Maddalena",
@@ -4427,7 +2911,8 @@
   "address": "Via Sant'Anna 26",
   "postal_code": "00024",
   "latitude": 41.9606951,
-  "longitude": 12.8004384
+  "longitude": 12.8004384,
+  "geo_precision": "esatta"
  },
  {
   "name": "Gli Annali",
@@ -4437,7 +2922,8 @@
   "address": "Via degli Annali snc",
   "postal_code": "00020",
   "latitude": 42.04946229999999,
-  "longitude": 12.9617088
+  "longitude": 12.9617088,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Hugh O'Heir S.R.L.",
@@ -4447,7 +2933,8 @@
   "address": "Via F. De Pinedo, 32/A",
   "postal_code": "00012",
   "latitude": 41.9952619,
-  "longitude": 12.725653
+  "longitude": 12.725653,
+  "geo_precision": "esatta"
  },
  {
   "name": "La Staffa",
@@ -4457,77 +2944,8 @@
   "address": "Via Bari 17/19",
   "postal_code": "00012",
   "latitude": 41.9532615,
-  "longitude": 12.7296655
- },
- {
-  "name": "Centro Diurno Per Il Trattamento Dei Dca E Obesità Villa Pia",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Guidonia Montecelio",
-  "address": "Via Pantano, 35",
-  "postal_code": "00012",
-  "latitude": 41.9860388,
-  "longitude": 12.7214803
- },
- {
-  "name": "Struttura Residenziale Psichiatrica \"Subiaco 2\"",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Subiaco",
-  "address": "Corso Cesare Battisti, 13",
-  "postal_code": "00028",
-  "latitude": 41.9245457,
-  "longitude": 13.0904107
- },
- {
-  "name": "Dialisi",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Guidonia Montecelio",
-  "address": "Via Tiburtina",
-  "postal_code": "00012",
-  "latitude": 41.9413296,
-  "longitude": 12.6491829
- },
- {
-  "name": "Struttura Residenziale Psichiatrica Ihg Canterano 1",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Rocca Canterano",
-  "address": "Via della Maddalena, 2",
-  "postal_code": "00020",
-  "latitude": 41.957104,
-  "longitude": 13.0206777
- },
- {
-  "name": "Struttura Residenziale Psichiatrica Villanova 1",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Guidonia Montecelio",
-  "address": "Via Cialdini, 25",
-  "postal_code": "00011",
-  "latitude": 41.9638143,
-  "longitude": 12.7525283
- },
- {
-  "name": "Struttura Residenziale Psichiatrica Villa Adriana 1",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Tivoli",
-  "address": "Via Sardegna, 2",
-  "postal_code": "00010",
-  "latitude": 41.955482,
-  "longitude": 12.7691275
- },
- {
-  "name": "Struttura Residenziale Psichiatrica Villaggio Adriano 2",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Tivoli",
-  "address": "Via del Canopo, 6",
-  "postal_code": "00010",
-  "latitude": 41.9423283,
-  "longitude": 12.7574579
+  "longitude": 12.7296655,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Residenziale Per Il Trattamento Dei Dca E Obesità Villa Pia",
@@ -4537,157 +2955,8 @@
   "address": "Via Pantano, 35",
   "postal_code": "00012",
   "latitude": 41.9860388,
-  "longitude": 12.7214803
- },
- {
-  "name": "Struttura Residenziale Psichiatrica Villanova Giona",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Guidonia Montecelio",
-  "address": "Via Carini, 15",
-  "postal_code": "00011",
-  "latitude": 41.9677677,
-  "longitude": 12.7538264
- },
- {
-  "name": "Struttura Residenziale Psichiatrica \"Subiaco 1\"",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Subiaco",
-  "address": "Corso Cesare Battisti, 13",
-  "postal_code": "00028",
-  "latitude": 41.9245457,
-  "longitude": 13.0904107
- },
- {
-  "name": "Struttura Residenziale Psichiatrica Villanova 2",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Guidonia Montecelio",
-  "address": "Via Cialdini, 25",
-  "postal_code": "00011",
-  "latitude": 41.9638143,
-  "longitude": 12.7525283
- },
- {
-  "name": "Struttura Residenziale Psichiatrica Villaggio Adriano 1",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Tivoli",
-  "address": "Via del Canopo, 6",
-  "postal_code": "00010",
-  "latitude": 41.9423283,
-  "longitude": 12.7574579
- },
- {
-  "name": "Struttura Residenziale Psichiatrica Ihg Canterano 2",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Rocca Canterano",
-  "address": "Via della Maddalena, 2",
-  "postal_code": "00020",
-  "latitude": 41.957104,
-  "longitude": 13.0206777
- },
- {
-  "name": "Struttura Residenziale Psichiatrica Villa Adriana 2",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Tivoli",
-  "address": "Via Sardegna, 2",
-  "postal_code": "00010",
-  "latitude": 41.955482,
-  "longitude": 12.7691275
- },
- {
-  "name": "Struttura Residenziale Psichiatrica Villa Adriana 3",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Tivoli",
-  "address": "Via Sardegna, 2",
-  "postal_code": "00010",
-  "latitude": 41.955482,
-  "longitude": 12.7691275
- },
- {
-  "name": "Struttura Residenziale Psichiatrica Villa Adriana 4",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Tivoli",
-  "address": "Via Sardegna, 2",
-  "postal_code": "00010",
-  "latitude": 41.955482,
-  "longitude": 12.7691275
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Analisi Cliniche Tiburtino Valerio S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Vicovaro",
-  "address": "Via Tiburtina Valeria, 36",
-  "postal_code": "00029",
-  "latitude": 42.01612430000001,
-  "longitude": 12.8954388
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Analisi Cliniche E Microbiologiche Santacroce Srl",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Tivoli",
-  "address": "Viale Arnaldi 13-15",
-  "postal_code": "00019",
-  "latitude": 41.9598822,
-  "longitude": 12.795141
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Analisi Salubris S.S.",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Montelibretti",
-  "address": "Via Roma 215",
-  "postal_code": "00010",
-  "latitude": 42.129968,
-  "longitude": 12.7352
- },
- {
-  "name": "Laboratorio Analisi Cliniche Salus Srl",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Tivoli",
-  "address": "Via Tommaso Neri N.5",
-  "postal_code": "00011",
-  "latitude": 41.9529425,
-  "longitude": 12.7212726
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Analisi Guidonia S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Guidonia Montecelio",
-  "address": "Via Roma N. 190/A",
-  "postal_code": "00012",
-  "latitude": 41.9869879,
-  "longitude": 12.716552
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Analisi Villanova S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Guidonia Montecelio",
-  "address": "Via Galletti N. 8-10",
-  "postal_code": "00012",
-  "latitude": 41.9614508,
-  "longitude": 12.7571047
- },
- {
-  "name": "Struttura Ambulatoriale Poliambulatorio Specialistico - Diagnostica Per Immagini \"Laboratorio Clinico Nomentano\"",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Monterotondo",
-  "address": "Via dello Stadio 1",
-  "postal_code": "00015",
-  "latitude": 42.05502,
-  "longitude": 12.6198
+  "longitude": 12.7214803,
+  "geo_precision": "esatta"
  },
  {
   "name": "Presidio 1",
@@ -4697,7 +2966,8 @@
   "address": "Via Mainello N. 10",
   "postal_code": "00010",
   "latitude": 41.8674068,
-  "longitude": 12.7980496
+  "longitude": 12.7980496,
+  "geo_precision": "esatta"
  },
  {
   "name": "Presidio Ambulatoriale Linea Medica",
@@ -4707,17 +2977,8 @@
   "address": "Via Ugo Foscolo 14",
   "postal_code": "00013",
   "latitude": 41.9975824,
-  "longitude": 12.6215659
- },
- {
-  "name": "Laboratorio Analisi Poliambulatorio San Cesareo Srl",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "San Cesareo",
-  "address": "Via Giovanni Amendola 8",
-  "postal_code": "00030",
-  "latitude": 41.8230204,
-  "longitude": 12.7995923
+  "longitude": 12.6215659,
+  "geo_precision": "esatta"
  },
  {
   "name": "Poliambulatorio Specialistico",
@@ -4727,7 +2988,8 @@
   "address": "Via Speciano 5/6",
   "postal_code": "00033",
   "latitude": 41.8160609,
-  "longitude": 12.9391369
+  "longitude": 12.9391369,
+  "geo_precision": "esatta"
  },
  {
   "name": "Francesco",
@@ -4737,17 +2999,8 @@
   "address": "Via Cavour 12",
   "postal_code": "00038",
   "latitude": 41.7728201,
-  "longitude": 12.9208406
- },
- {
-  "name": "Struttura Ambulatoriale Studio Analisi Ippocrate S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Guidonia Montecelio",
-  "address": "Via Palombarese Km 19,00",
-  "postal_code": "00012",
-  "latitude": 41.9939694,
-  "longitude": 12.7245045
+  "longitude": 12.9208406,
+  "geo_precision": "esatta"
  },
  {
   "name": "Studio Medico San Giorgio S.R.L",
@@ -4757,17 +3010,8 @@
   "address": "Via Fontana dell'Oste",
   "postal_code": "00034",
   "latitude": 41.7296917,
-  "longitude": 13.0165809
- },
- {
-  "name": "Struttura Ambulatoriale Studio Radiologico Guidonia Srl",
-  "type": "Ambulatorio",
-  "asl": "107 RM/G",
-  "municipality": "Guidonia Montecelio",
-  "address": "Via Roma 190",
-  "postal_code": "00012",
-  "latitude": 41.986933,
-  "longitude": 12.716505
+  "longitude": 13.0165809,
+  "geo_precision": "esatta"
  },
  {
   "name": "Villa Alba Fonte Nuova",
@@ -4777,7 +3021,8 @@
   "address": "Via Nomentana, 432",
   "postal_code": "00013",
   "latitude": 41.9982317,
-  "longitude": 12.6219777
+  "longitude": 12.6219777,
+  "geo_precision": "esatta"
  },
  {
   "name": "Aiva-Associazione Internazionale Vita Alternativa-Onlus",
@@ -4787,7 +3032,8 @@
   "address": "Via Lago Di Como 22B",
   "postal_code": "00048",
   "latitude": 41.53259,
-  "longitude": 12.63085
+  "longitude": 12.63085,
+  "geo_precision": "esatta"
  },
  {
   "name": "Associazione Arca Comunita' Il Chicco Onlus",
@@ -4797,7 +3043,8 @@
   "address": "Via Ancona, 1",
   "postal_code": "00043",
   "latitude": 41.789913,
-  "longitude": 12.618578
+  "longitude": 12.618578,
+  "geo_precision": "esatta"
  },
  {
   "name": "Associazione Comunita' Massimo Onlus",
@@ -4807,7 +3054,8 @@
   "address": "Via Dell'Oratorio Di Santa Rita 3",
   "postal_code": "00042",
   "latitude": 41.458833,
-  "longitude": 12.621878
+  "longitude": 12.621878,
+  "geo_precision": "esatta"
  },
  {
   "name": "Comunità \"Casa Gioia\"",
@@ -4817,7 +3065,8 @@
   "address": "P.zza Garibaldi 8",
   "postal_code": "00047",
   "latitude": 41.77007589999999,
-  "longitude": 12.6547439
+  "longitude": 12.6547439,
+  "geo_precision": "esatta"
  },
  {
   "name": "Associazione L'Approdo Onlus",
@@ -4827,7 +3076,8 @@
   "address": "lungomare Enea n. 10",
   "postal_code": "00042",
   "latitude": 41.50353,
-  "longitude": 12.581293
+  "longitude": 12.581293,
+  "geo_precision": "esatta"
  },
  {
   "name": "Villa Bona-Associazione Mapsi",
@@ -4837,7 +3087,8 @@
   "address": "Lungomare dei Troiani 58",
   "postal_code": "00040",
   "latitude": 41.5558319,
-  "longitude": 12.5318906
+  "longitude": 12.5318906,
+  "geo_precision": "esatta"
  },
  {
   "name": "Assohandicap Onlus",
@@ -4847,7 +3098,8 @@
   "address": "Via Pietro Nenni, 2",
   "postal_code": "00047",
   "latitude": 41.7731921,
-  "longitude": 12.6676527
+  "longitude": 12.6676527,
+  "geo_precision": "esatta"
  },
  {
   "name": "Beauty Shop Srl",
@@ -4857,7 +3109,8 @@
   "address": "via Armando Diaz snc",
   "postal_code": "00048",
   "latitude": 41.4577305,
-  "longitude": 12.6654914
+  "longitude": 12.6654914,
+  "geo_precision": "esatta"
  },
  {
   "name": "Mater Dei",
@@ -4867,7 +3120,8 @@
   "address": "via dei villini 17",
   "postal_code": "00040",
   "latitude": 41.72382,
-  "longitude": 12.66523
+  "longitude": 12.66523,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ars Sana",
@@ -4877,17 +3131,8 @@
   "address": "via dei villini 17",
   "postal_code": "00040",
   "latitude": 41.72382,
-  "longitude": 12.66523
- },
- {
-  "name": "C.O.F. S.R.L. Centro Ortopedico Fisioterapico",
-  "type": "Ambulatorio",
-  "asl": "108 RM/H",
-  "municipality": "Velletri",
-  "address": "Via Degli Atlantici 21",
-  "postal_code": "00049",
-  "latitude": 41.69161,
-  "longitude": 12.780385
+  "longitude": 12.66523,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ambulatori -Degenze",
@@ -4897,7 +3142,8 @@
   "address": "Via del Mare 69/71",
   "postal_code": "00040",
   "latitude": 41.672433,
-  "longitude": 12.495707
+  "longitude": 12.495707,
+  "geo_precision": "esatta"
  },
  {
   "name": "Cefi S.R.L.",
@@ -4907,37 +3153,8 @@
   "address": "via Giuditta Levato 3",
   "postal_code": "00043",
   "latitude": 41.7894998,
-  "longitude": 12.6187529
- },
- {
-  "name": "Centro Analisi Cliniche Morena Di Valenzi Libera S.N.C",
-  "type": "Ambulatorio",
-  "asl": "108 RM/H",
-  "municipality": "Ciampino",
-  "address": "Via Morena 30-32",
-  "postal_code": "00043",
-  "latitude": 41.8049367,
-  "longitude": 12.605707
- },
- {
-  "name": "Strutt. Ambul. Centro Analisi Sim.O. Srl",
-  "type": "Ambulatorio",
-  "asl": "108 RM/H",
-  "municipality": "Anzio",
-  "address": "VIA ESCULAPIO c/o CENTRO COMM. ANTEO",
-  "postal_code": "00042",
-  "latitude": 41.4495955,
-  "longitude": 12.6197253
- },
- {
-  "name": "Centro Radiodiagnostico Prof.F.Giancotti",
-  "type": "Ambulatorio",
-  "asl": "108 RM/H",
-  "municipality": "Anzio",
-  "address": "via bad pyrmont 2",
-  "postal_code": "00042",
-  "latitude": 41.45284700000001,
-  "longitude": 12.634015
+  "longitude": 12.6187529,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Ricerche Cliniche S.r.l.",
@@ -4947,7 +3164,8 @@
   "address": "Via Cicerone 15",
   "postal_code": "00040",
   "latitude": 41.667403,
-  "longitude": 12.496333
+  "longitude": 12.496333,
+  "geo_precision": "esatta"
  },
  {
   "name": "Cinthianum Labac S.R.L.",
@@ -4957,7 +3175,8 @@
   "address": "Via Antonio Gramsci, 7",
   "postal_code": "00045",
   "latitude": 41.7074882,
-  "longitude": 12.6883827
+  "longitude": 12.6883827,
+  "geo_precision": "esatta"
  },
  {
   "name": "Srsr Villa Nova",
@@ -4967,7 +3186,8 @@
   "address": "Via Giuseppe Garibaldi,337",
   "postal_code": "00040",
   "latitude": 41.7122465,
-  "longitude": 12.8430223
+  "longitude": 12.8430223,
+  "geo_precision": "esatta"
  },
  {
   "name": "Srtre Raymond Gledhill Al Colle",
@@ -4977,7 +3197,8 @@
   "address": "Via Colle Cavalieri 32",
   "postal_code": "00040",
   "latitude": 41.658881,
-  "longitude": 12.69106
+  "longitude": 12.69106,
+  "geo_precision": "esatta"
  },
  {
   "name": "Srtre Raymond Gledhill",
@@ -4987,7 +3208,8 @@
   "address": "Via Cesare Colizza 56A",
   "postal_code": "00047",
   "latitude": 41.771424,
-  "longitude": 12.6516075
+  "longitude": 12.6516075,
+  "geo_precision": "esatta"
  },
  {
   "name": "Corilab Srl",
@@ -4997,7 +3219,8 @@
   "address": "via duca d'aosta 8",
   "postal_code": "00044",
   "latitude": 41.8075062,
-  "longitude": 12.6782935
+  "longitude": 12.6782935,
+  "geo_precision": "esatta"
  },
  {
   "name": "Di.Fi. S.R.L.",
@@ -5007,27 +3230,8 @@
   "address": "Via Maroncelli, 19",
   "postal_code": "00040",
   "latitude": 41.6668019,
-  "longitude": 12.501395
- },
- {
-  "name": "Diagnostica Gamma S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "108 RM/H",
-  "municipality": "Grottaferrata",
-  "address": "Via delle Sorgenti, 90",
-  "postal_code": "00046",
-  "latitude": 41.7824745,
-  "longitude": 12.682399
- },
- {
-  "name": "Laboratorio Analisi Cliniche Di Base",
-  "type": "Ambulatorio",
-  "asl": "108 RM/H",
-  "municipality": "Ariccia",
-  "address": "Scalinata Pompeo Magno, 4",
-  "postal_code": "00040",
-  "latitude": 41.7202212,
-  "longitude": 12.6787706
+  "longitude": 12.501395,
+  "geo_precision": "esatta"
  },
  {
   "name": "Eulab Srl",
@@ -5037,7 +3241,8 @@
   "address": "corso Giacomo Matteotti 4",
   "postal_code": "00041",
   "latitude": 41.730451,
-  "longitude": 12.6566672
+  "longitude": 12.6566672,
+  "geo_precision": "esatta"
  },
  {
   "name": "Eunos Sas Di Fabi Silvio &",
@@ -5047,17 +3252,8 @@
   "address": "Via Napoli 221",
   "postal_code": "00040",
   "latitude": 41.7389474,
-  "longitude": 12.8478692
- },
- {
-  "name": "Struttura Ambulatoriale Gabinetto Analisi Cliniche E Batteriologiche Tirreno Srl",
-  "type": "Ambulatorio",
-  "asl": "108 RM/H",
-  "municipality": "Nettuno",
-  "address": "via Romana, Galleria Lumaca,47",
-  "postal_code": "00048",
-  "latitude": 41.4577305,
-  "longitude": 12.6654914
+  "longitude": 12.8478692,
+  "geo_precision": "esatta"
  },
  {
   "name": "Gnosis Castelluccia",
@@ -5067,7 +3263,8 @@
   "address": "Via Boville 1",
   "postal_code": "00047",
   "latitude": 41.74358,
-  "longitude": 12.61361
+  "longitude": 12.61361,
+  "geo_precision": "esatta"
  },
  {
   "name": "La Grande Montagna",
@@ -5077,7 +3274,8 @@
   "address": "Via Arturo Toscanini,17",
   "postal_code": "00047",
   "latitude": 41.755583,
-  "longitude": 12.6403901
+  "longitude": 12.6403901,
+  "geo_precision": "esatta"
  },
  {
   "name": "Casa Degli Angeli Custodi",
@@ -5087,7 +3285,8 @@
   "address": "Via Antonio Gramsci n. 65",
   "postal_code": "00048",
   "latitude": 41.456173,
-  "longitude": 12.6517344
+  "longitude": 12.6517344,
+  "geo_precision": "esatta"
  },
  {
   "name": "Villa Gaia",
@@ -5097,7 +3296,8 @@
   "address": "Via Antonio Gramsci n. 77",
   "postal_code": "00048",
   "latitude": 41.4558534,
-  "longitude": 12.6505788
+  "longitude": 12.6505788,
+  "geo_precision": "esatta"
  },
  {
   "name": "Presidio1",
@@ -5107,7 +3307,8 @@
   "address": "Via Petrarca 35",
   "postal_code": "00040",
   "latitude": 41.674383,
-  "longitude": 12.501163
+  "longitude": 12.501163,
+  "geo_precision": "esatta"
  },
  {
   "name": "La Teresiana",
@@ -5117,27 +3318,8 @@
   "address": "P.za Santa Teresa 6",
   "postal_code": "00042",
   "latitude": 41.45330999999999,
-  "longitude": 12.6247969
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Casella Srl",
-  "type": "Ambulatorio",
-  "asl": "108 RM/H",
-  "municipality": "Grottaferrata",
-  "address": "Viale I° Maggio 110",
-  "postal_code": "00046",
-  "latitude": 41.7861701,
-  "longitude": 12.6701352
- },
- {
-  "name": "Laboratorio Dott. Guido Bugliosi Srl",
-  "type": "Ambulatorio",
-  "asl": "108 RM/H",
-  "municipality": "Albano Laziale",
-  "address": "Via Olivella 14",
-  "postal_code": "00041",
-  "latitude": 41.7310118,
-  "longitude": 12.655182
+  "longitude": 12.6247969,
+  "geo_precision": "esatta"
  },
  {
   "name": "S.R.T.R. Villa Costanza",
@@ -5147,7 +3329,8 @@
   "address": "Via Belmonte 74",
   "postal_code": "00040",
   "latitude": 41.7850995,
-  "longitude": 12.7584643
+  "longitude": 12.7584643,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ma.Fe Srl Il Filo Di Penelope",
@@ -5157,7 +3340,8 @@
   "address": "Via delle rose 16",
   "postal_code": "00040",
   "latitude": 41.7150729,
-  "longitude": 12.835998
+  "longitude": 12.835998,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale - Medilab Srl",
@@ -5167,7 +3351,8 @@
   "address": "Via San Francesco D'Assisi 58",
   "postal_code": "00043",
   "latitude": 41.8026476,
-  "longitude": 12.5972688
+  "longitude": 12.5972688,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ortochinesis S.R.L.",
@@ -5177,7 +3362,8 @@
   "address": "Via Della Folgarella, 49",
   "postal_code": "00043",
   "latitude": 41.8035102,
-  "longitude": 12.5970978
+  "longitude": 12.5970978,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ospedale Regina Apostolorum",
@@ -5187,7 +3373,8 @@
   "address": "Via San Francesco nr. 50",
   "postal_code": "00041",
   "latitude": 41.73096470000001,
-  "longitude": 12.6638227
+  "longitude": 12.6638227,
+  "geo_precision": "esatta"
  },
  {
   "name": "Po.Med. S.r.l.",
@@ -5197,7 +3384,8 @@
   "address": "via pontina vecchia Km 10",
   "postal_code": "00040",
   "latitude": 41.6693373,
-  "longitude": 12.5023439
+  "longitude": 12.5023439,
+  "geo_precision": "esatta"
  },
  {
   "name": "Casa Famiglia Villa Del Pino",
@@ -5207,7 +3395,8 @@
   "address": "Via S. Antonino 2",
   "postal_code": "00040",
   "latitude": 41.8186,
-  "longitude": 12.71146
+  "longitude": 12.71146,
+  "geo_precision": "esatta"
  },
  {
   "name": "Radiomedica S.R.L.",
@@ -5217,7 +3406,8 @@
   "address": "via francesco baracca 5",
   "postal_code": "00043",
   "latitude": 41.8002094,
-  "longitude": 12.5992245
+  "longitude": 12.5992245,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ricerche Biologiche Della Valle Aurora S.R.L.",
@@ -5227,7 +3417,8 @@
   "address": "Via Gran Bretagna, 32",
   "postal_code": "00040",
   "latitude": 41.62086499999999,
-  "longitude": 12.465022
+  "longitude": 12.465022,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Salus S.R.L.",
@@ -5237,7 +3428,8 @@
   "address": "via G. Matteotti 52",
   "postal_code": "00045",
   "latitude": 41.7044413,
-  "longitude": 12.6941237
+  "longitude": 12.6941237,
+  "geo_precision": "esatta"
  },
  {
   "name": "Studio Medico Risorgimento Smr S.R.L.",
@@ -5247,17 +3439,8 @@
   "address": "Via Cisternole, 12",
   "postal_code": "00044",
   "latitude": 41.8224205,
-  "longitude": 12.6791699
- },
- {
-  "name": "Studio Radiologico Catarinacci S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "108 RM/H",
-  "municipality": "Ciampino",
-  "address": "Via S. Francesco D'Assisi 77",
-  "postal_code": "00043",
-  "latitude": 41.802273,
-  "longitude": 12.597833
+  "longitude": 12.6791699,
+  "geo_precision": "esatta"
  },
  {
   "name": "Villa Monia",
@@ -5267,7 +3450,8 @@
   "address": "Via Collepicchione 71/a",
   "postal_code": "00047",
   "latitude": 41.7516056,
-  "longitude": 12.6316378
+  "longitude": 12.6316378,
+  "geo_precision": "esatta"
  },
  {
   "name": "Villa Paradiso",
@@ -5277,17 +3461,8 @@
   "address": "S.P. Litoranea Km. 1 750",
   "postal_code": "01016",
   "latitude": 42.25418459999999,
-  "longitude": 11.7575684
- },
- {
-  "name": "Comunita' Accoglienza Semiresidenziale",
-  "type": "Ambulatorio",
-  "asl": "109 VITERBO",
-  "municipality": "Viterbo",
-  "address": "Via del Collegio n°2",
-  "postal_code": "01100",
-  "latitude": 42.4168519,
-  "longitude": 12.1068395
+  "longitude": 11.7575684,
+  "geo_precision": "esatta"
  },
  {
   "name": "Colle Speranza",
@@ -5297,7 +3472,8 @@
   "address": "S.S. Aurelia bis Km. 3 841",
   "postal_code": "01016",
   "latitude": 42.25418459999999,
-  "longitude": 11.7575684
+  "longitude": 11.7575684,
+  "geo_precision": "esatta"
  },
  {
   "name": "Villa Ciulepi",
@@ -5307,7 +3483,8 @@
   "address": "S.S. Aurelia bis Km. 10 900",
   "postal_code": "01010",
   "latitude": 42.2681023,
-  "longitude": 11.8984212
+  "longitude": 11.8984212,
+  "geo_precision": "esatta"
  },
  {
   "name": "Comunita' Terapeutica Residenziale Palanzana",
@@ -5317,7 +3494,8 @@
   "address": "Strada Palanzana N°15",
   "postal_code": "01100",
   "latitude": 42.41683,
-  "longitude": 12.13227
+  "longitude": 12.13227,
+  "geo_precision": "esatta"
  },
  {
   "name": "Comunita' Terapeutica Residenziale La Quercia",
@@ -5327,7 +3505,8 @@
   "address": "strada Acquabianca n°7",
   "postal_code": "01100",
   "latitude": 42.4399903,
-  "longitude": 12.1381053
+  "longitude": 12.1381053,
+  "geo_precision": "esatta"
  },
  {
   "name": "R.S.A. L'Assunta -Bassano Romano",
@@ -5337,7 +3516,8 @@
   "address": "Via dei Cappuccini, 1",
   "postal_code": "01030",
   "latitude": 42.224479,
-  "longitude": 12.186094
+  "longitude": 12.186094,
+  "geo_precision": "esatta"
  },
  {
   "name": "Presidio Dipendenze (Loc. Poggio Rena - Montefiascone)",
@@ -5347,7 +3527,8 @@
   "address": "Via Primie, 5",
   "postal_code": "01027",
   "latitude": 42.539055,
-  "longitude": 12.039633
+  "longitude": 12.039633,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ematologico Viterbese",
@@ -5357,7 +3538,8 @@
   "address": "Via Genova 36",
   "postal_code": "01100",
   "latitude": 42.4214858,
-  "longitude": 12.1115084
+  "longitude": 12.1115084,
+  "geo_precision": "esatta"
  },
  {
   "name": "Etruria Lab Sas Di Breccia Carlo Maria",
@@ -5367,27 +3549,8 @@
   "address": "Via delle Croci n.49",
   "postal_code": "01016",
   "latitude": 42.2511046,
-  "longitude": 11.7610047
- },
- {
-  "name": "Laboratorio Analisi Cliniche",
-  "type": "Ambulatorio",
-  "asl": "109 VITERBO",
-  "municipality": "Civita Castellana",
-  "address": "Via Del Casaletto 5",
-  "postal_code": "01033",
-  "latitude": 42.296451,
-  "longitude": 12.408736
- },
- {
-  "name": "Laboratorio San Faustino Srl",
-  "type": "Ambulatorio",
-  "asl": "109 VITERBO",
-  "municipality": "Viterbo",
-  "address": "Piazza San Francesco 2",
-  "postal_code": "01100",
-  "latitude": 42.42218,
-  "longitude": 12.10613
+  "longitude": 11.7610047,
+  "geo_precision": "esatta"
  },
  {
   "name": "Montalto Check-Up Srl",
@@ -5397,7 +3560,8 @@
   "address": "S.S. 312 CASTRENSE snc",
   "postal_code": "01014",
   "latitude": 42.3515659,
-  "longitude": 11.6070098
+  "longitude": 11.6070098,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Poliambulatorio Medico Specialistico Del Dott. Rodolfo Manzi E C. Srl",
@@ -5407,7 +3571,8 @@
   "address": "Via Verentana, 20",
   "postal_code": "01027",
   "latitude": 42.5393614,
-  "longitude": 12.0336531
+  "longitude": 12.0336531,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Riabilitativo Villa Immacolata (Ex-Art 26)",
@@ -5417,7 +3582,8 @@
   "address": "Via Martiri di Via Fani",
   "postal_code": "01012",
   "latitude": 42.25786799999999,
-  "longitude": 12.164881
+  "longitude": 12.164881,
+  "geo_precision": "esatta"
  },
  {
   "name": "Radioligia Prof. Luigi Ciarpaglini S.A.S. Di Giovanna Gualdi",
@@ -5427,7 +3593,8 @@
   "address": "via G. Matteotti,38",
   "postal_code": "01100",
   "latitude": 42.4207888,
-  "longitude": 12.1069527
+  "longitude": 12.1069527,
+  "geo_precision": "esatta"
  },
  {
   "name": "Myosotis",
@@ -5437,7 +3604,8 @@
   "address": "Via Verga snc",
   "postal_code": "01020",
   "latitude": 42.48672,
-  "longitude": 12.2502796
+  "longitude": 12.2502796,
+  "geo_precision": "esatta"
  },
  {
   "name": "Studio Di Terapia Fisica Prof.Vito Calamita Del Dott. Minelli Costantino & C. S.A.S.",
@@ -5447,7 +3615,8 @@
   "address": "piazza san francesco 2",
   "postal_code": "01100",
   "latitude": 42.42218,
-  "longitude": 12.10613
+  "longitude": 12.10613,
+  "geo_precision": "esatta"
  },
  {
   "name": "Studio Medico Analista Dr Vicini S.R.L.",
@@ -5457,27 +3626,8 @@
   "address": "SS Cassia KM 67.300",
   "postal_code": "01019",
   "latitude": 42.318861,
-  "longitude": 12.058817
- },
- {
-  "name": "Studio Radiologico E Terapia Fisica Quadrani Di Quadrani Grazia E C. Sas",
-  "type": "Ambulatorio",
-  "asl": "109 VITERBO",
-  "municipality": "Viterbo",
-  "address": "Via Fratelli Rosselli,2",
-  "postal_code": "01100",
-  "latitude": 42.4211036,
-  "longitude": 12.1083258
- },
- {
-  "name": "Analisi Cliniche O' Bios Srl",
-  "type": "Ambulatorio",
-  "asl": "110 RIETI",
-  "municipality": "Poggio Moiano",
-  "address": "Via Salaria Km. 53,00",
-  "postal_code": "02030",
-  "latitude": 42.2030175,
-  "longitude": 12.875237
+  "longitude": 12.058817,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ass. Comunità Emmanuel Onlus, Ct. R. Blasetti",
@@ -5487,67 +3637,8 @@
   "address": "via cese 12",
   "postal_code": "02100",
   "latitude": 42.44032,
-  "longitude": 12.82037
- },
- {
-  "name": "Laboratorio Analisi Cliniche S.Anastasia S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "110 RIETI",
-  "municipality": "Borgorose",
-  "address": "viale Elia Micangeli n. 22",
-  "postal_code": "02021",
-  "latitude": 42.1927685,
-  "longitude": 13.235852
- },
- {
-  "name": "Laboratorio Safim",
-  "type": "Ambulatorio",
-  "asl": "110 RIETI",
-  "municipality": "Petrella Salto",
-  "address": "Via Del Fante 1",
-  "postal_code": "02020",
-  "latitude": 42.250406,
-  "longitude": 13.095496
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Di Analisi Cliniche Igea Snc Di Giorgi E Co.",
-  "type": "Ambulatorio",
-  "asl": "110 RIETI",
-  "municipality": "Rieti",
-  "address": "Largo F.Spadoni, 4 c",
-  "postal_code": "02100",
-  "latitude": 42.4039993,
-  "longitude": 12.8527204
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorio Sabino Srl",
-  "type": "Ambulatorio",
-  "asl": "110 RIETI",
-  "municipality": "Fara In Sabina",
-  "address": "Via Servilia Snc Passo Corese",
-  "postal_code": "02032",
-  "latitude": 42.1552443,
-  "longitude": 12.6569405
- },
- {
-  "name": "Laboratorio Sant'Anna Sas",
-  "type": "Ambulatorio",
-  "asl": "110 RIETI",
-  "municipality": "Antrodoco",
-  "address": "Via della Stazione n. 81/a",
-  "postal_code": "02013",
-  "latitude": 42.40914009999999,
-  "longitude": 13.0685326
- },
- {
-  "name": "Studio Radiologico Lutemadue",
-  "type": "Ambulatorio",
-  "asl": "110 RIETI",
-  "municipality": "Rieti",
-  "address": "Viale Matteucci 1/B",
-  "postal_code": "02100",
-  "latitude": 42.398409,
-  "longitude": 12.8574091
+  "longitude": 12.82037,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale S.I.S.S. A R.L.",
@@ -5557,17 +3648,8 @@
   "address": "Via Moisè di Gaio n.5",
   "postal_code": "02100",
   "latitude": 42.40528,
-  "longitude": 12.8587692
- },
- {
-  "name": "Laboratorio Salus Srl",
-  "type": "Ambulatorio",
-  "asl": "110 RIETI",
-  "municipality": "Rieti",
-  "address": "Viale Matteucci 23",
-  "postal_code": "02100",
-  "latitude": 42.3996424,
-  "longitude": 12.8558497
+  "longitude": 12.8587692,
+  "geo_precision": "esatta"
  },
  {
   "name": "Villa Belvedere",
@@ -5577,7 +3659,8 @@
   "address": "Via Salaria Km 64",
   "postal_code": "02030",
   "latitude": 42.26214340000001,
-  "longitude": 12.8699348
+  "longitude": 12.8699348,
+  "geo_precision": "esatta"
  },
  {
   "name": "Agora' Salus",
@@ -5587,7 +3670,8 @@
   "address": "VIA MANTOVA,5 - Loc. CASTELVERDE",
   "postal_code": "04100",
   "latitude": 41.4945238,
-  "longitude": 12.7990068
+  "longitude": 12.7990068,
+  "geo_precision": "esatta"
  },
  {
   "name": "Terme Santamaria",
@@ -5597,7 +3681,8 @@
   "address": "Via Delle Terme, 423",
   "postal_code": "04021",
   "latitude": 41.2940632,
-  "longitude": 13.860864
+  "longitude": 13.860864,
+  "geo_precision": "esatta"
  },
  {
   "name": "Armonia S.R.L.",
@@ -5607,17 +3692,8 @@
   "address": "Via Piave, km 69",
   "postal_code": "04100",
   "latitude": 41.4675671,
-  "longitude": 12.9035965
- },
- {
-  "name": "Ars Medica S.R.L. Laboratorio Di Analisi Cliniche",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "Santi Cosma E Damiano",
-  "address": "Via Francesco Baracca, 370",
-  "postal_code": "04020",
-  "latitude": 41.2756929,
-  "longitude": 13.801488
+  "longitude": 12.9035965,
+  "geo_precision": "esatta"
  },
  {
   "name": "Srsr La Lanterna",
@@ -5627,7 +3703,8 @@
   "address": "Via Genova 33",
   "postal_code": "04010",
   "latitude": 41.359818,
-  "longitude": 13.43616
+  "longitude": 13.43616,
+  "geo_precision": "esatta"
  },
  {
   "name": "Poliambulatorio Ce.R.Te.F-Galeno",
@@ -5637,17 +3714,8 @@
   "address": "PIAZZA PORTA VESCOVO, nr.8/9",
   "postal_code": "04022",
   "latitude": 41.3568152,
-  "longitude": 13.4280727
- },
- {
-  "name": "Centro Radiologico Pontino",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "Latina",
-  "address": "Via Fabio Filzi, 19",
-  "postal_code": "04100",
-  "latitude": 41.4666915,
-  "longitude": 12.9083656
+  "longitude": 13.4280727,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Biologico Pasteur Srl",
@@ -5657,57 +3725,8 @@
   "address": "Via Marconi, 30",
   "postal_code": "04011",
   "latitude": 41.59392,
-  "longitude": 12.65176
- },
- {
-  "name": "Centro Diagnostico A. Fleming",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "Fondi",
-  "address": "via Edificio Scolastico snc",
-  "postal_code": "04022",
-  "latitude": 41.359119,
-  "longitude": 13.4265681
- },
- {
-  "name": "Centro Diagnostico E Radiologico La Meridiana Srl",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "Minturno",
-  "address": "Via APPIA n. 10",
-  "postal_code": "04028",
-  "latitude": 41.26086,
-  "longitude": 13.689303
- },
- {
-  "name": "Centro Diagnostico Enne Uno Srl",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "Itri",
-  "address": "via SAN PAOLO DELLA CROCE n¿ 1/3",
-  "postal_code": "04020",
-  "latitude": 41.2906757,
-  "longitude": 13.5259709
- },
- {
-  "name": "Centro Diagnostico Fleming Srl",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "Pontinia",
-  "address": "Via Marconi, 64",
-  "postal_code": "04014",
-  "latitude": 41.4091242,
-  "longitude": 13.0401475
- },
- {
-  "name": "Centro Diagnostico Medico Anxur S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "Terracina",
-  "address": "Via Lungolinea Pio Vi, 107",
-  "postal_code": "04019",
-  "latitude": 41.2881998,
-  "longitude": 13.2508348
+  "longitude": 12.65176,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Fisiokinesiterapico Europa Srl",
@@ -5717,7 +3736,8 @@
   "address": "Piazza della Repubblica, 39",
   "postal_code": "04019",
   "latitude": 41.2876255,
-  "longitude": 13.255167
+  "longitude": 13.255167,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Medico Di Patologia Clinica Dott. Redi Ugo Srl",
@@ -5727,17 +3747,8 @@
   "address": "Via Oberdan, 43",
   "postal_code": "04100",
   "latitude": 41.4684987,
-  "longitude": 12.904915
- },
- {
-  "name": "Centro Dialisi Città Di Aprilia S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "Aprilia",
-  "address": "Via R. Leoncavallo, 4",
-  "postal_code": "04011",
-  "latitude": 41.5899627,
-  "longitude": 12.6622362
+  "longitude": 12.904915,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Medico Sociale Albert Schweitzer S.A.S. Di Lombardi Ernesta Dora E C.",
@@ -5747,7 +3758,8 @@
   "address": "Via G. Marconi N.14",
   "postal_code": "04026",
   "latitude": 41.2535937,
-  "longitude": 13.7118746
+  "longitude": 13.7118746,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Polispecialistico Sa.Na.",
@@ -5757,7 +3769,8 @@
   "address": "Via Peschiera, 10",
   "postal_code": "04011",
   "latitude": 41.5945889,
-  "longitude": 12.6450007
+  "longitude": 12.6450007,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale",
@@ -5767,7 +3780,8 @@
   "address": "via Appia, 1325",
   "postal_code": "04026",
   "latitude": 41.2517281,
-  "longitude": 13.7283128
+  "longitude": 13.7283128,
+  "geo_precision": "esatta"
  },
  {
   "name": "Clin Audit San Carlo Srl",
@@ -5777,17 +3791,8 @@
   "address": "Via Gattuccia N. 8/10",
   "postal_code": "04018",
   "latitude": 41.50407999999999,
-  "longitude": 13.06677
- },
- {
-  "name": "Diagnostica Hermes Srl",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "Formia",
-  "address": "Via Palazzo, 44/A",
-  "postal_code": "04023",
-  "latitude": 41.2635684,
-  "longitude": 13.6231742
+  "longitude": 13.06677,
+  "geo_precision": "esatta"
  },
  {
   "name": "Diaverum Italia S.R.L. - Fondi",
@@ -5797,7 +3802,8 @@
   "address": "Via Arnale Rosso 129",
   "postal_code": "04021",
   "latitude": 41.3584869,
-  "longitude": 13.436137
+  "longitude": 13.436137,
+  "geo_precision": "esatta"
  },
  {
   "name": "Studio Dott. Di Russo Alfonso",
@@ -5807,7 +3813,8 @@
   "address": "Via Unita' D'Italia, 38",
   "postal_code": "04023",
   "latitude": 41.2559961,
-  "longitude": 13.6068672
+  "longitude": 13.6068672,
+  "geo_precision": "esatta"
  },
  {
   "name": "Emolabo",
@@ -5817,7 +3824,8 @@
   "address": "Via Sicilia,81",
   "postal_code": "04019",
   "latitude": 41.2881749,
-  "longitude": 13.2402463
+  "longitude": 13.2402463,
+  "geo_precision": "esatta"
  },
  {
   "name": "Erre-D Srl",
@@ -5827,7 +3835,8 @@
   "address": "Via Dei Piceni 45/55",
   "postal_code": "04100",
   "latitude": 41.4588779,
-  "longitude": 12.9290386
+  "longitude": 12.9290386,
+  "geo_precision": "esatta"
  },
  {
   "name": "F.Lli Tomassi Snc Di Tomassi Roberto & C.",
@@ -5837,7 +3846,8 @@
   "address": "Via Delle Terme - Suio Terme",
   "postal_code": "04021",
   "latitude": 41.2987721,
-  "longitude": 13.8225318
+  "longitude": 13.8225318,
+  "geo_precision": "esatta"
  },
  {
   "name": "Fisiosanisport Latina S.R.L.",
@@ -5847,7 +3857,8 @@
   "address": "Via Franco Faggiana, 1754",
   "postal_code": "04100",
   "latitude": 41.4426382,
-  "longitude": 12.9028552
+  "longitude": 12.9028552,
+  "geo_precision": "esatta"
  },
  {
   "name": "Geas Srl",
@@ -5857,7 +3868,8 @@
   "address": "Via Pio Vi, 7",
   "postal_code": "04100",
   "latitude": 41.4658285,
-  "longitude": 12.9037008
+  "longitude": 12.9037008,
+  "geo_precision": "esatta"
  },
  {
   "name": "S.R.S.R. ''La Margherita''",
@@ -5867,7 +3879,8 @@
   "address": "Via Pontina Km 105.400",
   "postal_code": "04019",
   "latitude": 41.2963728,
-  "longitude": 13.2332657
+  "longitude": 13.2332657,
+  "geo_precision": "esatta"
  },
  {
   "name": "S.R.T.R. ''Esserci''",
@@ -5877,7 +3890,8 @@
   "address": "Via Badino 267",
   "postal_code": "04019",
   "latitude": 41.2880754,
-  "longitude": 13.2272021
+  "longitude": 13.2272021,
+  "geo_precision": "esatta"
  },
  {
   "name": "Co. Di Co. Alberto Pezzi",
@@ -5887,7 +3901,8 @@
   "address": "Via Cerri Aprano snc",
   "postal_code": "04020",
   "latitude": 41.2988908,
-  "longitude": 13.8126177
+  "longitude": 13.8126177,
+  "geo_precision": "esatta"
  },
  {
   "name": "Insieme 1",
@@ -5897,7 +3912,8 @@
   "address": "Via Penitro a Monte snc",
   "postal_code": "04023",
   "latitude": 41.2559961,
-  "longitude": 13.6068672
+  "longitude": 13.6068672,
+  "geo_precision": "esatta"
  },
  {
   "name": "Insieme",
@@ -5907,7 +3923,8 @@
   "address": "Via Ausente angolo Cerri Aprano",
   "postal_code": "04020",
   "latitude": 41.28722459999999,
-  "longitude": 13.7803335
+  "longitude": 13.7803335,
+  "geo_precision": "esatta"
  },
  {
   "name": "Co. Di Co. Redzep Sestovic",
@@ -5917,7 +3934,8 @@
   "address": "Via Cerri Aprano snc",
   "postal_code": "04020",
   "latitude": 41.2988908,
-  "longitude": 13.8126177
+  "longitude": 13.8126177,
+  "geo_precision": "esatta"
  },
  {
   "name": "Srtr Insieme",
@@ -5927,7 +3945,8 @@
   "address": "Via Silvio Pellico n.7/9",
   "postal_code": "04020",
   "latitude": 41.34384300000001,
-  "longitude": 13.781882
+  "longitude": 13.781882,
+  "geo_precision": "esatta"
  },
  {
   "name": "Insieme 2",
@@ -5937,17 +3956,8 @@
   "address": "Via Ausente Km.2,750",
   "postal_code": "04020",
   "latitude": 41.2988908,
-  "longitude": 13.8126177
- },
- {
-  "name": "Istituto Fisioterapico B & B Snc",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "Latina",
-  "address": "Corso della Repubblica, 80",
-  "postal_code": "04100",
-  "latitude": 41.4705524,
-  "longitude": 12.9029645
+  "longitude": 13.8126177,
+  "geo_precision": "esatta"
  },
  {
   "name": "Laboratori Vita S.R.L.",
@@ -5957,37 +3967,8 @@
   "address": "Via Sabaudia 19",
   "postal_code": "04100",
   "latitude": 41.45661,
-  "longitude": 12.91183
- },
- {
-  "name": "Laboratorio Analisi Bio-Cliniche D.Ssa Maria Rosa Cicconardi Minutillo S.R.L",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "Gaeta",
-  "address": "Via Cuostile N. 5/H",
-  "postal_code": "04024",
-  "latitude": 41.21939,
-  "longitude": 13.56518
- },
- {
-  "name": "Laboratorio Analisi Cliniche Dott.Sa Mattei Fiammetta S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "Terracina",
-  "address": "Viale della Vittoria, 150",
-  "postal_code": "04019",
-  "latitude": 41.2859747,
-  "longitude": 13.2481727
- },
- {
-  "name": "Laboratorio Diagnostica Medica Srl",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "Latina",
-  "address": "Largo Cirri, 10",
-  "postal_code": "04100",
-  "latitude": 41.446227,
-  "longitude": 12.8777925
+  "longitude": 12.91183,
+  "geo_precision": "esatta"
  },
  {
   "name": "Elkalab",
@@ -5997,37 +3978,8 @@
   "address": "Via Delle Regioni, 20",
   "postal_code": "04011",
   "latitude": 41.5999995,
-  "longitude": 12.6482052
- },
- {
-  "name": "Laboratorio Galeno Srl",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "Formia",
-  "address": "Via Vitruvio, 77",
-  "postal_code": "04023",
-  "latitude": 41.25489169999999,
-  "longitude": 13.6042491
- },
- {
-  "name": "Laboratorio Mendel Srl",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "Sabaudia",
-  "address": "Via Principe di Piemonte, 6",
-  "postal_code": "04016",
-  "latitude": 41.3009559,
-  "longitude": 13.0245684
- },
- {
-  "name": "Laboratorio Salus S.A.S.",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "San Felice Circeo",
-  "address": "Via Montenero 2/4",
-  "postal_code": "04017",
-  "latitude": 41.2431203,
-  "longitude": 13.0926582
+  "longitude": 12.6482052,
+  "geo_precision": "esatta"
  },
  {
   "name": "Terme S. Egidio",
@@ -6037,7 +3989,8 @@
   "address": "Via delle Terme",
   "postal_code": "04021",
   "latitude": 41.2920155,
-  "longitude": 13.8447573
+  "longitude": 13.8447573,
+  "geo_precision": "esatta"
  },
  {
   "name": "Marie & Pierre Curie S.R.L.",
@@ -6047,7 +4000,8 @@
   "address": "Via Aurelio Saffi 53/69",
   "postal_code": "04100",
   "latitude": 41.4697256,
-  "longitude": 12.9001473
+  "longitude": 12.9001473,
+  "geo_precision": "esatta"
  },
  {
   "name": "Medical Pontino S.R.L.",
@@ -6057,7 +4011,8 @@
   "address": "Via Custoza, 3/B",
   "postal_code": "04100",
   "latitude": 41.47372,
-  "longitude": 12.90796
+  "longitude": 12.90796,
+  "geo_precision": "esatta"
  },
  {
   "name": "Polilab S.R.L.",
@@ -6067,7 +4022,8 @@
   "address": "Via Regina Camilla, 13/17",
   "postal_code": "04015",
   "latitude": 41.474691,
-  "longitude": 13.179477
+  "longitude": 13.179477,
+  "geo_precision": "esatta"
  },
  {
   "name": "Abaton Progetto Insieme",
@@ -6077,7 +4033,8 @@
   "address": "Via De Gasperi A.",
   "postal_code": "04021",
   "latitude": 41.29773369999999,
-  "longitude": 13.825986
+  "longitude": 13.825986,
+  "geo_precision": "esatta"
  },
  {
   "name": "San Rocco Srl",
@@ -6087,7 +4044,8 @@
   "address": "viale giovane europa 4/12",
   "postal_code": "04012",
   "latitude": 41.589823,
-  "longitude": 12.828465
+  "longitude": 12.828465,
+  "geo_precision": "esatta"
  },
  {
   "name": "Sermolab S.R.L.",
@@ -6097,7 +4055,8 @@
   "address": "Via Le Pastine, 3",
   "postal_code": "04010",
   "latitude": 41.6055302,
-  "longitude": 12.9085238
+  "longitude": 12.9085238,
+  "geo_precision": "esatta"
  },
  {
   "name": "Soc. Sempl. 'Hard' Di Peroni Flora E C.",
@@ -6107,27 +4066,8 @@
   "address": "Via Cialdini 18",
   "postal_code": "04100",
   "latitude": 41.4634936,
-  "longitude": 12.903922
- },
- {
-  "name": "Studio Di Radiologia E Terapia Fisica Dr. Giuseppe Izzo",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "Latina",
-  "address": "corso della Repubblica 239",
-  "postal_code": "04100",
-  "latitude": 41.4640859,
-  "longitude": 12.9043292
- },
- {
-  "name": "Stabilimento Termale Nuova Suio",
-  "type": "Ambulatorio",
-  "asl": "111 LATINA",
-  "municipality": "Castelforte",
-  "address": "via delle terme 314",
-  "postal_code": "04020",
-  "latitude": 41.2939286,
-  "longitude": 13.8605557
+  "longitude": 12.903922,
+  "geo_precision": "esatta"
  },
  {
   "name": "Terme Caracciolo Forte",
@@ -6137,7 +4077,8 @@
   "address": "VIA DELLE TERME, snc",
   "postal_code": "04021",
   "latitude": 41.2987721,
-  "longitude": 13.8225318
+  "longitude": 13.8225318,
+  "geo_precision": "esatta"
  },
  {
   "name": "Terme Vescine",
@@ -6147,7 +4088,8 @@
   "address": "Via Delle Terme, 417",
   "postal_code": "04021",
   "latitude": 41.2940632,
-  "longitude": 13.860864
+  "longitude": 13.860864,
+  "geo_precision": "esatta"
  },
  {
   "name": "Villa Delle Querce By C.C. Srl",
@@ -6157,7 +4099,8 @@
   "address": "Via Arrigo Boito, 3",
   "postal_code": "04100",
   "latitude": 41.4574256,
-  "longitude": 12.8764342
+  "longitude": 12.8764342,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Residenziale Anziani Domus Aurea *2",
@@ -6167,7 +4110,8 @@
   "address": "Via S. Sebastiano 8-10 Loc. Petrete",
   "postal_code": "04021",
   "latitude": 41.2987721,
-  "longitude": 13.8225318
+  "longitude": 13.8225318,
+  "geo_precision": "esatta"
  },
  {
   "name": "Comunità Di Piglio",
@@ -6177,7 +4121,8 @@
   "address": "Via Prenestina 95",
   "postal_code": "03010",
   "latitude": 41.8323942,
-  "longitude": 13.1030849
+  "longitude": 13.1030849,
+  "geo_precision": "esatta"
  },
  {
   "name": "San Nicola",
@@ -6187,27 +4132,8 @@
   "address": "Via Pozzi N. 20",
   "postal_code": "03040",
   "latitude": 41.5794794,
-  "longitude": 13.8103966
- },
- {
-  "name": "Laboratorio Analisi Biomedica",
-  "type": "Ambulatorio",
-  "asl": "112 FROSINONE",
-  "municipality": "Alatri",
-  "address": "v. Provinciale, 77",
-  "postal_code": "03011",
-  "latitude": 41.775528,
-  "longitude": 13.272233
- },
- {
-  "name": "Centro Di Radiologia S.Antonio Srl",
-  "type": "Ambulatorio",
-  "asl": "112 FROSINONE",
-  "municipality": "Cassino",
-  "address": "Via Arigni 55",
-  "postal_code": "03043",
-  "latitude": 41.4899341,
-  "longitude": 13.827922
+  "longitude": 13.8103966,
+  "geo_precision": "esatta"
  },
  {
   "name": "Centro Medico Polispecialistico Aditerm",
@@ -6217,17 +4143,8 @@
   "address": "Via Casilina Km 77,600",
   "postal_code": "03013",
   "latitude": 41.6956788,
-  "longitude": 13.2577285
- },
- {
-  "name": "Centro Ortopedico Fisioterapico S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "112 FROSINONE",
-  "municipality": "Cassino",
-  "address": "Via Sferracavalli 2/c",
-  "postal_code": "03043",
-  "latitude": 41.5019771,
-  "longitude": 13.8361641
+  "longitude": 13.2577285,
+  "geo_precision": "esatta"
  },
  {
   "name": "Clinica S. Antonio",
@@ -6237,7 +4154,8 @@
   "address": "Via Marittima 228",
   "postal_code": "03100",
   "latitude": 41.63374530000001,
-  "longitude": 13.3372289
+  "longitude": 13.3372289,
+  "geo_precision": "esatta"
  },
  {
   "name": "Nuova Era",
@@ -6247,7 +4165,8 @@
   "address": "Via S. Rocco, n. 2",
   "postal_code": "03010",
   "latitude": 41.775806,
-  "longitude": 13.272121
+  "longitude": 13.272121,
+  "geo_precision": "esatta"
  },
  {
   "name": "Casa Famiglia Paraclito",
@@ -6257,7 +4176,8 @@
   "address": "borgo s. rocco, 2",
   "postal_code": "03010",
   "latitude": 41.775806,
-  "longitude": 13.272121
+  "longitude": 13.272121,
+  "geo_precision": "esatta"
  },
  {
   "name": "Il Casale",
@@ -6267,7 +4187,8 @@
   "address": "contrada malle snc",
   "postal_code": "03010",
   "latitude": 41.7756543,
-  "longitude": 13.2722571
+  "longitude": 13.2722571,
+  "geo_precision": "esatta"
  },
  {
   "name": "C.R.N. Srl",
@@ -6277,7 +4198,8 @@
   "address": "Via Largo Michelozzi",
   "postal_code": "03030",
   "latitude": 41.49549469999999,
-  "longitude": 13.750909
+  "longitude": 13.750909,
+  "geo_precision": "esatta"
  },
  {
   "name": "Delta Medical Srl",
@@ -6287,7 +4209,8 @@
   "address": "via Fresine-Loc.tà Giardino-Condominio dei Portici",
   "postal_code": "03013",
   "latitude": 41.6956788,
-  "longitude": 13.2577285
+  "longitude": 13.2577285,
+  "geo_precision": "esatta"
  },
  {
   "name": "Euronefro Srl",
@@ -6297,17 +4220,8 @@
   "address": "Via Marittima 362",
   "postal_code": "03100",
   "latitude": 41.633,
-  "longitude": 13.33607
- },
- {
-  "name": "Sant'Elisabetta Dialisi",
-  "type": "Ambulatorio",
-  "asl": "112 FROSINONE",
-  "municipality": "Fiuggi",
-  "address": "via Guglielmo Marconi 1",
-  "postal_code": "03014",
-  "latitude": 41.8032027,
-  "longitude": 13.2234705
+  "longitude": 13.33607,
+  "geo_precision": "esatta"
  },
  {
   "name": "Complesso Polispecialistico Figebo Centro Polispecialistico Srl",
@@ -6317,7 +4231,8 @@
   "address": "Via Cimarosa,snc",
   "postal_code": "03043",
   "latitude": 41.4907889,
-  "longitude": 13.8333776
+  "longitude": 13.8333776,
+  "geo_precision": "esatta"
  },
  {
   "name": "Fondazione Di Culto E Religione Piccolo Rifugio Onlus",
@@ -6327,7 +4242,8 @@
   "address": "Via A. Pettorini 100/a",
   "postal_code": "03013",
   "latitude": 41.68694850000001,
-  "longitude": 13.251894
+  "longitude": 13.251894,
+  "geo_precision": "esatta"
  },
  {
   "name": "Exodus Cassino",
@@ -6337,27 +4253,8 @@
   "address": "Via San Domenico Vertelle, 23",
   "postal_code": "03043",
   "latitude": 41.5049673,
-  "longitude": 13.8371411
- },
- {
-  "name": "Diagnostica Per Immagini - Medicina Fisica E Ribilitazione",
-  "type": "Ambulatorio",
-  "asl": "112 FROSINONE",
-  "municipality": "Pontecorvo",
-  "address": "Via Lungoliri, 5",
-  "postal_code": "03037",
-  "latitude": 41.459197,
-  "longitude": 13.664848
- },
- {
-  "name": "Ges.L.An. S.R.L. Ambulatoriale - Laboratorio Di Analisi Cliniche",
-  "type": "Ambulatorio",
-  "asl": "112 FROSINONE",
-  "municipality": "Frosinone",
-  "address": "Via Adige, 41",
-  "postal_code": "03100",
-  "latitude": 41.6430176,
-  "longitude": 13.3443972
+  "longitude": 13.8371411,
+  "geo_precision": "esatta"
  },
  {
   "name": "S.R.T.R.Estensiva - Borgo San Tommaso",
@@ -6367,7 +4264,8 @@
   "address": "Via San Francesco, 2/a",
   "postal_code": "03038",
   "latitude": 41.5517396,
-  "longitude": 13.670554
+  "longitude": 13.670554,
+  "geo_precision": "esatta"
  },
  {
   "name": "S.R.T.R. Estensiva Montello",
@@ -6377,7 +4275,8 @@
   "address": "Via Montello, 22",
   "postal_code": "03038",
   "latitude": 41.5497088,
-  "longitude": 13.6590034
+  "longitude": 13.6590034,
+  "geo_precision": "esatta"
  },
  {
   "name": "S.R.T.R. 24Hh - Borgo San Tommaso",
@@ -6387,7 +4286,8 @@
   "address": "Via San Francesco, 2/a",
   "postal_code": "03038",
   "latitude": 41.5517396,
-  "longitude": 13.670554
+  "longitude": 13.670554,
+  "geo_precision": "esatta"
  },
  {
   "name": "Insieme Ausonia",
@@ -6397,7 +4297,8 @@
   "address": "C/da Orfanotrofio snc",
   "postal_code": "03040",
   "latitude": 41.3570246,
-  "longitude": 13.7507436
+  "longitude": 13.7507436,
+  "geo_precision": "esatta"
  },
  {
   "name": "Laboratori Ars Medica Srl L.A.M.",
@@ -6407,87 +4308,8 @@
   "address": "Via Claudio Monteverdi 90/94",
   "postal_code": "03100",
   "latitude": 41.6272013,
-  "longitude": 13.3280012
- },
- {
-  "name": "Struttura Ambulatoriale Laboratorioanalisi Chimico-Cliniche E Microbiologiche \"David Snc\"",
-  "type": "Ambulatorio",
-  "asl": "112 FROSINONE",
-  "municipality": "Sora",
-  "address": "Via Giuriati 11",
-  "postal_code": "03039",
-  "latitude": 41.7169924,
-  "longitude": 13.6107666
- },
- {
-  "name": "Laboratorio Analisi Cliniche Collatino Srl",
-  "type": "Ambulatorio",
-  "asl": "112 FROSINONE",
-  "municipality": "Castro Dei Volsci",
-  "address": "Via A. Carnevale Snc",
-  "postal_code": "03020",
-  "latitude": 41.5077006,
-  "longitude": 13.4055372
- },
- {
-  "name": "Laboratorio Analisi Cliniche 'Dante'",
-  "type": "Ambulatorio",
-  "asl": "112 FROSINONE",
-  "municipality": "Anagni",
-  "address": "Via G.Giminiani, 153",
-  "postal_code": "03012",
-  "latitude": 41.7443123,
-  "longitude": 13.1595275
- },
- {
-  "name": "Laboratorio Analisi Cliniche Di Antonelli Armando & C. S.R.L.",
-  "type": "Ambulatorio",
-  "asl": "112 FROSINONE",
-  "municipality": "Arce",
-  "address": "via Casilina km 111,700",
-  "postal_code": "03032",
-  "latitude": 41.5855679,
-  "longitude": 13.5730857
- },
- {
-  "name": "Laboratorio Analisi Cliniche S.Marco S.A.S.",
-  "type": "Ambulatorio",
-  "asl": "112 FROSINONE",
-  "municipality": "Pontecorvo",
-  "address": "Via Le Mura S.ANDREA",
-  "postal_code": "03037",
-  "latitude": 41.4545679,
-  "longitude": 13.6637674
- },
- {
-  "name": "Laboratorio Analisi Cliniche Polese",
-  "type": "Ambulatorio",
-  "asl": "112 FROSINONE",
-  "municipality": "Roccasecca",
-  "address": "rivolta 24/a",
-  "postal_code": "03038",
-  "latitude": 41.53142099999999,
-  "longitude": 13.6462696
- },
- {
-  "name": "Sezione Laboratorio Di Analisi - Diagnostica Per Immagini - Risonanza Magnetica",
-  "type": "Ambulatorio",
-  "asl": "112 FROSINONE",
-  "municipality": "Cassino",
-  "address": "P.zza S. Scolastica, 1",
-  "postal_code": "03043",
-  "latitude": 41.4954906,
-  "longitude": 13.8290606
- },
- {
-  "name": "Laboratorio Diagnostico Val Comino Srl",
-  "type": "Ambulatorio",
-  "asl": "112 FROSINONE",
-  "municipality": "Atina",
-  "address": "Via San Nicandro, snc",
-  "postal_code": "03042",
-  "latitude": 41.6193372,
-  "longitude": 13.8015603
+  "longitude": 13.3280012,
+  "geo_precision": "esatta"
  },
  {
   "name": "Menichelli Ottavia Srl",
@@ -6497,7 +4319,8 @@
   "address": "Piazza Berardi, 36",
   "postal_code": "03023",
   "latitude": 41.5699592,
-  "longitude": 13.3365605
+  "longitude": 13.3365605,
+  "geo_precision": "esatta"
  },
  {
   "name": "Struttura Ambulatoriale Nephrocare Spa",
@@ -6507,7 +4330,8 @@
   "address": "Piazza S. Scolastica",
   "postal_code": "03043",
   "latitude": 41.5057532,
-  "longitude": 13.8431007
+  "longitude": 13.8431007,
+  "geo_precision": "esatta"
  },
  {
   "name": "Polymedic Srl",
@@ -6517,27 +4341,8 @@
   "address": "Vicolo Mecci Snc",
   "postal_code": "03013",
   "latitude": 41.6956788,
-  "longitude": 13.2577285
- },
- {
-  "name": "Radiologia Diagnostica",
-  "type": "Ambulatorio",
-  "asl": "112 FROSINONE",
-  "municipality": "Frosinone",
-  "address": "Via Tiburtina 185",
-  "postal_code": "03100",
-  "latitude": 41.6522959,
-  "longitude": 13.3432341
- },
- {
-  "name": "Radiologia Morlupo Di E. Arduini & C. S.A.S.",
-  "type": "Ambulatorio",
-  "asl": "112 FROSINONE",
-  "municipality": "Roma",
-  "address": "Via Dei Villini 1",
-  "postal_code": "00067",
-  "latitude": 42.14399299999999,
-  "longitude": 12.490363
+  "longitude": 13.2577285,
+  "geo_precision": "esatta"
  },
  {
   "name": "Via Lecce",
@@ -6547,7 +4352,8 @@
   "address": "Via Lecce 7",
   "postal_code": "03100",
   "latitude": 41.63532,
-  "longitude": 13.34973
+  "longitude": 13.34973,
+  "geo_precision": "esatta"
  },
  {
   "name": "Salus Srl (20Pl)",
@@ -6557,7 +4363,8 @@
   "address": "VIA Aurita, 4",
   "postal_code": "03030",
   "latitude": 41.702,
-  "longitude": 13.67386
+  "longitude": 13.67386,
+  "geo_precision": "esatta"
  },
  {
   "name": "Salus Srl (60Pl)",
@@ -6567,7 +4374,8 @@
   "address": "Via Valcatoio N.20",
   "postal_code": "03036",
   "latitude": 41.6812376,
-  "longitude": 13.573585
+  "longitude": 13.573585,
+  "geo_precision": "esatta"
  },
  {
   "name": "Salus Terme Srl",
@@ -6577,7 +4385,8 @@
   "address": "Via A.Nazari 24",
   "postal_code": "03014",
   "latitude": 41.7914428,
-  "longitude": 13.2199172
+  "longitude": 13.2199172,
+  "geo_precision": "esatta"
  },
  {
   "name": "R.S.A. San Germano Srl",
@@ -6587,7 +4396,8 @@
   "address": "Viale Marconi, 10",
   "postal_code": "03030",
   "latitude": 41.4997747,
-  "longitude": 13.743345
+  "longitude": 13.743345,
+  "geo_precision": "esatta"
  },
  {
   "name": "Sm3 Srl",
@@ -6597,7 +4407,8 @@
   "address": "Via Morolense 20",
   "postal_code": "03019",
   "latitude": 41.6090394,
-  "longitude": 13.2896324
+  "longitude": 13.2896324,
+  "geo_precision": "esatta"
  },
  {
   "name": "Casa Johnny",
@@ -6607,7 +4418,8 @@
   "address": "Via Poggio Romano,5",
   "postal_code": "03018",
   "latitude": 41.806102,
-  "longitude": 13.035037
+  "longitude": 13.035037,
+  "geo_precision": "esatta"
  },
  {
   "name": "Casa Mary",
@@ -6617,7 +4429,8 @@
   "address": "VIa Poggio Romano 45",
   "postal_code": "03018",
   "latitude": 41.8032358,
-  "longitude": 13.0282113
+  "longitude": 13.0282113,
+  "geo_precision": "esatta"
  },
  {
   "name": "R.S.A. San Francesco",
@@ -6627,7 +4440,8 @@
   "address": "Via San Francesco Di Fuori, 14",
   "postal_code": "03011",
   "latitude": 41.7253443,
-  "longitude": 13.3339046
+  "longitude": 13.3339046,
+  "geo_precision": "esatta"
  },
  {
   "name": "Villa Degli Ulivi",
@@ -6637,7 +4451,8 @@
   "address": "via Tascitara , 9",
   "postal_code": "03049",
   "latitude": 41.53693,
-  "longitude": 13.87296
+  "longitude": 13.87296,
+  "geo_precision": "esatta"
  },
  {
   "name": "S.R.T.R. Le Palme E Gli Oleandri",
@@ -6647,17 +4462,8 @@
   "address": "via Tascitara 9",
   "postal_code": "03049",
   "latitude": 41.53693,
-  "longitude": 13.87296
- },
- {
-  "name": "Centro Diagnostico E Radiologico Sirolli",
-  "type": "Ambulatorio",
-  "asl": "112 FROSINONE",
-  "municipality": "Ceprano",
-  "address": "via ALFIERI 21/23",
-  "postal_code": "03024",
-  "latitude": 41.5455677,
-  "longitude": 13.5183331
+  "longitude": 13.87296,
+  "geo_precision": "esatta"
  },
  {
   "name": "Ambulatorio Polispecialistico Studio Medico Ferentino",
@@ -6667,7 +4473,8 @@
   "address": "Via Casilina Sud Km.76",
   "postal_code": "03013",
   "latitude": 41.6956788,
-  "longitude": 13.2577285
+  "longitude": 13.2577285,
+  "geo_precision": "esatta"
  },
  {
   "name": "Terme Pompeo Srl",
@@ -6677,7 +4484,8 @@
   "address": "Via Casilina Km.76",
   "postal_code": "03013",
   "latitude": 41.6956788,
-  "longitude": 13.2577285
+  "longitude": 13.2577285,
+  "geo_precision": "esatta"
  },
  {
   "name": "Villa Alba Veroli Sr E Nr",
@@ -6687,6 +4495,7 @@
   "address": "Via Foiano, 34",
   "postal_code": "03020",
   "latitude": 41.67616,
-  "longitude": 13.43019
+  "longitude": 13.43019,
+  "geo_precision": "esatta"
  }
 ]

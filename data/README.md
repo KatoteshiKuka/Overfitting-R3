@@ -15,6 +15,11 @@ Lo script scarica le fonti, normalizza i record, geocodifica le strutture prive 
 coordinate (Nominatim, una richiesta al secondo) e riscrive i file qui sotto. La cache
 `.geocache.json` evita di rifare il lavoro già svolto.
 
+`raw/` conserva i CSV scaricati così come arrivano dal portale. Sono committati per due
+motivi: mostrano la provenienza esatta dei dati, e fanno da rete quando `dati.lazio.it`
+risponde 503 — cosa già successa durante lo sviluppo. Se il portale è giù, lo script
+riprova qualche volta e poi riparte dall'ultima copia buona invece di fallire.
+
 Poi si ricarica il database:
 
 ```bash

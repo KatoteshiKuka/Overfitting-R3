@@ -1,0 +1,625 @@
+{
+ "generator": "gen_synthetic_patients.py",
+ "provenance": "SYNTHETIC",
+ "synthetic": true,
+ "note": "Identità inventate. I codici fiscali sono formalmente validi ma non appartengono a nessuna persona reale e non vanno usati con servizi esterni.",
+ "patients": [
+  {
+   "profile_id": "SYN-001",
+   "username": "mario.rossi",
+   "spid_code": "TESTSP00001",
+   "fiscal_code": "RSSMRA92P14H501K",
+   "given_name": "Mario",
+   "family_name": "Rossi",
+   "birth_date": "1992-09-14",
+   "birth_place": "Roma",
+   "birth_county": "RM",
+   "gender": "M",
+   "email": "mario.rossi@example.test",
+   "mobile_phone": "+39 333 1000001",
+   "is_minor": false,
+   "demo_care_intent": "minor_wound_care",
+   "hero": "A",
+   "guardian": null,
+   "gp": {
+    "given_name": "Giulia",
+    "family_name": "Barbieri",
+    "phone": "+39 06 5000037"
+   },
+   "emergency_contact": {
+    "given_name": "Marco",
+    "family_name": "Rossi",
+    "relationship": "familiare",
+    "phone": "+39 340 2000001"
+   },
+   "exemptions": [],
+   "chronic_conditions": [],
+   "recent_episodes": [
+    {
+     "episode_date": "2024-06-20",
+     "facility": "Sant'Andrea — Pronto Soccorso",
+     "reason": "prescription_renewal",
+     "outcome": "dimesso con indicazioni"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "profile_id": "SYN-002",
+   "username": "giulia.bianchi",
+   "spid_code": "TESTSP00002",
+   "fiscal_code": "BNCGLI79D59E472Q",
+   "given_name": "Giulia",
+   "family_name": "Bianchi",
+   "birth_date": "1979-04-19",
+   "birth_place": "Latina",
+   "birth_county": "LT",
+   "gender": "F",
+   "email": "giulia.bianchi@example.test",
+   "mobile_phone": "+39 333 1000002",
+   "is_minor": false,
+   "demo_care_intent": "musculoskeletal_minor",
+   "hero": "B",
+   "guardian": null,
+   "gp": null,
+   "emergency_contact": {
+    "given_name": "Davide",
+    "family_name": "Bianchi",
+    "relationship": "familiare",
+    "phone": "+39 340 2000002"
+   },
+   "exemptions": [
+    {
+     "code": "048",
+     "description": "Patologia oncologica in follow-up"
+    }
+   ],
+   "chronic_conditions": [
+    "asma"
+   ],
+   "recent_episodes": [],
+   "synthetic": true
+  },
+  {
+   "profile_id": "SYN-003",
+   "username": "giuseppe.ferrari",
+   "spid_code": "TESTSP00003",
+   "fiscal_code": "FRRGPP17T13D810L",
+   "given_name": "Giuseppe",
+   "family_name": "Ferrari",
+   "birth_date": "2017-12-13",
+   "birth_place": "Frosinone",
+   "birth_county": "FR",
+   "gender": "M",
+   "email": null,
+   "mobile_phone": null,
+   "is_minor": true,
+   "demo_care_intent": "pediatric_non_urgent",
+   "hero": "C",
+   "guardian": {
+    "given_name": "Sara",
+    "family_name": "Ferrari",
+    "relationship": "genitore",
+    "phone": "+39 349 3000003"
+   },
+   "gp": {
+    "given_name": "Chiara",
+    "family_name": "Santoro",
+    "phone": "+39 06 5000111"
+   },
+   "emergency_contact": {
+    "given_name": "Simone",
+    "family_name": "Ferrari",
+    "relationship": "familiare",
+    "phone": "+39 340 2000003"
+   },
+   "exemptions": [],
+   "chronic_conditions": [],
+   "recent_episodes": [
+    {
+     "episode_date": "2024-06-07",
+     "facility": "Ospedale dei Castelli — Pronto Soccorso",
+     "reason": "specimen_collection",
+     "outcome": "dimesso"
+    },
+    {
+     "episode_date": "2026-04-06",
+     "facility": "Pol. Univ. Umberto I — Pronto Soccorso",
+     "reason": "specialist_referral",
+     "outcome": "dimesso con indicazioni"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "profile_id": "SYN-004",
+   "username": "chiara.esposito",
+   "spid_code": "TESTSP00004",
+   "fiscal_code": "SPSCHR68P47M082S",
+   "given_name": "Chiara",
+   "family_name": "Esposito",
+   "birth_date": "1968-09-07",
+   "birth_place": "Viterbo",
+   "birth_county": "VT",
+   "gender": "F",
+   "email": "chiara.esposito@example.test",
+   "mobile_phone": "+39 333 1000004",
+   "is_minor": false,
+   "demo_care_intent": "specimen_collection",
+   "hero": "D",
+   "guardian": null,
+   "gp": {
+    "given_name": "Sara",
+    "family_name": "Mariani",
+    "phone": "+39 06 5000148"
+   },
+   "emergency_contact": {
+    "given_name": "Pietro",
+    "family_name": "Esposito",
+    "relationship": "familiare",
+    "phone": "+39 340 2000004"
+   },
+   "exemptions": [
+    {
+     "code": "027",
+     "description": "Ipotiroidismo congenito"
+    }
+   ],
+   "chronic_conditions": [
+    "emicrania cronica"
+   ],
+   "recent_episodes": [
+    {
+     "episode_date": "2025-02-12",
+     "facility": "Pol. Univ. Umberto I — Pronto Soccorso",
+     "reason": "specialist_referral",
+     "outcome": "dimesso con indicazioni"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "profile_id": "SYN-005",
+   "username": "marco.romano",
+   "spid_code": "TESTSP00005",
+   "fiscal_code": "RMNMRC55R12H282P",
+   "given_name": "Marco",
+   "family_name": "Romano",
+   "birth_date": "1955-10-12",
+   "birth_place": "Rieti",
+   "birth_county": "RI",
+   "gender": "M",
+   "email": null,
+   "mobile_phone": "+39 333 1000005",
+   "is_minor": false,
+   "demo_care_intent": "prescription_renewal",
+   "hero": null,
+   "guardian": null,
+   "gp": {
+    "given_name": "Martina",
+    "family_name": "Rinaldi",
+    "phone": "+39 06 5000185"
+   },
+   "emergency_contact": null,
+   "exemptions": [],
+   "chronic_conditions": [],
+   "recent_episodes": [
+    {
+     "episode_date": "2025-08-17",
+     "facility": "Sant'Andrea — Pronto Soccorso",
+     "reason": "chronic_followup",
+     "outcome": "inviato al medico curante"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "profile_id": "SYN-006",
+   "username": "martina.colombo",
+   "spid_code": "TESTSP00006",
+   "fiscal_code": "CLMMTN98L71L182H",
+   "given_name": "Martina",
+   "family_name": "Colombo",
+   "birth_date": "1998-07-31",
+   "birth_place": "Tivoli",
+   "birth_county": "RM",
+   "gender": "F",
+   "email": "martina.colombo@example.test",
+   "mobile_phone": "+39 333 1000006",
+   "is_minor": false,
+   "demo_care_intent": "vaccination",
+   "hero": null,
+   "guardian": null,
+   "gp": {
+    "given_name": "Laura",
+    "family_name": "Moretti",
+    "phone": "+39 06 5000222"
+   },
+   "emergency_contact": {
+    "given_name": "Luca",
+    "family_name": "Colombo",
+    "relationship": "familiare",
+    "phone": "+39 340 2000006"
+   },
+   "exemptions": [
+    {
+     "code": "031",
+     "description": "Ipertensione arteriosa"
+    }
+   ],
+   "chronic_conditions": [
+    "diabete tipo 2"
+   ],
+   "recent_episodes": [
+    {
+     "episode_date": "2024-07-31",
+     "facility": "Casa della Comunità Prati",
+     "reason": "pediatric_non_urgent",
+     "outcome": "dimesso"
+    },
+    {
+     "episode_date": "2025-03-28",
+     "facility": "Ospedale dei Castelli — Pronto Soccorso",
+     "reason": "musculoskeletal_minor",
+     "outcome": "dimesso con indicazioni"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "profile_id": "SYN-007",
+   "username": "simone.ricci",
+   "spid_code": "TESTSP00007",
+   "fiscal_code": "RCCSMN74H05A323B",
+   "given_name": "Simone",
+   "family_name": "Ricci",
+   "birth_date": "1974-06-05",
+   "birth_place": "Anzio",
+   "birth_county": "RM",
+   "gender": "M",
+   "email": "simone.ricci@example.test",
+   "mobile_phone": "+39 333 1000007",
+   "is_minor": false,
+   "demo_care_intent": "specialist_referral",
+   "hero": null,
+   "guardian": null,
+   "gp": {
+    "given_name": "Federica",
+    "family_name": "Barbieri",
+    "phone": "+39 06 5000259"
+   },
+   "emergency_contact": {
+    "given_name": "Giuseppe",
+    "family_name": "Ricci",
+    "relationship": "familiare",
+    "phone": "+39 340 2000007"
+   },
+   "exemptions": [],
+   "chronic_conditions": [],
+   "recent_episodes": [
+    {
+     "episode_date": "2026-06-17",
+     "facility": "Ospedale dei Castelli — Pronto Soccorso",
+     "reason": "musculoskeletal_minor",
+     "outcome": "dimesso con indicazioni"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "profile_id": "SYN-008",
+   "username": "federica.marino",
+   "spid_code": "TESTSP00008",
+   "fiscal_code": "MRNFRC60L63L719W",
+   "given_name": "Federica",
+   "family_name": "Marino",
+   "birth_date": "1960-07-23",
+   "birth_place": "Velletri",
+   "birth_county": "RM",
+   "gender": "F",
+   "email": "federica.marino@example.test",
+   "mobile_phone": "+39 333 1000008",
+   "is_minor": false,
+   "demo_care_intent": "chronic_followup",
+   "hero": null,
+   "guardian": null,
+   "gp": {
+    "given_name": "Anna",
+    "family_name": "Fontana",
+    "phone": "+39 06 5000296"
+   },
+   "emergency_contact": {
+    "given_name": "Andrea",
+    "family_name": "Marino",
+    "relationship": "familiare",
+    "phone": "+39 340 2000008"
+   },
+   "exemptions": [
+    {
+     "code": "007",
+     "description": "Asma bronchiale"
+    }
+   ],
+   "chronic_conditions": [
+    "ipotiroidismo"
+   ],
+   "recent_episodes": [],
+   "synthetic": true
+  },
+  {
+   "profile_id": "SYN-009",
+   "username": "anna.greco",
+   "spid_code": "TESTSP00009",
+   "fiscal_code": "GRCNNA87L57H501M",
+   "given_name": "Anna",
+   "family_name": "Greco",
+   "birth_date": "1987-07-17",
+   "birth_place": "Roma",
+   "birth_county": "RM",
+   "gender": "F",
+   "email": "anna.greco@example.test",
+   "mobile_phone": "+39 333 1000009",
+   "is_minor": false,
+   "demo_care_intent": "medication_advice",
+   "hero": null,
+   "guardian": null,
+   "gp": {
+    "given_name": "Giulia",
+    "family_name": "Santoro",
+    "phone": "+39 06 5000333"
+   },
+   "emergency_contact": {
+    "given_name": "Marco",
+    "family_name": "Greco",
+    "relationship": "familiare",
+    "phone": "+39 340 2000009"
+   },
+   "exemptions": [],
+   "chronic_conditions": [],
+   "recent_episodes": [
+    {
+     "episode_date": "2026-01-06",
+     "facility": "Sant'Andrea — Pronto Soccorso",
+     "reason": "minor_wound_care",
+     "outcome": "dimesso"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "profile_id": "SYN-010",
+   "username": "luca.bruno",
+   "spid_code": "TESTSP00010",
+   "fiscal_code": "BRNLCU03E04E472Q",
+   "given_name": "Luca",
+   "family_name": "Bruno",
+   "birth_date": "2003-05-04",
+   "birth_place": "Latina",
+   "birth_county": "LT",
+   "gender": "M",
+   "email": "luca.bruno@example.test",
+   "mobile_phone": "+39 333 1000010",
+   "is_minor": false,
+   "demo_care_intent": "minor_wound_care",
+   "hero": null,
+   "guardian": null,
+   "gp": {
+    "given_name": "Elena",
+    "family_name": "Mariani",
+    "phone": "+39 06 5000370"
+   },
+   "emergency_contact": {
+    "given_name": "Davide",
+    "family_name": "Bruno",
+    "relationship": "familiare",
+    "phone": "+39 340 2000010"
+   },
+   "exemptions": [],
+   "chronic_conditions": [],
+   "recent_episodes": [
+    {
+     "episode_date": "2024-04-12",
+     "facility": "Casa della Comunità Prati",
+     "reason": "prescription_renewal",
+     "outcome": "dimesso con indicazioni"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "profile_id": "SYN-011",
+   "username": "giuseppe.gallo",
+   "spid_code": "TESTSP00011",
+   "fiscal_code": "GLLGPP82L28D810U",
+   "given_name": "Giuseppe",
+   "family_name": "Gallo",
+   "birth_date": "1982-07-28",
+   "birth_place": "Frosinone",
+   "birth_county": "FR",
+   "gender": "M",
+   "email": "giuseppe.gallo@example.test",
+   "mobile_phone": "+39 333 1000011",
+   "is_minor": false,
+   "demo_care_intent": "musculoskeletal_minor",
+   "hero": null,
+   "guardian": null,
+   "gp": {
+    "given_name": "Chiara",
+    "family_name": "Rinaldi",
+    "phone": "+39 06 5000407"
+   },
+   "emergency_contact": {
+    "given_name": "Simone",
+    "family_name": "Gallo",
+    "relationship": "familiare",
+    "phone": "+39 340 2000011"
+   },
+   "exemptions": [
+    {
+     "code": "031",
+     "description": "Ipertensione arteriosa"
+    }
+   ],
+   "chronic_conditions": [
+    "diabete tipo 2"
+   ],
+   "recent_episodes": [],
+   "synthetic": true
+  },
+  {
+   "profile_id": "SYN-012",
+   "username": "chiara.conti",
+   "spid_code": "TESTSP00012",
+   "fiscal_code": "CNTCHR20A59M082W",
+   "given_name": "Chiara",
+   "family_name": "Conti",
+   "birth_date": "2020-01-19",
+   "birth_place": "Viterbo",
+   "birth_county": "VT",
+   "gender": "F",
+   "email": null,
+   "mobile_phone": null,
+   "is_minor": true,
+   "demo_care_intent": "pediatric_non_urgent",
+   "hero": null,
+   "guardian": {
+    "given_name": "Martina",
+    "family_name": "Conti",
+    "relationship": "genitore",
+    "phone": "+39 349 3000012"
+   },
+   "gp": {
+    "given_name": "Sara",
+    "family_name": "Moretti",
+    "phone": "+39 06 5000444"
+   },
+   "emergency_contact": {
+    "given_name": "Pietro",
+    "family_name": "Conti",
+    "relationship": "familiare",
+    "phone": "+39 340 2000012"
+   },
+   "exemptions": [],
+   "chronic_conditions": [],
+   "recent_episodes": [],
+   "synthetic": true
+  },
+  {
+   "profile_id": "SYN-013",
+   "username": "sara.deluca",
+   "spid_code": "TESTSP00013",
+   "fiscal_code": "DLCSRA45D52H282B",
+   "given_name": "Sara",
+   "family_name": "De Luca",
+   "birth_date": "1945-04-12",
+   "birth_place": "Rieti",
+   "birth_county": "RI",
+   "gender": "F",
+   "email": "sara.deluca@example.test",
+   "mobile_phone": "+39 333 1000013",
+   "is_minor": false,
+   "demo_care_intent": "medication_advice",
+   "hero": null,
+   "guardian": null,
+   "gp": null,
+   "emergency_contact": {
+    "given_name": "Mario",
+    "family_name": "De Luca",
+    "relationship": "familiare",
+    "phone": "+39 340 2000013"
+   },
+   "exemptions": [],
+   "chronic_conditions": [],
+   "recent_episodes": [
+    {
+     "episode_date": "2025-11-03",
+     "facility": "Sant'Andrea — Pronto Soccorso",
+     "reason": "specialist_referral",
+     "outcome": "dimesso con indicazioni"
+    }
+   ],
+   "synthetic": true
+  },
+  {
+   "profile_id": "SYN-014",
+   "username": "davide.costa",
+   "spid_code": "TESTSP00014",
+   "fiscal_code": "CSTDVD91M07L182E",
+   "given_name": "Davide",
+   "family_name": "Costa",
+   "birth_date": "1991-08-07",
+   "birth_place": "Tivoli",
+   "birth_county": "RM",
+   "gender": "M",
+   "email": null,
+   "mobile_phone": "+39 333 1000014",
+   "is_minor": false,
+   "demo_care_intent": "vaccination",
+   "hero": null,
+   "guardian": null,
+   "gp": {
+    "given_name": "Laura",
+    "family_name": "Fontana",
+    "phone": "+39 06 5000518"
+   },
+   "emergency_contact": null,
+   "exemptions": [],
+   "chronic_conditions": [],
+   "recent_episodes": [],
+   "synthetic": true
+  },
+  {
+   "profile_id": "SYN-015",
+   "username": "simone.giordano",
+   "spid_code": "TESTSP00015",
+   "fiscal_code": "GRDSMN67L16A323Q",
+   "given_name": "Simone",
+   "family_name": "Giordano",
+   "birth_date": "1967-07-16",
+   "birth_place": "Anzio",
+   "birth_county": "RM",
+   "gender": "M",
+   "email": "simone.giordano@example.test",
+   "mobile_phone": "+39 333 1000015",
+   "is_minor": false,
+   "demo_care_intent": "chronic_followup",
+   "hero": null,
+   "guardian": null,
+   "gp": {
+    "given_name": "Federica",
+    "family_name": "Santoro",
+    "phone": "+39 06 5000555"
+   },
+   "emergency_contact": {
+    "given_name": "Giuseppe",
+    "family_name": "Giordano",
+    "relationship": "familiare",
+    "phone": "+39 340 2000015"
+   },
+   "exemptions": [
+    {
+     "code": "013",
+     "description": "Diabete mellito"
+    }
+   ],
+   "chronic_conditions": [
+    "ipertensione"
+   ],
+   "recent_episodes": [
+    {
+     "episode_date": "2025-09-07",
+     "facility": "Ospedale dei Castelli — Pronto Soccorso",
+     "reason": "pediatric_non_urgent",
+     "outcome": "dimesso"
+    },
+    {
+     "episode_date": "2026-02-13",
+     "facility": "Pol. Univ. Umberto I — Pronto Soccorso",
+     "reason": "musculoskeletal_minor",
+     "outcome": "dimesso con indicazioni"
+    }
+   ],
+   "synthetic": true
+  }
+ ]
+}

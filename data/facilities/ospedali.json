@@ -6,7 +6,8 @@
   "municipality": "Acquapendente",
   "province": "VT",
   "latitude": 42.7459289,
-  "longitude": 11.8648716
+  "longitude": 11.8648716,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. Di Civita Castellana",
@@ -15,7 +16,8 @@
   "municipality": "Civita Castellana",
   "province": "VT",
   "latitude": 42.2904959,
-  "longitude": 12.4206416
+  "longitude": 12.4206416,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. Di Tarquinia",
@@ -24,7 +26,8 @@
   "municipality": "Tarquinia",
   "province": "VT",
   "latitude": 42.2532394,
-  "longitude": 11.7591747
+  "longitude": 11.7591747,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Salus",
@@ -32,8 +35,9 @@
   "asl": "Asl Viterbo",
   "municipality": "Viterbo",
   "province": "VT",
-  "latitude": 42.4929522,
-  "longitude": 11.9488136
+  "latitude": 42.4168441,
+  "longitude": 12.1051148,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. S.Teresa Del Bambin Gesu'",
@@ -41,8 +45,9 @@
   "asl": "Asl Viterbo",
   "municipality": "Viterbo",
   "province": "VT",
-  "latitude": 42.4929522,
-  "longitude": 11.9488136
+  "latitude": 42.4168441,
+  "longitude": 12.1051148,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Immacolata",
@@ -50,8 +55,9 @@
   "asl": "Asl Viterbo",
   "municipality": "Viterbo",
   "province": "VT",
-  "latitude": 42.4929522,
-  "longitude": 11.9488136
+  "latitude": 42.4168441,
+  "longitude": 12.1051148,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. S.Camillo De Lellis",
@@ -59,8 +65,9 @@
   "asl": "Asl Rieti",
   "municipality": "Rieti",
   "province": "RI",
-  "latitude": 42.4147364,
-  "longitude": 12.8858881
+  "latitude": 42.4025479,
+  "longitude": 12.8605297,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. Di Magliano Sabina",
@@ -69,7 +76,8 @@
   "municipality": "Magliano Sabina",
   "province": "RI",
   "latitude": 42.3613571,
-  "longitude": 12.4811695
+  "longitude": 12.4811695,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. Distrettuale Di Amatrice",
@@ -78,7 +86,8 @@
   "municipality": "Amatrice",
   "province": "RI",
   "latitude": 42.6320509,
-  "longitude": 13.2901924
+  "longitude": 13.2901924,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. S.Spirito",
@@ -87,7 +96,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.9010559,
-  "longitude": 12.4625575
+  "longitude": 12.4625575,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. Villa Betania",
@@ -96,7 +106,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. Regionale Oftalmico",
@@ -105,7 +116,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. G. Eastman",
@@ -114,7 +126,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. Villa Albani",
@@ -123,7 +136,8 @@
   "municipality": "Anzio",
   "province": "RM",
   "latitude": 41.4495745,
-  "longitude": 12.6276277
+  "longitude": 12.6276277,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. Nuovo Regina Margherita",
@@ -132,7 +146,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8859105,
-  "longitude": 12.4708946
+  "longitude": 12.4708946,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. Di Anzio E Nettuno",
@@ -140,8 +155,9 @@
   "asl": "Asl Rm/H",
   "municipality": "Anzio",
   "province": "RM",
-  "latitude": 41.4471008,
-  "longitude": 12.6285618
+  "latitude": 41.4605404,
+  "longitude": 12.6367566,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. Albano Laziale",
@@ -149,8 +165,9 @@
   "asl": "Asl Rm/H",
   "municipality": "Albano Laziale",
   "province": "RM",
-  "latitude": 41.7288988,
-  "longitude": 12.6448187
+  "latitude": 41.7290949,
+  "longitude": 12.6438945,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. Genzano Di Roma",
@@ -159,7 +176,8 @@
   "municipality": "Genzano Di Roma",
   "province": "RM",
   "latitude": 41.7062459,
-  "longitude": 12.6934267
+  "longitude": 12.6934267,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. S.Paolo",
@@ -168,7 +186,8 @@
   "municipality": "Civitavecchia",
   "province": "RM",
   "latitude": 42.0981586,
-  "longitude": 11.8097588
+  "longitude": 11.8097588,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. L.Parodi Delfino",
@@ -177,7 +196,8 @@
   "municipality": "Colleferro",
   "province": "RM",
   "latitude": 41.727033,
-  "longitude": 13.0041576
+  "longitude": 13.0041576,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. S.Sebastiano",
@@ -185,8 +205,9 @@
   "asl": "Asl Rm/H",
   "municipality": "Frascati",
   "province": "RM",
-  "latitude": 41.8117534,
-  "longitude": 12.6739239
+  "latitude": 41.8091805,
+  "longitude": 12.6753309,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. S.Giuseppe Marino",
@@ -195,7 +216,8 @@
   "municipality": "Marino",
   "province": "RM",
   "latitude": 41.7689041,
-  "longitude": 12.6686034
+  "longitude": 12.6686034,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. SS Gonfalone",
@@ -204,7 +226,8 @@
   "municipality": "Monterotondo",
   "province": "RM",
   "latitude": 42.0504267,
-  "longitude": 12.6214304
+  "longitude": 12.6214304,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. Civile Coniugi Bernardini",
@@ -213,7 +236,8 @@
   "municipality": "Palestrina",
   "province": "RM",
   "latitude": 41.8389656,
-  "longitude": 12.8912487
+  "longitude": 12.8912487,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. A.Angelucci",
@@ -222,7 +246,8 @@
   "municipality": "Subiaco",
   "province": "RM",
   "latitude": 41.9322074,
-  "longitude": 13.0862927
+  "longitude": 13.0862927,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. S.Giovanni Evengelista",
@@ -231,7 +256,8 @@
   "municipality": "Tivoli",
   "province": "RM",
   "latitude": 41.960922,
-  "longitude": 12.798884
+  "longitude": 12.798884,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. Paolo Colombo",
@@ -240,7 +266,8 @@
   "municipality": "Velletri",
   "province": "RM",
   "latitude": 41.6875235,
-  "longitude": 12.7813985
+  "longitude": 12.7813985,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. Di Ariccia",
@@ -249,7 +276,8 @@
   "municipality": "Ariccia",
   "province": "RM",
   "latitude": 41.6994815,
-  "longitude": 12.6743549
+  "longitude": 12.6743549,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. Padre Pio",
@@ -258,7 +286,8 @@
   "municipality": "Bracciano",
   "province": "RM",
   "latitude": 42.0962534,
-  "longitude": 12.1731973
+  "longitude": 12.1731973,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. G.Grassi",
@@ -267,7 +296,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. Paraplegici Di Ostia",
@@ -276,7 +306,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. S.Eugenio",
@@ -285,7 +316,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. CTO Alesini",
@@ -294,7 +326,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8578022,
-  "longitude": 12.4867694
+  "longitude": 12.4867694,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp.C. Regina Apostolorum",
@@ -303,7 +336,8 @@
   "municipality": "Albano Laziale",
   "province": "RM",
   "latitude": 41.7288894,
-  "longitude": 12.6582689
+  "longitude": 12.6582689,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp.C. S.Pietro Fatebenefratelli",
@@ -312,7 +346,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp.C. Fatebenefratelli",
@@ -321,7 +356,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp.C. S.Carlo Di Nancy",
@@ -330,7 +366,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp.C. Cristo Re",
@@ -339,7 +376,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp.C. Israelitico",
@@ -348,7 +386,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp.C. G.Vannini",
@@ -357,7 +396,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Domelia",
@@ -366,7 +406,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Delle Querce",
@@ -375,7 +416,8 @@
   "municipality": "Nemi",
   "province": "RM",
   "latitude": 41.7200217,
-  "longitude": 12.7133951
+  "longitude": 12.7133951,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Valeria",
@@ -384,7 +426,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Tiberina",
@@ -393,7 +436,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Madonna Della Fiducia",
@@ -402,7 +446,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Policlinico Italia",
@@ -411,7 +456,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Medicus Hotel",
@@ -420,7 +466,8 @@
   "municipality": "Tivoli",
   "province": "RM",
   "latitude": 41.960922,
-  "longitude": 12.798884
+  "longitude": 12.798884,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Neuroscienze",
@@ -429,7 +476,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Villa Benedetta",
@@ -438,7 +486,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Villa Luisa",
@@ -447,7 +496,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Sanatrix",
@@ -456,7 +506,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC S.Anna",
@@ -465,7 +516,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Madonna Delle Grazie",
@@ -474,7 +526,8 @@
   "municipality": "Velletri",
   "province": "RM",
   "latitude": 41.6867015,
-  "longitude": 12.7770433
+  "longitude": 12.7770433,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Aurora",
@@ -483,7 +536,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Ns Sig.Ra Delle Mercede",
@@ -492,7 +546,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "Pres. Luigi Di Liegro",
@@ -501,7 +556,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Fulvia",
@@ -510,7 +566,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Marco Polo",
@@ -519,7 +576,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Assunzione Di Maria Ss",
@@ -528,7 +586,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Pia",
@@ -537,7 +596,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Quisisana",
@@ -546,7 +606,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. S.Famiglia",
@@ -555,7 +616,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. S.Luca",
@@ -564,7 +626,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Villa Del Rosario",
@@ -573,7 +636,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Villa Mafalda",
@@ -582,7 +646,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC S.Domenico",
@@ -590,8 +655,9 @@
   "asl": "Asl Rm/A",
   "municipality": "Roma",
   "province": "RM",
-  "latitude": 42.0551257,
-  "longitude": 12.582559
+  "latitude": 41.8933203,
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. S.Raffaele",
@@ -600,7 +666,8 @@
   "municipality": "Rocca Di Papa",
   "province": "RM",
   "latitude": 41.7607608,
-  "longitude": 12.7096141
+  "longitude": 12.7096141,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Villa Stuart",
@@ -608,8 +675,9 @@
   "asl": "Asl Rm/E",
   "municipality": "Roma",
   "province": "RM",
-  "latitude": 41.9275061,
-  "longitude": 12.4490676
+  "latitude": 41.8933203,
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Villa Margherita",
@@ -618,7 +686,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Sandra",
@@ -627,7 +696,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Dei Pini",
@@ -636,7 +706,8 @@
   "municipality": "Anzio",
   "province": "RM",
   "latitude": 41.4471008,
-  "longitude": 12.6285618
+  "longitude": 12.6285618,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Guarnieri",
@@ -645,7 +716,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Slavatore Mundi",
@@ -654,7 +726,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. S.Anna",
@@ -663,7 +736,8 @@
   "municipality": "Pomezia",
   "province": "RM",
   "latitude": 41.667529,
-  "longitude": 12.5047863
+  "longitude": 12.5047863,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Mater Misericordiae",
@@ -672,7 +746,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp.C. S.Giovanni Battista",
@@ -681,7 +756,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Latina",
@@ -689,8 +765,9 @@
   "asl": "Asl Rm/C",
   "municipality": "Roma",
   "province": "RM",
-  "latitude": 41.3594905,
-  "longitude": 13.4258277
+  "latitude": 41.8933203,
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Siglato",
@@ -699,7 +776,8 @@
   "municipality": "Civitavecchia",
   "province": "RM",
   "latitude": 42.0937524,
-  "longitude": 11.7922462
+  "longitude": 11.7922462,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Santo Volto",
@@ -708,7 +786,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Concordia Hospital",
@@ -717,7 +796,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Valle Giulia",
@@ -725,8 +805,9 @@
   "asl": "Asl Rm/A",
   "municipality": "Roma",
   "province": "RM",
-  "latitude": 41.9152871,
-  "longitude": 12.485444
+  "latitude": 41.8933203,
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. S.Rita Da Cascia",
@@ -735,7 +816,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Pio Xi",
@@ -743,8 +825,9 @@
   "asl": "Asl Rm/E",
   "municipality": "Roma",
   "province": "RM",
-  "latitude": 41.8945849,
-  "longitude": 12.4381485
+  "latitude": 41.8933203,
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Addominale",
@@ -753,7 +836,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Fabia Mater",
@@ -762,7 +846,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Paideia",
@@ -771,7 +856,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Claudia",
@@ -780,7 +866,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. S.Feliciano",
@@ -789,7 +876,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "Pres. Casilino",
@@ -798,7 +886,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Nuova Itor",
@@ -807,7 +896,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Annunaziatella",
@@ -816,7 +906,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Citta' Di Roma",
@@ -824,8 +915,9 @@
   "asl": "Asl Rm/D",
   "municipality": "Roma",
   "province": "RM",
-  "latitude": 41.8987497,
-  "longitude": 12.4798081
+  "latitude": 41.8933203,
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Mater Dei",
@@ -833,8 +925,9 @@
   "asl": "Asl Rm/A",
   "municipality": "Roma",
   "province": "RM",
-  "latitude": 41.7390859,
-  "longitude": 12.6382675
+  "latitude": 41.8933203,
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. European Hospital",
@@ -843,7 +936,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Ist.Neurotraumatologico",
@@ -852,7 +946,8 @@
   "municipality": "Grottaferrata",
   "province": "RM",
   "latitude": 41.788616,
-  "longitude": 12.6667408
+  "longitude": 12.6667408,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Ancelle Del Buon Pastore",
@@ -861,7 +956,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Aurelia Hospital",
@@ -870,7 +966,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Merry House",
@@ -879,7 +976,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. S.Volto",
@@ -888,7 +986,8 @@
   "municipality": "S. Marinella",
   "province": "RM",
   "latitude": 42.0354641,
-  "longitude": 11.867938
+  "longitude": 11.867938,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Dante",
@@ -897,7 +996,8 @@
   "municipality": "Guidonia",
   "province": "RM",
   "latitude": 41.9972039,
-  "longitude": 12.7263446
+  "longitude": 12.7263446,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. S.Maria Goretti",
@@ -906,7 +1006,8 @@
   "municipality": "Latina",
   "province": "LT",
   "latitude": 41.4612896,
-  "longitude": 12.9092837
+  "longitude": 12.9092837,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. A.Fiorini",
@@ -915,7 +1016,8 @@
   "municipality": "Terracina",
   "province": "LT",
   "latitude": 41.2984276,
-  "longitude": 13.2328332
+  "longitude": 13.2328332,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. S.Giovanni Di Dio",
@@ -924,7 +1026,8 @@
   "municipality": "Fondi",
   "province": "LT",
   "latitude": 41.3612577,
-  "longitude": 13.4151986
+  "longitude": 13.4151986,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. Regina Elena",
@@ -932,8 +1035,9 @@
   "asl": "Asl Latina",
   "municipality": "Priverno",
   "province": "LT",
-  "latitude": 41.8023302,
-  "longitude": 12.4516912
+  "latitude": 41.4726165,
+  "longitude": 13.1798388,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. Dono Svizzero",
@@ -942,7 +1046,8 @@
   "municipality": "Formia",
   "province": "LT",
   "latitude": 41.259308,
-  "longitude": 13.6080209
+  "longitude": 13.6080209,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. Don L.Di Liegro",
@@ -951,7 +1056,8 @@
   "municipality": "Gaeta",
   "province": "LT",
   "latitude": 41.218312,
-  "longitude": 13.56281
+  "longitude": 13.56281,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. Civile Di Minturno",
@@ -960,7 +1066,8 @@
   "municipality": "Minturno",
   "province": "LT",
   "latitude": 41.2629744,
-  "longitude": 13.7465219
+  "longitude": 13.7465219,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Del Sole Tommaso Costa",
@@ -969,7 +1076,8 @@
   "municipality": "Formia",
   "province": "LT",
   "latitude": 41.259308,
-  "longitude": 13.6080209
+  "longitude": 13.6080209,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. I.C.O.T.",
@@ -977,8 +1085,9 @@
   "asl": "Asl Latina",
   "municipality": "Latina",
   "province": "LT",
-  "latitude": 41.4595261,
-  "longitude": 13.0125912
+  "latitude": 41.5381381,
+  "longitude": 12.9460971,
+  "geo_precision": "esatta"
  },
  {
   "name": "C.C.A. San Marco",
@@ -986,8 +1095,9 @@
   "asl": "Asl Latina",
   "municipality": "Latina",
   "province": "LT",
-  "latitude": 41.4595261,
-  "longitude": 13.0125912
+  "latitude": 41.467299,
+  "longitude": 12.9037518,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. C.Franceschini",
@@ -996,7 +1106,8 @@
   "municipality": "Sabaudia",
   "province": "LT",
   "latitude": 41.3015672,
-  "longitude": 13.0258726
+  "longitude": 13.0258726,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Citta Di Aprilia",
@@ -1005,7 +1116,8 @@
   "municipality": "Aprilia",
   "province": "LT",
   "latitude": 41.5942016,
-  "longitude": 12.6485765
+  "longitude": 12.6485765,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. F.Spaziani",
@@ -1013,8 +1125,9 @@
   "asl": "Asl Frosinone",
   "municipality": "Frosinone",
   "province": "FR",
-  "latitude": 41.6285468,
-  "longitude": 13.5758498
+  "latitude": 41.640707,
+  "longitude": 13.3509157,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. S.Benedetto",
@@ -1023,7 +1136,8 @@
   "municipality": "Alatri",
   "province": "FR",
   "latitude": 41.737609,
-  "longitude": 13.3344057
+  "longitude": 13.3344057,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. Civile Di Anagni",
@@ -1032,7 +1146,8 @@
   "municipality": "Anagni",
   "province": "FR",
   "latitude": 41.7447015,
-  "longitude": 13.1526343
+  "longitude": 13.1526343,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. SS.Trinita'",
@@ -1041,7 +1156,8 @@
   "municipality": "Sora",
   "province": "FR",
   "latitude": 41.7329181,
-  "longitude": 13.5713325
+  "longitude": 13.5713325,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. S.Scolatica",
@@ -1050,7 +1166,8 @@
   "municipality": "Cassino",
   "province": "FR",
   "latitude": 41.4925576,
-  "longitude": 13.8305297
+  "longitude": 13.8305297,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. S.Anna",
@@ -1059,7 +1176,8 @@
   "municipality": "Cassino",
   "province": "FR",
   "latitude": 41.4925576,
-  "longitude": 13.8305297
+  "longitude": 13.8305297,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Gioia",
@@ -1068,7 +1186,8 @@
   "municipality": "Sora",
   "province": "FR",
   "latitude": 41.7329181,
-  "longitude": 13.5713325
+  "longitude": 13.5713325,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Serena",
@@ -1077,7 +1196,8 @@
   "municipality": "Cassino",
   "province": "FR",
   "latitude": 41.4925576,
-  "longitude": 13.8305297
+  "longitude": 13.8305297,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. S.Teresa",
@@ -1086,7 +1206,8 @@
   "municipality": "Isola Del Liri",
   "province": "FR",
   "latitude": 41.6792485,
-  "longitude": 13.5730766
+  "longitude": 13.5730766,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Villa Salaria",
@@ -1095,7 +1216,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC S.Alessandro",
@@ -1103,8 +1225,9 @@
   "asl": "Asl Rm/B",
   "municipality": "Roma",
   "province": "RM",
-  "latitude": 42.136944,
-  "longitude": 12.3775151
+  "latitude": 41.8933203,
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Villa Anna Maria",
@@ -1113,7 +1236,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Ars Medica",
@@ -1122,7 +1246,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Villa Flaminia",
@@ -1131,7 +1256,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC S.Maria Di Leuca",
@@ -1140,7 +1266,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Maria Immacolata",
@@ -1149,7 +1276,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Verde",
@@ -1158,7 +1286,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Rome American Hospital",
@@ -1167,7 +1296,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. S.Pertini",
@@ -1176,7 +1306,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. Di Belcolle",
@@ -1185,7 +1316,8 @@
   "municipality": "Viterbo",
   "province": "VT",
   "latitude": 42.3932741,
-  "longitude": 12.1238576
+  "longitude": 12.1238576,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. Di Montefiascone",
@@ -1194,7 +1326,8 @@
   "municipality": "Montefiascone",
   "province": "VT",
   "latitude": 42.5362947,
-  "longitude": 12.0312694
+  "longitude": 12.0312694,
+  "geo_precision": "esatta"
  },
  {
   "name": "Osp. Di Ronciglione",
@@ -1203,7 +1336,8 @@
   "municipality": "Ronciglione",
   "province": "VT",
   "latitude": 42.2918399,
-  "longitude": 12.2123508
+  "longitude": 12.2123508,
+  "geo_precision": "esatta"
  },
  {
   "name": "CC Villa Sacra Famiglia",
@@ -1212,7 +1346,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Luana",
@@ -1221,7 +1356,8 @@
   "municipality": "Poli",
   "province": "RM",
   "latitude": 41.8873266,
-  "longitude": 12.8931264
+  "longitude": 12.8931264,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. S.Raffaele",
@@ -1230,7 +1366,8 @@
   "municipality": "Cassino",
   "province": "FR",
   "latitude": 41.4925576,
-  "longitude": 13.8305297
+  "longitude": 13.8305297,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Villa Silvana",
@@ -1239,7 +1376,8 @@
   "municipality": "Aprilia",
   "province": "LT",
   "latitude": 41.5942016,
-  "longitude": 12.6485765
+  "longitude": 12.6485765,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Citta' Bianca",
@@ -1247,8 +1385,9 @@
   "asl": "Asl Frosinone",
   "municipality": "Veroli",
   "province": "FR",
-  "latitude": 41.562696,
-  "longitude": 12.5589675
+  "latitude": 41.6912736,
+  "longitude": 13.4176298,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. S.Raffaele",
@@ -1257,7 +1396,8 @@
   "municipality": "Montecompatri",
   "province": "RM",
   "latitude": 41.808918,
-  "longitude": 12.737784
+  "longitude": 12.737784,
+  "geo_precision": "comune"
  },
  {
   "name": "Osp. S.Anna",
@@ -1266,7 +1406,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.9196524,
-  "longitude": 12.4999044
+  "longitude": 12.4999044,
+  "geo_precision": "esatta"
  },
  {
   "name": "CC Villa Borghese",
@@ -1274,8 +1415,9 @@
   "asl": "Asl Rm/A",
   "municipality": "Roma",
   "province": "RM",
-  "latitude": 41.4536319,
-  "longitude": 12.6341756
+  "latitude": 41.8933203,
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "CC Ist. Clinico Cardiologico",
@@ -1284,7 +1426,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Nomentana Hospital",
@@ -1293,7 +1436,8 @@
   "municipality": "Fonte Nuova",
   "province": "RM",
   "latitude": 41.9962545,
-  "longitude": 12.6236212
+  "longitude": 12.6236212,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. Don Carlo Gnocchi",
@@ -1302,7 +1446,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "C.C.A. S.Raffaele Portuense",
@@ -1311,7 +1456,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "A.O. S.Camillo",
@@ -1320,7 +1466,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "A.O. S.Giovanni Addolorata",
@@ -1329,7 +1476,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "A.O. S.Filippo Neri",
@@ -1338,7 +1486,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "A.O. S.Andrea",
@@ -1347,7 +1496,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "A.O. Salus Infirmorum",
@@ -1356,7 +1506,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "IRCCSpr Bambino Gesu`",
@@ -1365,7 +1516,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "IRCCSpr Bambino Gesu`",
@@ -1374,7 +1526,8 @@
   "municipality": "Palidoro",
   "province": "RM",
   "latitude": 41.9294655,
-  "longitude": 12.1780464
+  "longitude": 12.1780464,
+  "geo_precision": "comune"
  },
  {
   "name": "IRCCSpr Bambino Gesu`",
@@ -1383,7 +1536,8 @@
   "municipality": "S.Marinella",
   "province": "RM",
   "latitude": 42.0354641,
-  "longitude": 11.867938
+  "longitude": 11.867938,
+  "geo_precision": "comune"
  },
  {
   "name": "Pol.U. A.Gemelli",
@@ -1392,7 +1546,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "Pol.U. Columbus",
@@ -1401,7 +1556,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "A.O.U.U. Umberto I",
@@ -1410,7 +1566,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "IRCCSpub Regina Elena",
@@ -1419,7 +1576,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "IRCCSpub S.Gallicano",
@@ -1428,7 +1586,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "IRCCSf S.Lucia",
@@ -1437,7 +1596,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "IRCCSpr S.Raffale Pisana",
@@ -1446,7 +1606,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "IRCCSpr I.D.I.",
@@ -1455,7 +1616,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "IRCCSpub Inrca",
@@ -1464,7 +1626,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "IRCCSpr Villa Paola",
@@ -1473,7 +1636,8 @@
   "municipality": "Capranica",
   "province": "VT",
   "latitude": 42.2564918,
-  "longitude": 12.1776114
+  "longitude": 12.1776114,
+  "geo_precision": "comune"
  },
  {
   "name": "Pol.U. Campus Biomedico",
@@ -1482,7 +1646,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "IRCCSpub L.Spallanzani",
@@ -1491,7 +1656,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "A.O.U.U. S.Andrea",
@@ -1500,7 +1666,8 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  },
  {
   "name": "A.O.U.U. Tor Vergata",
@@ -1509,6 +1676,7 @@
   "municipality": "Roma",
   "province": "RM",
   "latitude": 41.8933203,
-  "longitude": 12.4829321
+  "longitude": 12.4829321,
+  "geo_precision": "comune"
  }
 ]
