@@ -1,5 +1,6 @@
 import { ErrorState } from '@/components/ErrorState';
 import { AddressForm } from '@/features/triage/AddressForm';
+import { ArrivalConfirm } from '@/features/triage/ArrivalConfirm';
 import { AssessmentPanel } from '@/features/triage/AssessmentPanel';
 import { ChatBubble } from '@/features/triage/ChatBubble';
 import { ChatComposer } from '@/features/triage/ChatComposer';
@@ -191,6 +192,13 @@ export function TriagePage() {
               </div>
 
               <RouteSummary option={selected} />
+
+              {/* Conferma esplicita: la struttura viene avvisata solo se lo decide la persona. */}
+              <ArrivalConfirm
+                key={selected.facility_id}
+                option={selected}
+                careIntent={assessment?.care_setting ?? null}
+              />
 
               <div className="rounded-2xl border border-line bg-surface p-4">
                 <p className="text-sm leading-relaxed text-ink">{plan.data.advice}</p>
