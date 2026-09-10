@@ -62,6 +62,10 @@ class PlanOption(BaseModel):
     geo_precision: str | None = None
     #: Punti [lat, lon] del tragitto, per tracciarlo sulla mappa.
     route_geometry: list[tuple[float, float]] = []
+    #: Persone che HealthPulse ha già indirizzato qui e non sono ancora arrivate.
+    inbound_people: int = 0
+    #: Minuti di attesa in più dovuti a quegli arrivi già promessi.
+    inbound_wait_minutes: int = 0
     recommended: bool = False
 
 
@@ -76,6 +80,9 @@ class PlanResponse(BaseModel):
     options: list[PlanOption]
     advice: str
     provider: str
+    #: Perché la struttura più vicina non è quella consigliata, quando succede.
+    crowding_note: str | None = None
+    crowding_formula: str = "induced_crowding.v1"
 
 
 class ProviderStatus(BaseModel):

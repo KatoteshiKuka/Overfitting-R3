@@ -191,7 +191,7 @@ export function TriagePage() {
                 />
               </div>
 
-              <RouteSummary option={selected} />
+              <RouteSummary option={selected} crowdingNote={plan.data.crowding_note} />
 
               {/* Conferma esplicita: la struttura viene avvisata solo se lo decide la persona. */}
               <ArrivalConfirm

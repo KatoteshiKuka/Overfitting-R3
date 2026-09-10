@@ -1,0 +1,27 @@
+{
+  "name": "HealthPulse Lazio",
+  "short_name": "HealthPulse",
+  "description": "Trova la struttura sanitaria giusta per il tuo caso, con i tempi reali di viaggio e attesa.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f8fafa",
+  "theme_color": "#0d766e",
+  "lang": "it",
+  "categories": ["health", "medical"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

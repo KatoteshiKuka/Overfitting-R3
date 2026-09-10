@@ -16,7 +16,10 @@ class Settings(BaseSettings):
     api_prefix: str = "/api/v1"
 
     data_dir: Path = BACKEND_ROOT.parent / "data"
-    database_url: str = "sqlite:///./healthpulse.db"
+    # Percorso assoluto: con `sqlite:///./…` il database finisce nella cartella da cui si
+    # lancia il comando, quindi avviare il server da un punto diverso creava un secondo
+    # database vuoto senza dire niente, oppure ne apriva uno non scrivibile.
+    database_url: str = f"sqlite:///{BACKEND_ROOT / 'healthpulse.db'}"
     auto_seed: bool = True
 
     # Durata della sessione di accesso: coprire una giornata di demo senza rifare login.

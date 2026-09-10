@@ -102,7 +102,7 @@ Quando `done` è `true`, `assessment` è valorizzato:
 `escalated` è `true` solo quando le regole di sicurezza hanno alzato il codice **fino ad
 arancione o rosso**: le correzioni minori non vanno segnalate, altrimenti l'avviso perde valore.
 
-### `POST /api/v1/triage/plan` — 🔒 LOCKED (feature 1)
+### `POST /api/v1/triage/plan` — 🔒 LOCKED (feature 1, esteso feature 2)
 
 ```json
 // richiesta
@@ -112,6 +112,15 @@ arancione o rosso**: le correzioni minori non vanno segnalate, altrimenti l'avvi
 Risposta: `origin` (indirizzo geocodificato), `options` ordinate per `total_minutes`
 (`distance_km`, `travel_minutes`, `waiting_minutes`, `total_minutes`, `congestion_level`,
 `route_source`, `recommended`) e `advice` scritto dall'LLM **sui numeri già calcolati**.
+
+Ogni opzione porta anche `inbound_people` e `inbound_wait_minutes`: le persone che
+HealthPulse ha già indirizzato lì e i minuti che aggiungono all'attesa. La risposta
+include `crowding_note` quando la struttura che avremmo consigliato ignorando i nostri
+stessi invii è diversa da quella consigliata, e `crowding_formula`
+(`induced_crowding.v1`).
+
+Il totale è `viaggio + attesa osservata + attesa indotta`: una struttura non viene mai
+nascosta, viene mostrata con il tempo che avrà davvero quando ci si arriva.
 
 Errori: `422 address_not_found`, `404 no_geolocated_facility`.
 
@@ -398,6 +407,7 @@ Nessuno installa dipendenze da solo. Si aggiunge una riga qui, l'Orchestratore a
 |---|---|---|---|
 | `@diego/claude` | `leaflet` + `react-leaflet` | Mappa OpenStreetMap con i presidi colorati per congestione (feature 1). | **Merged** |
 | `@diego/claude` | `httpx` | Chiamate a LM Studio, Groq, Nominatim e OSRM. Già presente come dipendenza di `fastapi[standard]`, nessuna installazione aggiuntiva. | **Merged** |
+| `@diego/claude` | `qrcode` + `@types/qrcode` | QR del codice di pre-accettazione. Un encoder scritto a mano era stato tentato e scartato: la versione 1 richiede il blocco singolo, dalla 3 in poi serve l'interlacciamento, e un QR *quasi* corretto fallisce allo sportello senza dirlo. 20 KB, MIT. | **Merged** |
 
 Pacchetti già approvati e installati (baseline pinnata, non si tocca):
 

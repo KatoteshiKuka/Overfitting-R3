@@ -60,6 +60,15 @@ export function PlanOptionCard({ option, selected, onSelect }: PlanOptionCardPro
           />
           {CONGESTION_LABELS[option.congestion_level]}
         </span>
+        {option.inbound_wait_minutes >= 5 && (
+          <span
+            className="text-[11px]"
+            style={{ color: 'rgb(var(--triage-azzurro))' }}
+            title="Persone già indirizzate qui da HealthPulse e non ancora arrivate"
+          >
+            +{option.inbound_wait_minutes} min per {option.inbound_people} in arrivo
+          </span>
+        )}
         {option.route_source === 'stimato' && (
           <span className="text-[11px] text-faint" title="OSRM non ha risposto: distanza in linea d'aria">
             tragitto stimato

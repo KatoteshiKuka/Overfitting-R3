@@ -4,10 +4,12 @@ import { ErrorState } from '@/components/ErrorState';
 import { ProvenanceTag } from '@/components/ProvenanceTag';
 import { Skeleton } from '@/components/Skeleton';
 import { StatTile } from '@/components/StatTile';
+import { AdmissionDesk } from '@/features/operatore/AdmissionDesk';
 import { HospitalLogin } from '@/features/auth/HospitalLogin';
 import { InboundPanel } from '@/features/operatore/InboundPanel';
 import { ReadinessPanel } from '@/features/operatore/ReadinessPanel';
 import { StaffingPanel } from '@/features/operatore/StaffingPanel';
+import { SurgeAlert } from '@/features/operatore/SurgeAlert';
 import type { ConsoleOverview } from '@/features/operatore/types';
 import { useAuth } from '@/features/auth/useAuth';
 import { formatDateTime, formatNumber } from '@/lib/format';
@@ -68,6 +70,8 @@ export function OperatorePage() {
         </p>
       </div>
 
+      <SurgeAlert data={data} />
+
       <section aria-label="Situazione attuale" className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <div className="rounded-xl border border-line bg-surface px-4 py-3">
           <div className="flex items-center justify-between gap-2">
@@ -114,7 +118,8 @@ export function OperatorePage() {
         <ReadinessPanel readiness={data.readiness} />
       </div>
 
-      <div className="mt-4">
+      <div className="mt-4 grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+        <AdmissionDesk />
         <StaffingPanel staffing={data.staffing} />
       </div>
 

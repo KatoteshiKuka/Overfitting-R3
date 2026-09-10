@@ -4,6 +4,7 @@ import '@/styles/theme.css';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { registerServiceWorker } from '@/lib/registerServiceWorker';
 import { BrowserRouter } from 'react-router-dom';
 
 const container = document.getElementById('root');
@@ -18,3 +19,5 @@ createRoot(container).render(
     </QueryClientProvider>
   </StrictMode>,
 );
+
+registerServiceWorker();

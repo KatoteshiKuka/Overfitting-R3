@@ -1,12 +1,17 @@
-# Presidio Lazio — Emergency Triage Assistant
+# HealthPulse — Emergency Triage Assistant
 
 Web app che aiuta il cittadino a capire **dove andare** quando ha un problema di salute non grave: invece del pronto soccorso, la struttura territoriale più adatta al caso — casa della comunità, farmacia attrezzata, ambulatorio.
 
 Traccia 3 — Sanità / Healthcare. Dati dal Portale Open Data della Regione Lazio e dal Portale Nazionale Open Data.
 
-Stato: **feature 1 completa**. All'apertura si sceglie il ruolo; il percorso del paziente è
-implementato end-to-end (chat di triage, classificazione nei cinque codici, mappa con tempi
-reali). L'area del personale è predisposta ma vuota: la sviluppa il team.
+Stato: **percorso completo in entrambe le direzioni.** Il cittadino descrive il problema,
+riceve un codice e la struttura più adatta con i tempi reali, conferma dove sta andando e
+ottiene un codice per l'accettazione. La struttura vede arrivare quella persona, sa che
+tipo di accesso aspettarsi e riceve una proposta su quante risorse servono.
+
+L'app si apre con la scelta del ruolo, senza chiedere niente: l'identità viene richiesta
+solo al momento di confermare una destinazione (cittadino) o di aprire la console
+(personale). Vedi [`docs/SPID_TEST.md`](docs/SPID_TEST.md).
 
 ## Come funziona il percorso del paziente
 
@@ -19,11 +24,17 @@ reali). L'area del personale è predisposta ma vuota: la sviluppa il team.
 3. **Mappa.** Inserito l'indirizzo, Nominatim lo geocodifica e OSRM calcola i tragitti reali.
    I minuti di viaggio e di attesa sono **calcolati**, non inventati dall'LLM, che si limita
    a scrivere il consiglio sui numeri già pronti.
+4. **Nessun effetto gregge.** Una struttura conveniente lo è per tutti quelli che chiedono
+   nello stesso momento: consigliarla a venti persone creerebbe lì la coda che si voleva
+   evitare. Prima di ordinare le opzioni si conta quante persone HealthPulse ha già
+   indirizzato in ciascuna e non sono ancora arrivate, e quell'attesa si somma alle altre.
+   Chi si vede consigliare una struttura più lontana legge il motivo
+   (`backend/app/features/arrivals/crowding.py`, formula `induced_crowding.v1`).
 
 ### Configurazione LLM
 
 Il modello locale si configura in `backend/.env` (vedi `.env.example`). Per Groq serve
-`PRESIDIO_GROQ_API_KEY`. **La chiave non va committata**: il repo è pubblico.
+`HEALTHPULSE_GROQ_API_KEY`. **La chiave non va committata**: il repo è pubblico.
 
 ### I dati sono reali
 
@@ -63,9 +74,41 @@ cd backend  && uv run fastapi dev app/main.py   # http://localhost:8000
 cd frontend && pnpm dev                         # http://localhost:5173
 ```
 
-L'app si apre su **http://localhost:5173**. Vite fa da proxy su `/api` verso il backend: nel codice si usano sempre URL relative, niente CORS in dev.
+### Provarla dal telefono
 
-L'app parte anche **senza dati**: in quel caso mostra come caricarli invece di rompersi.
+Vite è già in ascolto su tutte le interfacce, quindi `pnpm dev` (o `npm run dev`) stampa
+anche un indirizzo di rete:
+
+```
+➜  Network: http://192.168.x.x:5173/
+```
+
+Aprilo dal telefono sulla stessa rete Wi-Fi. Le chiamate all'API passano dal proxy di
+Vite, quindi funzionano senza configurare niente.
+
+Per installarla come app (icona sulla home, schermo intero) serve la build vera, perché
+il service worker è attivo solo in produzione:
+
+```bash
+cd frontend && pnpm build && pnpm preview --host   # :4173
+```
+
+Su Android: menu del browser → «Installa app». Su iOS: Condividi → «Aggiungi a Home».
+
+### Dimostrare che la logica funziona
+
+```bash
+uv run --with httpx python scripts/demo_closed_loop.py
+```
+
+Percorre l'intero flusso con le API pubbliche e stampa cosa succede a ogni passaggio:
+login, profilo, **saturazione di una struttura con 20 invii e spostamento della
+raccomandazione**, conferma, codice di pre-accettazione, console della struttura,
+accettazione allo sportello, revoca senza conseguenze.
+
+Vite fa da proxy su `/api` verso il backend: nel codice si usano sempre URL relative,
+niente CORS in dev. L'app parte anche **senza dati**: in quel caso mostra come caricarli
+invece di rompersi.
 
 ---
 
@@ -124,14 +167,14 @@ frontend/src/
   api/          client HTTP tipizzato e tipi condivisi
   components/   componenti riusabili, uno per file
   features/     <-- qui dentro si lavora
-    home/  facilities/  feature-a/  feature-b/
+    home/  triage/  operatore/  auth/  facilities/
   lib/          utility pure (triage, tipi struttura, tema, formattazione)
   routes.tsx    registro rotte — append-only
 
 backend/app/
   core/         config, database, errori, stato dataset
   features/     <-- qui dentro si lavora
-    facilities/  status/  feature_a/  feature_b/
+    auth/  citizens/  arrivals/  hospital/  triage/  congestion/  facilities/
   main.py       bootstrap — append-only
 
 data/           dataset Open Data (vedi data/README.md)
@@ -153,4 +196,9 @@ Base path `/api/v1`. Contratti completi in [`STATE.md`](STATE.md), documentazion
 | `POST /triage/plan` | Indirizzo + codice → strutture ordinate per tempo totale, con consiglio |
 | `GET /triage/status` | Disponibilità dei provider LLM |
 | `GET /congestion` | Carico dei presidi (oggi stimato, vedi sopra) |
-| `GET /feature-b` | Slot libero, risponde `501` |
+| `POST /auth/test-spid/login` | Accesso con identità di test, imposta il cookie di sessione |
+| `GET /citizens/me/profile` | Profilo sanitario dell'utente autenticato |
+| `POST /arrivals/commitments` | Conferma della destinazione, revocabile |
+| `POST /navigation/preadmission` | Codice di pre-accettazione, monouso |
+| `GET /hospital/console/overview` | Vista aggregata della struttura, per il personale |
+| `PUT /congestion/{id}` | L'operatore dichiara il carico reale del proprio PS |

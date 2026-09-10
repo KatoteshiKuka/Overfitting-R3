@@ -40,6 +40,10 @@ export type PlanOption = {
   congestion_level: 'basso' | 'medio' | 'alto';
   congestion_ratio: number;
   route_source: 'osrm' | 'stimato';
+  /** Persone già indirizzate qui e non ancora arrivate. */
+  inbound_people: number;
+  /** Minuti di attesa in più dovuti a quegli arrivi già promessi. */
+  inbound_wait_minutes: number;
   /** `esatta` o `comune`: quanto è precisa la posizione della struttura. */
   geo_precision: 'esatta' | 'comune' | null;
   /** Punti [lat, lon] del tragitto, per tracciarlo sulla mappa. */
@@ -52,6 +56,9 @@ export type PlanResponse = {
   options: PlanOption[];
   advice: string;
   provider: string;
+  /** Perché la struttura più vicina non è quella consigliata, quando succede. */
+  crowding_note: string | null;
+  crowding_formula: string;
 };
 
 export type ProviderStatus = {

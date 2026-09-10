@@ -2,12 +2,26 @@
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- viewport-fit=cover: sui telefoni con il notch il contenuto arriva ai bordi
+         e le safe area vengono gestite dal CSS. -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <meta
       name="description"
       content="HealthPulse — assistente di triage: trova la struttura sanitaria giusta per il tuo caso."
     />
-    <meta name="theme-color" content="#0f766e" />
+    <meta name="theme-color" content="#0d766e" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#080f12" media="(prefers-color-scheme: dark)" />
+
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="HealthPulse" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
     <title>HealthPulse — Lazio</title>
   </head>
   <body>

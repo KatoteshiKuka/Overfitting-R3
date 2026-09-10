@@ -7,6 +7,8 @@ import type { PlanOption } from '@/features/triage/types';
 
 type RouteSummaryProps = {
   option: PlanOption;
+  /** Perché la struttura più vicina non è quella consigliata, quando succede. */
+  crowdingNote?: string | null;
 };
 
 /**
@@ -14,7 +16,7 @@ type RouteSummaryProps = {
  * e quanto aspetti una volta lì. Tenerli separati è il punto dell'app — un pronto
  * soccorso vicino ma pieno può costare più di uno lontano e scarico.
  */
-export function RouteSummary({ option }: RouteSummaryProps) {
+export function RouteSummary({ option, crowdingNote }: RouteSummaryProps) {
   const cssVar = CONGESTION_COLORS[option.congestion_level];
 
   return (
@@ -40,6 +42,18 @@ export function RouteSummary({ option }: RouteSummaryProps) {
         <Operator symbol="=" />
         <Metric label="Totale" value={formatMinutes(option.total_minutes)} strong />
       </div>
+
+      {crowdingNote && (
+        <p
+          className="mt-4 rounded-xl px-3 py-2.5 text-xs leading-relaxed"
+          style={{
+            backgroundColor: 'rgb(var(--triage-azzurro) / 0.1)',
+            color: 'rgb(var(--triage-azzurro))',
+          }}
+        >
+          {crowdingNote}
+        </p>
+      )}
 
       <p className="mt-4 text-xs leading-relaxed text-faint">
         {option.route_source === 'osrm'

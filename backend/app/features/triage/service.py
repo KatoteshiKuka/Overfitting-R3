@@ -6,6 +6,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.core.errors import AppError
+from app.features.arrivals import crowding
 from app.features.congestion import service as congestion_service
 from app.features.congestion.waiting import level_for
 from app.features.facilities.models import Facility
@@ -189,6 +190,10 @@ async def plan(db: Session, address: str, code: str, limit: int) -> PlanResponse
     if len(shortlist) < wanted:
         shortlist += approximate[: wanted - len(shortlist)]
 
+    # Quante persone HealthPulse ha già mandato verso ciascuna struttura: consigliare la
+    # stessa a tutti creerebbe lì la coda che stiamo cercando di evitare.
+    inbound = crowding.inbound_by_facility(db)
+
     options: list[PlanOption] = []
     for facility in shortlist:
         route = await geo.route_between(origin, facility.latitude or 0.0, facility.longitude or 0.0)
@@ -196,6 +201,9 @@ async def plan(db: Session, address: str, code: str, limit: int) -> PlanResponse
         # L'attesa dipende da chi hai davanti: un codice bianco passa dopo tutti gli altri.
         waiting = congestion_service.waiting_minutes_for(load, code) if load else 0
         ratio = load.ratio if load else 0.0
+
+        queue = congestion_service.to_queue(load) if load else None
+        induced = crowding.crowding_for(facility.id, inbound.get(facility.id, 0.0), queue, code)
 
         options.append(
             PlanOption(
@@ -209,30 +217,62 @@ async def plan(db: Session, address: str, code: str, limit: int) -> PlanResponse
                 distance_km=route.distance_km,
                 travel_minutes=route.travel_minutes,
                 waiting_minutes=waiting,
-                total_minutes=route.travel_minutes + waiting,
+                # Il totale include l'attesa che troverai davvero, code indotte comprese.
+                total_minutes=route.travel_minutes + waiting + induced.added_minutes,
                 congestion_level=level_for(ratio),
                 congestion_ratio=round(ratio, 3),
                 route_source=route.source,
                 geo_precision=facility.geo_precision,
                 route_geometry=[list(point) for point in route.geometry],
+                inbound_people=induced.inbound_people,
+                inbound_wait_minutes=induced.added_minutes,
             )
         )
 
+    # Quale struttura avremmo consigliato ignorando le code che stiamo creando noi.
+    # Se è diversa da quella che consigliamo davvero, la persona merita di sapere perché:
+    # senza spiegazione, vedersi mandare più lontano sembra arbitrario.
+    without_us = (
+        min(options, key=lambda option: option.travel_minutes + option.waiting_minutes)
+        if options
+        else None
+    )
+
     options.sort(key=lambda option: option.total_minutes)
     options = options[:limit]
+
+    crowding_note: str | None = None
     if options:
         options[0].recommended = True
+        if (
+            without_us is not None
+            and without_us.facility_id != options[0].facility_id
+            and without_us.inbound_wait_minutes >= 5
+        ):
+            crowding_note = crowding.explain(
+                crowding.Crowding(
+                    facility_id=without_us.facility_id,
+                    inbound_people=without_us.inbound_people,
+                    inbound_weighted=float(without_us.inbound_people),
+                    added_minutes=without_us.inbound_wait_minutes,
+                ),
+                without_us.name,
+            )
 
-    advice, provider = await _plan_advice(code, options)
+    advice, provider = await _plan_advice(code, options, crowding_note)
     return PlanResponse(
         origin=Origin(label=origin.label, latitude=origin.latitude, longitude=origin.longitude),
         options=options,
+        crowding_note=crowding_note,
+        crowding_formula=crowding.CROWDING_FORMULA,
         advice=advice,
         provider=provider,
     )
 
 
-def _deterministic_advice(code: str, options: list[PlanOption]) -> str:
+def _deterministic_advice(
+    code: str, options: list[PlanOption], crowding_note: str | None = None
+) -> str:
     if code == "rosso":
         return (
             "Chiama subito il 118: non metterti in viaggio da solo. "
@@ -242,23 +282,24 @@ def _deterministic_advice(code: str, options: list[PlanOption]) -> str:
         return "Nessuna struttura disponibile nei dati caricati."
 
     best = options[0]
-    where = f"{best.name} ({best.municipality or 'Lazio'})"
-    timing = f"circa {best.travel_minutes} minuti di viaggio e {best.waiting_minutes} di attesa"
+    where = best.name
+    tail = f" {crowding_note}" if crowding_note else ""
     if code in {"bianco", "verde"}:
         return (
-            f"Per un problema come il tuo il pronto soccorso non serve: ti conviene {where}, "
-            f"{timing}, in tutto circa {best.total_minutes} minuti. Andare al pronto soccorso "
-            "significherebbe aspettare molto di più e togliere spazio a chi sta peggio."
+            f"Vai a {where}: {best.total_minutes} minuti in tutto. Il pronto soccorso per un "
+            f"problema come il tuo significherebbe ore di attesa.{tail}"
         )
     return (
-        f"L'opzione più rapida è {where}: {timing}, in tutto circa {best.total_minutes} minuti. "
-        "Se durante il tragitto peggiori, chiama il 118."
+        f"Vai a {where}: {best.total_minutes} minuti in tutto. Se peggiori durante il "
+        f"tragitto, chiama il 118.{tail}"
     )
 
 
-async def _plan_advice(code: str, options: list[PlanOption]) -> tuple[str, str]:
+async def _plan_advice(
+    code: str, options: list[PlanOption], crowding_note: str | None = None
+) -> tuple[str, str]:
     """Il consiglio lo scrive l'LLM, ma solo sui numeri già calcolati."""
-    fallback = _deterministic_advice(code, options)
+    fallback = _deterministic_advice(code, options, crowding_note)
     if not options:
         return fallback, "regole"
 
@@ -266,13 +307,19 @@ async def _plan_advice(code: str, options: list[PlanOption]) -> tuple[str, str]:
         f"- {o.name} ({o.type}, {o.municipality or 'Lazio'}): {o.distance_km} km, "
         f"{o.travel_minutes} min di viaggio, {o.waiting_minutes} min di attesa, "
         f"totale {o.total_minutes} min, affollamento {o.congestion_level}"
+        + (
+            f", piu' {o.inbound_wait_minutes} min per {o.inbound_people} arrivi gia' indirizzati"
+            if o.inbound_wait_minutes
+            else ""
+        )
         for o in options
     )
+    note = f"\nNota sull'affollamento: {crowding_note}" if crowding_note else ""
     payload = [
         {"role": "system", "content": PLAN_SYSTEM},
         {
             "role": "user",
-            "content": f"Codice di triage: {code}\nStrutture disponibili:\n{summary}",
+            "content": f"Codice di triage: {code}\nStrutture disponibili:\n{summary}{note}",
         },
     ]
 

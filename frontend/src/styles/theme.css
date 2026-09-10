@@ -58,6 +58,12 @@
   body {
     @apply bg-ground text-ink antialiased;
     font-family: theme('fontFamily.sans');
+    /* Telefoni con il notch: il contenuto non deve finirci sotto. */
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+    /* Evita lo zoom involontario al doppio tocco su iOS. */
+    touch-action: manipulation;
   }
 
   /* Il focus deve restare visibile: l'app la usa gente di fretta, anche da tastiera. */

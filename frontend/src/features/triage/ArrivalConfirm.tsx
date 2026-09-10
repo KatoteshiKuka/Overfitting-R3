@@ -1,6 +1,7 @@
 import { apiPost } from '@/api/client';
 import { Card } from '@/components/Card';
 import { ErrorState } from '@/components/ErrorState';
+import { QrCode } from '@/components/QrCode';
 import { SpidLoginPanel } from '@/features/auth/SpidLoginPanel';
 import { useAuth } from '@/features/auth/useAuth';
 import { formatMinutes } from '@/features/triage/congestion';
@@ -170,12 +171,12 @@ export function ArrivalConfirm({ option, careIntent }: ArrivalConfirmProps) {
             <p className="text-xs font-medium uppercase tracking-wide text-accent-ink">
               Pre-accettazione pronta
             </p>
-            <p className="tabular mt-1 text-2xl font-semibold tracking-wider text-accent-ink">
-              {preadmission.code}
-            </p>
-            <p className="mt-1.5 text-xs leading-relaxed text-accent-ink/80">
-              Mostra questo codice all'accettazione. Il triage lo esegue comunque il
-              personale all'arrivo: HealthPulse non lo pre-assegna.
+            <div className="mt-3 flex justify-center">
+              <QrCode value={preadmission.code} label={`Codice di accettazione ${preadmission.code}`} />
+            </div>
+            <p className="mt-3 text-xs leading-relaxed text-accent-ink/80">
+              Mostra il QR all'accettazione. Il triage lo esegue comunque il personale
+              all'arrivo: HealthPulse non lo pre-assegna.
             </p>
           </div>
         )}
