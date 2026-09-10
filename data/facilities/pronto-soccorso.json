@@ -1,0 +1,394 @@
+[
+ {
+  "name": "Ospedale dei Castelli — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM6",
+  "municipality": "Ariccia",
+  "latitude": 41.6771329,
+  "longitude": 12.6482579
+ },
+ {
+  "name": "Ospedali Riuniti — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM6",
+  "municipality": "Anzio",
+  "latitude": 41.4605404,
+  "longitude": 12.6367566
+ },
+ {
+  "name": "Pol. Univ. Tor Vergata — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM2",
+  "municipality": "Roma",
+  "latitude": 41.8576274,
+  "longitude": 12.6309806
+ },
+ {
+  "name": "Sant'Andrea — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM1",
+  "municipality": "Roma",
+  "latitude": 41.9033154,
+  "longitude": 12.4833925
+ },
+ {
+  "name": "Campus Biomedico — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM2",
+  "municipality": "Roma",
+  "latitude": 41.77269,
+  "longitude": 12.4670953
+ },
+ {
+  "name": "Pol. Univ. Umberto I — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM1",
+  "municipality": "Roma",
+  "latitude": 41.906457,
+  "longitude": 12.5121255
+ },
+ {
+  "name": "Pol. Univ. A. Gemelli — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM1",
+  "municipality": "Roma",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Bambino Gesu' Palidoro — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM3",
+  "municipality": "Palidoro",
+  "latitude": 41.9192319,
+  "longitude": 12.1417199
+ },
+ {
+  "name": "Bambino Gesu' — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM1",
+  "municipality": "Roma",
+  "latitude": 41.8970772,
+  "longitude": 12.4607003
+ },
+ {
+  "name": "San Giovanni Addolorata — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM1",
+  "municipality": "Roma",
+  "latitude": 41.8852718,
+  "longitude": 12.4986193
+ },
+ {
+  "name": "San Camillo-Forlanini — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM3",
+  "municipality": "Roma",
+  "latitude": 41.8695994,
+  "longitude": 12.4559991
+ },
+ {
+  "name": "Policlinico Casilino — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM2",
+  "municipality": "Roma",
+  "latitude": 41.8686656,
+  "longitude": 12.5895908
+ },
+ {
+  "name": "San Filippo Neri — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM1",
+  "municipality": "Roma",
+  "latitude": 41.6970708,
+  "longitude": 12.6500744
+ },
+ {
+  "name": "Belcolle — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "VT",
+  "municipality": "Viterbo",
+  "latitude": 42.3942071,
+  "longitude": 12.1207055
+ },
+ {
+  "name": "Sandro Pertini — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM2",
+  "municipality": "Roma",
+  "latitude": 41.9205448,
+  "longitude": 12.5403454
+ },
+ {
+  "name": "Santa Scolastica — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "FR",
+  "municipality": "Cassino",
+  "latitude": 41.4952249,
+  "longitude": 13.8298994
+ },
+ {
+  "name": "Santissima Trinita' — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "FR",
+  "municipality": "Sora",
+  "latitude": 41.7296991,
+  "longitude": 13.6362634
+ },
+ {
+  "name": "San Benedetto — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "FR",
+  "municipality": "Alatri",
+  "latitude": 41.7258809,
+  "longitude": 13.3407046
+ },
+ {
+  "name": "F. Spaziani — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "FR",
+  "municipality": "Frosinone",
+  "latitude": 41.6688233,
+  "longitude": 13.1468818
+ },
+ {
+  "name": "Citta' di Aprilia — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "LT",
+  "municipality": "Aprilia",
+  "latitude": 41.5876712,
+  "longitude": 12.6484792
+ },
+ {
+  "name": "Dono Svizzero — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "LT",
+  "municipality": "Formia",
+  "latitude": 41.2617917,
+  "longitude": 13.6182823
+ },
+ {
+  "name": "San Giovanni di Dio — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "LT",
+  "municipality": "Fondi",
+  "latitude": 41.3612577,
+  "longitude": 13.4151986
+ },
+ {
+  "name": "A. Fiorini — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "LT",
+  "municipality": "Terracina",
+  "latitude": 41.2885307,
+  "longitude": 13.2403379
+ },
+ {
+  "name": "Santa Maria Goretti — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "LT",
+  "municipality": "Latina",
+  "latitude": 41.4710229,
+  "longitude": 12.9004976
+ },
+ {
+  "name": "Aurelia Hospital — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM1",
+  "municipality": "Roma",
+  "latitude": 41.8870757,
+  "longitude": 12.3983943
+ },
+ {
+  "name": "Madre G. Vannini — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM2",
+  "municipality": "Roma",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Cristo Re — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM1",
+  "municipality": "Roma",
+  "latitude": 41.9274305,
+  "longitude": 12.5136552
+ },
+ {
+  "name": "San Carlo di Nancy — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM1",
+  "municipality": "Roma",
+  "latitude": 41.897578,
+  "longitude": 12.4386999
+ },
+ {
+  "name": "San Giovanni Calibita-FBF — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM1",
+  "municipality": "Roma",
+  "latitude": 41.8907852,
+  "longitude": 12.476941
+ },
+ {
+  "name": "San Pietro-FBF — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM1",
+  "municipality": "Roma",
+  "latitude": 41.9635742,
+  "longitude": 12.4502174
+ },
+ {
+  "name": "C.T.O. Andrea Alesini — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM2",
+  "municipality": "Roma",
+  "latitude": 41.8578022,
+  "longitude": 12.4867694
+ },
+ {
+  "name": "Sant'Eugenio — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM2",
+  "municipality": "Roma",
+  "latitude": 41.821253,
+  "longitude": 12.4722581
+ },
+ {
+  "name": "G. Battista Grassi — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM3",
+  "municipality": "Roma",
+  "latitude": 41.772123,
+  "longitude": 12.2273246
+ },
+ {
+  "name": "Padre Pio — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM4",
+  "municipality": "Bracciano",
+  "latitude": 42.0962534,
+  "longitude": 12.1731973
+ },
+ {
+  "name": "San Giovanni Evangelista — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM5",
+  "municipality": "Tivoli",
+  "latitude": 41.9599875,
+  "longitude": 12.8019633
+ },
+ {
+  "name": "A. Angelucci — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM5",
+  "municipality": "Subiaco",
+  "latitude": 41.9322074,
+  "longitude": 13.0862927
+ },
+ {
+  "name": "Coniugi Bernardini — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM5",
+  "municipality": "Palestrina",
+  "latitude": 41.8364541,
+  "longitude": 12.8863273
+ },
+ {
+  "name": "Santissimo Gonfalone — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM5",
+  "municipality": "Monterotondo",
+  "latitude": 42.0517987,
+  "longitude": 12.6183967
+ },
+ {
+  "name": "L. Parodi Delfino — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM5",
+  "municipality": "Colleferro",
+  "latitude": 41.7379526,
+  "longitude": 13.0105576
+ },
+ {
+  "name": "San Paolo — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM4",
+  "municipality": "Civitavecchia",
+  "latitude": 42.0981586,
+  "longitude": 11.8097588
+ },
+ {
+  "name": "Oftalmico — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM1",
+  "municipality": "Roma",
+  "latitude": 41.9081182,
+  "longitude": 12.4484657
+ },
+ {
+  "name": "Santo Spirito — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM1",
+  "municipality": "Roma",
+  "latitude": 41.9010559,
+  "longitude": 12.4625575
+ },
+ {
+  "name": "San Camillo De Lellis — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RI",
+  "municipality": "Rieti",
+  "latitude": 41.907034,
+  "longitude": 12.4943508
+ },
+ {
+  "name": "Ospedale Civile — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "VT",
+  "municipality": "Tarquinia",
+  "latitude": 42.4038724,
+  "longitude": 12.8635218
+ },
+ {
+  "name": "Sant'Anna — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM6",
+  "municipality": "Pomezia",
+  "latitude": 41.6720582,
+  "longitude": 12.4963055
+ },
+ {
+  "name": "P. Colombo — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM6",
+  "municipality": "Velletri",
+  "latitude": 41.6891901,
+  "longitude": 12.7784762
+ },
+ {
+  "name": "San Sebastiano Martire — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "RM6",
+  "municipality": "Frascati",
+  "latitude": 42.0665503,
+  "longitude": 12.3326933
+ },
+ {
+  "name": "Andosilla — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "VT",
+  "municipality": "Civitacastellana",
+  "latitude": 41.8816742,
+  "longitude": 12.3946641
+ },
+ {
+  "name": "Ospedale Civile — Pronto Soccorso",
+  "type": "Pronto Soccorso",
+  "asl": "VT",
+  "municipality": "Acquapendente",
+  "latitude": 42.4038724,
+  "longitude": 12.8635218
+ }
+]

@@ -1,0 +1,1514 @@
+[
+ {
+  "name": "Osp. Di Acquapendente",
+  "type": "Ospedale",
+  "asl": "Asl Viterbo",
+  "municipality": "Acquapendente",
+  "province": "VT",
+  "latitude": 42.7459289,
+  "longitude": 11.8648716
+ },
+ {
+  "name": "Osp. Di Civita Castellana",
+  "type": "Ospedale",
+  "asl": "Asl Viterbo",
+  "municipality": "Civita Castellana",
+  "province": "VT",
+  "latitude": 42.2904959,
+  "longitude": 12.4206416
+ },
+ {
+  "name": "Osp. Di Tarquinia",
+  "type": "Ospedale",
+  "asl": "Asl Viterbo",
+  "municipality": "Tarquinia",
+  "province": "VT",
+  "latitude": 42.2532394,
+  "longitude": 11.7591747
+ },
+ {
+  "name": "C.C.A. Salus",
+  "type": "Ospedale",
+  "asl": "Asl Viterbo",
+  "municipality": "Viterbo",
+  "province": "VT",
+  "latitude": 42.4929522,
+  "longitude": 11.9488136
+ },
+ {
+  "name": "C.C.A. S.Teresa Del Bambin Gesu'",
+  "type": "Ospedale",
+  "asl": "Asl Viterbo",
+  "municipality": "Viterbo",
+  "province": "VT",
+  "latitude": 42.4929522,
+  "longitude": 11.9488136
+ },
+ {
+  "name": "C.C.A. Villa Immacolata",
+  "type": "Ospedale",
+  "asl": "Asl Viterbo",
+  "municipality": "Viterbo",
+  "province": "VT",
+  "latitude": 42.4929522,
+  "longitude": 11.9488136
+ },
+ {
+  "name": "Osp. S.Camillo De Lellis",
+  "type": "Ospedale",
+  "asl": "Asl Rieti",
+  "municipality": "Rieti",
+  "province": "RI",
+  "latitude": 42.4147364,
+  "longitude": 12.8858881
+ },
+ {
+  "name": "Osp. Di Magliano Sabina",
+  "type": "Ospedale",
+  "asl": "Asl Rieti",
+  "municipality": "Magliano Sabina",
+  "province": "RI",
+  "latitude": 42.3613571,
+  "longitude": 12.4811695
+ },
+ {
+  "name": "Osp. Distrettuale Di Amatrice",
+  "type": "Ospedale",
+  "asl": "Asl Rieti",
+  "municipality": "Amatrice",
+  "province": "RI",
+  "latitude": 42.6320509,
+  "longitude": 13.2901924
+ },
+ {
+  "name": "Osp. S.Spirito",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.9010559,
+  "longitude": 12.4625575
+ },
+ {
+  "name": "Osp. Villa Betania",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Osp. Regionale Oftalmico",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Osp. G. Eastman",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Osp. Villa Albani",
+  "type": "Ospedale",
+  "asl": "Asl Rm/H",
+  "municipality": "Anzio",
+  "province": "RM",
+  "latitude": 41.4495745,
+  "longitude": 12.6276277
+ },
+ {
+  "name": "Osp. Nuovo Regina Margherita",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8859105,
+  "longitude": 12.4708946
+ },
+ {
+  "name": "Osp. Di Anzio E Nettuno",
+  "type": "Ospedale",
+  "asl": "Asl Rm/H",
+  "municipality": "Anzio",
+  "province": "RM",
+  "latitude": 41.4471008,
+  "longitude": 12.6285618
+ },
+ {
+  "name": "Osp. Albano Laziale",
+  "type": "Ospedale",
+  "asl": "Asl Rm/H",
+  "municipality": "Albano Laziale",
+  "province": "RM",
+  "latitude": 41.7288988,
+  "longitude": 12.6448187
+ },
+ {
+  "name": "Osp. Genzano Di Roma",
+  "type": "Ospedale",
+  "asl": "Asl Rm/H",
+  "municipality": "Genzano Di Roma",
+  "province": "RM",
+  "latitude": 41.7062459,
+  "longitude": 12.6934267
+ },
+ {
+  "name": "Osp. S.Paolo",
+  "type": "Ospedale",
+  "asl": "Asl Rm/F",
+  "municipality": "Civitavecchia",
+  "province": "RM",
+  "latitude": 42.0981586,
+  "longitude": 11.8097588
+ },
+ {
+  "name": "Osp. L.Parodi Delfino",
+  "type": "Ospedale",
+  "asl": "Asl Rm/G",
+  "municipality": "Colleferro",
+  "province": "RM",
+  "latitude": 41.727033,
+  "longitude": 13.0041576
+ },
+ {
+  "name": "Osp. S.Sebastiano",
+  "type": "Ospedale",
+  "asl": "Asl Rm/H",
+  "municipality": "Frascati",
+  "province": "RM",
+  "latitude": 41.8117534,
+  "longitude": 12.6739239
+ },
+ {
+  "name": "Osp. S.Giuseppe Marino",
+  "type": "Ospedale",
+  "asl": "Asl Rm/H",
+  "municipality": "Marino",
+  "province": "RM",
+  "latitude": 41.7689041,
+  "longitude": 12.6686034
+ },
+ {
+  "name": "Osp. SS Gonfalone",
+  "type": "Ospedale",
+  "asl": "Asl Rm/G",
+  "municipality": "Monterotondo",
+  "province": "RM",
+  "latitude": 42.0504267,
+  "longitude": 12.6214304
+ },
+ {
+  "name": "Osp. Civile Coniugi Bernardini",
+  "type": "Ospedale",
+  "asl": "Asl Rm/G",
+  "municipality": "Palestrina",
+  "province": "RM",
+  "latitude": 41.8389656,
+  "longitude": 12.8912487
+ },
+ {
+  "name": "Osp. A.Angelucci",
+  "type": "Ospedale",
+  "asl": "Asl Rm/G",
+  "municipality": "Subiaco",
+  "province": "RM",
+  "latitude": 41.9322074,
+  "longitude": 13.0862927
+ },
+ {
+  "name": "Osp. S.Giovanni Evengelista",
+  "type": "Ospedale",
+  "asl": "Asl Rm/G",
+  "municipality": "Tivoli",
+  "province": "RM",
+  "latitude": 41.960922,
+  "longitude": 12.798884
+ },
+ {
+  "name": "Osp. Paolo Colombo",
+  "type": "Ospedale",
+  "asl": "Asl Rm/H",
+  "municipality": "Velletri",
+  "province": "RM",
+  "latitude": 41.6875235,
+  "longitude": 12.7813985
+ },
+ {
+  "name": "Osp. Di Ariccia",
+  "type": "Ospedale",
+  "asl": "Asl Rm/H",
+  "municipality": "Ariccia",
+  "province": "RM",
+  "latitude": 41.6994815,
+  "longitude": 12.6743549
+ },
+ {
+  "name": "Osp. Padre Pio",
+  "type": "Ospedale",
+  "asl": "Asl Rm/F",
+  "municipality": "Bracciano",
+  "province": "RM",
+  "latitude": 42.0962534,
+  "longitude": 12.1731973
+ },
+ {
+  "name": "Osp. G.Grassi",
+  "type": "Ospedale",
+  "asl": "Asl Rm/D",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Osp. Paraplegici Di Ostia",
+  "type": "Ospedale",
+  "asl": "Asl Rm/D",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Osp. S.Eugenio",
+  "type": "Ospedale",
+  "asl": "Asl Rm/C",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Osp. CTO Alesini",
+  "type": "Ospedale",
+  "asl": "Asl Rm/C",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8578022,
+  "longitude": 12.4867694
+ },
+ {
+  "name": "Osp.C. Regina Apostolorum",
+  "type": "Ospedale",
+  "asl": "Asl Rm/H",
+  "municipality": "Albano Laziale",
+  "province": "RM",
+  "latitude": 41.7288894,
+  "longitude": 12.6582689
+ },
+ {
+  "name": "Osp.C. S.Pietro Fatebenefratelli",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Osp.C. Fatebenefratelli",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Osp.C. S.Carlo Di Nancy",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Osp.C. Cristo Re",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Osp.C. Israelitico",
+  "type": "Ospedale",
+  "asl": "Asl Rm/D",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Osp.C. G.Vannini",
+  "type": "Ospedale",
+  "asl": "Asl Rm/C",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Villa Domelia",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Villa Delle Querce",
+  "type": "Ospedale",
+  "asl": "Asl Rm/H",
+  "municipality": "Nemi",
+  "province": "RM",
+  "latitude": 41.7200217,
+  "longitude": 12.7133951
+ },
+ {
+  "name": "C.C.A. Villa Valeria",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Villa Tiberina",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC Madonna Della Fiducia",
+  "type": "Ospedale",
+  "asl": "Asl Rm/C",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Policlinico Italia",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Medicus Hotel",
+  "type": "Ospedale",
+  "asl": "Asl Rm/G",
+  "municipality": "Tivoli",
+  "province": "RM",
+  "latitude": 41.960922,
+  "longitude": 12.798884
+ },
+ {
+  "name": "C.C.A. Neuroscienze",
+  "type": "Ospedale",
+  "asl": "Asl Rm/C",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC Villa Benedetta",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC Villa Luisa",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC Sanatrix",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC S.Anna",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Madonna Delle Grazie",
+  "type": "Ospedale",
+  "asl": "Asl Rm/H",
+  "municipality": "Velletri",
+  "province": "RM",
+  "latitude": 41.6867015,
+  "longitude": 12.7770433
+ },
+ {
+  "name": "C.C.A. Villa Aurora",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC Ns Sig.Ra Delle Mercede",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Pres. Luigi Di Liegro",
+  "type": "Ospedale",
+  "asl": "Asl Rm/D",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Villa Fulvia",
+  "type": "Ospedale",
+  "asl": "Asl Rm/B",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Marco Polo",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC Assunzione Di Maria Ss",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Villa Pia",
+  "type": "Ospedale",
+  "asl": "Asl Rm/D",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC Quisisana",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. S.Famiglia",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. S.Luca",
+  "type": "Ospedale",
+  "asl": "Asl Rm/C",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC Villa Del Rosario",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC Villa Mafalda",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC S.Domenico",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 42.0551257,
+  "longitude": 12.582559
+ },
+ {
+  "name": "C.C.A. S.Raffaele",
+  "type": "Ospedale",
+  "asl": "Asl Rm/H",
+  "municipality": "Rocca Di Papa",
+  "province": "RM",
+  "latitude": 41.7607608,
+  "longitude": 12.7096141
+ },
+ {
+  "name": "CC Villa Stuart",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.9275061,
+  "longitude": 12.4490676
+ },
+ {
+  "name": "CC Villa Margherita",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Villa Sandra",
+  "type": "Ospedale",
+  "asl": "Asl Rm/D",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Villa Dei Pini",
+  "type": "Ospedale",
+  "asl": "Asl Rm/H",
+  "municipality": "Anzio",
+  "province": "RM",
+  "latitude": 41.4471008,
+  "longitude": 12.6285618
+ },
+ {
+  "name": "C.C.A. Guarnieri",
+  "type": "Ospedale",
+  "asl": "Asl Rm/B",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC Slavatore Mundi",
+  "type": "Ospedale",
+  "asl": "Asl Rm/D",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. S.Anna",
+  "type": "Ospedale",
+  "asl": "Asl Rm/H",
+  "municipality": "Pomezia",
+  "province": "RM",
+  "latitude": 41.667529,
+  "longitude": 12.5047863
+ },
+ {
+  "name": "C.C.A. Mater Misericordiae",
+  "type": "Ospedale",
+  "asl": "Asl Rm/C",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Osp.C. S.Giovanni Battista",
+  "type": "Ospedale",
+  "asl": "Asl Rm/D",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Latina",
+  "type": "Ospedale",
+  "asl": "Asl Rm/C",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.3594905,
+  "longitude": 13.4258277
+ },
+ {
+  "name": "C.C.A. Siglato",
+  "type": "Ospedale",
+  "asl": "Asl Rm/F",
+  "municipality": "Civitavecchia",
+  "province": "RM",
+  "latitude": 42.0937524,
+  "longitude": 11.7922462
+ },
+ {
+  "name": "CC Santo Volto",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Concordia Hospital",
+  "type": "Ospedale",
+  "asl": "Asl Rm/C",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC Valle Giulia",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.9152871,
+  "longitude": 12.485444
+ },
+ {
+  "name": "C.C.A. S.Rita Da Cascia",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC Pio Xi",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8945849,
+  "longitude": 12.4381485
+ },
+ {
+  "name": "C.C.A. Addominale",
+  "type": "Ospedale",
+  "asl": "Asl Rm/C",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Fabia Mater",
+  "type": "Ospedale",
+  "asl": "Asl Rm/C",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC Paideia",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Villa Claudia",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. S.Feliciano",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Pres. Casilino",
+  "type": "Ospedale",
+  "asl": "Asl Rm/B",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Nuova Itor",
+  "type": "Ospedale",
+  "asl": "Asl Rm/B",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Annunaziatella",
+  "type": "Ospedale",
+  "asl": "Asl Rm/C",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Citta' Di Roma",
+  "type": "Ospedale",
+  "asl": "Asl Rm/D",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8987497,
+  "longitude": 12.4798081
+ },
+ {
+  "name": "CC Mater Dei",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.7390859,
+  "longitude": 12.6382675
+ },
+ {
+  "name": "C.C.A. European Hospital",
+  "type": "Ospedale",
+  "asl": "Asl Rm/D",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Ist.Neurotraumatologico",
+  "type": "Ospedale",
+  "asl": "Asl Rm/H",
+  "municipality": "Grottaferrata",
+  "province": "RM",
+  "latitude": 41.788616,
+  "longitude": 12.6667408
+ },
+ {
+  "name": "C.C.A. Ancelle Del Buon Pastore",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Aurelia Hospital",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Merry House",
+  "type": "Ospedale",
+  "asl": "Asl Rm/D",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. S.Volto",
+  "type": "Ospedale",
+  "asl": "Asl Rm/F",
+  "municipality": "S. Marinella",
+  "province": "RM",
+  "latitude": 42.0354641,
+  "longitude": 11.867938
+ },
+ {
+  "name": "C.C.A. Villa Dante",
+  "type": "Ospedale",
+  "asl": "Asl Rm/G",
+  "municipality": "Guidonia",
+  "province": "RM",
+  "latitude": 41.9972039,
+  "longitude": 12.7263446
+ },
+ {
+  "name": "Osp. S.Maria Goretti",
+  "type": "Ospedale",
+  "asl": "Asl Latina",
+  "municipality": "Latina",
+  "province": "LT",
+  "latitude": 41.4612896,
+  "longitude": 12.9092837
+ },
+ {
+  "name": "Osp. A.Fiorini",
+  "type": "Ospedale",
+  "asl": "Asl Latina",
+  "municipality": "Terracina",
+  "province": "LT",
+  "latitude": 41.2984276,
+  "longitude": 13.2328332
+ },
+ {
+  "name": "Osp. S.Giovanni Di Dio",
+  "type": "Ospedale",
+  "asl": "Asl Latina",
+  "municipality": "Fondi",
+  "province": "LT",
+  "latitude": 41.3612577,
+  "longitude": 13.4151986
+ },
+ {
+  "name": "Osp. Regina Elena",
+  "type": "Ospedale",
+  "asl": "Asl Latina",
+  "municipality": "Priverno",
+  "province": "LT",
+  "latitude": 41.8023302,
+  "longitude": 12.4516912
+ },
+ {
+  "name": "Osp. Dono Svizzero",
+  "type": "Ospedale",
+  "asl": "Asl Latina",
+  "municipality": "Formia",
+  "province": "LT",
+  "latitude": 41.259308,
+  "longitude": 13.6080209
+ },
+ {
+  "name": "Osp. Don L.Di Liegro",
+  "type": "Ospedale",
+  "asl": "Asl Latina",
+  "municipality": "Gaeta",
+  "province": "LT",
+  "latitude": 41.218312,
+  "longitude": 13.56281
+ },
+ {
+  "name": "Osp. Civile Di Minturno",
+  "type": "Ospedale",
+  "asl": "Asl Latina",
+  "municipality": "Minturno",
+  "province": "LT",
+  "latitude": 41.2629744,
+  "longitude": 13.7465219
+ },
+ {
+  "name": "C.C.A. Del Sole Tommaso Costa",
+  "type": "Ospedale",
+  "asl": "Asl Latina",
+  "municipality": "Formia",
+  "province": "LT",
+  "latitude": 41.259308,
+  "longitude": 13.6080209
+ },
+ {
+  "name": "C.C.A. I.C.O.T.",
+  "type": "Ospedale",
+  "asl": "Asl Latina",
+  "municipality": "Latina",
+  "province": "LT",
+  "latitude": 41.4595261,
+  "longitude": 13.0125912
+ },
+ {
+  "name": "C.C.A. San Marco",
+  "type": "Ospedale",
+  "asl": "Asl Latina",
+  "municipality": "Latina",
+  "province": "LT",
+  "latitude": 41.4595261,
+  "longitude": 13.0125912
+ },
+ {
+  "name": "C.C.A. C.Franceschini",
+  "type": "Ospedale",
+  "asl": "Asl Latina",
+  "municipality": "Sabaudia",
+  "province": "LT",
+  "latitude": 41.3015672,
+  "longitude": 13.0258726
+ },
+ {
+  "name": "C.C.A. Citta Di Aprilia",
+  "type": "Ospedale",
+  "asl": "Asl Latina",
+  "municipality": "Aprilia",
+  "province": "LT",
+  "latitude": 41.5942016,
+  "longitude": 12.6485765
+ },
+ {
+  "name": "Osp. F.Spaziani",
+  "type": "Ospedale",
+  "asl": "Asl Frosinone",
+  "municipality": "Frosinone",
+  "province": "FR",
+  "latitude": 41.6285468,
+  "longitude": 13.5758498
+ },
+ {
+  "name": "Osp. S.Benedetto",
+  "type": "Ospedale",
+  "asl": "Asl Frosinone",
+  "municipality": "Alatri",
+  "province": "FR",
+  "latitude": 41.737609,
+  "longitude": 13.3344057
+ },
+ {
+  "name": "Osp. Civile Di Anagni",
+  "type": "Ospedale",
+  "asl": "Asl Frosinone",
+  "municipality": "Anagni",
+  "province": "FR",
+  "latitude": 41.7447015,
+  "longitude": 13.1526343
+ },
+ {
+  "name": "Osp. SS.Trinita'",
+  "type": "Ospedale",
+  "asl": "Asl Frosinone",
+  "municipality": "Sora",
+  "province": "FR",
+  "latitude": 41.7329181,
+  "longitude": 13.5713325
+ },
+ {
+  "name": "Osp. S.Scolatica",
+  "type": "Ospedale",
+  "asl": "Asl Frosinone",
+  "municipality": "Cassino",
+  "province": "FR",
+  "latitude": 41.4925576,
+  "longitude": 13.8305297
+ },
+ {
+  "name": "C.C.A. S.Anna",
+  "type": "Ospedale",
+  "asl": "Asl Frosinone",
+  "municipality": "Cassino",
+  "province": "FR",
+  "latitude": 41.4925576,
+  "longitude": 13.8305297
+ },
+ {
+  "name": "C.C.A. Villa Gioia",
+  "type": "Ospedale",
+  "asl": "Asl Frosinone",
+  "municipality": "Sora",
+  "province": "FR",
+  "latitude": 41.7329181,
+  "longitude": 13.5713325
+ },
+ {
+  "name": "C.C.A. Villa Serena",
+  "type": "Ospedale",
+  "asl": "Asl Frosinone",
+  "municipality": "Cassino",
+  "province": "FR",
+  "latitude": 41.4925576,
+  "longitude": 13.8305297
+ },
+ {
+  "name": "C.C.A. S.Teresa",
+  "type": "Ospedale",
+  "asl": "Asl Frosinone",
+  "municipality": "Isola Del Liri",
+  "province": "FR",
+  "latitude": 41.6792485,
+  "longitude": 13.5730766
+ },
+ {
+  "name": "CC Villa Salaria",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC S.Alessandro",
+  "type": "Ospedale",
+  "asl": "Asl Rm/B",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 42.136944,
+  "longitude": 12.3775151
+ },
+ {
+  "name": "CC Villa Anna Maria",
+  "type": "Ospedale",
+  "asl": "Asl Rm/C",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC Ars Medica",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC Villa Flaminia",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC S.Maria Di Leuca",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Villa Maria Immacolata",
+  "type": "Ospedale",
+  "asl": "Asl Rm/D",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Villa Verde",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "CC Rome American Hospital",
+  "type": "Ospedale",
+  "asl": "Asl Rm/B",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Osp. S.Pertini",
+  "type": "Ospedale",
+  "asl": "Asl Rm/B",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Osp. Di Belcolle",
+  "type": "Ospedale",
+  "asl": "Asl Viterbo",
+  "municipality": "Viterbo",
+  "province": "VT",
+  "latitude": 42.3932741,
+  "longitude": 12.1238576
+ },
+ {
+  "name": "Osp. Di Montefiascone",
+  "type": "Ospedale",
+  "asl": "Asl Viterbo",
+  "municipality": "Montefiascone",
+  "province": "VT",
+  "latitude": 42.5362947,
+  "longitude": 12.0312694
+ },
+ {
+  "name": "Osp. Di Ronciglione",
+  "type": "Ospedale",
+  "asl": "Asl Viterbo",
+  "municipality": "Ronciglione",
+  "province": "VT",
+  "latitude": 42.2918399,
+  "longitude": 12.2123508
+ },
+ {
+  "name": "CC Villa Sacra Famiglia",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Villa Luana",
+  "type": "Ospedale",
+  "asl": "Asl Rm/G",
+  "municipality": "Poli",
+  "province": "RM",
+  "latitude": 41.8873266,
+  "longitude": 12.8931264
+ },
+ {
+  "name": "C.C.A. S.Raffaele",
+  "type": "Ospedale",
+  "asl": "Asl Frosinone",
+  "municipality": "Cassino",
+  "province": "FR",
+  "latitude": 41.4925576,
+  "longitude": 13.8305297
+ },
+ {
+  "name": "C.C.A. Villa Silvana",
+  "type": "Ospedale",
+  "asl": "Asl Latina",
+  "municipality": "Aprilia",
+  "province": "LT",
+  "latitude": 41.5942016,
+  "longitude": 12.6485765
+ },
+ {
+  "name": "C.C.A. Citta' Bianca",
+  "type": "Ospedale",
+  "asl": "Asl Frosinone",
+  "municipality": "Veroli",
+  "province": "FR",
+  "latitude": 41.562696,
+  "longitude": 12.5589675
+ },
+ {
+  "name": "C.C.A. S.Raffaele",
+  "type": "Ospedale",
+  "asl": "Asl Rm/H",
+  "municipality": "Montecompatri",
+  "province": "RM",
+  "latitude": 41.808918,
+  "longitude": 12.737784
+ },
+ {
+  "name": "Osp. S.Anna",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.9196524,
+  "longitude": 12.4999044
+ },
+ {
+  "name": "CC Villa Borghese",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.4536319,
+  "longitude": 12.6341756
+ },
+ {
+  "name": "CC Ist. Clinico Cardiologico",
+  "type": "Ospedale",
+  "asl": "Asl Rm/D",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. Nomentana Hospital",
+  "type": "Ospedale",
+  "asl": "Asl Rm/G",
+  "municipality": "Fonte Nuova",
+  "province": "RM",
+  "latitude": 41.9962545,
+  "longitude": 12.6236212
+ },
+ {
+  "name": "C.C.A. Don Carlo Gnocchi",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "C.C.A. S.Raffaele Portuense",
+  "type": "Ospedale",
+  "asl": "Asl Rm/D",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "A.O. S.Camillo",
+  "type": "Ospedale",
+  "asl": "Asl Rm/D",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "A.O. S.Giovanni Addolorata",
+  "type": "Ospedale",
+  "asl": "Asl Rm/C",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "A.O. S.Filippo Neri",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "A.O. S.Andrea",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "A.O. Salus Infirmorum",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "IRCCSpr Bambino Gesu`",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "IRCCSpr Bambino Gesu`",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Palidoro",
+  "province": "RM",
+  "latitude": 41.9294655,
+  "longitude": 12.1780464
+ },
+ {
+  "name": "IRCCSpr Bambino Gesu`",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "S.Marinella",
+  "province": "RM",
+  "latitude": 42.0354641,
+  "longitude": 11.867938
+ },
+ {
+  "name": "Pol.U. A.Gemelli",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "Pol.U. Columbus",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "A.O.U.U. Umberto I",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "IRCCSpub Regina Elena",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "IRCCSpub S.Gallicano",
+  "type": "Ospedale",
+  "asl": "Asl Rm/A",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "IRCCSf S.Lucia",
+  "type": "Ospedale",
+  "asl": "Asl Rm/C",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "IRCCSpr S.Raffale Pisana",
+  "type": "Ospedale",
+  "asl": "Asl Rm/D",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "IRCCSpr I.D.I.",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "IRCCSpub Inrca",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "IRCCSpr Villa Paola",
+  "type": "Ospedale",
+  "asl": "Asl Viterbo",
+  "municipality": "Capranica",
+  "province": "VT",
+  "latitude": 42.2564918,
+  "longitude": 12.1776114
+ },
+ {
+  "name": "Pol.U. Campus Biomedico",
+  "type": "Ospedale",
+  "asl": "Asl Rm/B",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "IRCCSpub L.Spallanzani",
+  "type": "Ospedale",
+  "asl": "Asl Rm/D",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "A.O.U.U. S.Andrea",
+  "type": "Ospedale",
+  "asl": "Asl Rm/E",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ },
+ {
+  "name": "A.O.U.U. Tor Vergata",
+  "type": "Ospedale",
+  "asl": "Asl Rm/B",
+  "municipality": "Roma",
+  "province": "RM",
+  "latitude": 41.8933203,
+  "longitude": 12.4829321
+ }
+]

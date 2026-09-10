@@ -1,0 +1,792 @@
+{
+ "source": "Regione Lazio — Pronto Soccorso, accessi in tempo reale (HP-D01)",
+ "url": "https://dati.lazio.it/dataset/pronto-soccorso-accessi-in-tempo-reale",
+ "snapshot_at": "31/07/2021 16:34",
+ "note": "Fotografia reale delle code al momento indicato. Il portale regionale non espone uno storico né un feed aggiornato: questo resta l'ultimo dato pubblico.",
+ "items": [
+  {
+   "facility_name": "Ospedale dei Castelli — Pronto Soccorso",
+   "municipality": "Ariccia",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 7,
+    "bianco": 1,
+    "non_assegnato": 0,
+    "totale": 8
+   },
+   "in_treatment": 12,
+   "in_observation": 6,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "Ospedali Riuniti — Pronto Soccorso",
+   "municipality": "Anzio",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 3,
+    "bianco": 0,
+    "non_assegnato": 1,
+    "totale": 4
+   },
+   "in_treatment": 20,
+   "in_observation": 3,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "Pol. Univ. Tor Vergata — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 21,
+    "bianco": 2,
+    "non_assegnato": 0,
+    "totale": 23
+   },
+   "in_treatment": 49,
+   "in_observation": 18,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "Sant'Andrea — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 1,
+    "verde": 4,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 5
+   },
+   "in_treatment": 32,
+   "in_observation": 1,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "Campus Biomedico — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 12,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 12
+   },
+   "in_treatment": 13,
+   "in_observation": 3,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "Pol. Univ. Umberto I — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA II",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 1,
+    "verde": 7,
+    "bianco": 8,
+    "non_assegnato": 0,
+    "totale": 16
+   },
+   "in_treatment": 46,
+   "in_observation": 0,
+   "capacity_hint": 40
+  },
+  {
+   "facility_name": "Pol. Univ. A. Gemelli — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA II",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 1,
+    "verde": 15,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 16
+   },
+   "in_treatment": 43,
+   "in_observation": 10,
+   "capacity_hint": 40
+  },
+  {
+   "facility_name": "Bambino Gesu' Palidoro — Pronto Soccorso",
+   "municipality": "Palidoro",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 2,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 2
+   },
+   "in_treatment": 6,
+   "in_observation": 0,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "Bambino Gesu' — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA II",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 0,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 0
+   },
+   "in_treatment": 9,
+   "in_observation": 0,
+   "capacity_hint": 40
+  },
+  {
+   "facility_name": "San Giovanni Addolorata — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA II",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 2,
+    "verde": 3,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 5
+   },
+   "in_treatment": 13,
+   "in_observation": 4,
+   "capacity_hint": 40
+  },
+  {
+   "facility_name": "San Camillo-Forlanini — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA II",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 5,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 5
+   },
+   "in_treatment": 25,
+   "in_observation": 20,
+   "capacity_hint": 40
+  },
+  {
+   "facility_name": "Policlinico Casilino — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 1,
+    "verde": 33,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 34
+   },
+   "in_treatment": 22,
+   "in_observation": 0,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "San Filippo Neri — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 1,
+    "verde": 4,
+    "bianco": 0,
+    "non_assegnato": 1,
+    "totale": 6
+   },
+   "in_treatment": 19,
+   "in_observation": 10,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "Belcolle — Pronto Soccorso",
+   "municipality": "Viterbo",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 7,
+    "bianco": 0,
+    "non_assegnato": 1,
+    "totale": 8
+   },
+   "in_treatment": 27,
+   "in_observation": 3,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "Sandro Pertini — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 1,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 1
+   },
+   "in_treatment": 27,
+   "in_observation": 1,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "Santa Scolastica — Pronto Soccorso",
+   "municipality": "Cassino",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 0,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 0
+   },
+   "in_treatment": 14,
+   "in_observation": 0,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "Santissima Trinita' — Pronto Soccorso",
+   "municipality": "Sora",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 4,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 4
+   },
+   "in_treatment": 13,
+   "in_observation": 4,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "San Benedetto — Pronto Soccorso",
+   "municipality": "Alatri",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 8,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 8
+   },
+   "in_treatment": 10,
+   "in_observation": 5,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "F. Spaziani — Pronto Soccorso",
+   "municipality": "Frosinone",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 0,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 0
+   },
+   "in_treatment": 26,
+   "in_observation": 0,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "Citta' di Aprilia — Pronto Soccorso",
+   "municipality": "Aprilia",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 1,
+    "verde": 6,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 7
+   },
+   "in_treatment": 7,
+   "in_observation": 0,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "Dono Svizzero — Pronto Soccorso",
+   "municipality": "Formia",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 7,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 7
+   },
+   "in_treatment": 14,
+   "in_observation": 0,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "San Giovanni di Dio — Pronto Soccorso",
+   "municipality": "Fondi",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 2,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 2
+   },
+   "in_treatment": 5,
+   "in_observation": 0,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "A. Fiorini — Pronto Soccorso",
+   "municipality": "Terracina",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 1,
+    "verde": 10,
+    "bianco": 1,
+    "non_assegnato": 0,
+    "totale": 12
+   },
+   "in_treatment": 13,
+   "in_observation": 0,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "Santa Maria Goretti — Pronto Soccorso",
+   "municipality": "Latina",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 2,
+    "verde": 15,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 17
+   },
+   "in_treatment": 67,
+   "in_observation": 7,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "Aurelia Hospital — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 6,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 6
+   },
+   "in_treatment": 16,
+   "in_observation": 0,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "Madre G. Vannini — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 0,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 0
+   },
+   "in_treatment": 11,
+   "in_observation": 1,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "Cristo Re — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 1,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 1
+   },
+   "in_treatment": 4,
+   "in_observation": 0,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "San Carlo di Nancy — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 10,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 10
+   },
+   "in_treatment": 3,
+   "in_observation": 0,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "San Giovanni Calibita-FBF — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 5,
+    "bianco": 0,
+    "non_assegnato": 1,
+    "totale": 6
+   },
+   "in_treatment": 11,
+   "in_observation": 0,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "San Pietro-FBF — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 1,
+    "verde": 1,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 2
+   },
+   "in_treatment": 11,
+   "in_observation": 5,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "C.T.O. Andrea Alesini — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "PS SPEC.",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 6,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 6
+   },
+   "in_treatment": 8,
+   "in_observation": 0,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "Sant'Eugenio — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 1,
+    "verde": 6,
+    "bianco": 0,
+    "non_assegnato": 1,
+    "totale": 8
+   },
+   "in_treatment": 36,
+   "in_observation": 0,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "G. Battista Grassi — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 5,
+    "bianco": 0,
+    "non_assegnato": 1,
+    "totale": 6
+   },
+   "in_treatment": 12,
+   "in_observation": 4,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "Padre Pio — Pronto Soccorso",
+   "municipality": "Bracciano",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 1,
+    "bianco": 2,
+    "non_assegnato": 0,
+    "totale": 3
+   },
+   "in_treatment": 10,
+   "in_observation": 0,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "San Giovanni Evangelista — Pronto Soccorso",
+   "municipality": "Tivoli",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 8,
+    "bianco": 1,
+    "non_assegnato": 0,
+    "totale": 9
+   },
+   "in_treatment": 22,
+   "in_observation": 0,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "A. Angelucci — Pronto Soccorso",
+   "municipality": "Subiaco",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 2,
+    "bianco": 0,
+    "non_assegnato": 1,
+    "totale": 3
+   },
+   "in_treatment": 2,
+   "in_observation": 0,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "Coniugi Bernardini — Pronto Soccorso",
+   "municipality": "Palestrina",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 0,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 0
+   },
+   "in_treatment": 5,
+   "in_observation": 1,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "Santissimo Gonfalone — Pronto Soccorso",
+   "municipality": "Monterotondo",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 1,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 1
+   },
+   "in_treatment": 3,
+   "in_observation": 0,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "L. Parodi Delfino — Pronto Soccorso",
+   "municipality": "Colleferro",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 1,
+    "verde": 6,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 7
+   },
+   "in_treatment": 7,
+   "in_observation": 3,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "San Paolo — Pronto Soccorso",
+   "municipality": "Civitavecchia",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 8,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 8
+   },
+   "in_treatment": 13,
+   "in_observation": 4,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "Oftalmico — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "PS SPEC.",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 10,
+    "bianco": 5,
+    "non_assegnato": 0,
+    "totale": 15
+   },
+   "in_treatment": 3,
+   "in_observation": 0,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "Santo Spirito — Pronto Soccorso",
+   "municipality": "Roma",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 1,
+    "verde": 6,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 7
+   },
+   "in_treatment": 12,
+   "in_observation": 4,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "San Camillo De Lellis — Pronto Soccorso",
+   "municipality": "Rieti",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 8,
+    "verde": 5,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 13
+   },
+   "in_treatment": 18,
+   "in_observation": 8,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "Ospedale Civile — Pronto Soccorso",
+   "municipality": "Tarquinia",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 1,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 1
+   },
+   "in_treatment": 10,
+   "in_observation": 1,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "Sant'Anna — Pronto Soccorso",
+   "municipality": "Pomezia",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 1,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 1
+   },
+   "in_treatment": 9,
+   "in_observation": 0,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "P. Colombo — Pronto Soccorso",
+   "municipality": "Velletri",
+   "ps_type": "DEA I",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 4,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 4
+   },
+   "in_treatment": 14,
+   "in_observation": 0,
+   "capacity_hint": 25
+  },
+  {
+   "facility_name": "San Sebastiano Martire — Pronto Soccorso",
+   "municipality": "Frascati",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 4,
+    "bianco": 1,
+    "non_assegnato": 1,
+    "totale": 6
+   },
+   "in_treatment": 6,
+   "in_observation": 7,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "Andosilla — Pronto Soccorso",
+   "municipality": "Civitacastellana",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 1,
+    "bianco": 0,
+    "non_assegnato": 1,
+    "totale": 2
+   },
+   "in_treatment": 4,
+   "in_observation": 0,
+   "capacity_hint": 15
+  },
+  {
+   "facility_name": "Ospedale Civile — Pronto Soccorso",
+   "municipality": "Acquapendente",
+   "ps_type": "PS",
+   "waiting": {
+    "rosso": 0,
+    "giallo": 0,
+    "verde": 0,
+    "bianco": 0,
+    "non_assegnato": 0,
+    "totale": 0
+   },
+   "in_treatment": 0,
+   "in_observation": 0,
+   "capacity_hint": 15
+  }
+ ]
+}

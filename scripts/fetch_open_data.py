@@ -94,15 +94,44 @@ def title_case(value: str | None) -> str | None:
     return text.title() if text.isupper() else text
 
 
-def fetch(url: str) -> str:
-    response = httpx.get(url, timeout=120, follow_redirects=True, headers={"User-Agent": USER_AGENT})
-    response.raise_for_status()
+def _decode(payload: bytes) -> str:
     for encoding in ("utf-8-sig", "utf-8", "latin-1"):
         try:
-            return response.content.decode(encoding)
+            return payload.decode(encoding)
         except UnicodeDecodeError:
             continue
-    return response.content.decode("utf-8", errors="replace")
+    return payload.decode("utf-8", errors="replace")
+
+
+def fetch(name: str, url: str, attempts: int = 4) -> str:
+    """Scarica un dataset, conservandone una copia grezza.
+
+    Il portale regionale risponde 503 a intermittenza e a volte resta giù per minuti:
+    senza la copia locale, un'indisponibilità durante una demo lascerebbe l'app senza
+    dati. Si riprova qualche volta, poi si usa l'ultima copia buona.
+    """
+    cached = RAW / f"{name}.csv"
+    last: Exception | None = None
+
+    for attempt in range(attempts):
+        try:
+            response = httpx.get(
+                url, timeout=120, follow_redirects=True, headers={"User-Agent": USER_AGENT}
+            )
+            response.raise_for_status()
+            RAW.mkdir(parents=True, exist_ok=True)
+            cached.write_bytes(response.content)
+            return _decode(response.content)
+        except httpx.HTTPError as exc:
+            last = exc
+            print(f"    {name}: tentativo {attempt + 1}/{attempts} fallito ({type(exc).__name__})")
+            time.sleep(3 * (attempt + 1))
+
+    if cached.exists():
+        print(f"    {name}: portale non raggiungibile, uso la copia locale")
+        return _decode(cached.read_bytes())
+
+    raise RuntimeError(f"Download non riuscito e nessuna copia locale: {url}") from last
 
 
 def read_csv(text: str, delimiter: str) -> list[dict[str, str]]:
