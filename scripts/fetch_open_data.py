@@ -37,6 +37,8 @@ DATA = ROOT / "data"
 FACILITIES = DATA / "facilities"
 CONGESTION = DATA / "congestion"
 CACHE = DATA / ".geocache.json"
+# Copie grezze dei dataset: fanno da rete quando il portale regionale è giù.
+RAW = DATA / "raw"
 
 USER_AGENT = "HealthPulse/0.1 (hackathon; open data ingestion)"
 
@@ -271,7 +273,7 @@ PS_TYPE_CAPACITY = {"PS": 15, "PS SPEC.": 15, "DEA I": 25, "DEA II": 40}
 
 
 def build_pronto_soccorso(cache: dict) -> tuple[list[dict], dict]:
-    rows = read_csv(fetch(SOURCES["pronto_soccorso"]), ";")
+    rows = read_csv(fetch("pronto_soccorso", SOURCES["pronto_soccorso"]), ";")
     print(f"  pronto soccorso: {len(rows)} righe")
 
     facilities: list[dict] = []
@@ -341,7 +343,7 @@ def build_pronto_soccorso(cache: dict) -> tuple[list[dict], dict]:
 
 
 def build_farmacie(today: datetime) -> list[dict]:
-    rows = read_csv(fetch(SOURCES["farmacie"]), ";")
+    rows = read_csv(fetch("farmacie", SOURCES["farmacie"]), ";")
     print(f"  farmacie: {len(rows)} righe")
 
     out: list[dict] = []
@@ -387,7 +389,7 @@ def build_farmacie(today: datetime) -> list[dict]:
 
 
 def build_ospedali(cache: dict, known: set[str]) -> list[dict]:
-    rows = read_csv(fetch(SOURCES["ospedali"]), ",")
+    rows = read_csv(fetch("ospedali", SOURCES["ospedali"]), ",")
     print(f"  ospedali: {len(rows)} righe")
 
     out: list[dict] = []
@@ -418,7 +420,7 @@ def build_ospedali(cache: dict, known: set[str]) -> list[dict]:
 
 
 def build_ambulatori() -> list[dict]:
-    rows = read_csv(fetch(SOURCES["private"]), ",")
+    rows = read_csv(fetch("private", SOURCES["private"]), ",")
     print(f"  strutture private accreditate: {len(rows)} righe")
 
     out: list[dict] = []
