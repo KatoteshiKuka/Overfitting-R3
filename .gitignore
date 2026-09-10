@@ -23,3 +23,6 @@ __pycache__/
 # os / editor
 .DS_Store
 *.swp
+
+# file temporanei di Claude Code
+.claude/settings.local.json.tmp.*
