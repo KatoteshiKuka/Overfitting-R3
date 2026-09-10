@@ -12,6 +12,7 @@ from fastapi import FastAPI
 from app.core.config import get_settings
 from app.core.database import Base, SessionLocal, engine
 from app.core.errors import register_error_handlers
+from app.features.congestion.service import seed_loads
 from app.features.facilities.seed import seed_facilities
 
 settings = get_settings()
@@ -24,6 +25,8 @@ async def lifespan(_: FastAPI) -> AsyncGenerator[None, None]:
     if settings.auto_seed:
         with SessionLocal() as db:
             seed_facilities(db, settings.facilities_dir)
+            # Il carico dipende dai presidi, quindi va generato dopo di loro.
+            seed_loads(db)
     yield
 
 
@@ -32,11 +35,15 @@ register_error_handlers(app)
 
 # --- Registro dei router. Aggiungere in fondo, una riga per feature. ---
 from app.features.facilities.router import router as facilities_router  # noqa: E402
-from app.features.feature_a.router import router as feature_a_router  # noqa: E402
 from app.features.feature_b.router import router as feature_b_router  # noqa: E402
 from app.features.status.router import router as status_router  # noqa: E402
 
 app.include_router(status_router, prefix=settings.api_prefix)
 app.include_router(facilities_router, prefix=settings.api_prefix)
-app.include_router(feature_a_router, prefix=settings.api_prefix)
 app.include_router(feature_b_router, prefix=settings.api_prefix)
+
+from app.features.congestion.router import router as congestion_router  # noqa: E402
+from app.features.triage.router import router as triage_router  # noqa: E402
+
+app.include_router(congestion_router, prefix=settings.api_prefix)
+app.include_router(triage_router, prefix=settings.api_prefix)

@@ -19,6 +19,21 @@ class Settings(BaseSettings):
     database_url: str = "sqlite:///./presidio.db"
     auto_seed: bool = True
 
+    # Catena LLM: si prova prima il modello locale, poi Groq, poi le regole deterministiche.
+    llm_base_url: str = "http://127.0.0.1:1234/v1"
+    llm_model: str = "google/gemma-4-e4b"
+    llm_timeout_seconds: float = 60.0
+    groq_base_url: str = "https://api.groq.com/openai/v1"
+    groq_model: str = "openai/gpt-oss-120b"
+    groq_api_key: str = ""
+
+    # Servizi OpenStreetMap: geocodifica dell'indirizzo e calcolo del tragitto.
+    nominatim_url: str = "https://nominatim.openstreetmap.org/search"
+    osrm_url: str = "https://router.project-osrm.org/route/v1/driving"
+    geo_timeout_seconds: float = 8.0
+    # Nominatim richiede uno user agent identificabile.
+    user_agent: str = "PresidioLazio/0.1 (hackathon project)"
+
     @property
     def facilities_dir(self) -> Path:
         return self.resolved_data_dir / "facilities"
