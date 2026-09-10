@@ -1,0 +1,5 @@
+# Senza questa riga `pnpm install` esce con errore perché blocca gli script di build
+# di esbuild, che a Vite servono. Decisione presa una volta e committata: nessuno
+# deve rispondere al prompt interattivo di `pnpm approve-builds` sul proprio PC.
+allowBuilds:
+  esbuild: true
