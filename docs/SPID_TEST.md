@@ -50,9 +50,23 @@ appartengono a nessuno e non vanno usati per interrogare FSE, anagrafi o servizi
 
 ---
 
+## Quando viene chiesto l'accesso
+
+L'applicazione **non** è protetta da un cancello all'ingresso: la home lascia scegliere
+il ruolo e il percorso del cittadino — sintomi, codice di priorità, mappa, tempi — si
+percorre senza autenticarsi. Chiedere un login per poter descrivere un mal di gola
+sarebbe un ostacolo senza motivo.
+
+L'identità viene richiesta solo nei due punti in cui serve davvero:
+
+| Percorso | Momento | Perché |
+|---|---|---|
+| Cittadino | quando conferma la struttura verso cui si sta dirigendo | per avvisarla serve sapere chi arriva |
+| Operatore | all'apertura di `/operatore` | la console mostra dati operativi di una struttura precisa |
+
 ## Identità per la demo
 
-Nessuna password. Si sceglie l'identità dalla schermata di accesso.
+Nessuna password. Si sceglie l'identità dal pannello «Entra con SPID».
 
 | Utente | Chi è | Intento | Particolarità |
 |---|---|---|---|

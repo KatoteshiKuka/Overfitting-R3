@@ -43,12 +43,16 @@ export function FacilityMap({ plan, selectedId, onSelect }: FacilityMapProps) {
         className="h-full w-full"
       >
         {/*
-          Tile in scala di grigi: la cartografia standard è satura di colori e insegne,
-          e coprirebbe proprio quello che deve risaltare — il percorso e i due capolinea.
+          Cartografia standard OpenStreetMap, scolorita via CSS (vedi `.map-muted` in
+          theme.css): satura di colori coprirebbe proprio quello che deve risaltare —
+          il percorso e i due capolinea. I servizi di tile già in scala di grigi
+          richiedono ormai una chiave, e una mappa che smette di funzionare in demo
+          perché scade una chiave non vale il guadagno estetico.
         */}
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attributions">CARTO</a>'
-          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          className="map-muted"
         />
 
         {/* Tracciato: una scia chiara sotto e la linea piena sopra, così si stacca dallo sfondo. */}

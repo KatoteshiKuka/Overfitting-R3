@@ -79,3 +79,13 @@
     }
   }
 }
+
+@layer components {
+  /*
+    Tile OpenStreetMap smorzate: i marker e il percorso devono staccarsi dallo sfondo.
+    Si resta sulla cartografia standard perché non richiede chiavi di accesso.
+  */
+  .map-muted {
+    filter: saturate(0.25) brightness(1.06) contrast(0.92);
+  }
+}

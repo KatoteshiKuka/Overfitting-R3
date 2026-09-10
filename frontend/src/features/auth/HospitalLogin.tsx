@@ -3,11 +3,12 @@ import type { FacilityList } from '@/api/types';
 import { ErrorState } from '@/components/ErrorState';
 import { useAuth } from '@/features/auth/useAuth';
 import { useQuery } from '@tanstack/react-query';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 const ROLE_LABELS: Record<string, string> = {
-  'hospital.admin': 'Direzione sanitaria',
   'ps.coordinator': 'Coordinamento PS',
+  'hospital.admin': 'Direzione sanitaria',
   'reparto.lead': 'Responsabile di reparto',
   'sola.lettura': 'Consultazione (sola lettura)',
 };
@@ -16,9 +17,9 @@ const ROLE_LABELS: Record<string, string> = {
  * Accesso del personale di struttura.
  *
  * Dominio separato da quello del cittadino: chi lavora in ospedale non entra con SPID,
- * e la sessione che ne risulta è un'altra cosa anche nel modello dati.
+ * ed è giusto che l'aspetto sia diverso — sono due percorsi che non vanno confusi.
  */
-export function HospitalLogin({ onBack }: { onBack: () => void }) {
+export function HospitalLogin({ onBack }: { onBack?: () => void } = {}) {
   const { loginOperator } = useAuth();
   const [username, setUsername] = useState('ps.coordinator');
   const [facilityId, setFacilityId] = useState<number | null>(null);
@@ -27,8 +28,7 @@ export function HospitalLogin({ onBack }: { onBack: () => void }) {
 
   const facilities = useQuery({
     queryKey: ['facilities', 'pronto-soccorso', 'login'],
-    queryFn: () =>
-      apiGet<FacilityList>('/facilities', { type: 'pronto-soccorso', limit: 60 }),
+    queryFn: () => apiGet<FacilityList>('/facilities', { type: 'pronto-soccorso', limit: 60 }),
   });
 
   const options = facilities.data?.items ?? [];
@@ -48,17 +48,17 @@ export function HospitalLogin({ onBack }: { onBack: () => void }) {
   }
 
   return (
-    <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center py-8">
-      <span className="self-center rounded-full border border-line bg-surface px-3 py-1 text-[11px] font-medium uppercase tracking-wide text-faint">
-        Accesso struttura · demo
-      </span>
-      <h1 className="mt-4 text-center text-2xl font-semibold tracking-tight text-ink">
-        Console operativa
-      </h1>
-      <p className="mx-auto mt-2 max-w-sm text-center text-sm leading-relaxed text-muted">
-        Account di servizio simulati. Il personale non accede con l'identità SPID del
-        cittadino: sono due domini distinti.
-      </p>
+    <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center py-10">
+      <div className="text-center">
+        <span className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-faint">
+          Accesso struttura · demo
+        </span>
+        <h1 className="mt-4 text-2xl font-semibold tracking-tight text-ink">Console operativa</h1>
+        <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-muted">
+          Account di servizio simulati. Il personale non accede con l'identità SPID del
+          cittadino: sono due domini distinti.
+        </p>
+      </div>
 
       {error !== null && (
         <div className="mt-5">
@@ -103,9 +103,7 @@ export function HospitalLogin({ onBack }: { onBack: () => void }) {
             ))}
           </select>
           {options.length === 0 && !facilities.isPending && (
-            <p className="mt-1.5 text-xs text-faint">
-              Nessun pronto soccorso nei dati caricati.
-            </p>
+            <p className="mt-1.5 text-xs text-faint">Nessun pronto soccorso nei dati caricati.</p>
           )}
         </div>
 
@@ -115,17 +113,26 @@ export function HospitalLogin({ onBack }: { onBack: () => void }) {
           disabled={pending || selected === null}
           className="min-h-11 w-full rounded-xl bg-accent text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-40"
         >
-          {pending ? 'Accesso in corso…' : 'Entra'}
+          {pending ? 'Accesso in corso…' : 'Entra nella console'}
         </button>
       </div>
 
-      <button
-        type="button"
-        onClick={onBack}
-        className="mx-auto mt-6 min-h-11 text-sm text-muted transition-colors hover:text-ink"
-      >
-        ← Torna all'accesso cittadino
-      </button>
+      {onBack ? (
+        <button
+          type="button"
+          onClick={onBack}
+          className="mx-auto mt-6 min-h-11 text-sm text-muted transition-colors hover:text-ink"
+        >
+          ← Indietro
+        </button>
+      ) : (
+        <Link
+          to="/"
+          className="mx-auto mt-6 min-h-11 text-sm leading-[2.75rem] text-muted transition-colors hover:text-ink"
+        >
+          ← Torna alla scelta del ruolo
+        </Link>
+      )}
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import { apiPost } from '@/api/client';
 import { Card } from '@/components/Card';
 import { ErrorState } from '@/components/ErrorState';
+import { SpidLoginPanel } from '@/features/auth/SpidLoginPanel';
+import { useAuth } from '@/features/auth/useAuth';
 import { formatMinutes } from '@/features/triage/congestion';
 import type { PlanOption } from '@/features/triage/types';
 import { useMutation } from '@tanstack/react-query';
@@ -33,6 +35,7 @@ type ArrivalConfirmProps = {
  * esiste nessun punteggio, nessuna segnalazione per chi cambia idea.
  */
 export function ArrivalConfirm({ option, careIntent }: ArrivalConfirmProps) {
+  const { state } = useAuth();
   const [commitment, setCommitment] = useState<Commitment | null>(null);
   const [preadmission, setPreadmission] = useState<Preadmission | null>(null);
   const [phone, setPhone] = useState('');
@@ -63,6 +66,18 @@ export function ArrivalConfirm({ option, careIntent }: ArrivalConfirmProps) {
       }),
     onSuccess: setPreadmission,
   });
+
+  // L'identità serve solo da qui in avanti: per avvisare la struttura bisogna sapere
+  // chi sta arrivando. Tutto quello che viene prima — sintomi, codice, mappa — resta
+  // accessibile senza autenticarsi.
+  if (state.status !== 'citizen') {
+    return (
+      <SpidLoginPanel
+        title="Per confermare serve la tua identità"
+        description={`La struttura deve sapere chi sta arrivando. Fin qui non ti abbiamo chiesto nulla: l'accesso serve solo per avvisare ${option.name}.`}
+      />
+    );
+  }
 
   if (commitment === null) {
     return (

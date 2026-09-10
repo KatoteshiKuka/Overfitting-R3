@@ -4,6 +4,7 @@ import { ErrorState } from '@/components/ErrorState';
 import { ProvenanceTag } from '@/components/ProvenanceTag';
 import { Skeleton } from '@/components/Skeleton';
 import { StatTile } from '@/components/StatTile';
+import { HospitalLogin } from '@/features/auth/HospitalLogin';
 import { InboundPanel } from '@/features/operatore/InboundPanel';
 import { ReadinessPanel } from '@/features/operatore/ReadinessPanel';
 import { StaffingPanel } from '@/features/operatore/StaffingPanel';
@@ -28,15 +29,11 @@ export function OperatorePage() {
     refetchInterval: 15_000,
   });
 
+  // La console mostra dati operativi di una struttura precisa: senza sapere chi sei e
+  // dove lavori non c'è niente da mostrare. Il login avviene qui, non all'ingresso
+  // dell'applicazione.
   if (state.status !== 'operator') {
-    return (
-      <div className="mx-auto w-full max-w-md py-16 text-center">
-        <p className="text-sm text-muted">
-          Questa sezione richiede un accesso struttura. Esci e rientra da «Accesso
-          struttura».
-        </p>
-      </div>
-    );
+    return <HospitalLogin />;
   }
 
   if (overview.isPending) {
