@@ -44,7 +44,10 @@ def _set_cookie(response: Response, name: str, value: str, max_age_hours: int) -
 
 @router.post("/test-spid/login", response_model=CitizenSession)
 async def login_citizen(
-    db: DbSession, payload: SpidLoginRequest, response: Response
+    db: DbSession,
+    payload: SpidLoginRequest,
+    response: Response,
+    healthpulse_hospital_session: Annotated[str | None, Cookie()] = None,
 ) -> CitizenSession:
     profile = identity_provider.authenticate(payload.username)
     if profile is None:
@@ -53,6 +56,9 @@ async def login_citizen(
         )
 
     settings = get_settings()
+    # Un solo dominio attivo per browser: al refresh non deve riapparire il ruolo precedente.
+    service.destroy_session(db, healthpulse_hospital_session)
+    response.delete_cookie(service.HOSPITAL_COOKIE, path="/")
     session = service.create_citizen_session(db, profile, identity_provider.name)
     _set_cookie(response, service.CITIZEN_COOKIE, session.session_id, settings.session_hours)
 
@@ -103,7 +109,10 @@ async def logout(
 
 @router.post("/hospital/login", response_model=HospitalSession)
 async def login_operator(
-    db: DbSession, payload: HospitalLoginRequest, response: Response
+    db: DbSession,
+    payload: HospitalLoginRequest,
+    response: Response,
+    healthpulse_test_session: Annotated[str | None, Cookie()] = None,
 ) -> HospitalSession:
     operator = hospital_provider.authenticate(payload.username, payload.facility_id)
     if operator is None:
@@ -116,6 +125,8 @@ async def login_operator(
         raise AppError("Struttura non trovata.", code="facility_not_found", status_code=404)
 
     settings = get_settings()
+    service.destroy_session(db, healthpulse_test_session)
+    response.delete_cookie(service.CITIZEN_COOKIE, path="/")
     session = service.create_hospital_session(db, operator, hospital_provider.name)
     _set_cookie(response, service.HOSPITAL_COOKIE, session.session_id, settings.session_hours)
 

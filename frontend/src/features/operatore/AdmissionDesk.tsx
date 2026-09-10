@@ -93,7 +93,8 @@ export function AdmissionDesk() {
         <ProvenanceTag value="SYNTHETIC" />
       </div>
       <p className="mt-1 text-xs text-muted">
-        Inserisci il codice mostrato dalla persona all'arrivo.
+        Inserisci il codice mostrato dalla persona per confermare soltanto che è arrivata. Il
+        resoconto è già visibile sopra e non dipende da questo passaggio.
       </p>
 
       <form
@@ -230,7 +231,7 @@ export function AdmissionDesk() {
               disabled={accept.isPending}
               className="mt-4 min-h-11 w-full rounded-xl bg-accent text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-40"
             >
-              {accept.isPending ? 'Accetto…' : 'Registra arrivo'}
+              {accept.isPending ? 'Confermo…' : 'Conferma arrivo'}
             </button>
           )}
         </div>

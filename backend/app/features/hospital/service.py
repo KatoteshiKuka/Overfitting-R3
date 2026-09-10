@@ -60,11 +60,13 @@ def _window(rows: list[ArrivalCommitment], minutes: int) -> InboundWindow:
 
 
 def _active_commitments(db: Session, facility_id: int) -> list[ArrivalCommitment]:
+    stale_limit = _now() - timedelta(hours=3)
     return list(
         db.scalars(
             select(ArrivalCommitment).where(
                 ArrivalCommitment.facility_id == facility_id,
                 ArrivalCommitment.status.in_(weights.ACTIVE_STATUSES),
+                ArrivalCommitment.expected_arrival_at >= stale_limit,
             )
         ).all()
     )
@@ -90,11 +92,16 @@ def _readiness(care_mix: list[CareMixEntry], level: str) -> list[ReadinessEntry]
     for area, score in scores.most_common():
         bump = 1 if score >= 3 else 0
         index = min(len(READINESS_ORDER) - 1, base + bump)
+        reason = (
+            "1 arrivo atteso che può richiedere quest'area"
+            if score == 1
+            else f"{score} arrivi attesi che possono richiedere quest'area"
+        )
         out.append(
             ReadinessEntry(
                 area=area,
                 level=READINESS_ORDER[index],
-                reason=f"{score} arrivi attesi che possono richiedere quest'area",
+                reason=reason,
             )
         )
     return out

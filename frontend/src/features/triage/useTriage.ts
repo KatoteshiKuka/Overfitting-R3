@@ -2,6 +2,7 @@ import { apiGet, apiPost } from '@/api/client';
 import type {
   ChatMessage,
   ChatResponse,
+  NearbyResponse,
   PlanResponse,
   TriageStatus,
 } from '@/features/triage/types';
@@ -28,5 +29,12 @@ export function usePlan() {
   return useMutation({
     mutationFn: (input: { address: string; code: TriageCode }) =>
       apiPost<PlanResponse>('/triage/plan', { ...input, limit: 5 }),
+  });
+}
+
+export function useNearbyFacilities() {
+  return useMutation({
+    mutationFn: (address: string) =>
+      apiPost<NearbyResponse>('/triage/nearby', { address, limit: 8 }),
   });
 }

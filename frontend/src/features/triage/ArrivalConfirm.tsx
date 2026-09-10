@@ -1,20 +1,26 @@
-import { apiPost } from '@/api/client';
+import { apiGet, apiPost } from '@/api/client';
 import { Card } from '@/components/Card';
 import { ErrorState } from '@/components/ErrorState';
 import { QrCode } from '@/components/QrCode';
 import { SpidLoginPanel } from '@/features/auth/SpidLoginPanel';
 import { useAuth } from '@/features/auth/useAuth';
 import { formatMinutes } from '@/features/triage/congestion';
-import type { PlanOption } from '@/features/triage/types';
-import { useMutation } from '@tanstack/react-query';
-import { useState } from 'react';
+import type { Assessment, PlanOption } from '@/features/triage/types';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { useEffect, useState } from 'react';
 
 type Commitment = {
   commitment_id: string;
+  facility_id: number;
   facility_name: string | null;
   status: string;
   eta_minutes: number;
   expected_arrival_at: string;
+};
+
+type CommitmentList = {
+  items: Commitment[];
+  total: number;
 };
 
 type Preadmission = {
@@ -25,7 +31,8 @@ type Preadmission = {
 
 type ArrivalConfirmProps = {
   option: PlanOption;
-  careIntent: string | null;
+  assessment: Assessment;
+  provider: string;
 };
 
 /**
@@ -35,37 +42,93 @@ type ArrivalConfirmProps = {
  * persona preme il pulsante. Ed è sempre revocabile, senza alcuna conseguenza — non
  * esiste nessun punteggio, nessuna segnalazione per chi cambia idea.
  */
-export function ArrivalConfirm({ option, careIntent }: ArrivalConfirmProps) {
+export function ArrivalConfirm({ option, assessment, provider }: ArrivalConfirmProps) {
   const { state } = useAuth();
-  const [commitment, setCommitment] = useState<Commitment | null>(null);
+  const queryClient = useQueryClient();
   const [preadmission, setPreadmission] = useState<Preadmission | null>(null);
   const [phone, setPhone] = useState('');
+  const citizenId = state.status === 'citizen' ? state.session.profile.fiscalNumber : null;
+  const mineQueryKey = ['arrivals', 'mine', citizenId] as const;
+
+  const mine = useQuery({
+    queryKey: mineQueryKey,
+    queryFn: () => apiGet<CommitmentList>('/arrivals/commitments/mine'),
+    enabled: citizenId !== null,
+  });
+
+  useEffect(() => {
+    setPreadmission(null);
+    setPhone('');
+  }, [citizenId]);
+
+  const activeCommitment = mine.data?.items.find(
+    (item) => item.status === 'CONFIRMED' || item.status === 'EN_ROUTE',
+  );
+  const restoredCommitment =
+    activeCommitment?.facility_id === option.facility_id ? activeCommitment : null;
+  const conflictingCommitment =
+    activeCommitment && activeCommitment.facility_id !== option.facility_id
+      ? activeCommitment
+      : null;
+  const commitment = restoredCommitment;
+
+  const prepare = useMutation({
+    mutationFn: ({ id, contactPhone }: { id: string; contactPhone: string | null }) =>
+      apiPost<Preadmission>('/navigation/preadmission', {
+        commitment_id: id,
+        contact_phone: contactPhone,
+        triage_summary: {
+          priority_code: assessment.code,
+          reason: assessment.reason.slice(0, 500),
+          advice: assessment.advice.slice(0, 500),
+          provider: provider || 'regole',
+          provisional: true,
+        },
+        consents: {
+          share_arrival: true,
+          share_preadmission: true,
+          share_reason: true,
+        },
+      }),
+    onSuccess: setPreadmission,
+  });
 
   const confirm = useMutation({
     mutationFn: () =>
       apiPost<Commitment>('/arrivals/commitments', {
         facility_id: option.facility_id,
         eta_minutes: option.travel_minutes,
-        care_intent: careIntent,
+        care_intent: assessment.care_setting,
+        consents: {
+          share_arrival: true,
+          share_preadmission: true,
+          share_reason: true,
+        },
       }),
-    onSuccess: setCommitment,
+    onSuccess: (created) => {
+      queryClient.setQueryData<CommitmentList>(mineQueryKey, (current) => ({
+        items: [created, ...(current?.items ?? [])],
+        total: (current?.total ?? 0) + 1,
+      }));
+      prepare.mutate({ id: created.commitment_id, contactPhone: null });
+    },
   });
 
   const cancel = useMutation({
     mutationFn: (id: string) => apiPost<Commitment>(`/arrivals/commitments/${id}/cancel`, {}),
-    onSuccess: () => {
-      setCommitment(null);
+    onSuccess: (cancelled) => {
       setPreadmission(null);
+      queryClient.setQueryData<CommitmentList>(mineQueryKey, (current) =>
+        current
+          ? {
+              ...current,
+              items: current.items.map((item) =>
+                item.commitment_id === cancelled.commitment_id ? cancelled : item,
+              ),
+            }
+          : current,
+      );
     },
-  });
-
-  const prepare = useMutation({
-    mutationFn: (id: string) =>
-      apiPost<Preadmission>('/navigation/preadmission', {
-        commitment_id: id,
-        contact_phone: phone.trim() || null,
-      }),
-    onSuccess: setPreadmission,
   });
 
   // L'identità serve solo da qui in avanti: per avvisare la struttura bisogna sapere
@@ -80,13 +143,53 @@ export function ArrivalConfirm({ option, careIntent }: ArrivalConfirmProps) {
     );
   }
 
+  if (mine.isError) {
+    return (
+      <Card className="p-5">
+        <ErrorState error={mine.error} />
+        <button
+          type="button"
+          onClick={() => void mine.refetch()}
+          className="mt-3 min-h-11 text-sm font-medium text-accent-ink hover:underline"
+        >
+          Riprova
+        </button>
+      </Card>
+    );
+  }
+
+  if (conflictingCommitment) {
+    return (
+      <Card className="border-amber-300/60 p-5">
+        <h3 className="text-sm font-semibold text-ink">Hai già una destinazione attiva</h3>
+        <p className="mt-1 text-sm leading-relaxed text-muted">
+          Risulti in viaggio verso {conflictingCommitment.facility_name ?? 'un’altra struttura'}.
+          Per evitare di comunicare due arrivi contemporanei, annulla prima quella destinazione.
+        </p>
+        {cancel.isError && (
+          <div className="mt-3">
+            <ErrorState error={cancel.error} />
+          </div>
+        )}
+        <button
+          type="button"
+          onClick={() => cancel.mutate(conflictingCommitment.commitment_id)}
+          disabled={cancel.isPending}
+          className="mt-4 min-h-11 w-full rounded-xl border border-line px-5 text-sm font-medium text-ink transition-colors hover:border-accent/50 disabled:opacity-40"
+        >
+          {cancel.isPending ? 'Annullo…' : 'Annulla la destinazione precedente'}
+        </button>
+      </Card>
+    );
+  }
+
   if (commitment === null) {
     return (
       <Card className="p-5">
         <h3 className="text-sm font-semibold text-ink">Ti stai dirigendo qui?</h3>
         <p className="mt-1 text-sm leading-relaxed text-muted">
-          Se confermi, la struttura sa che stai arrivando e può prepararsi. Puoi annullare
-          in qualsiasi momento, senza conseguenze.
+          Se confermi, condividi con questa struttura il tuo profilo sintetico e la valutazione
+          preliminare mostrata sopra. Puoi annullare in qualsiasi momento, senza conseguenze.
         </p>
 
         {confirm.isError && (
@@ -98,10 +201,14 @@ export function ArrivalConfirm({ option, careIntent }: ArrivalConfirmProps) {
         <button
           type="button"
           onClick={() => confirm.mutate()}
-          disabled={confirm.isPending}
+          disabled={confirm.isPending || mine.isPending}
           className="mt-4 min-h-11 w-full rounded-xl bg-accent px-5 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-40"
         >
-          {confirm.isPending ? 'Invio…' : 'Confermo che mi sto dirigendo qui'}
+          {mine.isPending
+            ? 'Verifico le destinazioni…'
+            : confirm.isPending
+              ? 'Invio…'
+              : 'Confermo che mi sto dirigendo qui'}
         </button>
       </Card>
     );
@@ -128,16 +235,17 @@ export function ArrivalConfirm({ option, careIntent }: ArrivalConfirmProps) {
           </span>
         </div>
         <p className="mt-1.5 text-sm text-muted">
-          {commitment.facility_name} · arrivo previsto tra{' '}
-          {formatMinutes(commitment.eta_minutes)}
+          {commitment.facility_name} · arrivo previsto tra {formatMinutes(commitment.eta_minutes)}
         </p>
 
         {preadmission === null ? (
           <div className="mt-4 rounded-xl bg-raised p-4">
-            <p className="text-sm font-medium text-ink">Prepara l'accettazione</p>
+            <p className="text-sm font-medium text-ink">
+              {prepare.isPending ? 'Invio il resoconto alla struttura…' : 'Invia il resoconto'}
+            </p>
             <p className="mt-1 text-xs leading-relaxed text-muted">
-              I tuoi dati vengono presi dal profilo: qui aggiungi solo un recapito, se
-              vuoi. Riceverai un codice da mostrare all'arrivo.
+              L’ospedale vedrà i dati prima del tuo arrivo. Puoi aggiungere un recapito oppure
+              riprovare senza inserirlo.
             </p>
             <div className="mt-3 flex flex-col gap-2 sm:flex-row">
               <label htmlFor="contact-phone" className="sr-only">
@@ -153,11 +261,16 @@ export function ArrivalConfirm({ option, careIntent }: ArrivalConfirmProps) {
               />
               <button
                 type="button"
-                onClick={() => prepare.mutate(commitment.commitment_id)}
+                onClick={() =>
+                  prepare.mutate({
+                    id: commitment.commitment_id,
+                    contactPhone: phone.trim() || null,
+                  })
+                }
                 disabled={prepare.isPending}
                 className="min-h-11 shrink-0 rounded-xl border border-accent px-4 text-sm font-medium text-accent-ink transition-colors hover:bg-accent-soft disabled:opacity-40"
               >
-                {prepare.isPending ? 'Preparo…' : 'Prepara'}
+                {prepare.isPending ? 'Invio…' : 'Invia e genera QR'}
               </button>
             </div>
             {prepare.isError && (
@@ -172,11 +285,15 @@ export function ArrivalConfirm({ option, careIntent }: ArrivalConfirmProps) {
               Pre-accettazione pronta
             </p>
             <div className="mt-3 flex justify-center">
-              <QrCode value={preadmission.code} label={`Codice di accettazione ${preadmission.code}`} />
+              <QrCode
+                value={preadmission.code}
+                label={`Codice di accettazione ${preadmission.code}`}
+              />
             </div>
             <p className="mt-3 text-xs leading-relaxed text-accent-ink/80">
-              Mostra il QR all'accettazione. Il triage lo esegue comunque il personale
-              all'arrivo: HealthPulse non lo pre-assegna.
+              Il resoconto è già visibile alla struttura. Il QR serve solo a confermare il tuo
+              arrivo; il triage resta responsabilità del personale e non ci sono penalità se cambi
+              idea.
             </p>
           </div>
         )}

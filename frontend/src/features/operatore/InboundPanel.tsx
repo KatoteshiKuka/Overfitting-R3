@@ -26,6 +26,17 @@ export function InboundPanel({ inbound, careMix }: InboundPanelProps) {
         Persone che hanno dichiarato di dirigersi qui. Non sostituisce la domanda esterna.
       </p>
 
+      <div className="mt-3 rounded-xl border border-line bg-raised px-3 py-2.5">
+        <p className="text-xs font-medium text-ink">Impatto sulle prossime raccomandazioni</p>
+        <p className="mt-1 text-xs leading-relaxed text-muted">
+          {inbound.next_60_min.commitments > 0
+            ? inbound.next_60_min.commitments === 1
+              ? 'Questo arrivo viene già sommato alla coda prevista: se il vantaggio di questa struttura si annulla, HealthPulse indirizza le persone successive verso un’alternativa più rapida.'
+              : `Questi ${inbound.next_60_min.commitments} arrivi vengono già sommati alla coda prevista: se il vantaggio di questa struttura si annulla, HealthPulse indirizza le persone successive verso un’alternativa più rapida.`
+            : 'Nessun arrivo HealthPulse incide ora sul ranking. La struttura viene valutata sulla coda osservata.'}
+        </p>
+      </div>
+
       <div className="mt-4 grid grid-cols-3 gap-2">
         {windows.map((entry) => (
           <div key={entry.label} className="rounded-xl bg-raised px-3 py-2.5 text-center">
@@ -36,7 +47,7 @@ export function InboundPanel({ inbound, careMix }: InboundPanelProps) {
               {entry.value.commitments}
             </p>
             <p className="tabular mt-0.5 text-[11px] text-muted">
-              {entry.value.weighted} ponderati
+              {entry.value.weighted} {entry.value.weighted === 1 ? 'ponderato' : 'ponderati'}
             </p>
           </div>
         ))}
@@ -46,9 +57,7 @@ export function InboundPanel({ inbound, careMix }: InboundPanelProps) {
         Tipo di accesso atteso
       </h3>
       {careMix.length === 0 ? (
-        <p className="mt-2 text-sm text-faint">
-          Nessun arrivo confermato in questo momento.
-        </p>
+        <p className="mt-2 text-sm text-faint">Nessun arrivo confermato in questo momento.</p>
       ) : (
         <ul className="mt-2 space-y-2">
           {careMix.map((entry) => (

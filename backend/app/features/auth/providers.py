@@ -153,7 +153,7 @@ class HospitalMockAuthProvider:
 
     ACCOUNTS: dict[str, HospitalOperator] = {
         "ps.coordinator": HospitalOperator(
-            "ps.coordinator", "Coordinamento PS", "PS_COORDINATOR", None
+            "ps.coordinator", "Dott.ssa Elisa Conti", "PS_COORDINATOR", None
         ),
         "hospital.admin": HospitalOperator(
             "hospital.admin", "Direzione sanitaria", "HOSPITAL_ADMIN", None

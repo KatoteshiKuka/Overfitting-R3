@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from typing import Any
+
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
@@ -21,6 +23,8 @@ from app.features.triage.schemas import (
     Assessment,
     ChatMessage,
     ChatResponse,
+    NearbyFacility,
+    NearbyResponse,
     Origin,
     PlanOption,
     PlanResponse,
@@ -52,6 +56,19 @@ BUSY_RATIO = 0.85
 
 def _last_user_text(messages: list[ChatMessage]) -> str:
     return " ".join(m.content for m in messages if m.role == "user")
+
+
+def _provider_message(message: ChatMessage) -> dict[str, Any]:
+    """Trasforma una foto transitoria nel formato multimodale OpenAI-compatible."""
+    if message.image is None:
+        return {"role": message.role, "content": message.content}
+    return {
+        "role": message.role,
+        "content": [
+            {"type": "text", "text": message.content},
+            {"type": "image_url", "image_url": {"url": message.image.data_url}},
+        ],
+    }
 
 
 def _fallback_reply(match: rules.RuleMatch) -> ChatResponse:
@@ -86,8 +103,8 @@ async def chat(messages: list[ChatMessage]) -> ChatResponse:
     user_text = _last_user_text(messages)
     rule_match = rules.classify(user_text)
 
-    payload = [{"role": "system", "content": TRIAGE_SYSTEM}]
-    payload += [{"role": m.role, "content": m.content} for m in messages]
+    payload: list[dict[str, Any]] = [{"role": "system", "content": TRIAGE_SYSTEM}]
+    payload += [_provider_message(message) for message in messages]
 
     try:
         result = await llm.complete_json(payload, TRIAGE_SCHEMA)
@@ -153,12 +170,67 @@ def _candidates(db: Session, code: str) -> list[Facility]:
     return list(rows)
 
 
+async def nearby(db: Session, address: str, limit: int) -> NearbyResponse:
+    """Servizi territoriali vicini per l'anteprima pubblica, senza usare né salvare l'LLM."""
+    origin = await geo.geocode(address)
+    if origin is None:
+        raise AppError(
+            "Non ho trovato questa posizione nel Lazio. Controllala o usa un indirizzo.",
+            code="address_not_found",
+            status_code=422,
+        )
+
+    facilities = _candidates(db, "bianco")
+    if not facilities:
+        raise AppError(
+            "Nessun servizio territoriale georeferenziato nei dataset caricati.",
+            code="no_geolocated_facility",
+            status_code=404,
+        )
+
+    def distance(facility: Facility) -> float:
+        return geo.haversine_km(
+            origin.latitude, origin.longitude, facility.latitude or 0.0, facility.longitude or 0.0
+        )
+
+    ordered = sorted(facilities, key=distance)
+    # Assicura che la preview non sia una lista di sole farmacie quando sono disponibili
+    # anche presidi di prossimità con capacità differenti.
+    selected: list[Facility] = []
+    for facility_type in CODE_TO_TYPES["bianco"]:
+        match = next((item for item in ordered if item.type == facility_type), None)
+        if match is not None:
+            selected.append(match)
+    selected_ids = {item.id for item in selected}
+    selected.extend(item for item in ordered if item.id not in selected_ids)
+    selected = sorted(selected[:limit], key=distance)
+
+    return NearbyResponse(
+        origin=Origin(label=origin.label, latitude=origin.latitude, longitude=origin.longitude),
+        facilities=[
+            NearbyFacility(
+                facility_id=facility.id,
+                name=facility.name,
+                type=facility.type,
+                address=facility.address,
+                municipality=facility.municipality,
+                latitude=facility.latitude or 0.0,
+                longitude=facility.longitude or 0.0,
+                distance_km=round(distance(facility), 1),
+                geo_precision=facility.geo_precision,
+            )
+            for facility in selected
+        ],
+    )
+
+
 async def plan(db: Session, address: str, code: str, limit: int) -> PlanResponse:
     """Dalla posizione della persona alle strutture migliori, con tempi calcolati."""
     origin = await geo.geocode(address)
     if origin is None:
         raise AppError(
-            "Non ho trovato questo indirizzo nel Lazio. Prova ad aggiungere il comune.",
+            "Non ho trovato questa posizione nel Lazio. "
+            "Controlla la posizione o aggiungi il comune.",
             code="address_not_found",
             status_code=422,
         )
@@ -203,7 +275,12 @@ async def plan(db: Session, address: str, code: str, limit: int) -> PlanResponse
         ratio = load.ratio if load else 0.0
 
         queue = congestion_service.to_queue(load) if load else None
-        induced = crowding.crowding_for(facility.id, inbound.get(facility.id, 0.0), queue, code)
+        induced = crowding.crowding_for(
+            facility.id,
+            inbound.get(facility.id, crowding.InboundDemand(people=0, weighted=0.0)),
+            queue,
+            code,
+        )
 
         options.append(
             PlanOption(

@@ -1,11 +1,12 @@
-import type { ChatRole } from '@/features/triage/types';
+import type { ChatImage, ChatRole } from '@/features/triage/types';
 
 type ChatBubbleProps = {
   role: ChatRole;
   content: string;
+  image?: ChatImage;
 };
 
-export function ChatBubble({ role, content }: ChatBubbleProps) {
+export function ChatBubble({ role, content, image }: ChatBubbleProps) {
   const isUser = role === 'user';
 
   return (
@@ -17,6 +18,13 @@ export function ChatBubble({ role, content }: ChatBubbleProps) {
             : 'rounded-bl-md border border-line bg-surface text-ink'
         }`}
       >
+        {image && (
+          <img
+            src={image.data_url}
+            alt={`Foto allegata: ${image.name}`}
+            className="mb-2 max-h-56 w-full rounded-xl object-cover"
+          />
+        )}
         {content}
       </div>
     </div>

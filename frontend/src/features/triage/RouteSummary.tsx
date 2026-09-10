@@ -1,8 +1,4 @@
-import {
-  CONGESTION_COLORS,
-  CONGESTION_LABELS,
-  formatMinutes,
-} from '@/features/triage/congestion';
+import { CONGESTION_COLORS, CONGESTION_LABELS, formatMinutes } from '@/features/triage/congestion';
 import type { PlanOption } from '@/features/triage/types';
 
 type RouteSummaryProps = {
@@ -21,7 +17,9 @@ export function RouteSummary({ option, crowdingNote }: RouteSummaryProps) {
 
   return (
     <div className="rounded-2xl border border-line bg-surface p-5">
-      <p className="text-xs font-medium uppercase tracking-wide text-faint">Struttura consigliata</p>
+      <p className="text-xs font-medium uppercase tracking-wide text-faint">
+        Struttura consigliata
+      </p>
       <h3 className="mt-1 text-lg font-semibold leading-tight text-ink">{option.name}</h3>
       {option.address && (
         <p className="mt-0.5 text-sm text-muted">
@@ -30,18 +28,36 @@ export function RouteSummary({ option, crowdingNote }: RouteSummaryProps) {
         </p>
       )}
 
-      <div className="mt-4 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-2">
-        <Metric label="Viaggio" value={formatMinutes(option.travel_minutes)} hint={`${option.distance_km} km`} />
-        <Operator symbol="+" />
+      <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
         <Metric
-          label="Attesa"
+          label="Viaggio"
+          value={formatMinutes(option.travel_minutes)}
+          hint={`${option.distance_km} km`}
+        />
+        <Metric
+          label="Attesa attuale"
           value={formatMinutes(option.waiting_minutes)}
           hint={CONGESTION_LABELS[option.congestion_level]}
           cssVar={cssVar}
         />
-        <Operator symbol="=" />
+        <Metric
+          label="Arrivi previsti"
+          value={formatMinutes(option.inbound_wait_minutes)}
+          hint={
+            option.inbound_people > 0
+              ? `${option.inbound_people} persone già confermate`
+              : 'nessuna conferma attiva'
+          }
+          cssVar="--triage-azzurro"
+        />
         <Metric label="Totale" value={formatMinutes(option.total_minutes)} strong />
       </div>
+
+      <p className="mt-2 text-[11px] leading-relaxed text-faint">
+        Totale = viaggio + attesa attuale + impatto degli arrivi che HealthPulse ha già indirizzato
+        qui. Le nuove raccomandazioni usano questo totale, così non mandano tutti nello stesso
+        pronto soccorso.
+      </p>
 
       {crowdingNote && (
         <p
@@ -63,8 +79,8 @@ export function RouteSummary({ option, crowdingNote }: RouteSummaryProps) {
         {option.geo_precision === 'comune' && (
           <>
             {' '}
-            La posizione esatta di questa struttura non è nei dati aperti: è collocata al
-            centro del comune, quindi distanza e tempi sono indicativi.
+            La posizione esatta di questa struttura non è nei dati aperti: è collocata al centro del
+            comune, quindi distanza e tempi sono indicativi.
           </>
         )}
       </p>
@@ -96,13 +112,5 @@ function Metric({
       </p>
       {hint && <p className="mt-0.5 truncate text-[11px] text-faint">{hint}</p>}
     </div>
-  );
-}
-
-function Operator({ symbol }: { symbol: string }) {
-  return (
-    <span aria-hidden="true" className="text-center text-sm text-faint">
-      {symbol}
-    </span>
   );
 }

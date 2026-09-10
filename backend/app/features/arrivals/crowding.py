@@ -35,10 +35,6 @@ CROWDING_FORMULA = "induced_crowding.v1"
 # Oltre le due ore l'effetto si è esaurito: chi è arrivato è già stato smaltito.
 HORIZON_MINUTES = 120
 
-# Quanto conta un arrivo promesso rispetto a una persona già in coda. Un impegno non è
-# una certezza, quindi vale meno di chi è fisicamente lì.
-INBOUND_DISCOUNT = 0.8
-
 # Capacità presunta di una struttura di cui non conosciamo la coda.
 #
 # Solo i pronto soccorso hanno dati di affluenza pubblicati: farmacie, ambulatori e
@@ -64,10 +60,21 @@ class Crowding:
         return self.added_minutes >= 5
 
 
-def inbound_by_facility(db: Session, horizon_minutes: int = HORIZON_MINUTES) -> dict[int, float]:
+@dataclass(frozen=True, slots=True)
+class InboundDemand:
+    """Numero reale di conferme e relativo peso previsionale."""
+
+    people: int
+    weighted: float
+
+
+def inbound_by_facility(
+    db: Session, horizon_minutes: int = HORIZON_MINUTES
+) -> dict[int, InboundDemand]:
     """Arrivi già promessi e non ancora avvenuti, per struttura, pesati per stato."""
     now = datetime.now(UTC)
     limit = now + timedelta(minutes=horizon_minutes)
+    stale_limit = now - timedelta(hours=3)
 
     rows = db.scalars(
         select(ArrivalCommitment).where(
@@ -75,19 +82,23 @@ def inbound_by_facility(db: Session, horizon_minutes: int = HORIZON_MINUTES) -> 
         )
     ).all()
 
-    totals: dict[int, float] = {}
+    totals: dict[int, tuple[int, float]] = {}
     for row in rows:
         expected = row.expected_arrival_at
         if expected.tzinfo is None:
             expected = expected.replace(tzinfo=UTC)
-        if expected > limit:
+        if expected > limit or expected < stale_limit:
             continue
-        totals[row.facility_id] = totals.get(row.facility_id, 0.0) + row.weight
-    return totals
+        count, weighted = totals.get(row.facility_id, (0, 0.0))
+        totals[row.facility_id] = (count + 1, weighted + row.weight)
+    return {
+        facility_id: InboundDemand(people=count, weighted=round(weighted, 2))
+        for facility_id, (count, weighted) in totals.items()
+    }
 
 
 def crowding_for(
-    facility_id: int, inbound_weighted: float, queue: Queue | None, app_code: str
+    facility_id: int, inbound: InboundDemand, queue: Queue | None, app_code: str
 ) -> Crowding:
     """Minuti di attesa aggiuntivi dovuti a chi HealthPulse ha già indirizzato lì.
 
@@ -95,9 +106,8 @@ def crowding_for(
     che smaltiscono — così i due numeri sono commensurabili invece di essere due stime
     scollegate.
     """
-    people = inbound_weighted * INBOUND_DISCOUNT
-    if people <= 0:
-        return Crowding(facility_id, 0, 0.0, 0)
+    if inbound.weighted <= 0:
+        return Crowding(facility_id, inbound.people, 0.0, 0)
 
     # Senza dati di coda si assume una capacità prudente invece di ignorare l'effetto.
     queue = queue or Queue(capacity_hint=ASSUMED_CAPACITY)
@@ -105,12 +115,12 @@ def crowding_for(
     # Chi arriva tramite HealthPulse ha in genere un problema a bassa intensità: si usa
     # il tempo di servizio del colore corrispondente, non quello di un'emergenza.
     colour = "verde" if app_code in {"verde", "azzurro", "bianco"} else "giallo"
-    added = people * SERVICE_MINUTES[colour] / throughput(queue)
+    added = inbound.weighted * SERVICE_MINUTES[colour] / throughput(queue)
 
     return Crowding(
         facility_id=facility_id,
-        inbound_people=round(inbound_weighted),
-        inbound_weighted=round(inbound_weighted, 2),
+        inbound_people=inbound.people,
+        inbound_weighted=round(inbound.weighted, 2),
         added_minutes=int(round(added)),
     )
 
@@ -119,6 +129,6 @@ def explain(crowding: Crowding, facility_name: str) -> str:
     """Frase da mostrare a chi si vede consigliare una struttura più lontana."""
     return (
         f"{facility_name} sarebbe più vicina, ma abbiamo già indirizzato lì "
-        f"{crowding.inbound_people} persone nell'ultima ora: ci troveresti circa "
+        f"{crowding.inbound_people} persone in arrivo nelle prossime due ore: ci troveresti circa "
         f"{crowding.added_minutes} minuti di attesa in più."
     )

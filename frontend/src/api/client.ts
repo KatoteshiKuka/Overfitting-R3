@@ -49,6 +49,10 @@ async function request<T>(url: string, init?: RequestInit): Promise<T> {
     throw new ApiError(body.detail ?? fallback.detail, body.code ?? fallback.code, response.status);
   }
 
+  // Le risposte 204 non hanno un body: provare a leggerle come JSON trasformava un
+  // logout riuscito in un errore client e lasciava una rejection non gestita in console.
+  if (response.status === 204) return undefined as T;
+
   return (await response.json()) as T;
 }
 
@@ -59,6 +63,14 @@ export function apiGet<T>(path: string, params?: Record<string, QueryValue>): Pr
 export function apiPost<T>(path: string, body: unknown): Promise<T> {
   return request<T>(buildUrl(path), {
     method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+}
+
+export function apiPut<T>(path: string, body: unknown): Promise<T> {
+  return request<T>(buildUrl(path), {
+    method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
   });

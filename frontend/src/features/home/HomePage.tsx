@@ -1,11 +1,56 @@
-import { RoleCard } from '@/features/home/RoleCard';
+import { HospitalLogin } from '@/features/auth/HospitalLogin';
+import { SpidLoginPanel } from '@/features/auth/SpidLoginPanel';
+import { DemoProfileCard } from '@/features/home/DemoProfileCard';
+import { NearbyCarePreview } from '@/features/home/NearbyCarePreview';
 import { TriageScale } from '@/features/home/TriageScale';
 import { BRANDING } from '@/lib/branding';
 import { useRole } from '@/lib/useRole';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-/** Apertura dell'app: si sceglie chi sei, e da lì cambia tutto il percorso. */
+/** Apertura della demo: prima il ruolo, poi l'identità o la struttura sintetica. */
 export function HomePage() {
   const { setRole } = useRole();
+  const navigate = useNavigate();
+  const [selectedRole, setSelectedRole] = useState<
+    'citizen-preview' | 'citizen-login' | 'operator' | null
+  >(null);
+
+  function enterCitizen() {
+    setRole('paziente');
+    navigate('/paziente');
+  }
+
+  function enterOperator() {
+    setRole('operatore');
+    navigate('/operatore');
+  }
+
+  if (selectedRole === 'citizen-preview') {
+    return (
+      <NearbyCarePreview
+        onContinue={() => setSelectedRole('citizen-login')}
+        onBack={() => setSelectedRole(null)}
+      />
+    );
+  }
+
+  if (selectedRole === 'citizen-login') {
+    return (
+      <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center py-10">
+        <SpidLoginPanel
+          title="Scegli il paziente mock"
+          description="Seleziona liberamente uno dei profili sintetici per provare il percorso cittadino. Non serve alcuna password."
+          onDone={enterCitizen}
+          onBack={() => setSelectedRole('citizen-preview')}
+        />
+      </div>
+    );
+  }
+
+  if (selectedRole === 'operator') {
+    return <HospitalLogin onDone={enterOperator} onBack={() => setSelectedRole(null)} />;
+  }
 
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col justify-center py-6">
@@ -19,58 +64,34 @@ export function HomePage() {
         </p>
       </section>
 
-      <section aria-label="Scegli il tuo ruolo" className="mt-10 grid gap-4 sm:grid-cols-2">
-        <RoleCard
-          to="/paziente"
+      <section aria-label="Scegli come entrare" className="mt-10 grid gap-4 sm:grid-cols-2">
+        <DemoProfileCard
           accent
-          onSelect={() => setRole('paziente')}
-          title="Ho bisogno di aiuto"
-          description="Raccontami cosa ti succede: capiamo insieme quanto è urgente e dove conviene andare, con i tempi reali di viaggio e di attesa."
-          cta="Inizia"
-          icon={
-            <svg
-              viewBox="0 0 24 24"
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.7"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M20.5 10.5c0 5-8.5 9.5-8.5 9.5s-8.5-4.5-8.5-9.5a5 5 0 0 1 8.5-3.5 5 5 0 0 1 8.5 3.5Z" />
-            </svg>
-          }
+          name="Paziente"
+          role="Percorso cittadino"
+          initials="PA"
+          badge="15 profili mock"
+          description="Scegli un paziente sintetico, prova il triage intelligente e confronta viaggio, attesa e afflusso previsto."
+          cta="Entra come paziente"
+          onSelect={() => setSelectedRole('citizen-preview')}
         />
 
-        <RoleCard
-          to="/operatore"
-          onSelect={() => setRole('operatore')}
-          title="Lavoro in una struttura"
-          description="Monitoraggio dei reparti e dello stato dei presidi. Sezione in costruzione: la sviluppa il team."
-          cta="Entra"
-          icon={
-            <svg
-              viewBox="0 0 24 24"
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.7"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M4 20V8.5L12 4l8 4.5V20" />
-              <path d="M12 10v5M9.5 12.5h5" />
-              <path d="M3 20h18" />
-            </svg>
-          }
+        <DemoProfileCard
+          name="Operatore pronto soccorso"
+          role="Console ospedaliera"
+          initials="PS"
+          badge="Ospedali registrati"
+          description="Scegli il pronto soccorso, osserva gli arrivi confermati e aggiorna la coda per alimentare il ranking predittivo."
+          cta="Entra come operatore pronto soccorso"
+          onSelect={() => setSelectedRole('operator')}
         />
       </section>
 
       <TriageScale />
 
       <p className="mt-10 rounded-xl border border-line bg-raised px-4 py-3 text-xs leading-relaxed text-muted">
-        HealthPulse non è un servizio medico e non sostituisce una diagnosi. In caso di
-        emergenza chiama sempre il <strong className="text-ink">118</strong>.
+        HealthPulse non è un servizio medico e non sostituisce una diagnosi. In caso di emergenza
+        chiama sempre il <strong className="text-ink">118</strong>.
       </p>
     </div>
   );

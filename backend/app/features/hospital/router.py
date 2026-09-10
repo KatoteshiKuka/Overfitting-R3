@@ -3,6 +3,8 @@ from datetime import UTC, datetime
 from fastapi import APIRouter
 
 from app.core.errors import AppError
+from app.features.arrivals import service as arrivals_service
+from app.features.arrivals.schemas import IncomingPatientRead
 from app.features.auth.deps import CurrentOperator, DbSession
 from app.features.congestion.models import FacilityLoad
 from app.features.congestion.schemas import FacilityLoadRead
@@ -25,6 +27,16 @@ async def console_overview(db: DbSession, operator: CurrentOperator) -> ConsoleO
             "Sessione operatore senza struttura.", code="facility_not_found", status_code=400
         )
     return service.overview(db, operator.facility_id)
+
+
+@router.get("/hospital/incoming-patients", response_model=list[IncomingPatientRead])
+async def incoming_patients(db: DbSession, operator: CurrentOperator) -> list[IncomingPatientRead]:
+    """Resoconti condivisi con la struttura, disponibili già prima del check-in."""
+    if not operator.facility_id:
+        raise AppError(
+            "Sessione operatore senza struttura.", code="facility_not_found", status_code=400
+        )
+    return arrivals_service.list_incoming_for_facility(db, operator.facility_id)
 
 
 @router.put("/congestion/{facility_id}", response_model=FacilityLoadRead)

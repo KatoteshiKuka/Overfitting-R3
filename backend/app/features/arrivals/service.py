@@ -15,6 +15,7 @@ from app.features.arrivals.models import ArrivalCommitment, PreadmissionToken
 from app.features.arrivals.schemas import (
     CommitmentCreate,
     CommitmentRead,
+    IncomingPatientRead,
     PersonRef,
     PreadmissionClinical,
     PreadmissionCreate,
@@ -171,6 +172,8 @@ def _build_read(
 ) -> PreadmissionRead:
     profile = records.profile_for(token.fiscal_code) or {}
     facility = db.get(Facility, commitment.facility_id)
+    user_input = json.loads(token.user_input or "{}")
+    triage_summary = user_input.pop("triage_summary", None)
 
     status = token.status
     if status == "issued" and _aware(token.expires_at) <= _now():
@@ -193,13 +196,16 @@ def _build_read(
             birth_date=profile.get("birth_date", ""),
             is_minor=bool(profile.get("is_minor")),
             guardian=_person(profile.get("guardian")),
+            email=profile.get("email"),
+            mobile_phone=profile.get("mobile_phone"),
         ),
         clinical_context=PreadmissionClinical(
             exemptions=list(profile.get("exemptions", [])),
             chronic_conditions=list(profile.get("chronic_conditions", [])),
             gp=_person(profile.get("gp")),
         ),
-        user_input=json.loads(token.user_input or "{}"),
+        user_input=user_input,
+        triage_summary=triage_summary if commitment.share_reason else None,
     )
 
 
@@ -220,6 +226,19 @@ def create_preadmission(
     )
     if existing is not None and _aware(existing.expires_at) > _now():
         # Un secondo codice per lo stesso viaggio confonderebbe solo l'accettazione.
+        existing_input = json.loads(existing.user_input or "{}")
+        if payload.contact_name is not None:
+            existing_input["contact_name"] = payload.contact_name
+        if payload.contact_phone is not None:
+            existing_input["contact_phone"] = payload.contact_phone
+        if payload.notes is not None:
+            existing_input["notes"] = payload.notes
+        if payload.triage_summary is not None:
+            existing_input["triage_summary"] = payload.triage_summary.model_dump()
+        existing.user_input = json.dumps(existing_input, ensure_ascii=False)
+        commitment.share_preadmission = payload.consents.share_preadmission
+        commitment.share_reason = payload.consents.share_reason
+        db.commit()
         return _build_read(db, existing, commitment)
 
     token = PreadmissionToken(
@@ -234,6 +253,9 @@ def create_preadmission(
                 "contact_name": payload.contact_name,
                 "contact_phone": payload.contact_phone,
                 "notes": payload.notes,
+                "triage_summary": (
+                    payload.triage_summary.model_dump() if payload.triage_summary else None
+                ),
             },
             ensure_ascii=False,
         ),
@@ -245,6 +267,34 @@ def create_preadmission(
     db.commit()
 
     return _build_read(db, token, commitment)
+
+
+def list_incoming_for_facility(db: Session, facility_id: int) -> list[IncomingPatientRead]:
+    """Resoconti già condivisi con la struttura, disponibili prima del check-in."""
+    rows = db.execute(
+        select(PreadmissionToken, ArrivalCommitment)
+        .join(
+            ArrivalCommitment,
+            ArrivalCommitment.commitment_id == PreadmissionToken.commitment_id,
+        )
+        .where(
+            ArrivalCommitment.facility_id == facility_id,
+            ArrivalCommitment.status.in_((*weights.ACTIVE_STATUSES, "ARRIVED")),
+            ArrivalCommitment.share_preadmission.is_(True),
+            PreadmissionToken.expires_at >= _now(),
+        )
+        .order_by(ArrivalCommitment.expected_arrival_at.asc())
+    ).all()
+
+    return [
+        IncomingPatientRead(
+            **_build_read(db, token, commitment).model_dump(),
+            commitment_status=commitment.status,
+            eta_minutes=commitment.eta_minutes,
+            expected_arrival_at=_aware(commitment.expected_arrival_at),
+        )
+        for token, commitment in rows
+    ]
 
 
 def resolve_preadmission(db: Session, code: str) -> PreadmissionRead:

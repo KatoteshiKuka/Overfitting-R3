@@ -2,9 +2,16 @@ import type { TriageCode } from '@/lib/triage';
 
 export type ChatRole = 'user' | 'assistant';
 
+export type ChatImage = {
+  name: string;
+  data_url: string;
+};
+
 export type ChatMessage = {
   role: ChatRole;
   content: string;
+  /** Solo memoria della chat corrente: non entra nella scheda paziente. */
+  image?: ChatImage;
 };
 
 export type Assessment = {
@@ -23,6 +30,23 @@ export type ChatResponse = {
   assessment: Assessment | null;
   /** `locale`, `groq` o `regole`. */
   provider: string;
+};
+
+export type NearbyFacility = {
+  facility_id: number;
+  name: string;
+  type: string;
+  address: string | null;
+  municipality: string | null;
+  latitude: number;
+  longitude: number;
+  distance_km: number;
+  geo_precision: 'esatta' | 'comune' | null;
+};
+
+export type NearbyResponse = {
+  origin: { label: string; latitude: number; longitude: number };
+  facilities: NearbyFacility[];
 };
 
 export type PlanOption = {

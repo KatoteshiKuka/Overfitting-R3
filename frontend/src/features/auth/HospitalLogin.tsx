@@ -6,12 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-const ROLE_LABELS: Record<string, string> = {
-  'ps.coordinator': 'Coordinamento PS',
-  'hospital.admin': 'Direzione sanitaria',
-  'reparto.lead': 'Responsabile di reparto',
-  'sola.lettura': 'Consultazione (sola lettura)',
-};
+const DEMO_OPERATOR = 'ps.coordinator';
 
 /**
  * Accesso del personale di struttura.
@@ -19,9 +14,13 @@ const ROLE_LABELS: Record<string, string> = {
  * Dominio separato da quello del cittadino: chi lavora in ospedale non entra con SPID,
  * ed è giusto che l'aspetto sia diverso — sono due percorsi che non vanno confusi.
  */
-export function HospitalLogin({ onBack }: { onBack?: () => void } = {}) {
+type HospitalLoginProps = {
+  onBack?: () => void;
+  onDone?: () => void;
+};
+
+export function HospitalLogin({ onBack, onDone }: HospitalLoginProps = {}) {
   const { loginOperator } = useAuth();
-  const [username, setUsername] = useState('ps.coordinator');
   const [facilityId, setFacilityId] = useState<number | null>(null);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<unknown>(null);
@@ -39,7 +38,8 @@ export function HospitalLogin({ onBack }: { onBack?: () => void } = {}) {
     setPending(true);
     setError(null);
     try {
-      await loginOperator(username, selected);
+      await loginOperator(DEMO_OPERATOR, selected);
+      onDone?.();
     } catch (caught) {
       setError(caught);
     } finally {
@@ -55,8 +55,8 @@ export function HospitalLogin({ onBack }: { onBack?: () => void } = {}) {
         </span>
         <h1 className="mt-4 text-2xl font-semibold tracking-tight text-ink">Console operativa</h1>
         <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-muted">
-          Account di servizio simulati. Il personale non accede con l'identità SPID del
-          cittadino: sono due domini distinti.
+          Un solo profilo sintetico per la demo. Il personale non usa l’identità del cittadino: i
+          due accessi restano separati.
         </p>
       </div>
 
@@ -67,22 +67,17 @@ export function HospitalLogin({ onBack }: { onBack?: () => void } = {}) {
       )}
 
       <div className="mt-6 space-y-4 rounded-2xl border border-line bg-surface p-5">
-        <div>
-          <label htmlFor="op-role" className="block text-sm font-medium text-ink">
-            Ruolo
-          </label>
-          <select
-            id="op-role"
-            value={username}
-            onChange={(event) => setUsername(event.target.value)}
-            className="mt-1.5 min-h-11 w-full rounded-xl border border-line bg-surface px-3 text-sm text-ink focus:border-accent"
+        <div className="flex items-center gap-3 rounded-xl bg-raised p-3">
+          <span
+            aria-hidden="true"
+            className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-accent text-xs font-semibold text-white"
           >
-            {Object.entries(ROLE_LABELS).map(([value, label]) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </select>
+            EC
+          </span>
+          <span>
+            <span className="block text-sm font-semibold text-ink">Dott.ssa Elisa Conti</span>
+            <span className="block text-xs text-muted">Responsabile pronto soccorso · demo</span>
+          </span>
         </div>
 
         <div>
@@ -99,6 +94,7 @@ export function HospitalLogin({ onBack }: { onBack?: () => void } = {}) {
             {options.map((facility) => (
               <option key={facility.id} value={facility.id}>
                 {facility.name}
+                {facility.municipality ? ` — ${facility.municipality}` : ''}
               </option>
             ))}
           </select>

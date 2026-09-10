@@ -15,6 +15,73 @@ export type InboundWindow = {
   weighted: number;
 };
 
+export type CongestionSnapshot = {
+  facility_id: number;
+  queue: {
+    rosso: number;
+    giallo: number;
+    verde: number;
+    bianco: number;
+    non_assegnato: number;
+    totale: number;
+  };
+  in_treatment: number;
+  in_observation: number;
+  ratio: number;
+  level: string;
+  source: string;
+  observed_at: string | null;
+  updated_at: string;
+};
+
+export type CongestionDraft = {
+  waiting_red: number;
+  waiting_yellow: number;
+  waiting_green: number;
+  waiting_white: number;
+  waiting_unassigned: number;
+  in_treatment: number;
+  in_observation: number;
+};
+
+export type IncomingPatient = {
+  code: string;
+  commitment_id: string;
+  commitment_status: 'CONFIRMED' | 'EN_ROUTE' | 'ARRIVED';
+  status: 'issued' | 'accepted' | 'expired';
+  eta_minutes: number;
+  expected_arrival_at: string;
+  care_cluster: string;
+  identity: {
+    given_name: string;
+    family_name: string;
+    fiscal_code: string;
+    birth_date: string;
+    is_minor: boolean;
+    email: string | null;
+    mobile_phone: string | null;
+  };
+  clinical_context: {
+    exemptions: { code: string; description: string }[];
+    chronic_conditions: string[];
+    gp: {
+      given_name: string;
+      family_name: string;
+      relationship: string | null;
+      phone: string | null;
+    } | null;
+  };
+  user_input: Record<string, string | null>;
+  triage_summary: {
+    priority_code: 'bianco' | 'verde' | 'azzurro' | 'arancione' | 'rosso';
+    reason: string;
+    advice: string;
+    provider: string;
+    provisional: true;
+  } | null;
+  synthetic: boolean;
+};
+
 export type ConsoleOverview = {
   facility: { id: number; name: string; municipality: string | null };
   pressure: {

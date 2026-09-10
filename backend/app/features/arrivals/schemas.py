@@ -4,6 +4,7 @@ from typing import Literal
 from pydantic import BaseModel, Field, field_validator
 
 CommitmentStatus = Literal["CONFIRMED", "EN_ROUTE", "ARRIVED", "CANCELLED", "EXPIRED"]
+TriagePriority = Literal["bianco", "verde", "azzurro", "arancione", "rosso"]
 
 
 def _as_utc(value: datetime | None) -> datetime | None:
@@ -54,12 +55,23 @@ class CommitmentList(BaseModel):
     total: int
 
 
+class PreliminaryTriageSummary(BaseModel):
+    """Valutazione preliminare, mai diagnosi né triage assegnato dall'ospedale."""
+
+    priority_code: TriagePriority
+    reason: str = Field(min_length=1, max_length=500)
+    advice: str = Field(min_length=1, max_length=500)
+    provider: str = Field(min_length=1, max_length=32)
+    provisional: Literal[True] = True
+
+
 class PreadmissionCreate(BaseModel):
     commitment_id: str = Field(min_length=1, max_length=40)
     #: Contatti e note aggiunti dalla persona: l'unica parte non derivata dai dati.
     contact_phone: str | None = Field(default=None, max_length=40)
     contact_name: str | None = Field(default=None, max_length=80)
     notes: str | None = Field(default=None, max_length=500)
+    triage_summary: PreliminaryTriageSummary | None = None
     consents: Consents = Consents()
 
 
@@ -77,6 +89,8 @@ class PreadmissionIdentity(BaseModel):
     birth_date: str
     is_minor: bool
     guardian: PersonRef | None = None
+    email: str | None = None
+    mobile_phone: str | None = None
 
 
 class PreadmissionClinical(BaseModel):
@@ -105,10 +119,22 @@ class PreadmissionRead(BaseModel):
     identity: PreadmissionIdentity
     clinical_context: PreadmissionClinical
     user_input: dict[str, str | None] = {}
+    triage_summary: PreliminaryTriageSummary | None = None
     provenance: PreadmissionProvenance = PreadmissionProvenance()
     synthetic: bool = True
 
     @field_validator("created_at", "expires_at")
     @classmethod
     def as_utc(cls, value: datetime) -> datetime:
+        return _as_utc(value) or value
+
+
+class IncomingPatientRead(PreadmissionRead):
+    commitment_status: CommitmentStatus
+    eta_minutes: int
+    expected_arrival_at: datetime
+
+    @field_validator("expected_arrival_at")
+    @classmethod
+    def expected_as_utc(cls, value: datetime) -> datetime:
         return _as_utc(value) or value

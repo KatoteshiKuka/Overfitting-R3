@@ -7,6 +7,8 @@ import { StatTile } from '@/components/StatTile';
 import { AdmissionDesk } from '@/features/operatore/AdmissionDesk';
 import { HospitalLogin } from '@/features/auth/HospitalLogin';
 import { InboundPanel } from '@/features/operatore/InboundPanel';
+import { IncomingPatientsPanel } from '@/features/operatore/IncomingPatientsPanel';
+import { LiveLoadPanel } from '@/features/operatore/LiveLoadPanel';
 import { ReadinessPanel } from '@/features/operatore/ReadinessPanel';
 import { StaffingPanel } from '@/features/operatore/StaffingPanel';
 import { SurgeAlert } from '@/features/operatore/SurgeAlert';
@@ -23,12 +25,14 @@ import { useQuery } from '@tanstack/react-query';
  */
 export function OperatorePage() {
   const { state } = useAuth();
+  const facilityId = state.status === 'operator' ? state.session.operator.facility_id : null;
 
   const overview = useQuery({
-    queryKey: ['hospital', 'console'],
+    queryKey: ['hospital', 'console', facilityId],
     queryFn: () => apiGet<ConsoleOverview>('/hospital/console/overview'),
+    enabled: facilityId !== null,
     // Il closed loop si deve vedere: la console si aggiorna da sola.
-    refetchInterval: 15_000,
+    refetchInterval: facilityId !== null ? 15_000 : false,
   });
 
   // La console mostra dati operativi di una struttura precisa: senza sapere chi sei e
@@ -65,9 +69,7 @@ export function OperatorePage() {
             {state.session.operator.display_name} · {data.facility.municipality ?? 'Lazio'}
           </p>
         </div>
-        <p className="text-xs text-faint">
-          Aggiornata {formatDateTime(data.generated_at)}
-        </p>
+        <p className="text-xs text-faint">Aggiornata {formatDateTime(data.generated_at)}</p>
       </div>
 
       <SurgeAlert data={data} />
@@ -113,6 +115,14 @@ export function OperatorePage() {
         </div>
       </section>
 
+      <div className="mt-4">
+        <LiveLoadPanel facilityId={data.facility.id} />
+      </div>
+
+      <div className="mt-4">
+        <IncomingPatientsPanel facilityId={data.facility.id} />
+      </div>
+
       <div className="mt-4 grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
         <InboundPanel inbound={data.inbound} careMix={data.care_mix} />
         <ReadinessPanel readiness={data.readiness} />
@@ -125,11 +135,12 @@ export function OperatorePage() {
 
       <Card className="mt-4 p-4">
         <p className="text-xs leading-relaxed text-muted">
-          Gli arrivi previsti derivano dalle conferme dei cittadini, pesate per stato
-          (<code className="text-ink">{data.inbound.weight_formula}</code>): una conferma non è un
-          arrivo certo. Il tipo di accesso è un raggruppamento di preparazione, non una
-          diagnosi né un'assegnazione di reparto — <strong className="text-ink">chi arriva
-          entra sempre dal pronto soccorso</strong> e il triage lo esegue il personale.
+          Gli arrivi previsti derivano dalle conferme dei cittadini, pesate per stato (
+          <code className="text-ink">{data.inbound.weight_formula}</code>): una conferma non è un
+          arrivo certo. Il tipo di accesso è un raggruppamento di preparazione, non una diagnosi né
+          un'assegnazione di reparto —{' '}
+          <strong className="text-ink">chi arriva entra sempre dal pronto soccorso</strong> e il
+          triage lo esegue il personale.
         </p>
       </Card>
     </div>

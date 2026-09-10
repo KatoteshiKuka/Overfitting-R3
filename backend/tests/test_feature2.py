@@ -11,12 +11,19 @@ il ciclo dell'impegno di arrivo e il closed loop fino alla console.
 
 from __future__ import annotations
 
+import os
 import sys
+import tempfile
 import unittest
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
 from fastapi.testclient import TestClient
+
+# Condivide un DB temporaneo con gli altri moduli della suite nello stesso processo.
+os.environ["HEALTHPULSE_DATABASE_URL"] = (
+    f"sqlite:///{tempfile.gettempdir()}/healthpulse-tests-{os.getpid()}.db"
+)
 
 BACKEND = Path(__file__).resolve().parents[1]
 SCRIPTS = BACKEND.parent / "scripts"
@@ -141,6 +148,16 @@ class TestApi(unittest.TestCase):
         self.assertEqual(response.status_code, 401)
         self.assertEqual(response.json()["code"], "unknown_identity")
 
+    def test_directory_demo_espone_solo_profili_sintetici(self) -> None:
+        response = self.client.get("/api/v1/auth/demo-identities")
+        self.assertEqual(response.status_code, 200)
+        body = response.json()
+        self.assertTrue(body["synthetic"])
+        self.assertEqual(len(body["citizens"]), 15)
+        self.assertIn("mario.rossi", {item["username"] for item in body["citizens"]})
+        self.assertIn("ps.coordinator", body["operators"])
+        self.assertNotIn("password", response.text.lower())
+
     def test_sessione_assente(self) -> None:
         response = self.client.get("/api/v1/auth/session")
         self.assertEqual(response.status_code, 401)
@@ -193,6 +210,23 @@ class TestApi(unittest.TestCase):
         # Con la sola sessione cittadino la console deve restare chiusa.
         self.assertEqual(self.client.get("/api/v1/hospital/console/overview").status_code, 401)
 
+    def test_cambio_profilo_mantiene_un_solo_dominio_attivo(self) -> None:
+        facility_id = self._facility_id()
+
+        self.client.post("/api/v1/auth/test-spid/login", json={"username": "mario.rossi"})
+        operator_login = self.client.post(
+            "/api/v1/auth/hospital/login",
+            json={"username": "ps.coordinator", "facility_id": facility_id},
+        )
+        self.assertEqual(operator_login.status_code, 200)
+        self.assertEqual(operator_login.json()["operator"]["display_name"], "Dott.ssa Elisa Conti")
+        self.assertEqual(self.client.get("/api/v1/auth/session").status_code, 401)
+        self.assertEqual(self.client.get("/api/v1/auth/hospital/session").status_code, 200)
+
+        self.client.post("/api/v1/auth/test-spid/login", json={"username": "mario.rossi"})
+        self.assertEqual(self.client.get("/api/v1/auth/hospital/session").status_code, 401)
+        self.assertEqual(self.client.get("/api/v1/auth/session").status_code, 200)
+
     # --- impegni di arrivo ---
 
     def _facility_id(self) -> int:
@@ -228,6 +262,12 @@ class TestApi(unittest.TestCase):
         self.assertEqual(body["care_cluster"], "minor_trauma")
         self.assertEqual(body["weight"], 0.75)
         self.assertEqual(body["provenance"], "DERIVED")
+
+        mine = self.client.get("/api/v1/arrivals/commitments/mine")
+        self.assertEqual(mine.status_code, 200)
+        mine_by_id = {item["commitment_id"]: item for item in mine.json()["items"]}
+        self.assertEqual(mine_by_id[body["commitment_id"]]["facility_id"], facility_id)
+        self.assertEqual(mine_by_id[body["commitment_id"]]["status"], "CONFIRMED")
 
         cancelled = self.client.post(f"/api/v1/arrivals/commitments/{body['commitment_id']}/cancel")
         self.assertEqual(cancelled.status_code, 200)
@@ -309,8 +349,83 @@ class TestApi(unittest.TestCase):
         clusters = {row["cluster"] for row in after["care_mix"]}
         self.assertIn("minor_trauma", clusters)
         self.assertIn(after["expected_pressure_level"], ("LOW", "MODERATE", "HIGH", "VERY_HIGH"))
-        # La console resta aggregata: nessun dato nominativo.
+        # La console aggregata non include ancora i resoconti nominativi.
         self.assertNotIn("fiscal_code", after)
+
+    def test_resoconto_visibile_prima_del_check_in_solo_alla_struttura_scelta(self) -> None:
+        facilities = self.client.get(
+            "/api/v1/facilities", params={"type": "pronto-soccorso", "limit": 2}
+        ).json()["items"]
+        if len(facilities) < 2:
+            self.skipTest("servono due pronto soccorso per verificare l'isolamento")
+        selected_id = int(facilities[0]["id"])
+        other_id = int(facilities[1]["id"])
+
+        self.client.post("/api/v1/auth/test-spid/login", json={"username": "chiara.esposito"})
+        commitment = self.client.post(
+            "/api/v1/arrivals/commitments",
+            json={
+                "facility_id": selected_id,
+                "eta_minutes": 12,
+                "care_intent": "pronto soccorso",
+                "consents": {
+                    "share_arrival": True,
+                    "share_preadmission": True,
+                    "share_reason": True,
+                },
+            },
+        ).json()
+        preadmission = self.client.post(
+            "/api/v1/navigation/preadmission",
+            json={
+                "commitment_id": commitment["commitment_id"],
+                "triage_summary": {
+                    "priority_code": "arancione",
+                    "reason": "Ferita con osso esposto, rischio di infezione",
+                    "advice": "Non muovere la gamba.",
+                    "provider": "groq",
+                    "provisional": True,
+                },
+                "consents": {
+                    "share_arrival": True,
+                    "share_preadmission": True,
+                    "share_reason": True,
+                },
+            },
+        )
+        self.assertEqual(preadmission.status_code, 201)
+
+        self.client.cookies.clear()
+        self.client.post(
+            "/api/v1/auth/hospital/login",
+            json={"username": "ps.coordinator", "facility_id": selected_id},
+        )
+        incoming = self.client.get("/api/v1/hospital/incoming-patients")
+        self.assertEqual(incoming.status_code, 200)
+        by_id = {item["commitment_id"]: item for item in incoming.json()}
+        report = by_id[commitment["commitment_id"]]
+        self.assertEqual(report["commitment_status"], "CONFIRMED")
+        self.assertEqual(report["identity"]["given_name"], "Chiara")
+        self.assertEqual(
+            report["triage_summary"]["reason"],
+            "Ferita con osso esposto, rischio di infezione",
+        )
+
+        checked_in = self.client.post(f"/api/v1/admission/{preadmission.json()['code']}/accept")
+        self.assertEqual(checked_in.status_code, 200)
+        after_check_in = self.client.get("/api/v1/hospital/incoming-patients").json()
+        after_by_id = {item["commitment_id"]: item for item in after_check_in}
+        self.assertEqual(after_by_id[commitment["commitment_id"]]["commitment_status"], "ARRIVED")
+        self.assertNotIn("penalt", str(after_by_id[commitment["commitment_id"]]).lower())
+
+        self.client.cookies.clear()
+        self.client.post(
+            "/api/v1/auth/hospital/login",
+            json={"username": "ps.coordinator", "facility_id": other_id},
+        )
+        other_incoming = self.client.get("/api/v1/hospital/incoming-patients").json()
+        other_ids = {item["commitment_id"] for item in other_incoming}
+        self.assertNotIn(commitment["commitment_id"], other_ids)
 
     def test_console_dichiara_carico_e_routing_lo_vede(self) -> None:
         facility_id = self._facility_id()

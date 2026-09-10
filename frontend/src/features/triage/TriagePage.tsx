@@ -9,7 +9,7 @@ import { PlanOptionCard } from '@/features/triage/PlanOptionCard';
 import { ProviderBadge } from '@/features/triage/ProviderBadge';
 import { RouteSummary } from '@/features/triage/RouteSummary';
 import { TypingBubble } from '@/features/triage/TypingBubble';
-import type { Assessment, ChatMessage } from '@/features/triage/types';
+import type { Assessment, ChatImage, ChatMessage } from '@/features/triage/types';
 import { usePlan, useSendMessage, useTriageStatus } from '@/features/triage/useTriage';
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
@@ -41,8 +41,8 @@ export function TriagePage() {
     scrollAnchor.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });
   }, [messages, sendMessage.isPending]);
 
-  function handleSend(text: string) {
-    const next: ChatMessage[] = [...messages, { role: 'user', content: text }];
+  function handleSend(text: string, image?: ChatImage) {
+    const next: ChatMessage[] = [...messages, { role: 'user', content: text, image }];
     setMessages(next);
 
     // Il saluto iniziale è solo scenografia: al modello si mandano i turni veri.
@@ -130,7 +130,12 @@ export function TriagePage() {
           <div className="flex flex-1 flex-col rounded-2xl border border-line bg-raised p-3 sm:p-4">
             <div className="flex-1 space-y-3 overflow-y-auto pr-1" style={{ maxHeight: '58vh' }}>
               {messages.map((message, index) => (
-                <ChatBubble key={index} role={message.role} content={message.content} />
+                <ChatBubble
+                  key={index}
+                  role={message.role}
+                  content={message.content}
+                  image={message.image}
+                />
               ))}
               {sendMessage.isPending && <TypingBubble />}
               <div ref={scrollAnchor} />
@@ -181,7 +186,7 @@ export function TriagePage() {
 
           {plan.isError && <ErrorState error={plan.error} />}
 
-          {plan.data && selected && (
+          {plan.data && selected && assessment && (
             <>
               <div className="h-[300px] shrink-0 lg:h-[340px]">
                 <FacilityMap
@@ -197,7 +202,8 @@ export function TriagePage() {
               <ArrivalConfirm
                 key={selected.facility_id}
                 option={selected}
-                careIntent={assessment?.care_setting ?? null}
+                assessment={assessment}
+                provider={provider}
               />
 
               <div className="rounded-2xl border border-line bg-surface p-4">

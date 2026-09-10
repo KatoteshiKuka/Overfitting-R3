@@ -68,8 +68,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const logout = useCallback(async () => {
     try {
       await apiPost<void>('/auth/logout', {});
+    } catch {
+      // Il logout locale deve riuscire anche se il backend è momentaneamente irraggiungibile.
     } finally {
-      // Anche se la chiamata fallisce, localmente si torna anonimi.
       setState({ status: 'anonymous' });
     }
   }, []);

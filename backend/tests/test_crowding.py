@@ -9,12 +9,19 @@ volte significa creare lì la coda che si voleva evitare.
 
 from __future__ import annotations
 
+import os
+import tempfile
 import unittest
 from datetime import UTC, datetime, timedelta
 
-from app.features.arrivals import crowding, weights
-from app.features.arrivals.models import ArrivalCommitment
-from app.features.congestion.waiting import Queue
+# I test devono essere invisibili alla demo: mai scrivere sessioni o arrivi nel DB locale.
+os.environ["HEALTHPULSE_DATABASE_URL"] = (
+    f"sqlite:///{tempfile.gettempdir()}/healthpulse-tests-{os.getpid()}.db"
+)
+
+from app.features.arrivals import crowding, weights  # noqa: E402
+from app.features.arrivals.models import ArrivalCommitment  # noqa: E402
+from app.features.congestion.waiting import Queue  # noqa: E402
 
 
 class TestAffollamentoIndotto(unittest.TestCase):
@@ -22,14 +29,18 @@ class TestAffollamentoIndotto(unittest.TestCase):
         # Pronto soccorso scarico: due persone in coda, otto postazioni che smaltiscono.
         self.queue = Queue(verde=2, in_treatment=8, capacity_hint=15)
 
+    @staticmethod
+    def demand(people: int) -> crowding.InboundDemand:
+        return crowding.InboundDemand(people=people, weighted=people * 0.75)
+
     def test_senza_arrivi_nessuna_attesa_aggiuntiva(self) -> None:
-        result = crowding.crowding_for(1, 0.0, self.queue, "verde")
+        result = crowding.crowding_for(1, self.demand(0), self.queue, "verde")
         self.assertEqual(result.added_minutes, 0)
         self.assertFalse(result.is_significant)
 
     def test_attesa_cresce_con_gli_arrivi_gia_indirizzati(self) -> None:
-        few = crowding.crowding_for(1, 3 * 0.75, self.queue, "verde")
-        many = crowding.crowding_for(1, 20 * 0.75, self.queue, "verde")
+        few = crowding.crowding_for(1, self.demand(3), self.queue, "verde")
+        many = crowding.crowding_for(1, self.demand(20), self.queue, "verde")
 
         self.assertGreater(many.added_minutes, few.added_minutes)
         # Venti persone indirizzate devono produrre un'attesa che si nota.
@@ -44,7 +55,7 @@ class TestAffollamentoIndotto(unittest.TestCase):
         nearest_travel, nearest_wait = 5, 4
         other_travel, other_wait = 20, 6
 
-        induced = crowding.crowding_for(1, 20 * 0.75, self.queue, "verde")
+        induced = crowding.crowding_for(1, self.demand(20), self.queue, "verde")
         nearest_total = nearest_travel + nearest_wait + induced.added_minutes
         other_total = other_travel + other_wait
 
@@ -56,7 +67,8 @@ class TestAffollamentoIndotto(unittest.TestCase):
         )
 
     def test_la_spiegazione_cita_persone_e_minuti(self) -> None:
-        result = crowding.crowding_for(1, 20 * 0.75, self.queue, "verde")
+        result = crowding.crowding_for(1, self.demand(20), self.queue, "verde")
+        self.assertEqual(result.inbound_people, 20)
         text = crowding.explain(result, "Ospedale Test")
         self.assertIn("Ospedale Test", text)
         self.assertIn(str(result.inbound_people), text)
@@ -65,14 +77,14 @@ class TestAffollamentoIndotto(unittest.TestCase):
     def test_struttura_satura_smaltisce_piu_lentamente(self) -> None:
         """A parità di arrivi, dove ci sono meno postazioni l'attesa cresce di più."""
         busy = Queue(verde=18, giallo=4, in_treatment=3, capacity_hint=15)
-        light = crowding.crowding_for(1, 10 * 0.75, self.queue, "verde")
-        heavy = crowding.crowding_for(1, 10 * 0.75, busy, "verde")
+        light = crowding.crowding_for(1, self.demand(10), self.queue, "verde")
+        heavy = crowding.crowding_for(1, self.demand(10), busy, "verde")
         self.assertGreater(heavy.added_minutes, light.added_minutes)
 
     def test_codice_urgente_pesa_di_piu(self) -> None:
         """Gli arrivi di chi è più grave occupano le postazioni più a lungo."""
-        low = crowding.crowding_for(1, 10 * 0.75, self.queue, "verde")
-        high = crowding.crowding_for(1, 10 * 0.75, self.queue, "arancione")
+        low = crowding.crowding_for(1, self.demand(10), self.queue, "verde")
+        high = crowding.crowding_for(1, self.demand(10), self.queue, "arancione")
         self.assertGreater(high.added_minutes, low.added_minutes)
 
 
@@ -114,12 +126,12 @@ class TestStruttureSenzaDatiDiCoda(unittest.TestCase):
     """
 
     def test_effetto_stimato_anche_senza_coda_nota(self) -> None:
-        result = crowding.crowding_for(1, 20 * 0.75, None, "verde")
+        result = crowding.crowding_for(1, TestAffollamentoIndotto.demand(20), None, "verde")
         self.assertGreater(result.added_minutes, 0)
         self.assertTrue(result.is_significant)
 
     def test_pochi_arrivi_restano_trascurabili(self) -> None:
-        result = crowding.crowding_for(1, 1 * 0.75, None, "verde")
+        result = crowding.crowding_for(1, TestAffollamentoIndotto.demand(1), None, "verde")
         self.assertFalse(result.is_significant)
 
 

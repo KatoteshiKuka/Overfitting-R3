@@ -26,6 +26,10 @@ URBAN_SPEED_KMH = 22.0
 # Le strade non sono rettilinee: correzione applicata quando OSRM non risponde.
 DETOUR_FACTOR = 1.35
 
+# Lo stesso riquadro usato da Nominatim: la demo instrada solo all'interno del Lazio.
+LAZIO_LATITUDE_RANGE = (40.75, 42.85)
+LAZIO_LONGITUDE_RANGE = (11.45, 14.05)
+
 
 @dataclass(frozen=True, slots=True)
 class GeoPoint:
@@ -42,6 +46,27 @@ class Route:
     source: str
     #: Punti [lat, lon] del tragitto, per disegnarlo sulla mappa.
     geometry: tuple[tuple[float, float], ...] = ()
+
+
+def _device_position(value: str) -> GeoPoint | None:
+    """Decodifica una posizione del browser senza inviarla al geocoder."""
+    if not value.startswith("geo:"):
+        return None
+
+    try:
+        latitude_text, longitude_text = value.removeprefix("geo:").split(",", maxsplit=1)
+        latitude = float(latitude_text)
+        longitude = float(longitude_text)
+    except ValueError:
+        return None
+
+    if not (
+        LAZIO_LATITUDE_RANGE[0] <= latitude <= LAZIO_LATITUDE_RANGE[1]
+        and LAZIO_LONGITUDE_RANGE[0] <= longitude <= LAZIO_LONGITUDE_RANGE[1]
+    ):
+        return None
+
+    return GeoPoint(label="Posizione attuale", latitude=latitude, longitude=longitude)
 
 
 def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
@@ -70,6 +95,9 @@ async def geocode(address: str) -> GeoPoint | None:
     query = address.strip()
     if not query:
         return None
+
+    if query.startswith("geo:"):
+        return _device_position(query)
 
     params = {
         "q": query,

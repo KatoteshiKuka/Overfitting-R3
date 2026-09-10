@@ -1,15 +1,48 @@
+import base64
+import binascii
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator, model_validator
 
 TriageCode = Literal["bianco", "verde", "azzurro", "arancione", "rosso"]
 
 Role = Literal["user", "assistant"]
 
 
+class ChatImage(BaseModel):
+    name: str = Field(min_length=1, max_length=120)
+    data_url: str = Field(min_length=32, max_length=2_666_720)
+
+    @field_validator("data_url")
+    @classmethod
+    def validate_data_url(cls, value: str) -> str:
+        header, separator, encoded = value.partition(",")
+        allowed_headers = {
+            "data:image/jpeg;base64",
+            "data:image/png;base64",
+            "data:image/webp;base64",
+        }
+        if separator != "," or header not in allowed_headers:
+            raise ValueError("La foto deve essere JPEG, PNG o WebP")
+        try:
+            decoded = base64.b64decode(encoded, validate=True)
+        except (binascii.Error, ValueError) as exc:
+            raise ValueError("La foto non contiene dati base64 validi") from exc
+        if len(decoded) > 2_000_000:
+            raise ValueError("La foto non può superare 2 MB")
+        return value
+
+
 class ChatMessage(BaseModel):
     role: Role
     content: str = Field(min_length=1, max_length=2000)
+    image: ChatImage | None = None
+
+    @model_validator(mode="after")
+    def image_only_from_user(self) -> "ChatMessage":
+        if self.image is not None and self.role != "user":
+            raise ValueError("Solo i messaggi dell'utente possono contenere una foto")
+        return self
 
 
 class Assessment(BaseModel):
@@ -40,6 +73,23 @@ class PlanRequest(BaseModel):
     address: str = Field(min_length=3, max_length=200)
     code: TriageCode
     limit: int = Field(default=5, ge=1, le=20)
+
+
+class NearbyRequest(BaseModel):
+    address: str = Field(min_length=3, max_length=200)
+    limit: int = Field(default=8, ge=1, le=20)
+
+
+class NearbyFacility(BaseModel):
+    facility_id: int
+    name: str
+    type: str
+    address: str | None = None
+    municipality: str | None = None
+    latitude: float
+    longitude: float
+    distance_km: float
+    geo_precision: str | None = None
 
 
 class PlanOption(BaseModel):
@@ -73,6 +123,11 @@ class Origin(BaseModel):
     label: str
     latitude: float
     longitude: float
+
+
+class NearbyResponse(BaseModel):
+    origin: Origin
+    facilities: list[NearbyFacility]
 
 
 class PlanResponse(BaseModel):

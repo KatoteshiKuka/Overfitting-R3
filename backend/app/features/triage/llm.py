@@ -73,7 +73,7 @@ async def _call_openai_compatible(
     client: httpx.AsyncClient,
     base_url: str,
     model: str,
-    messages: list[dict[str, str]],
+    messages: list[dict[str, Any]],
     schema: dict[str, Any],
     api_key: str = "",
     max_tokens: int = 1400,
@@ -106,7 +106,7 @@ async def _call_openai_compatible(
     return extract_json(content)
 
 
-async def complete_json(messages: list[dict[str, str]], schema: dict[str, Any]) -> LlmReply:
+async def complete_json(messages: list[dict[str, Any]], schema: dict[str, Any]) -> LlmReply:
     """Interroga i provider in ordine e restituisce il primo JSON valido."""
     settings = get_settings()
 

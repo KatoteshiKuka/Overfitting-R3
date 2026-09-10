@@ -74,6 +74,16 @@ cd backend  && uv run fastapi dev app/main.py   # http://localhost:8000
 cd frontend && pnpm dev                         # http://localhost:5173
 ```
 
+Se si usa npm, dalla root del repository il frontend si prepara e si avvia con:
+
+```bash
+npm --prefix frontend install
+npm --prefix frontend run dev -- --host
+```
+
+Il doppio `--` passa l'opzione `--host` a Vite. Eseguire il solo `npm run dev` dalla
+root non funziona perché il `package.json` del frontend vive in `frontend/`.
+
 ### Provarla dal telefono
 
 Vite è già in ascolto su tutte le interfacce, quindi `pnpm dev` (o `npm run dev`) stampa
@@ -85,6 +95,11 @@ anche un indirizzo di rete:
 
 Aprilo dal telefono sulla stessa rete Wi-Fi. Le chiamate all'API passano dal proxy di
 Vite, quindi funzionano senza configurare niente.
+
+La geolocalizzazione del dispositivo è consentita dai browser solo su HTTPS o su
+`localhost`: sul computer di sviluppo usa `http://localhost:5173`; aprendo dal telefono
+il semplice indirizzo HTTP di rete resta disponibile l'inserimento manuale dell'indirizzo.
+Per usare la posizione automatica anche dal telefono serve esporre la demo con un URL HTTPS.
 
 Per installarla come app (icona sulla home, schermo intero) serve la build vera, perché
 il service worker è attivo solo in produzione:

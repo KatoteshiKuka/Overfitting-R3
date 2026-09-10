@@ -73,8 +73,20 @@ Ritorna un singolo oggetto con lo stesso schema degli `items` sopra. `404` con `
 Un turno di conversazione. Il client manda tutta la cronologia: il backend non tiene sessione.
 
 ```json
-// richiesta
+// richiesta testuale
 { "messages": [{ "role": "user", "content": "Ho mal di gola da due giorni" }] }
+
+// richiesta con foto clinica opzionale e temporanea
+{
+  "messages": [{
+    "role": "user",
+    "content": "Mi sono tagliato la mano da circa dieci minuti",
+    "image": {
+      "name": "ferita.jpg",
+      "data_url": "data:image/jpeg;base64,..."
+    }
+  }]
+}
 
 // risposta
 {
@@ -102,6 +114,12 @@ Quando `done` è `true`, `assessment` è valorizzato:
 `escalated` è `true` solo quando le regole di sicurezza hanno alzato il codice **fino ad
 arancione o rosso**: le correzioni minori non vanno segnalate, altrimenti l'avviso perde valore.
 
+`image` è ammesso solo sui messaggi dell'utente, nei formati JPEG, PNG o WebP, fino a 2 MB
+decodificati. Viene inoltrato in memoria al provider multimodale e non viene scritto nel DB,
+nei log applicativi, nel commitment, nella pre-accettazione o nella scheda paziente. La foto
+resta visibile esclusivamente nella chat corrente del browser; il testo è comunque obbligatorio
+per garantire il fallback prudenziale quando il provider non supporta immagini.
+
 ### `POST /api/v1/triage/plan` — 🔒 LOCKED (feature 1, esteso feature 2)
 
 ```json
@@ -123,6 +141,35 @@ Il totale è `viaggio + attesa osservata + attesa indotta`: una struttura non vi
 nascosta, viene mostrata con il tempo che avrà davvero quando ci si arriva.
 
 Errori: `422 address_not_found`, `404 no_geolocated_facility`.
+
+### `POST /api/v1/triage/nearby` — 🔒 LOCKED (feature 1)
+
+Anteprima pubblica usata nella home, prima dell'autenticazione. Cerca i servizi territoriali
+più vicini senza invocare l'LLM e senza salvare la posizione.
+
+```json
+// richiesta
+{ "address": "geo:41.902800,12.496400", "limit": 8 }
+
+// risposta
+{
+  "origin": { "label": "Posizione attuale", "latitude": 41.9028, "longitude": 12.4964 },
+  "facilities": [{
+    "facility_id": 91,
+    "name": "Farmacia Centrale",
+    "type": "farmacia",
+    "address": "...",
+    "municipality": "Roma",
+    "latitude": 41.9,
+    "longitude": 12.5,
+    "distance_km": 0.6,
+    "geo_precision": "esatta"
+  }]
+}
+```
+
+Sono incluse farmacie, case della comunità e ambulatori. Errori: `422 address_not_found`,
+`404 no_geolocated_facility`.
 
 ### `GET /api/v1/triage/status` — 🔒 LOCKED (feature 1)
 
@@ -304,6 +351,8 @@ penalità, nessun flag no-show sul cittadino**.
 
 Crea la pre-accettazione **dopo** un commitment. Composizione a tre provider: identità dalla
 sessione, contesto clinico dai dati sintetici, contatti e consensi da input dell'utente.
+La conferma della destinazione crea subito questa pre-accettazione: l'ospedale scelto vede
+il resoconto prima dell'arrivo, senza dover attendere il check-in.
 
 `triage_hint` è **sempre `null`**: HealthPulse non pre-assegna il triage ospedaliero.
 
@@ -317,6 +366,13 @@ sessione, contesto clinico dai dati sintetici, contatti e consensi da input dell
   "care_cluster": "minor_trauma",
   "identity": { "given_name": "Mario", "family_name": "Rossi", "fiscal_code": "..." },
   "clinical_context": { "exemptions": [], "chronic_conditions": [], "gp": null },
+  "triage_summary": {
+    "priority_code": "arancione",
+    "reason": "Ferita con osso esposto, rischio di infezione e peggioramento",
+    "advice": "Non muovere la gamba e copri la ferita con una garza pulita.",
+    "provider": "groq",
+    "provisional": true
+  },
   "provenance": { "identity": "SYNTHETIC", "clinical": "SYNTHETIC", "input": "USER" }
 }
 ```
@@ -324,6 +380,14 @@ sessione, contesto clinico dai dati sintetici, contatti e consensi da input dell
 `GET /api/v1/admission/resolve/{code}` — l'ospedale risolve il codice (token monouso).
 `POST /api/v1/admission/{code}/accept` — segna `accepted`; un secondo tentativo dà
 `409` con `code: "token_already_used"`, scaduto `410` con `code: "token_expired"`.
+Il check-in conferma esclusivamente che la persona è arrivata e porta il commitment a
+`ARRIVED`: non assegna il triage, non certifica la veridicità e non genera penalità.
+
+### `GET /api/v1/hospital/incoming-patients` — 🔒 LOCKED (feature 2)
+
+Elenca i resoconti dei pazienti sintetici che hanno confermato di dirigersi verso la
+struttura dell'operatore autenticato. Identità, profilo sanitario e valutazione preliminare
+sono disponibili **prima** del check-in; commitment annullati o scaduti sono esclusi.
 
 ### `PUT /api/v1/congestion/{facility_id}` — 🔒 LOCKED (feature 2)
 

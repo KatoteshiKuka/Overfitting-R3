@@ -46,21 +46,23 @@ export function SurgeAlert({ data }: { data: ConsoleOverview }) {
         <p className="text-sm font-semibold" style={{ color: `rgb(var(${style.cssVar}))` }}>
           {style.label}
         </p>
-        <span className="text-[10px] font-medium uppercase tracking-wide text-faint">
-          {level}
-        </span>
+        <span className="text-[10px] font-medium uppercase tracking-wide text-faint">{level}</span>
       </div>
 
       <p className="mt-2 text-sm leading-relaxed text-ink">
-        {inbound.commitments} arrivi confermati nella prossima ora ({inbound.weighted}{' '}
-        ponderati)
+        {inbound.commitments}{' '}
+        {inbound.commitments === 1 ? 'arrivo confermato' : 'arrivi confermati'} nella prossima ora (
+        {inbound.weighted} {inbound.weighted === 1 ? 'ponderato' : 'ponderati'})
         {data.care_mix.length > 0 && (
           <>
             , in prevalenza <strong>{data.care_mix[0]!.label.toLowerCase()}</strong>
           </>
         )}
-        . {suggested > 0
-          ? `Servirebbero ${suggested} turni aggiuntivi per reggere il carico previsto.`
+        .{' '}
+        {suggested > 0
+          ? suggested === 1
+            ? 'Servirebbe 1 turno aggiuntivo per reggere il carico previsto.'
+            : `Servirebbero ${suggested} turni aggiuntivi per reggere il carico previsto.`
           : 'Il personale in turno è sufficiente per il carico previsto.'}
       </p>
 
@@ -71,9 +73,7 @@ export function SurgeAlert({ data }: { data: ConsoleOverview }) {
               key={entry.qualification}
               className="rounded-full border border-line bg-surface px-3 py-1 text-xs text-ink"
             >
-              <span className="tabular font-semibold">
-                +{entry.additional_shifts_suggested}
-              </span>{' '}
+              <span className="tabular font-semibold">+{entry.additional_shifts_suggested}</span>{' '}
               {entry.qualification.toLowerCase()}
               <span className="text-faint"> · {entry.candidates_available} disponibili</span>
             </li>
@@ -82,7 +82,9 @@ export function SurgeAlert({ data }: { data: ConsoleOverview }) {
       )}
 
       <p className="mt-2.5 text-[11px] text-faint">
-        Proposta da rivedere e approvare: HealthPulse non convoca nessuno.
+        Previsione basata su carico attuale + arrivi confermati. Gli stessi arrivi penalizzano
+        questa struttura nel ranking dei cittadini successivi. Proposta da rivedere e approvare:
+        HealthPulse non convoca nessuno.
       </p>
     </div>
   );
