@@ -19,6 +19,9 @@ class Settings(BaseSettings):
     database_url: str = "sqlite:///./healthpulse.db"
     auto_seed: bool = True
 
+    # Durata della sessione di accesso: coprire una giornata di demo senza rifare login.
+    session_hours: int = 8
+
     # Catena LLM: si prova prima il modello locale, poi Groq, poi le regole deterministiche.
     llm_base_url: str = "http://127.0.0.1:1234/v1"
     llm_model: str = "google/gemma-4-e4b"

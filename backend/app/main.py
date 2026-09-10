@@ -50,3 +50,14 @@ from app.features.triage.router import router as triage_router  # noqa: E402
 
 app.include_router(congestion_router, prefix=settings.api_prefix)
 app.include_router(triage_router, prefix=settings.api_prefix)
+
+# --- Feature 2: identità, arrivi e console ospedaliera ---
+from app.features.arrivals.router import router as arrivals_router  # noqa: E402
+from app.features.auth.router import router as auth_router  # noqa: E402
+from app.features.citizens.router import router as citizens_router  # noqa: E402
+from app.features.hospital.router import router as hospital_router  # noqa: E402
+
+app.include_router(auth_router, prefix=settings.api_prefix)
+app.include_router(citizens_router, prefix=settings.api_prefix)
+app.include_router(arrivals_router, prefix=settings.api_prefix)
+app.include_router(hospital_router, prefix=settings.api_prefix)
