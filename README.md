@@ -4,7 +4,30 @@ Web app che aiuta il cittadino a capire **dove andare** quando ha un problema di
 
 Traccia 3 — Sanità / Healthcare. Dati dal Portale Open Data della Regione Lazio e dal Portale Nazionale Open Data.
 
-Stato: **scocca completa e funzionante**. Il censimento dei presidi è implementato end-to-end; due slot feature sono predisposti e in attesa di essere scelti dal team.
+Stato: **feature 1 completa**. All'apertura si sceglie il ruolo; il percorso del paziente è
+implementato end-to-end (chat di triage, classificazione nei cinque codici, mappa con tempi
+reali). L'area del personale è predisposta ma vuota: la sviluppa il team.
+
+## Come funziona il percorso del paziente
+
+1. **Chat.** Un LLM raccoglie i sintomi facendo al massimo tre domande, poi assegna uno dei
+   cinque codici. La catena dei provider è: **modello locale** (LM Studio) → **Groq** →
+   **regole deterministiche**. L'app risponde sempre, anche senza rete e senza modello.
+2. **Rete di sicurezza.** Un classificatore a parole chiave gira in parallelo all'LLM e può
+   solo **alzare** la gravità, mai abbassarla: un dolore toracico classificato "bianco" dal
+   modello diventa comunque rosso. In interfaccia si vede sempre da dove arriva la risposta.
+3. **Mappa.** Inserito l'indirizzo, Nominatim lo geocodifica e OSRM calcola i tragitti reali.
+   I minuti di viaggio e di attesa sono **calcolati**, non inventati dall'LLM, che si limita
+   a scrivere il consiglio sui numeri già pronti.
+
+### Configurazione LLM
+
+Il modello locale si configura in `backend/.env` (vedi `.env.example`). Per Groq serve
+`PRESIDIO_GROQ_API_KEY`. **La chiave non va committata**: il repo è pubblico.
+
+⚠️ L'affollamento dei presidi è oggi un **valore generato**, non reale: gli Open Data non
+espongono la saturazione in tempo reale. È deterministico (stessa struttura, stesso valore) e
+sempre etichettato come stima in interfaccia.
 
 ---
 
@@ -114,4 +137,8 @@ Base path `/api/v1`. Contratti completi in [`STATE.md`](STATE.md), documentazion
 | `GET /facilities` | Elenco presidi, con `q`, `type`, `asl`, `limit`, `offset` |
 | `GET /facilities/summary` | Aggregati per tipologia, ASL e comuni |
 | `GET /facilities/{id}` | Dettaglio di un presidio |
-| `GET /feature-a` · `GET /feature-b` | Slot liberi, rispondono `501` |
+| `POST /triage/messages` | Un turno di chat: risposta, e valutazione quando `done` è `true` |
+| `POST /triage/plan` | Indirizzo + codice → strutture ordinate per tempo totale, con consiglio |
+| `GET /triage/status` | Disponibilità dei provider LLM |
+| `GET /congestion` | Carico dei presidi (oggi stimato, vedi sopra) |
+| `GET /feature-b` | Slot libero, risponde `501` |

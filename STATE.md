@@ -68,9 +68,70 @@ Query: `q` (string, ricerca su nome/comune/indirizzo), `type` (`pronto-soccorso`
 
 Ritorna un singolo oggetto con lo stesso schema degli `items` sopra. `404` con `{ "detail": "...", "code": "facility_not_found" }`.
 
-### `GET /api/v1/feature-a` · `GET /api/v1/feature-b` — ⚪ SLOT LIBERO
+### `POST /api/v1/triage/messages` — 🔒 LOCKED (feature 1)
 
-Rispondono `501` con `code: "not_implemented"` finché il team non definisce la feature. Chi prende lo slot **sostituisce questa sezione** con il contratto reale prima di implementare.
+Un turno di conversazione. Il client manda tutta la cronologia: il backend non tiene sessione.
+
+```json
+// richiesta
+{ "messages": [{ "role": "user", "content": "Ho mal di gola da due giorni" }] }
+
+// risposta
+{
+  "reply": "Da quanto tempo hai la febbre?",
+  "done": false,
+  "assessment": null,
+  "provider": "locale"
+}
+```
+
+Quando `done` è `true`, `assessment` è valorizzato:
+
+```json
+{
+  "code": "verde",
+  "reason": "Disturbo comune, gestibile sul territorio.",
+  "care_setting": "guardia medica",
+  "advice": "Riposa e bevi molto. Se peggiori, chiama il 118.",
+  "escalated": false,
+  "red_flags": []
+}
+```
+
+`provider` vale `locale` (LM Studio), `groq` o `regole` (fallback deterministico).
+`escalated` è `true` solo quando le regole di sicurezza hanno alzato il codice **fino ad
+arancione o rosso**: le correzioni minori non vanno segnalate, altrimenti l'avviso perde valore.
+
+### `POST /api/v1/triage/plan` — 🔒 LOCKED (feature 1)
+
+```json
+// richiesta
+{ "address": "Via Nazionale 100, Roma", "code": "verde", "limit": 5 }
+```
+
+Risposta: `origin` (indirizzo geocodificato), `options` ordinate per `total_minutes`
+(`distance_km`, `travel_minutes`, `waiting_minutes`, `total_minutes`, `congestion_level`,
+`route_source`, `recommended`) e `advice` scritto dall'LLM **sui numeri già calcolati**.
+
+Errori: `422 address_not_found`, `404 no_geolocated_facility`.
+
+### `GET /api/v1/triage/status` — 🔒 LOCKED (feature 1)
+
+Disponibilità dei provider LLM. `fallback_ready` è sempre `true`: le regole non dipendono da nulla.
+
+### `GET /api/v1/congestion` · `GET /api/v1/congestion/{facility_id}` — 🔒 LOCKED
+
+Carico dei presidi: `ratio` (0–1), `waiting_minutes`, `people_waiting`, `level`
+(`basso`/`medio`/`alto`), `source`, `updated_at`.
+
+⚠️ **I valori sono oggi generati in modo deterministico**, non reali: gli Open Data non
+espongono la saturazione in tempo reale. La tabella `facility_loads` è però scrivibile,
+ed è il punto di aggancio della feature 2.
+
+### `GET /api/v1/feature-b` — ⚪ SLOT LIBERO
+
+Risponde `501` con `code: "not_implemented"`. Chi prende lo slot **sostituisce questa sezione**
+con il contratto reale prima di implementare.
 
 ---
 
@@ -80,7 +141,8 @@ Nessuno installa dipendenze da solo. Si aggiunge una riga qui, l'Orchestratore a
 
 | Agente | Pacchetto | Ragione | Stato |
 |---|---|---|---|
-| `@diego/claude` | `leaflet` + `react-leaflet` | Mappa dei presidi con marker per tipologia. Non serve alla scocca (che usa lista + filtri), serve se si vuole la vista mappa. | **Pending** |
+| `@diego/claude` | `leaflet` + `react-leaflet` | Mappa OpenStreetMap con i presidi colorati per congestione (feature 1). | **Merged** |
+| `@diego/claude` | `httpx` | Chiamate a LM Studio, Groq, Nominatim e OSRM. Già presente come dipendenza di `fastapi[standard]`, nessuna installazione aggiuntiva. | **Merged** |
 
 Pacchetti già approvati e installati (baseline pinnata, non si tocca):
 
@@ -107,6 +169,13 @@ Definite in `.env.example` (append-only). `.env` non si committa mai.
 | `PRESIDIO_DATA_DIR` | `../data` | Cartella dei dataset Open Data |
 | `PRESIDIO_DATABASE_URL` | `sqlite:///./presidio.db` | Connessione SQLite |
 | `PRESIDIO_AUTO_SEED` | `true` | Carica i dati allo startup se il DB è vuoto |
+| `PRESIDIO_LLM_BASE_URL` | `http://127.0.0.1:1234/v1` | LM Studio, endpoint OpenAI-compatibile |
+| `PRESIDIO_LLM_MODEL` | `google/gemma-4-e4b` | Modello locale caricato in LM Studio |
+| `PRESIDIO_GROQ_API_KEY` | *(vuota)* | Chiave Groq, usata come secondo provider |
+| `PRESIDIO_GROQ_MODEL` | `openai/gpt-oss-120b` | Modello Groq |
+
+⚠️ La chiave Groq **non si committa**: sta in `backend/.env`, che è gitignorato. Il repo è
+pubblico, una chiave nel sorgente verrebbe scrapata e revocata nel giro di minuti.
 
 ### File globali sotto lock
 

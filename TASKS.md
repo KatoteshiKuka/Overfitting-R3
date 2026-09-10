@@ -20,10 +20,14 @@ Formato card:
 
 ## TODO
 
-- [ ] `feature-a` — **da definire dal team**. Slot già predisposto e navigabile. · owner: _libero_ · branch: `feat/<nome>` · area: `frontend/src/features/feature-a` + `backend/app/features/feature_a`
-- [ ] `feature-b` — **da definire dal team**. Slot già predisposto e navigabile. · owner: _libero_ · branch: `feat/<nome>` · area: `frontend/src/features/feature-b` + `backend/app/features/feature_b`
+- [ ] `feature-2-operatori` — **Area del personale di struttura.** Monitoraggio dei reparti e aggiornamento del carico reale dei presidi. La pagina `/operatore` esiste già ed è volutamente vuota. · owner: _libero_ · branch: `feat/<nome>` · area: `frontend/src/features/operatore` + `backend/app/features/congestion`
 
-> Candidati coerenti con la Traccia 3 (non vincolanti): assistente di triage sintomi → codice colore → struttura consigliata; motore di contesto picchi termici + eventi in città → indice di pressione sui pronto soccorso; serie storiche tempi di attesa ambulatoriali.
+> Punto di aggancio già pronto: la tabella `facility_loads` è scrivibile e oggi contiene valori
+> generati in modo deterministico. Chi prende questa feature aggiunge gli endpoint di scrittura
+> e l'interfaccia per dichiarare il carico reale; il resto dell'app si aggiorna da sé, perché
+> legge già quella tabella.
+
+- [ ] `feature-b` — slot residuo, ancora da definire. · owner: _libero_ · branch: `feat/<nome>` · area: `frontend/src/features/feature-b` + `backend/app/features/feature_b`
 
 ## IN_PROGRESS
 
@@ -37,3 +41,4 @@ _(vuoto)_
 
 - [x] `infra` — Protocollo multi-agente: `TASKS.md`, `STATE.md`, `REVIEWER_PROMPT.md`, CI di compliance. · owner: `@diego/claude` · branch: `feat/scocca`
 - [x] `scocca` — Scaffold avviabile frontend + backend, app shell, tema triage, registry presidi, cartella `data/`. · owner: `@diego/claude` · branch: `feat/scocca`
+- [x] `feature-1-triage` — Scelta del ruolo all'apertura; assistente di triage con LLM (LM Studio → Groq → regole), classificazione nei cinque codici, mappa OpenStreetMap con congestione e tempi reali di viaggio e attesa. · owner: `@diego/claude` · branch: `feat/triage-paziente`
