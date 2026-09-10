@@ -152,6 +152,244 @@ con il contratto reale prima di implementare.
 
 ---
 
+## Feature 2 — identità, commitment e console ospedaliera
+
+Contratti scritti **prima** dell'implementazione, come impone il protocollo.
+
+Regola trasversale: ogni valore esposto porta la propria **provenienza**, con questi valori
+ammessi — `OBSERVED`, `HISTORICAL`, `OFFICIAL_FORECAST`, `DERIVED`, `SIMULATED`, `SYNTHETIC`,
+`UNAVAILABLE`, `UNVERIFIED`. Non si mescolano: lo snapshot PS 2021 resta `HISTORICAL` e non
+diventa mai `OBSERVED`.
+
+### `POST /api/v1/auth/test-spid/login` — 🔒 LOCKED (feature 2)
+
+```json
+// richiesta
+{ "username": "mario.rossi" }
+
+// risposta 200
+{
+  "authenticated": true,
+  "provider": "spid_test_mock",
+  "synthetic": true,
+  "profile": {
+    "spidCode": "TESTSP00001",
+    "name": "Mario",
+    "familyName": "Rossi",
+    "fiscalNumber": "RSSMRA80A01H501U",
+    "dateOfBirth": "1980-01-01",
+    "placeOfBirth": "Roma",
+    "countyOfBirth": "RM",
+    "gender": "M",
+    "email": "mario.rossi@example.test",
+    "mobilePhone": "+39 333 0000001"
+  },
+  "expires_at": "2026-09-10T22:00:00Z"
+}
+```
+
+`401` con `code: "unknown_identity"` se lo username non esiste. La password non viene mai
+richiesta né restituita. La risposta imposta il cookie `healthpulse_test_session`
+(`HttpOnly`, `SameSite=Lax`, 8 ore).
+
+### `GET /api/v1/auth/session` — 🔒 LOCKED (feature 2)
+
+`200` con lo stesso oggetto della login quando la sessione è valida; `401` con
+`code: "no_session"` altrimenti. È l'unica fonte dell'identità corrente: il client non
+sceglie mai il `fiscal_code`.
+
+### `POST /api/v1/auth/logout` — 🔒 LOCKED (feature 2)
+
+`204`, cookie cancellato. Idempotente.
+
+### `POST /api/v1/auth/hospital/login` — 🔒 LOCKED (feature 2)
+
+Dominio **separato** da quello cittadino: il personale non usa SPID.
+
+```json
+// richiesta
+{ "username": "ps.coordinator", "facility_id": 12 }
+
+// risposta 200
+{
+  "authenticated": true,
+  "provider": "hospital_mock",
+  "synthetic": true,
+  "operator": {
+    "username": "ps.coordinator",
+    "display_name": "Coordinamento PS",
+    "role": "PS_COORDINATOR",
+    "facility_id": 12,
+    "facility_name": "Pol. Univ. Umberto I — Pronto Soccorso"
+  },
+  "expires_at": "..."
+}
+```
+
+Ruoli: `HOSPITAL_ADMIN`, `PS_COORDINATOR`, `DEPARTMENT_LEAD`, `OPERATOR_READONLY`.
+Cookie distinto: `healthpulse_hospital_session`.
+
+### `GET /api/v1/citizens/me/profile` — 🔒 LOCKED (feature 2)
+
+Profilo sanitario sintetico dell'utente autenticato, unito per `fiscal_code`. I campi
+mancanti sono `null`, **non** stringhe vuote: l'interfaccia mostra `UNAVAILABLE`.
+
+```json
+{
+  "fiscal_code": "RSSMRA80A01H501U",
+  "given_name": "Mario",
+  "family_name": "Rossi",
+  "birth_date": "1980-01-01",
+  "is_minor": false,
+  "guardian": null,
+  "gp": { "given_name": "Anna", "family_name": "Bianchi", "phone": "..." },
+  "emergency_contact": null,
+  "email": "mario.rossi@example.test",
+  "exemptions": [{ "code": "048", "description": "..." }],
+  "chronic_conditions": ["ipertensione"],
+  "recent_episodes": [{ "date": "2025-11-02", "facility": "...", "outcome": "dimesso" }],
+  "demo_care_intent": "minor_wound_care",
+  "provenance": "SYNTHETIC",
+  "synthetic": true
+}
+```
+
+### `POST /api/v1/arrivals/commitments` — 🔒 LOCKED (feature 2)
+
+Il cittadino dichiara che si sta dirigendo a una struttura. **Mai creato automaticamente**:
+serve un'azione esplicita.
+
+```json
+// richiesta — il codice fiscale NON si accetta dal client, viene dalla sessione
+{
+  "facility_id": 12,
+  "eta_minutes": 18,
+  "care_intent": "musculoskeletal_minor",
+  "care_cluster": "minor_trauma",
+  "consents": { "share_arrival": true, "share_preadmission": true, "share_reason": true }
+}
+
+// risposta 201
+{
+  "commitment_id": "cmt_9f3a...",
+  "facility_id": 12,
+  "status": "CONFIRMED",
+  "care_intent": "musculoskeletal_minor",
+  "care_cluster": "minor_trauma",
+  "created_at": "...",
+  "expected_arrival_at": "...",
+  "weight": 0.75,
+  "weight_formula": "commitment_weight.v1",
+  "provenance": "DERIVED",
+  "synthetic": true
+}
+```
+
+Stati: `CONFIRMED` · `EN_ROUTE` · `ARRIVED` · `CANCELLED` · `EXPIRED`.
+
+`GET /api/v1/arrivals/commitments/mine` elenca i propri.
+`POST /api/v1/arrivals/commitments/{id}/cancel` revoca — sempre possibile, **nessuna
+penalità, nessun flag no-show sul cittadino**.
+
+### `POST /api/v1/navigation/preadmission` — 🔒 LOCKED (feature 2)
+
+Crea la pre-accettazione **dopo** un commitment. Composizione a tre provider: identità dalla
+sessione, contesto clinico dai dati sintetici, contatti e consensi da input dell'utente.
+
+`triage_hint` è **sempre `null`**: HealthPulse non pre-assegna il triage ospedaliero.
+
+```json
+{
+  "code": "PA-7QK4-2M",
+  "commitment_id": "cmt_9f3a...",
+  "status": "issued",
+  "expires_at": "...",
+  "triage_hint": null,
+  "care_cluster": "minor_trauma",
+  "identity": { "given_name": "Mario", "family_name": "Rossi", "fiscal_code": "..." },
+  "clinical_context": { "exemptions": [], "chronic_conditions": [], "gp": null },
+  "provenance": { "identity": "SYNTHETIC", "clinical": "SYNTHETIC", "input": "USER" }
+}
+```
+
+`GET /api/v1/admission/resolve/{code}` — l'ospedale risolve il codice (token monouso).
+`POST /api/v1/admission/{code}/accept` — segna `accepted`; un secondo tentativo dà
+`409` con `code: "token_already_used"`, scaduto `410` con `code: "token_expired"`.
+
+### `PUT /api/v1/congestion/{facility_id}` — 🔒 LOCKED (feature 2)
+
+L'operatore dichiara il carico reale del proprio PS. Riusa la tabella `facility_loads`
+esistente: **nessuna tabella parallela**.
+
+```json
+// richiesta
+{
+  "waiting_red": 1, "waiting_yellow": 4, "waiting_green": 12,
+  "waiting_white": 2, "waiting_unassigned": 0,
+  "in_treatment": 9, "in_observation": 3,
+  "observed_at": "2026-09-10T14:05:00Z"
+}
+```
+
+Al salvataggio `source` diventa `dichiarato` e `observed_at` quello indicato. Il routing
+cittadino legge la stessa riga, quindi l'effetto è immediato su tutta l'app.
+
+### `GET /api/v1/hospital/console/overview` — 🔒 LOCKED (feature 2)
+
+Vista aggregata della struttura dell'operatore autenticato. **Nessun dato nominativo.**
+
+```json
+{
+  "facility": { "id": 12, "name": "...", "municipality": "Roma" },
+  "pressure": { "level": "alto", "ratio": 0.92, "provenance": "HISTORICAL", "observed_at": "2021-07-31T16:34:00Z" },
+  "inbound": {
+    "next_30_min": { "commitments": 3, "weighted": 2.25 },
+    "next_60_min": { "commitments": 5, "weighted": 3.75 },
+    "next_4_hours": { "commitments": 8, "weighted": 6.0 },
+    "provenance": "DERIVED",
+    "weight_formula": "commitment_weight.v1"
+  },
+  "care_mix": [{ "cluster": "minor_trauma", "count": 4 }],
+  "readiness": [{ "area": "Radiologia", "level": "HIGH", "reason": "..." }],
+  "staffing": {
+    "on_shift": 7, "on_call": 3, "resting": 5,
+    "deficit": [{ "qualification": "INFERMIERE", "additional_shifts_suggested": 2, "reason": "..." }],
+    "excluded": [{ "id": "MED-03", "exclusion_reason": "Riposo minimo non rispettato" }],
+    "provenance": "SIMULATED",
+    "policy": "SIMULATED HR POLICY"
+  }
+}
+```
+
+`readiness` usa categorie (`LOW`/`MODERATE`/`HIGH`/`VERY_HIGH`), mai percentuali: non
+esiste un modello validato dietro. Formula `surge_deficit.v1`, versionata in configurazione.
+
+### Righe che l'Orchestratore deve accodare ai file globali
+
+`backend/app/main.py`, in fondo:
+
+```python
+from app.features.auth.router import router as auth_router  # noqa: E402
+from app.features.citizens.router import router as citizens_router  # noqa: E402
+from app.features.arrivals.router import router as arrivals_router  # noqa: E402
+from app.features.hospital.router import router as hospital_router  # noqa: E402
+
+app.include_router(auth_router, prefix=settings.api_prefix)
+app.include_router(citizens_router, prefix=settings.api_prefix)
+app.include_router(arrivals_router, prefix=settings.api_prefix)
+app.include_router(hospital_router, prefix=settings.api_prefix)
+```
+
+`frontend/src/App.tsx` — modifica minima, l'unico punto condiviso che cambia:
+
+```tsx
+<AuthGate>
+  <AppShell>{/* invariato */}</AppShell>
+</AuthGate>
+```
+
+---
+
 ## 2. Dependency Requests
 
 Nessuno installa dipendenze da solo. Si aggiunge una riga qui, l'Orchestratore approva e installa su `main`.
